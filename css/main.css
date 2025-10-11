@@ -1,0 +1,152 @@
+body {
+    background-color: rgb(7, 123, 158);
+}
+
+h2 {
+
+}
+
+div {
+    display: inline-block;
+    /* height: 100%; */
+    text-align: center;
+}
+
+div#starter-modal section {
+    padding: 5% 0;
+    margin: 1%;
+    border: 2px solid black;
+    background: linear-gradient(to bottom, rgb(14, 160, 99), rgb(12, 80, 38));
+}
+
+div.areas {
+    text-transform: uppercase;
+    font-size: 2em;
+}
+
+div.areas a {
+    text-decoration: none;
+    color: black;
+}
+
+nav button {
+    /* display: block; */
+    font-size: 2em;
+}
+
+button {
+    color: black;
+    background-color: rgb(238, 187, 238);
+    border-color: rgb(120, 11, 221);
+    font-variant-caps: all-small-caps;
+}
+
+button:disabled {
+    background-color: rgb(120, 11, 221);
+    border-color: rgb(55, 6, 100);
+    color: gray;
+}
+
+table {
+    border: 1px solid black;
+    position: relative;
+    background-color: rgb(235, 146, 253);
+    text-align: right;
+    width: 80%;
+    left: 10%;
+    /* align-items: center; */
+}
+
+td+td{
+    text-align: left;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#modal-background {
+    position: relative;
+    width: 80%;
+    height: 80%;
+    top: 10%;
+    background-color: red;
+}
+
+#close-modal {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 40px;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+/* AREA INFO */
+#areas-menu-dwds {
+    display: none;
+    left: 10%;
+    width: 100%;
+    padding: 1% 0;
+    background-color: yellow;
+}
+
+#current-area-dwds {
+    margin: 1%;
+    height: 100%;
+    width: 98%;
+    background-color: pink;
+}
+
+#attack-button-dwds, #flee-button-dwds {
+    display: block;
+    margin: auto;   /* This lines centers items */
+}
+
+/* STARTER SELECTION */
+.starter-selection {
+    position: relative;
+    border: 2px solid black;
+    padding: 10% 0;
+    margin-top: 10vh;
+    /* margin-bottom: 10vh; */
+    /* height: 80%; */
+    width: 30%;
+    background-color: rgb(73, 84, 240);
+}
+
+.party-digimon {
+    display: none;
+    padding: 10px;
+    border: 2px solid black;
+    background-color: rgb(47, 206, 255);
+}
+
+.party-digimon h2 {
+    color: rgb(12, 70, 10);
+    font-size: 2em;
+}
+
+#party-box {
+    padding: 2%;
+    background-color: rgb(36, 49, 233);
+}
+
+section#area-info {
+    text-align: center;
+    padding: 2%;
+}
+
+div#game-info {
+    width: 100%;
+}
