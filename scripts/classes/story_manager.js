@@ -15,7 +15,7 @@ export class StoryManager {
         // TODO: Change to account for multiple games
         GameProgress.dwds.forEach((storyPart, index) => {
             if (storyPart.type == SpecialValues.boss) {
-                this.bossArray[storyPart.boss] = index;
+                this.bossOrdinals[storyPart.boss] = index;
             }
         });
     }
