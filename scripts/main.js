@@ -1,8 +1,6 @@
 import { DWDSGame } from './classes/dwds classes/dwds_game.js'
 import { Digimon } from './classes/digimon.js'
-// TODO: MongoDB free database forever
-// DEBUG: Only using Areas for Demo rn, can remove it afterwards
-import { DataNames, DigimonList, Names } from './constants.js'
+import { AreasList, DataNames, DigimonList, Locations, Names } from './constants.js'
 
 let language_chosen = "japanese"
 // var pair_game_chosen = "dawn/dusk/red/blue"
@@ -249,12 +247,6 @@ let language_chosen = "japanese"
 //     "Chronomon (Holy Mode)"
 // ]
 
-let wild_encounters = [
-    {
-        data_forest: []
-    }
-]
-
 let digimonNameDisplay;
 let digimonLevelDisplay;
 let digimonImageDisplay;
@@ -263,6 +255,67 @@ let partyDigimonDivs;
 let enemyDigimonDiv;
 let digimonInfoModal;
 let starterSelection;
+let attackButton;
+let locationButtons;
+let locationDivs;
+
+// Areas Elements
+let areasMenuDiv;
+let prevSectionButton;
+let nextSectionButton;
+
+/*************************
+ * Menu Functions
+ *************************/
+// Returns the players from the current area to the main hub (Town)
+let moveToLocation = (newLocation) => {
+    // TODO: Will have to make this stop any behavior from the current location, like resetting battles from Areas (remove enemy Digimon, heal player Digimon, etc etc)
+
+    // Enable the button for the old area
+    locationButtons[game.currLocation].disabled = false;
+
+    // TODO: Hide the old location's div
+    locationDivs[game.currLocation].style.display = "none";
+
+    handleLeavingLocation(game.currLocation);
+
+    // Update the current location
+    game.currLocation = newLocation;
+
+    // Disable the button for the new area
+    locationButtons[game.currLocation].disabled = true;
+    
+    // Show the new location's div
+    locationDivs[game.currLocation].style.display = "block";
+
+    // TODO: Might have to handle the specific behavior for each location, like moving sections for Areas
+    handleEnteringLocation(game.currLocation);
+}
+
+let handleLeavingLocation = (location) => {
+    switch (location) {
+        case Locations.Areas:
+            game.battleSystem.endBattle();
+            displayUpdatedPlayerDigimonBattleInformation();
+            break;
+        case Locations.Town:
+            break;
+        default:
+            break;
+    }
+}
+
+let handleEnteringLocation = (location) => {
+    switch (location) {
+        case Locations.Areas:
+            movedToNewSection();
+            break;
+        case Locations.Town:
+            break;
+        default:
+            break;
+    }
+} 
 
 /*********************
  * Modify Player Info
@@ -285,19 +338,22 @@ let setPartyDigimon = (id, digimon) => {
     let dataName = digimon.dataName;
     let displayName = Names[dataName][language_chosen] ?? dataName;
     partyDigimonDivs[id].querySelector("h2").innerHTML = displayName + " - Lv " + digimon.level;
-    partyDigimonDivs[id].querySelector("img").src = "./images/digimon/" + dataName + (DigimonList[dataName][game.game_chosen].sprite ?? "") + ".png";
+    partyDigimonDivs[id].querySelector("img").src = "./images/digimon/" + dataName + (DigimonList[dataName][game.gameChosen].sprite ?? "") + ".png";
     partyDigimonDivs[id].querySelector("img").alt = displayName + " Image";
     partyDigimonDivs[id].style.display = "inline-block";
     updatePartyDigimonInformation(partyDigimonDivs[id], digimon);
 }
 
 /*************************
- * Change Area Functions
+ * Area Functions
  *************************/
-let movedToNewLocation = () => {
+let movedToNewSection = () => {
+    updatePrevNextSectionButtons();
+
     let availableDigimonDisplay = document.getElementById("wild-digimon-list");
     availableDigimonDisplay.innerHTML = "";
-    
+    document.getElementById("area-name").textContent = AreasList[game.gameChosen][game.areasManager.currArea].name;
+
     // DEBUG: Will need to fix up the location for this line
     game.encounter.newAreaEntered(game.areasManager.currArea, game.areasManager.currSection);
 
@@ -306,7 +362,12 @@ let movedToNewLocation = () => {
         document.getElementById("wild-digimon-list").innerHTML += Names[digimon.digimon][language_chosen] ?? digimon.digimon + ", ";
     });
 
-    // generateNewDigimonEncounter();
+    generateNewDigimonEncounter();
+}
+
+let updatePrevNextSectionButtons = () => {
+    prevSectionButton.disabled = !game.areasManager.isPreviousSectionUnlocked();
+    nextSectionButton.disabled = !game.areasManager.isNextSectionUnlocked();
 }
 
 /*********************
@@ -324,11 +385,12 @@ let generateNewDigimonEncounter = () => {
 let setEnemyDigimon = digimon => {
     let dataName = digimon.dataName;
     let displayName = Names[dataName][language_chosen] ?? dataName;
-    enemyDigimonDiv.querySelector("img").src = "./images/digimon/" + dataName + (DigimonList[dataName][game.game_chosen].sprite ?? "") + ".png";
+    enemyDigimonDiv.querySelector("img").src = "./images/digimon/" + dataName + (DigimonList[dataName][game.gameChosen].sprite ?? "") + ".png";
     enemyDigimonDiv.querySelector("img").alt = displayName + " Image";
     enemyDigimonDiv.querySelector("h3").innerHTML = displayName;
     enemyDigimonDiv.querySelectorAll("p")[0].innerHTML = "Level " + digimon.level;
     enemyDigimonDiv.querySelectorAll("p")[1].innerHTML = "HP " + digimon.currHP + " / " + digimon.maxHP;
+    enemyDigimonDiv.style.display = "block";
 }
 
 /****************************
@@ -339,7 +401,7 @@ let displayDigimonInfo = partySlot => {
     let dataName = digimon.dataName;
     let displayName = Names[dataName][language_chosen] ?? dataName;
     digimonNameDisplay.innerHTML = displayName;
-    digimonImageDisplay.src = "./images/digimon/" + dataName + (DigimonList[dataName][game.game_chosen].sprite ?? "") + ".png";
+    digimonImageDisplay.src = "./images/digimon/" + dataName + (DigimonList[dataName][game.gameChosen].sprite ?? "") + ".png";
     digimonImageDisplay.alt = displayName + " Image";
     digimonLevelDisplay.innerHTML = digimon.level;
     digimonInfoModal.style.display = "block";
@@ -359,12 +421,16 @@ let closeModal = () => digimonInfoModal.style.display = "none";
 const game = new DWDSGame();
 
 document.addEventListener("DOMContentLoaded", _ => {
+    locationButtons = {};
+    locationDivs = {};
+
     starterSelection = document.getElementById("starter-modal");
 
     if (game.player.party.length == 0) {
         starterSelection.style.display = "block";
     }
 
+    // DEBUG: Change to not be hardcoded
     document.getElementById("current-area-dwds").style.backgroundImage = "url(images/areas/dataForest.png)";
     document.getElementById("current-area-dwds").style.backgroundSize = "100%";
 
@@ -379,14 +445,30 @@ document.addEventListener("DOMContentLoaded", _ => {
     }
 
     partyDigimonDivs = partyDigimonBox.querySelectorAll(".party-digimon");
-    document.getElementById("close-modal").onclick = _ => closeModal();
+    document.getElementById("close-modal").addEventListener("click", closeModal);
     enemyDigimonDiv = document.getElementById("enemy-digimon-dwds");
-    document.getElementById("areas-button").onclick = _ => {
-        document.getElementById("areas-menu-dwds").style.display = "block";
-        movedToNewLocation();
-    };
+    enemyDigimonDiv.style.display = "none";
 
-    document.getElementById("attack-button-dwds").onclick = () => {
+    /***************
+     * Areas Data
+     ***************/
+    areasMenuDiv = document.getElementById("areas-menu-dwds");
+    let areasButton = document.getElementById("areas-button");
+    locationButtons[Locations.Areas] = areasButton;
+    locationDivs[Locations.Areas] = areasMenuDiv;
+    areasButton.addEventListener("click", function () {
+        moveToLocation(Locations.Areas);
+    });
+    
+    let townButton = document.getElementById("town-button");
+    locationButtons[Locations.Town] = townButton;
+    locationDivs[Locations.Town] = document.getElementById("town-menu-dwds");
+    townButton.addEventListener("click", function () {
+        moveToLocation(Locations.Town);
+    });
+
+    attackButton = document.getElementById("attack-button-dwds");
+    attackButton.addEventListener("click", () => {
         let battleWon = game.battleSystem.playerAttack();
         if (battleWon) {
             // TODO: Temporary code, need to do it less hardcoded and possibly elsewhere
@@ -398,24 +480,31 @@ document.addEventListener("DOMContentLoaded", _ => {
         } else {
             // TODO: Update so it shows feedback for a Digimon that was defeated before showing the next one? Might not be necessary since some clickers ignore this last feedback in favor of making the game faster
             displayUpdatedEnemyDigimonInformation(game.battleSystem.getCurrentEnemyDigimon());
-            game.battleSystem.enemyAttack();
-            displayUpdatedPlayerDigimonBattleInformation();
+            // If this returns false, the player was defeated
+            if(game.battleSystem.handleEnemyAttack()) {
+                displayUpdatedPlayerDigimonBattleInformation();
+            } else {
+                moveToLocation(Locations.Town);
+            }
         }
-    };
-    // TODO: Rerolls the current enemy Digimon, might need tweaking in the future
-    document.getElementById("flee-button-dwds").onclick = () => {
-        generateNewDigimonEncounter();
-    };
-
-    // NOTE: Might have to change this assingment if the menu is tweaked
-    let areasMenu = document.getElementById("current-area-dwds");
-    areasMenu.querySelector("button").addEventListener("click", function() {
-        game.areasManager.changeSection(-1)
-        movedToNewLocation();
     });
-    areasMenu.querySelectorAll("button")[areasMenu.querySelectorAll("button").length - 1].addEventListener("click", function() {
-        game.areasManager.changeSection(1);
-        movedToNewLocation();
+
+    // TODO: Rerolls the current enemy Digimon, might need tweaking in the future
+    document.getElementById("flee-button-dwds").addEventListener("click", generateNewDigimonEncounter);
+
+    prevSectionButton = document.getElementById("prev-section-button");
+    nextSectionButton = document.getElementById("next-section-button");
+
+    prevSectionButton.addEventListener("click", () => {
+        if (game.areasManager.changeSection(-1)) {
+            movedToNewSection();
+        }
+    });
+
+    nextSectionButton.addEventListener("click", () => {
+        if (game.areasManager.changeSection(1)) {
+            movedToNewSection();
+        }
     });
     
     // Call the function displayDigimonInfo(partySlot) when the button is clicked

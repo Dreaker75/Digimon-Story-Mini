@@ -1,6 +1,7 @@
 export class Game {
     // TODO: Temporary, let player choose later
-    game_chosen = "dwds";
+    gameChosen = "dwds";
+    currLocation = "town";
 
     battleSystem;
     player;

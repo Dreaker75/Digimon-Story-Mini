@@ -15,11 +15,18 @@ export class Battle {
     startBattle(enemyDigimon) {
         this.currEnemy = 0;
         this.enemyDigimon = enemyDigimon;
-        this.calculatePlayerDamage();
+        this.updatePlayerBattleInfo();
+    }
+
+    endBattle() {
+        this.currEnemy = 0;
+        this.enemyDigimon = [];
+        this.player.party.forEach(digimon => {
+            digimon.startBattle();
+        })
     }
 
     playerAttack() {
-        console.log(this.player);
         if (this.enemyDigimon[this.currEnemy].takeDamage(this.playerDamage)) {
             // Grab the information of the Digimon defeated
             var enemyDigimonInfo = DigimonList[this.enemyDigimon[this.currEnemy].dataName];
@@ -53,7 +60,7 @@ export class Battle {
         }
     }
 
-    enemyAttack() {
+    handleEnemyAttack() {
         // TODO: Add extra behavior for boss fights.
         //  1 - Random chance to attack multiple Digimon at once
         //  2 - Random chance to hit multiple times
@@ -70,12 +77,15 @@ export class Battle {
 
             if (targetDigimon.takeDamage(this.enemyDigimon[this.currEnemy].damage)) {
                 // A Digimon from the player's party died, recalculate the damage
-                this.calculatePlayerDamage();
+                return this.updatePlayerBattleInfo();
             }
         }
+
+        return true;
     }
 
-    calculatePlayerDamage() {
+    updatePlayerBattleInfo() {
+        // Update the damage
         this.playerDamage = 0;
         // TODO: Currently uses even reserve Digimon's damage, might need to change to only use active ones, depends on game
         this.player.party.forEach(digimon => {
@@ -84,6 +94,14 @@ export class Battle {
                 this.playerDamage += digimon.damage;
             }
         });
+
+        // If the damage is still 0, there was no Digimon alive
+        if (this.playerDamage === 0) {
+            // We return false to inform the player was defeated
+            return false;
+        }
+
+        return true;
     }
 
     dropDigimonItem() {

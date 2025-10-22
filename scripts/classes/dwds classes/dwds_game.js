@@ -40,7 +40,7 @@ export class DWDSGame extends Game {
     player = new PlayerDWDS(6);
     // TODO: Move generic managers to the base Game class
     battleSystem = new Battle(this.player);
-    encounter = new Encounters(this.game_chosen);
+    encounter = new Encounters(this.gameChosen);
     areasManager = new AreasManager(this.encounter);
     storyManager = new StoryManager(this.areasManager);
 

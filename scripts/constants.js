@@ -4,6 +4,12 @@ export const MAX_LEVEL = 99;
 export const MAX_SPECIES_EXP = 9999;
 export const MAX_TOTAL_EXP = 99999;
 
+export const Locations = {
+    Town: "town",
+    Areas: "areas",
+    DigiFarm: "digifarm",
+}
+
 export const DataNames = {
     //#region Games
     dawn: "Dawn",

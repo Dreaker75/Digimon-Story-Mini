@@ -70,20 +70,23 @@
         src="https://vignette.wikia.nocookie.net/digimon/images/d/d3/Digimon_world_ds_logo.png/revision/latest?cb=20161124161643"
         alt="Digimon City">
       <nav>
+        <button id="town-button" disabled>Town</button>
         <button id="areas-button">Areas</button>
-        <button disabled>Party</button>
-        <button disabled>DigiFarm</button>
-        <button disabled>DigiBank</button>
-        <button disabled>DigiConvert</button>
-        <button disabled>Quests</button>
+        <button class="unimplemented">DigiConvert</button>
+        <button class="unimplemented">DigiBank</button>
+        <button class="unimplemented">DigiFarm</button>
+        <button class="unimplemented">Quests</button>
       </nav>
     </nav>
+    <section id="town-menu-dwds">
+
+    </section>
     <section id="areas-menu-dwds">
       <div id="current-area-dwds">
         <div class="areas">
-          <button>Prev</button> | <button>Select Area</button> | <button>Next</button>
+          <button id="prev-section-button">Prev</button> | <button class="unimplemented">Select Area</button> | <button id="next-section-button">Next</button>
         </div>
-        <h2>Area Name</h2>
+        <h2 id="area-name">Area Name</h2>
         <p><span class="bold">Wild Digimon: </span><span id="wild-digimon-list"></span></p>
         <!-- <img src="images/areas/dataForest.png" alt="Data Forest background"> -->
         <div id="enemy-digimon-dwds">
@@ -99,7 +102,7 @@
     <section id="party-box">
     </section>
   </div>
-  <script type="module" src="scripts/app.js"></script>
+  <script type="module" src="scripts/main.js"></script>
 </body>
 
 </html>
