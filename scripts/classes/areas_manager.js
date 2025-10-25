@@ -20,6 +20,10 @@ export class AreasManager {
         this.areasUnlocked[this.currArea][this.currSection] = true;
     }
 
+    isInAreaAndSection(area, section) {
+        return this.currArea === area && this.currSection === section;
+    }
+
     isNextSectionUnlocked() {
         // We check if there is another section after this one
         if (this.currSection + 1 >= this.areasUnlocked[this.currArea].length) {
@@ -60,7 +64,6 @@ export class AreasManager {
         this.currSection += direction;
         this.encountersManager.newAreaEntered(this.currArea, this.currSection);
 
-        // TODO: Disable Prev/Next Button if next section is locked or there is no prev/next section
         return true;
     }
 }

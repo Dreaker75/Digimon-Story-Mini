@@ -9488,7 +9488,7 @@ export const AreasList = {
                     name: "Area 1",
                     connectsTo: [
                         {
-                            section: 0,
+                            section: 1,
                         },
                     ],
                 },
@@ -9593,7 +9593,16 @@ export const AreasList = {
             dataName: DataNames.trainingPeak,
             name: "Training Peak",
             image: "",
-            sections: [],
+            sections: [
+                {
+                    name: "Area 1",
+                    connectsTo: [
+                        {
+                            section: 1,
+                        },
+                    ],
+                },
+            ],
             digimonPool: [],
         },
         steamyJungle: {
@@ -10006,9 +10015,10 @@ export const AreasList = {
 // - unlocks: if beating this part of the story unlocks a new area. Some story parts don't unlock new areas, but add new Digimon to old areas
 export const GameProgress = {
     dwds: [
-        { type: SpecialValues.defeat, area: AreasList.dwds.dataForest, section: 0, amount: 5, unlocks: { area: AreasList.dwds.dataForest, section: 1 } },
-        { type: SpecialValues.defeat, area: AreasList.dwds.dataForest, section: 1, amount: 5, unlocks: { area: AreasList.dwds.dataForest, section: 2 } },
-        { type: SpecialValues.boss, boss: Bosses.Ogremon, area: AreasList.dwds.dataForest, section: 2, unlocks: { area: AreasList.dwds.trainingPeak, section: 0 } },
+        { type: SpecialValues.defeat, area: AreasList.dwds.dataForest.dataName, section: 0, amount: 5, unlocks: { area: AreasList.dwds.dataForest.dataName, section: 1 } },
+        { type: SpecialValues.defeat, area: AreasList.dwds.dataForest.dataName, section: 1, amount: 5, unlocks: { area: AreasList.dwds.dataForest.dataName, section: 2 } },
+        { type: SpecialValues.boss, boss: Bosses.Ogremon, area: AreasList.dwds.dataForest.dataName, section: 2, unlocks: { area: AreasList.dwds.trainingPeak.dataName, section: 0 } },
+        { type: SpecialValues.defeat, area: AreasList.dwds.trainingPeak.dataName, section: 0, amount: 10, unlocks: { area: AreasList.dwds.trainingPeak.dataName, section: 1 } },
     ],
     dwdd: [
 

@@ -473,6 +473,11 @@ document.addEventListener("DOMContentLoaded", _ => {
         if (battleWon) {
             // TODO: Temporary code, need to do it less hardcoded and possibly elsewhere
             // The player won the battle
+            // Tell the Story Manager that we've defeated a Digimon, so it updates the Story Tasks if it applies
+            if (game.storyManager.digimonDefeated()) {
+                // We completed the Story Task, so a new Section might have unlocked
+                updatePrevNextSectionButtons();
+            }
             generateNewDigimonEncounter();
             setPartyDigimon(0, game.player.party[0]);
             setPartyDigimon(1, game.player.party[1]);
