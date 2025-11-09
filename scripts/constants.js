@@ -6,7 +6,7 @@ export const MAX_TOTAL_EXP = 99999;
 
 export const Locations = {
     Town: "town",
-    Areas: "areas",
+    Maps: "maps",
     DigiFarm: "digifarm",
 }
 
@@ -18,7 +18,7 @@ export const DataNames = {
     blue: "Blue",
     both: "Both",
     //#endregion
-    //#region Areas
+    //#region Maps
     //#region Digimon World DS
     dataForest: "dataForest",
     trainingPeak: "trainingPeak",
@@ -2182,7 +2182,7 @@ export const SpecialValues = {
     legend: "Legend",
     // Game Progress Types
     defeat: "defeat",
-    boss: "boss",
+    bosses: "bosses",
     // DWDS
     GrandLocomon: "GrandLocomon",
     ChronomonDM: "ChronomonDM",
@@ -9358,9 +9358,9 @@ const Story = {
 
 // })
 
-/*  AREA ENCOUNTERS
+/*  MAP ENCOUNTERS
 unlockRequirement: It's a story part that needs to be completed
-connectsTo: Lists the section it connects to, and how many Digimon need to be defeated in the current area to open it
+connectsTo: Lists the area it connects to, and how many Digimon need to be defeated in the current area to open it
 digimon requirements: Story completion, Quest completion or starter chosen
             dataName: "dataForest",
             name: "Data Forest",
@@ -9368,12 +9368,12 @@ digimon requirements: Story completion, Quest completion or starter chosen
             unlockRequirement: {
                 story: -1,
             },
-            sections: [
+            areas: [
                 {
                     name: "Area 1",
                     connectsTo: [
                         {
-                            section: 1,
+                            area: 1,
                             requirement: 5,
                         },
                     ],
@@ -9382,10 +9382,10 @@ digimon requirements: Story completion, Quest completion or starter chosen
                     name: "Area 2",
                     connectsTo: [
                         {
-                            section: 0,
+                            area: 0,
                         },
                         {
-                            section: 2,
+                            area: 2,
                             requirement: 5,
                         },
                     ],
@@ -9394,7 +9394,7 @@ digimon requirements: Story completion, Quest completion or starter chosen
                     name: "Boss Area",
                     connectsTo: [
                         {
-                            section: 1,
+                            area: 1,
                         },
                     ],
                 },
@@ -9477,18 +9477,18 @@ digimon requirements: Story completion, Quest completion or starter chosen
             ],
 */
 
-export const AreasList = {
+export const MapsList = {
     dwds: {
         dataForest: {
             dataName: "dataForest",
             name: "Data Forest",
             image: "",
-            sections: [
+            areas: [
                 {
                     name: "Area 1",
                     connectsTo: [
                         {
-                            section: 1,
+                            area: 1,
                         },
                     ],
                 },
@@ -9496,18 +9496,18 @@ export const AreasList = {
                     name: "Area 2",
                     connectsTo: [
                         {
-                            section: 0,
+                            area: 0,
                         },
                         {
-                            section: 2,
+                            area: 2,
                         },
                     ],
                 },
                 {
-                    name: "Boss Area",
+                    name: "Area 3",
                     connectsTo: [
                         {
-                            section: 1,
+                            area: 1,
                         },
                     ],
                 },
@@ -9547,7 +9547,7 @@ export const AreasList = {
                     level: 9,
                     foundIn: [1, 2],
                     requirement: {
-                        story: Story.dwds.Ogremon,
+                        story: Bosses.Ogremon,
                         starter: DataNames.Koromon,
                     },
                 },
@@ -9556,7 +9556,7 @@ export const AreasList = {
                     level: 9,
                     foundIn: [1, 2],
                     requirement: {
-                        story: Story.dwds.Ogremon,
+                        story: Bosses.Ogremon,
                         starter: DataNames.Tsunomon,
                     },
                 },
@@ -9565,7 +9565,7 @@ export const AreasList = {
                     level: 9,
                     foundIn: [1, 2],
                     requirement: {
-                        story: Story.dwds.Ogremon,
+                        story: Bosses.Ogremon,
                         starter: DataNames.Tanemon,
                     },
                 },
@@ -9584,7 +9584,7 @@ export const AreasList = {
                     level: 7,
                     foundIn: [2],
                     requirement: {
-                        story: Story.dwds.Ogremon,
+                        story: Bosses.Ogremon,
                     },
                 },
             ],
@@ -9593,12 +9593,12 @@ export const AreasList = {
             dataName: DataNames.trainingPeak,
             name: "Training Peak",
             image: "",
-            sections: [
+            areas: [
                 {
                     name: "Area 1",
                     connectsTo: [
                         {
-                            section: 1,
+                            area: 1,
                         },
                     ],
                 },
@@ -9609,112 +9609,112 @@ export const AreasList = {
             dataName: DataNames.steamyJungle,
             name: "Steamy Jungle",
             image: "",
-            sections: [],
+            areas: [],
             digimonPool: [],
         },
         sheerValley: {
             dataName: DataNames.sheerValley,
             name: "Sheer Valley",
             image: "",
-            sections: [],
+            areas: [],
             digimonPool: [],
         },
         drainTunnel: {
             dataName: DataNames.drainTunnel,
             name: "Drain Tunnel",
             image: "",
-            sections: [],
+            areas: [],
             digimonPool: [],
         },
         chromeMine: {
             dataName: DataNames.chromeMine,
             name: "Chrome Mine",
             image: "",
-            sections: [],
+            areas: [],
             digimonPool: [],
         },
         packetSwamp: {
             dataName: DataNames.packetSwamp,
             name: "Packet Swamp",
             image: "",
-            sections: [],
+            areas: [],
             digimonPool: [],
         },
         mangoveWoods: {
             dataName: DataNames.mangoveWoods,
             name: "Mangove Woods",
             image: "",
-            sections: [],
+            areas: [],
             digimonPool: [],
         },
         ancientCanyon: {
             dataName: DataNames.ancientCanyon,
             name: "Ancient Canyon",
             image: "",
-            sections: [],
+            areas: [],
             digimonPool: [],
         },
         junkFactory: {
             dataName: DataNames.junkFactory,
             name: "Junk Factory",
             image: "",
-            sections: [],
+            areas: [],
             digimonPool: [],
         },
         skyPalace: {
             dataName: DataNames.skyPalace,
             name: "Sky Palace",
             image: "",
-            sections: [],
+            areas: [],
             digimonPool: [],
         },
         tropicalIsles: {
             dataName: DataNames.tropicalIsles,
             name: "Tropical Isles",
             image: "",
-            sections: [],
+            areas: [],
             digimonPool: [],
         },
         hardMountains: {
             dataName: DataNames.hardMountains,
             name: "Hard Mountains",
             image: "",
-            sections: [],
+            areas: [],
             digimonPool: [],
         },
         underseaDrive: {
             dataName: DataNames.underseaDrive,
             name: "Undersea Drive",
             image: "",
-            sections: [],
+            areas: [],
             digimonPool: [],
         },
         lavaRiver: {
             dataName: DataNames.lavaRiver,
             name: "Lava River",
             image: "",
-            sections: [],
+            areas: [],
             digimonPool: [],
         },
         coreField: {
             dataName: DataNames.coreField,
             name: "Core Field",
             image: "",
-            sections: [],
+            areas: [],
             digimonPool: [],
         },
         destroyedBelt: {
             dataName: DataNames.destroyedBelt,
             name: "Destroyed Belt",
             image: "",
-            sections: [],
+            areas: [],
             digimonPool: [],
         },
         none: {
             dataName: DataNames.none,
             name: "Unknown",
             image: "",
-            sections: [],
+            areas: [],
             digimonPool: [],
         },
     },
@@ -10011,14 +10011,14 @@ export const AreasList = {
 }
 
 // Holds the information for the next story progress
-// When the type is "boss", the "area" and "section" indicate where said boss spawns. While this story is active, no wild Digimon will spawn in that section
+// When the type is "boss", the "map" and "area" indicate where said boss spawns. While this story is active, no wild Digimon will spawn in that area
 // - unlocks: if beating this part of the story unlocks a new area. Some story parts don't unlock new areas, but add new Digimon to old areas
 export const GameProgress = {
     dwds: [
-        { type: SpecialValues.defeat, area: AreasList.dwds.dataForest.dataName, section: 0, amount: 5, unlocks: { area: AreasList.dwds.dataForest.dataName, section: 1 } },
-        { type: SpecialValues.defeat, area: AreasList.dwds.dataForest.dataName, section: 1, amount: 5, unlocks: { area: AreasList.dwds.dataForest.dataName, section: 2 } },
-        { type: SpecialValues.boss, boss: Bosses.Ogremon, area: AreasList.dwds.dataForest.dataName, section: 2, unlocks: { area: AreasList.dwds.trainingPeak.dataName, section: 0 } },
-        { type: SpecialValues.defeat, area: AreasList.dwds.trainingPeak.dataName, section: 0, amount: 10, unlocks: { area: AreasList.dwds.trainingPeak.dataName, section: 1 } },
+        { type: SpecialValues.defeat, map: MapsList.dwds.dataForest.dataName, area: 0, amount: 5, unlocks: { map: MapsList.dwds.dataForest.dataName, area: 1 } },
+        { type: SpecialValues.defeat, map: MapsList.dwds.dataForest.dataName, area: 1, amount: 5, unlocks: { map: MapsList.dwds.dataForest.dataName, area: 2 } },
+        { type: SpecialValues.bosses, bosses: [{ dataName: Bosses.Ogremon, level: 7 }], map: MapsList.dwds.dataForest.dataName, area: 2, unlocks: { map: MapsList.dwds.trainingPeak.dataName, area: 0 } },
+        { type: SpecialValues.defeat, map: MapsList.dwds.trainingPeak.dataName, area: 0, amount: 10, unlocks: { map: MapsList.dwds.trainingPeak.dataName, area: 1 } },
     ],
     dwdd: [
 
@@ -10042,7 +10042,7 @@ export const DigimonList = {
         stage: Stage.stage1,
         dwds: {
             location: {
-                area: AreasList.dwds.dataForest,
+                area: MapsList.dwds.dataForest,
                 special: SpecialValues.starter,
             },
             evolutions: [
@@ -10070,7 +10070,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.limitValley,
+                area: MapsList.dwdd.limitValley,
                 version: DataNames.both,
             },
             evolutions: [
@@ -10090,7 +10090,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.heritageCape,
+                area: MapsList.dsle.heritageCape,
             },
             drops: [
                 {
@@ -10115,7 +10115,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.stealthValley,
+                area: MapsList.dssxw.stealthValley,
                 version: DataNames.both,
             },
             fusions: [DataNames.WarGreymon, DataNames.ShineGreymonBM],
@@ -10126,7 +10126,7 @@ export const DigimonList = {
         stage: Stage.stage1,
         dwds: {
             location: {
-                area: AreasList.dwds.dataForest,
+                area: MapsList.dwds.dataForest,
                 special: SpecialValues.starter,
             },
             evolutions: [
@@ -10151,7 +10151,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -10168,7 +10168,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.heritageCape,
+                area: MapsList.dsle.heritageCape,
             },
             drops: [
                 {
@@ -10194,7 +10194,7 @@ export const DigimonList = {
         stage: Stage.stage1,
         dwds: {
             location: {
-                area: AreasList.dwds.dataForest,
+                area: MapsList.dwds.dataForest,
                 special: SpecialValues.starter,
             },
             evolutions: [
@@ -10219,7 +10219,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.chipForest,
+                area: MapsList.dwdd.chipForest,
                 version: DataNames.both,
             },
             evolutions: [
@@ -10248,7 +10248,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.heritageCape,
+                area: MapsList.dsle.heritageCape,
             },
             drops: [
                 {
@@ -10274,7 +10274,7 @@ export const DigimonList = {
         stage: Stage.stage1,
         dwds: {
             location: {
-                area: AreasList.dwds.dataForest,
+                area: MapsList.dwds.dataForest,
             },
             evolutions: [
                 {
@@ -10298,7 +10298,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.loopSwamp,
+                area: MapsList.dwdd.loopSwamp,
                 version: DataNames.both,
             },
             evolutions: [
@@ -10323,7 +10323,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.loopSwamp,
+                area: MapsList.dsle.loopSwamp,
             },
             evolutions: [
                 {
@@ -10347,7 +10347,7 @@ export const DigimonList = {
         stage: Stage.stage1,
         dwds: {
             location: {
-                area: AreasList.dwds.trainingPeak,
+                area: MapsList.dwds.trainingPeak,
             },
             evolutions: [
                 {
@@ -10370,7 +10370,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.loginMountain,
+                area: MapsList.dwdd.loginMountain,
                 version: DataNames.both,
             },
             evolutions: [
@@ -10394,7 +10394,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.riskFactory,
+                area: MapsList.dsle.riskFactory,
             },
             drops: [
                 {
@@ -10428,7 +10428,7 @@ export const DigimonList = {
         stage: Stage.stage1,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutions: [
                 {
@@ -10448,7 +10448,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.highlightHaven,
+                area: MapsList.dwdd.highlightHaven,
                 version: DataNames.dawn,
             },
             evolutions: [
@@ -10476,7 +10476,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.none,
+                area: MapsList.dsle.none,
             },
             evolutions: [
                 {
@@ -10496,7 +10496,7 @@ export const DigimonList = {
         stage: Stage.stage1,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutions: [
                 {
@@ -10516,7 +10516,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.taskCanyon,
+                area: MapsList.dwdd.taskCanyon,
                 version: DataNames.dawn,
             },
             evolutions: [
@@ -10537,7 +10537,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.none,
+                area: MapsList.dsle.none,
             },
             evolutions: [
                 {
@@ -10557,7 +10557,7 @@ export const DigimonList = {
         stage: Stage.stage1,
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -10579,7 +10579,7 @@ export const DigimonList = {
         dsle: {
             location: {
                 // Added specifically for DIS, not found anywhere in the original games
-                area: AreasList.dsle.labelForest,
+                area: MapsList.dsle.labelForest,
             },
             evolutions: [
                 {
@@ -10604,7 +10604,7 @@ export const DigimonList = {
         stage: Stage.stage1,
         dwdd: {
             location: {
-                area: AreasList.dwdd.taskCanyon,
+                area: MapsList.dwdd.taskCanyon,
                 version: DataNames.dawn,
             },
             evolutions: [
@@ -10620,7 +10620,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.packetCoast,
+                area: MapsList.dsle.packetCoast,
             },
             evolutions: [
                 {
@@ -10636,7 +10636,7 @@ export const DigimonList = {
         stage: Stage.stage1,
         dwdd: {
             location: {
-                area: AreasList.dwdd.chipForest,
+                area: MapsList.dwdd.chipForest,
                 version: DataNames.both,
             },
             evolutions: [
@@ -10661,7 +10661,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.chipForest,
+                area: MapsList.dsle.chipForest,
             },
             drops: [
                 {
@@ -10688,7 +10688,7 @@ export const DigimonList = {
         stage: Stage.stage1,
         dwdd: {
             location: {
-                area: AreasList.dwdd.chipForest,
+                area: MapsList.dwdd.chipForest,
                 version: DataNames.both,
             },
             evolutions: [
@@ -10705,7 +10705,7 @@ export const DigimonList = {
         stage: Stage.stage1,
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -10722,7 +10722,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.patchPrairie,
+                area: MapsList.dsle.patchPrairie,
             },
             evolutions: [
                 {
@@ -10739,7 +10739,7 @@ export const DigimonList = {
         dwdd: {
             location: {
                 // Added specifically for DIS, not found anywhere in the original games
-                area: AreasList.dwdd.chipForest,
+                area: MapsList.dwdd.chipForest,
                 version: DataNames.dusk,
             },
             evolutions: [
@@ -10764,7 +10764,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.none,
+                area: MapsList.dsle.none,
             },
             evolutions: [
                 {
@@ -10780,7 +10780,7 @@ export const DigimonList = {
         stage: Stage.stage1,
         dwdd: {
             location: {
-                area: AreasList.dwdd.thrillerRuins, // TODO: Found in the temple area
+                area: MapsList.dwdd.thrillerRuins, // TODO: Found in the temple area
                 version: DataNames.dawn,
             },
             evolutions: [
@@ -10801,7 +10801,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.none,
+                area: MapsList.dsle.none,
             },
             evolutions: [
                 {
@@ -10817,7 +10817,7 @@ export const DigimonList = {
         stage: Stage.stage1,
         dwdd: {
             location: {
-                area: AreasList.dwdd.thrillerRuins,
+                area: MapsList.dwdd.thrillerRuins,
                 version: DataNames.both,
             },
             evolutions: [
@@ -10838,7 +10838,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.loginMountain,
+                area: MapsList.dsle.loginMountain,
             },
             drops: [
                 {
@@ -10864,7 +10864,7 @@ export const DigimonList = {
         stage: Stage.stage1,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutions: [
                 {
@@ -10888,7 +10888,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.magnetMine,
+                area: MapsList.dwdd.magnetMine,
                 version: DataNames.dusk,
             },
             evolutions: [
@@ -10902,7 +10902,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.magnetMine,
+                area: MapsList.dsle.magnetMine,
             },
             drops: [
                 {
@@ -10920,7 +10920,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.darknessTunnel,
+                area: MapsList.dssxw.darknessTunnel,
                 version: DataNames.blue,
             },
             drops: [
@@ -10937,7 +10937,7 @@ export const DigimonList = {
         stage: Stage.stage1,
         dwdd: {
             location: {
-                area: AreasList.dwdd.shadowAbyss,
+                area: MapsList.dwdd.shadowAbyss,
                 version: DataNames.dusk,
             },
             evolutions: [
@@ -10961,7 +10961,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.northCave,
+                area: MapsList.dsle.northCave,
             },
             evolutions: [
                 {
@@ -10981,7 +10981,7 @@ export const DigimonList = {
         stage: Stage.stage1,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutions: [
                 {
@@ -11009,7 +11009,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.sunkenTunnel,
+                area: MapsList.dwdd.sunkenTunnel,
                 version: DataNames.both,
             },
             evolutions: [
@@ -11034,7 +11034,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.magnetMine,
+                area: MapsList.dsle.magnetMine,
             },
             evolutions: [
                 {
@@ -11058,7 +11058,7 @@ export const DigimonList = {
         stage: Stage.stage1,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutions: [
                 {
@@ -11082,7 +11082,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -11107,7 +11107,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.none,
+                area: MapsList.dsle.none,
             },
             evolutions: [
                 {
@@ -11127,7 +11127,7 @@ export const DigimonList = {
         stage: Stage.stage1,
         dwdd: {
             location: {
-                area: AreasList.dwdd.taskCanyon,
+                area: MapsList.dwdd.taskCanyon,
                 version: DataNames.dawn,
             },
             evolutions: [
@@ -11140,7 +11140,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.classDesert,
+                area: MapsList.dsle.classDesert,
             },
             drops: [
                 {
@@ -11166,7 +11166,7 @@ export const DigimonList = {
         stage: Stage.stage1,
         dwdd: {
             location: {
-                area: AreasList.dwdd.magnetMine,
+                area: MapsList.dwdd.magnetMine,
                 version: DataNames.dusk,
             },
             evolutions: [
@@ -11179,7 +11179,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.chromeMine,
+                area: MapsList.dsle.chromeMine,
             },
             drops: [
                 {
@@ -11205,7 +11205,7 @@ export const DigimonList = {
         stage: Stage.stage1,
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -11226,7 +11226,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.none,
+                area: MapsList.dsle.none,
             },
             evolutions: [
                 {
@@ -11253,20 +11253,20 @@ export const DigimonList = {
         stage: Stage.stage1,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutionTree: DataNames.Culumon,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Culumon,
         },
         dsle: {
             location: {
-                area: AreasList.dsle.none,
+                area: MapsList.dsle.none,
             },
             evolutions: [
                 {
@@ -11279,7 +11279,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.CulumonHeart, DataNames.CulumonSpade],
             location: {
-                area: AreasList.dssxw.none,
+                area: MapsList.dssxw.none,
                 version: DataNames.both,
             },
         },
@@ -11289,7 +11289,7 @@ export const DigimonList = {
         stage: Stage.stage1,
         dssxw: {
             location: {
-                area: AreasList.dssxw.digitalSpaceSouth,
+                area: MapsList.dssxw.digitalSpaceSouth,
                 version: DataNames.both,
             },
         },
@@ -11299,7 +11299,7 @@ export const DigimonList = {
         stage: Stage.stage1,
         dssxw: {
             location: {
-                area: AreasList.dssxw.digitalSpaceNorth,
+                area: MapsList.dssxw.digitalSpaceNorth,
                 version: DataNames.blue,
             },
         },
@@ -11309,7 +11309,7 @@ export const DigimonList = {
         stage: Stage.stage2,
         dssxw: {
             location: {
-                area: AreasList.dssxw.digitalSpaceSouth,
+                area: MapsList.dssxw.digitalSpaceSouth,
                 version: DataNames.both,
             },
         },
@@ -11323,7 +11323,7 @@ export const DigimonList = {
         dwds: {
             sprite: "",
             location: {
-                area: AreasList.dwds.dataForest,
+                area: MapsList.dwds.dataForest,
                 special: SpecialValues.starter,
             },
             evolutions: [
@@ -11341,7 +11341,7 @@ export const DigimonList = {
         dwdd: {
             sprite: "",
             location: {
-                area: AreasList.dwdd.limitValley,
+                area: MapsList.dwdd.limitValley,
                 version: DataNames.both,
             },
             evolutions: [
@@ -11363,7 +11363,7 @@ export const DigimonList = {
         dsle: {
             sprite: "_2",
             location: {
-                area: AreasList.dsle.none,
+                area: MapsList.dsle.none,
             },
             evolutions: [
                 {
@@ -11382,7 +11382,7 @@ export const DigimonList = {
         dssxw: {
             sprite: "_2",
             location: {
-                area: AreasList.dssxw.fortYard,
+                area: MapsList.dssxw.fortYard,
                 version: DataNames.blue,
             },
             fusions: [DataNames.Agunimon, DataNames.Greymon, DataNames.WarGreymon, DataNames.ShoutmonSpade],
@@ -11393,7 +11393,7 @@ export const DigimonList = {
         stage: Stage.stage2,
         dwds: {
             location: {
-                area: AreasList.dwds.dataForest,
+                area: MapsList.dwds.dataForest,
                 special: SpecialValues.starter,
             },
             evolutions: [
@@ -11406,7 +11406,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.resistorJungle,
+                area: MapsList.dwdd.resistorJungle,
                 version: DataNames.both,
             },
             evolutions: [
@@ -11427,7 +11427,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.none,
+                area: MapsList.dsle.none,
             },
             evolutions: [
                 {
@@ -11440,7 +11440,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.fortYard,
+                area: MapsList.dssxw.fortYard,
                 version: DataNames.blue,
             },
             fusions: [DataNames.KabuterimonSpade, DataNames.Gaogamon, DataNames.Garurumon, DataNames.Greymon, DataNames.MetalGarurumon],
@@ -11451,7 +11451,7 @@ export const DigimonList = {
         stage: Stage.stage2,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutions: [
                 {
@@ -11463,7 +11463,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.limitValley,
+                area: MapsList.dwdd.limitValley,
                 version: DataNames.both,
             },
             evolutions: [
@@ -11484,7 +11484,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.patchPrairie,
+                area: MapsList.dsle.patchPrairie,
             },
             drops: [
                 {
@@ -11507,7 +11507,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.knuckleCoast,
+                area: MapsList.dssxw.knuckleCoast,
                 version: DataNames.both,
             },
             fusions: [DataNames.Aquilamon, DataNames.Angemon],
@@ -11518,7 +11518,7 @@ export const DigimonList = {
         stage: Stage.stage2,
         dwds: {
             location: {
-                area: AreasList.dwds.dataForest,
+                area: MapsList.dwds.dataForest,
                 special: SpecialValues.starter,
             },
             evolutions: [
@@ -11531,7 +11531,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -11552,7 +11552,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.none,
+                area: MapsList.dsle.none,
             },
             evolutions: [
                 {
@@ -11565,7 +11565,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.knuckleCoast,
+                area: MapsList.dssxw.knuckleCoast,
                 version: DataNames.both,
             },
             fusions: [DataNames.Ankylomon, DataNames.ArgomonUltimate],
@@ -11576,7 +11576,7 @@ export const DigimonList = {
         stage: Stage.stage2,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutions: [
                 {
@@ -11592,7 +11592,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.chipForest,
+                area: MapsList.dwdd.chipForest,
                 version: DataNames.both,
             },
             evolutions: [
@@ -11617,7 +11617,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.labelForest,
+                area: MapsList.dsle.labelForest,
             },
             drops: [
                 {
@@ -11636,7 +11636,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.knuckleCoast,
+                area: MapsList.dssxw.knuckleCoast,
                 version: DataNames.both,
             },
             fusions: [DataNames.KabuterimonSpade, DataNames.KabuterimonHeart, DataNames.Stingmon],
@@ -11647,7 +11647,7 @@ export const DigimonList = {
         stage: Stage.stage2,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutions: [
                 {
@@ -11659,7 +11659,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -11672,7 +11672,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.loopSwamp,
+                area: MapsList.dsle.loopSwamp,
             },
             evolutions: [
                 {
@@ -11689,7 +11689,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.knuckleCoast,
+                area: MapsList.dssxw.knuckleCoast,
                 version: DataNames.both,
             },
             drops: [
@@ -11706,7 +11706,7 @@ export const DigimonList = {
         stage: Stage.stage2,
         dwds: {
             location: {
-                area: AreasList.dwds.trainingPeak,
+                area: MapsList.dwds.trainingPeak,
             },
             evolutions: [
                 {
@@ -11722,7 +11722,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.loginMountain,
+                area: MapsList.dwdd.loginMountain,
                 version: DataNames.both,
             },
             evolutions: [
@@ -11740,7 +11740,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.patchPrairie,
+                area: MapsList.dsle.patchPrairie,
             },
             drops: [
                 {
@@ -11768,7 +11768,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.flowerMeadow,
+                area: MapsList.dssxw.flowerMeadow,
                 version: DataNames.blue,
             },
             drops: [
@@ -11789,7 +11789,7 @@ export const DigimonList = {
         stage: Stage.stage2,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutions: [
                 {
@@ -11801,7 +11801,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -11814,7 +11814,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.packetCoast,
+                area: MapsList.dsle.packetCoast,
             },
             drops: [
                 {
@@ -11833,7 +11833,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.fortYard,
+                area: MapsList.dssxw.fortYard,
                 version: DataNames.red,
             },
             drops: [
@@ -11858,7 +11858,7 @@ export const DigimonList = {
         stage: Stage.stage2,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutions: [
                 {
@@ -11870,7 +11870,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.loginMountain,
+                area: MapsList.dwdd.loginMountain,
                 version: DataNames.both,
             },
             evolutions: [
@@ -11892,7 +11892,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.loginMountain,
+                area: MapsList.dsle.loginMountain,
             },
             drops: [
                 {
@@ -11921,7 +11921,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.knuckleCoast,
+                area: MapsList.dssxw.knuckleCoast,
                 version: DataNames.blue,
             },
             drops: [
@@ -11942,7 +11942,7 @@ export const DigimonList = {
         stage: Stage.stage2,
         dwds: {
             location: {
-                area: AreasList.dwds.steamyJungle,
+                area: MapsList.dwds.steamyJungle,
             },
             evolutions: [
                 {
@@ -11954,7 +11954,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.resistorJungle,
+                area: MapsList.dwdd.resistorJungle,
                 version: DataNames.both,
             },
             evolutions: [
@@ -11972,7 +11972,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.chipForest,
+                area: MapsList.dsle.chipForest,
             },
             drops: [
                 {
@@ -12004,7 +12004,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.flowerMeadow,
+                area: MapsList.dssxw.flowerMeadow,
                 version: DataNames.blue,
             },
             drops: [
@@ -12025,7 +12025,7 @@ export const DigimonList = {
         stage: Stage.stage2,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutions: [
                 {
@@ -12037,7 +12037,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.loginMountain,
+                area: MapsList.dwdd.loginMountain,
                 version: DataNames.both,
             },
             evolutions: [
@@ -12051,7 +12051,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.loginMountain,
+                area: MapsList.dsle.loginMountain,
             },
             drops: [
                 {
@@ -12075,7 +12075,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.fortYard,
+                area: MapsList.dssxw.fortYard,
                 version: DataNames.red,
             },
             drops: [
@@ -12092,7 +12092,7 @@ export const DigimonList = {
         stage: Stage.stage2,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutions: [
                 {
@@ -12104,7 +12104,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.loginMountain,
+                area: MapsList.dwdd.loginMountain,
                 version: DataNames.both,
             },
             evolutions: [
@@ -12127,7 +12127,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Armadimon],
             location: {
-                area: AreasList.dsle.loginMountain,
+                area: MapsList.dsle.loginMountain,
             },
             drops: [
                 {
@@ -12155,7 +12155,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.fortYard,
+                area: MapsList.dssxw.fortYard,
                 version: DataNames.blue,
             },
             fusions: [DataNames.Ankylomon, DataNames.Minotarumon],
@@ -12166,7 +12166,7 @@ export const DigimonList = {
         stage: Stage.stage2,
         dwds: {
             location: {
-                area: AreasList.dwds.sheerValley,
+                area: MapsList.dwds.sheerValley,
             },
             evolutions: [
                 {
@@ -12182,7 +12182,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.taskCanyon,
+                area: MapsList.dwdd.taskCanyon,
                 version: DataNames.dawn,
             },
             evolutions: [
@@ -12206,7 +12206,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.limitValley,
+                area: MapsList.dsle.limitValley,
             },
             drops: [
                 {
@@ -12228,7 +12228,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.knuckleCoast,
+                area: MapsList.dssxw.knuckleCoast,
                 version: DataNames.red,
             },
             drops: [
@@ -12249,7 +12249,7 @@ export const DigimonList = {
         stage: Stage.stage2,
         dwds: {
             location: {
-                area: AreasList.dwds.sheerValley,
+                area: MapsList.dwds.sheerValley,
             },
             evolutions: [
                 {
@@ -12265,7 +12265,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.limitValley,
+                area: MapsList.dwdd.limitValley,
                 version: DataNames.both,
             },
             evolutions: [
@@ -12286,7 +12286,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.pixelDesert,
+                area: MapsList.dsle.pixelDesert,
             },
             drops: [
                 {
@@ -12309,7 +12309,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.darknessTunnel,
+                area: MapsList.dssxw.darknessTunnel,
                 version: DataNames.red,
             },
             drops: [
@@ -12326,7 +12326,7 @@ export const DigimonList = {
         stage: Stage.stage2,
         dwds: {
             location: {
-                area: AreasList.dwds.steamyJungle,
+                area: MapsList.dwds.steamyJungle,
             },
             evolutions: [
                 {
@@ -12338,7 +12338,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -12355,7 +12355,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.none,
+                area: MapsList.dsle.none,
             },
             evolutions: [
                 {
@@ -12368,7 +12368,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.flowerMeadow,
+                area: MapsList.dssxw.flowerMeadow,
                 version: DataNames.red,
             },
             drops: [
@@ -12389,7 +12389,7 @@ export const DigimonList = {
         stage: Stage.stage2,
         dwds: {
             location: {
-                area: AreasList.dwds.steamyJungle,
+                area: MapsList.dwds.steamyJungle,
             },
             evolutions: [
                 {
@@ -12401,7 +12401,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -12426,7 +12426,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.none,
+                area: MapsList.dsle.none,
             },
             evolutions: [
                 {
@@ -12438,7 +12438,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.flowerMeadow,
+                area: MapsList.dssxw.flowerMeadow,
                 version: DataNames.red,
             },
             fusions: [DataNames.CulumonHeart, DataNames.Gargomon, DataNames.Seasarmon, DataNames.Lekismon],
@@ -12449,7 +12449,7 @@ export const DigimonList = {
         stage: Stage.stage2,
         dwds: {
             location: {
-                area: AreasList.dwds.chromeMine,
+                area: MapsList.dwds.chromeMine,
             },
             evolutions: [
                 {
@@ -12477,7 +12477,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -12502,7 +12502,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.anglerTunnel,
+                area: MapsList.dsle.anglerTunnel,
             },
             drops: [
                 {
@@ -12522,7 +12522,7 @@ export const DigimonList = {
         dssxw: {
             sprite: "_2",
             location: {
-                area: AreasList.dssxw.darknessTunnel,
+                area: MapsList.dssxw.darknessTunnel,
                 version: DataNames.red,
             },
             drops: [
@@ -12539,7 +12539,7 @@ export const DigimonList = {
         stage: Stage.stage2,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutions: [
                 {
@@ -12551,7 +12551,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -12572,7 +12572,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.chipForest,
+                area: MapsList.dsle.chipForest,
             },
             drops: [
                 {
@@ -12596,7 +12596,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.knuckleCoast,
+                area: MapsList.dssxw.knuckleCoast,
                 version: DataNames.red,
             },
             drops: [
@@ -12613,7 +12613,7 @@ export const DigimonList = {
         stage: Stage.stage2,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutions: [
                 {
@@ -12625,7 +12625,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -12646,7 +12646,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.labelForest,
+                area: MapsList.dsle.labelForest,
             },
             evolutions: [
                 {
@@ -12668,7 +12668,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.knuckleCoast,
+                area: MapsList.dssxw.knuckleCoast,
                 version: DataNames.blue,
             },
             drops: [
@@ -12689,7 +12689,7 @@ export const DigimonList = {
         stage: Stage.stage2,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutions: [
                 {
@@ -12701,7 +12701,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -12714,7 +12714,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.none,
+                area: MapsList.dsle.none,
             },
             evolutions: [
                 {
@@ -12726,7 +12726,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.fortYard,
+                area: MapsList.dssxw.fortYard,
                 version: DataNames.blue,
             },
             fusions: [DataNames.Firamon, DataNames.RavemonBM],
@@ -12737,7 +12737,7 @@ export const DigimonList = {
         stage: Stage.stage2,
         dwds: {
             location: {
-                area: AreasList.dwds.chromeMine,
+                area: MapsList.dwds.chromeMine,
             },
             evolutions: [
                 {
@@ -12753,7 +12753,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.thrillerRuins,
+                area: MapsList.dwdd.thrillerRuins,
                 version: DataNames.both,
             },
             evolutions: [
@@ -12770,13 +12770,13 @@ export const DigimonList = {
         stage: Stage.stage2,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutionTree: DataNames.Puttomon,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.thrillerRuins,
+                area: MapsList.dwdd.thrillerRuins,
                 version: DataNames.both,
             },
             evolutions: [
@@ -12789,7 +12789,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.darknessTunnel,
+                area: MapsList.dssxw.darknessTunnel,
                 version: DataNames.blue,
             },
             fusions: [DataNames.Ankylomon],
@@ -12800,7 +12800,7 @@ export const DigimonList = {
         stage: Stage.stage2,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutions: [
                 {
@@ -12812,7 +12812,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.taskCanyon,
+                area: MapsList.dwdd.taskCanyon,
                 version: DataNames.dawn,
             },
             evolutions: [
@@ -12833,7 +12833,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.chipForest,
+                area: MapsList.dsle.chipForest,
             },
             drops: [
                 {
@@ -12857,7 +12857,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.knuckleCoast,
+                area: MapsList.dssxw.knuckleCoast,
                 version: DataNames.red,
             },
             drops: [
@@ -12874,7 +12874,7 @@ export const DigimonList = {
         stage: Stage.stage2,
         dwds: {
             location: {
-                area: AreasList.dwds.mangoveWoods,
+                area: MapsList.dwds.mangoveWoods,
             },
             evolutions: [
                 {
@@ -12890,7 +12890,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.loopSwamp,
+                area: MapsList.dwdd.loopSwamp,
                 version: DataNames.both,
             },
             evolutions: [
@@ -12912,7 +12912,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Kamemon],
             location: {
-                area: AreasList.dsle.loopSwamp,
+                area: MapsList.dsle.loopSwamp,
             },
             drops: [
                 {
@@ -12937,7 +12937,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.spinningAmazon,
+                area: MapsList.dssxw.spinningAmazon,
                 version: DataNames.blue,
             },
             drops: [
@@ -12954,7 +12954,7 @@ export const DigimonList = {
         stage: Stage.stage2,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutions: [
                 {
@@ -12970,7 +12970,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -12991,7 +12991,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.loginMountain,
+                area: MapsList.dsle.loginMountain,
             },
             evolutions: [
                 {
@@ -13012,7 +13012,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.fortYard,
+                area: MapsList.dssxw.fortYard,
                 version: DataNames.red,
             },
             drops: [
@@ -13029,7 +13029,7 @@ export const DigimonList = {
         stage: Stage.stage2,
         dwdd: {
             location: {
-                area: AreasList.dwdd.loginMountain,
+                area: MapsList.dwdd.loginMountain,
                 version: DataNames.both,
             },
             evolutions: [
@@ -13057,7 +13057,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.none,
+                area: MapsList.dsle.none,
             },
             drops: [
                 {
@@ -13076,7 +13076,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.darknessTunnel,
+                area: MapsList.dssxw.darknessTunnel,
                 version: DataNames.blue,
             },
             fusions: [DataNames.ExVeemon],
@@ -13087,7 +13087,7 @@ export const DigimonList = {
         stage: Stage.stage2,
         dwds: {
             location: {
-                area: AreasList.dwds.trainingPeak,
+                area: MapsList.dwds.trainingPeak,
             },
             evolutions: [
                 {
@@ -13099,7 +13099,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.processFactory,
+                area: MapsList.dwdd.processFactory,
                 version: DataNames.dusk,
             },
             evolutions: [
@@ -13124,7 +13124,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.packetCoast,
+                area: MapsList.dsle.packetCoast,
             },
             drops: [
                 {
@@ -13151,13 +13151,13 @@ export const DigimonList = {
         stage: Stage.stage2,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutionTree: DataNames.Chicomon,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -13174,7 +13174,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.skullIceberg,
+                area: MapsList.dssxw.skullIceberg,
                 version: DataNames.red,
             },
             fusions: [DataNames.Lekismon],
@@ -13185,7 +13185,7 @@ export const DigimonList = {
         stage: Stage.stage2,
         dwds: {
             location: {
-                area: AreasList.dwds.dataForest,
+                area: MapsList.dwds.dataForest,
             },
             evolutions: [
                 {
@@ -13209,7 +13209,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.chipForest,
+                area: MapsList.dwdd.chipForest,
                 version: DataNames.both,
             },
             evolutions: [
@@ -13238,7 +13238,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.labelForest,
+                area: MapsList.dsle.labelForest,
             },
             drops: [
                 {
@@ -13257,7 +13257,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.fortYard,
+                area: MapsList.dssxw.fortYard,
                 version: DataNames.both,
             },
             fusions: [DataNames.Minotarumon, DataNames.Musyamon, DataNames.LeomonHeart, DataNames.LeomonSpade],
@@ -13268,7 +13268,7 @@ export const DigimonList = {
         stage: Stage.stage2,
         dwdd: {
             location: {
-                area: AreasList.dwdd.limitValley,
+                area: MapsList.dwdd.limitValley,
                 version: DataNames.both,
             },
             evolutions: [
@@ -13300,7 +13300,7 @@ export const DigimonList = {
         stage: Stage.stage2,
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -13325,7 +13325,7 @@ export const DigimonList = {
         stage: Stage.stage2,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutions: [
                 {
@@ -13341,7 +13341,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.chipForest,
+                area: MapsList.dwdd.chipForest,
                 version: DataNames.both,
             },
             evolutions: [
@@ -13374,7 +13374,7 @@ export const DigimonList = {
         stage: Stage.stage2,
         dwds: {
             location: {
-                area: AreasList.dwds.mangoveWoods,
+                area: MapsList.dwds.mangoveWoods,
             },
             evolutions: [
                 {
@@ -13394,7 +13394,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -13419,7 +13419,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.skullIceberg,
+                area: MapsList.dssxw.skullIceberg,
                 version: DataNames.both,
             },
             drops: [
@@ -13436,7 +13436,7 @@ export const DigimonList = {
         stage: Stage.stage2,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutions: [
                 {
@@ -13448,7 +13448,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.paletteAmazon,
+                area: MapsList.dwdd.paletteAmazon,
                 version: DataNames.both,
             },
             evolutions: [
@@ -13477,7 +13477,7 @@ export const DigimonList = {
         stage: Stage.stage2,
         dwds: {
             location: {
-                area: AreasList.dwds.dataForest,
+                area: MapsList.dwds.dataForest,
             },
             evolutions: [
                 {
@@ -13493,7 +13493,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.sunkenTunnel,
+                area: MapsList.dwdd.sunkenTunnel,
                 version: DataNames.both,
             },
             evolutions: [
@@ -13526,7 +13526,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.packetCoast,
+                area: MapsList.dsle.packetCoast,
             },
             drops: [
                 {
@@ -13548,7 +13548,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.knuckleCoast,
+                area: MapsList.dssxw.knuckleCoast,
                 version: DataNames.blue,
             },
             fusions: [DataNames.Gekomon],
@@ -13559,7 +13559,7 @@ export const DigimonList = {
         stage: Stage.stage2,
         dwds: {
             location: {
-                area: AreasList.dwds.drainTunnel,
+                area: MapsList.dwds.drainTunnel,
             },
             evolutions: [
                 {
@@ -13579,7 +13579,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.loopSwamp,
+                area: MapsList.dwdd.loopSwamp,
                 version: DataNames.both,
             },
             evolutions: [
@@ -13611,7 +13611,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.spinningAmazon,
+                area: MapsList.dssxw.spinningAmazon,
                 version: DataNames.blue,
             },
             drops: [
@@ -13628,7 +13628,7 @@ export const DigimonList = {
         stage: Stage.stage2,
         dwds: {
             location: {
-                area: AreasList.dwds.packetSwamp,
+                area: MapsList.dwds.packetSwamp,
             },
             evolutions: [
                 {
@@ -13640,7 +13640,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.paletteAmazon,
+                area: MapsList.dwdd.paletteAmazon,
                 version: DataNames.both,
             },
             evolutions: [
@@ -13657,7 +13657,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.spinningAmazon,
+                area: MapsList.dssxw.spinningAmazon,
                 version: DataNames.red,
             },
             drops: [
@@ -13674,7 +13674,7 @@ export const DigimonList = {
         stage: Stage.stage2,
         dwds: {
             location: {
-                area: AreasList.dwds.drainTunnel,
+                area: MapsList.dwds.drainTunnel,
             },
             evolutions: [
                 {
@@ -13686,7 +13686,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.sunkenTunnel,
+                area: MapsList.dwdd.sunkenTunnel,
                 version: DataNames.both,
             },
             evolutions: [
@@ -13715,7 +13715,7 @@ export const DigimonList = {
         stage: Stage.stage2,
         dwdd: {
             location: {
-                area: AreasList.dwdd.macroSea,
+                area: MapsList.dwdd.macroSea,
                 version: DataNames.both,
             },
             evolutions: [
@@ -13744,7 +13744,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.loopSwamp,
+                area: MapsList.dsle.loopSwamp,
             },
             evolutions: [
                 {
@@ -13765,7 +13765,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.none,
+                area: MapsList.dssxw.none,
                 version: DataNames.both,
             },
             fusions: [DataNames.Coelamon, DataNames.Dorugamon],
@@ -13776,7 +13776,7 @@ export const DigimonList = {
         stage: Stage.stage2,
         dwdd: {
             location: {
-                area: AreasList.dwdd.chipForest,
+                area: MapsList.dwdd.chipForest,
                 version: DataNames.both,
             },
             evolutions: [
@@ -13813,7 +13813,7 @@ export const DigimonList = {
         stage: Stage.stage2,
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -13846,7 +13846,7 @@ export const DigimonList = {
         stage: Stage.stage2,
         dwds: {
             location: {
-                area: AreasList.dwds.steamyJungle,
+                area: MapsList.dwds.steamyJungle,
             },
             evolutions: [
                 {
@@ -13858,7 +13858,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.resistorJungle,
+                area: MapsList.dwdd.resistorJungle,
                 version: DataNames.both,
             },
             evolutions: [
@@ -13875,7 +13875,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.chipForest,
+                area: MapsList.dsle.chipForest,
             },
             evolutions: [
                 {
@@ -13888,7 +13888,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.flowerMeadow,
+                area: MapsList.dssxw.flowerMeadow,
                 version: DataNames.red,
             },
             fusions: [DataNames.Kabukimon],
@@ -13899,13 +13899,13 @@ export const DigimonList = {
         stage: Stage.stage2,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutionTree: DataNames.Dorimon,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -13930,7 +13930,7 @@ export const DigimonList = {
         stage: Stage.stage2,
         dwdd: {
             location: {
-                area: AreasList.dwdd.chipForest,
+                area: MapsList.dwdd.chipForest,
                 version: DataNames.both,
             },
             evolutions: [
@@ -13947,7 +13947,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.spinningAmazon,
+                area: MapsList.dssxw.spinningAmazon,
                 version: DataNames.blue,
             },
             fusions: [DataNames.Chrysalimon],
@@ -13958,7 +13958,7 @@ export const DigimonList = {
         stage: Stage.stage2,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutions: [
                 {
@@ -13978,7 +13978,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.processFactory,
+                area: MapsList.dwdd.processFactory,
                 version: DataNames.dusk,
             },
             evolutions: [
@@ -13999,7 +13999,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.none,
+                area: MapsList.dsle.none,
             },
             evolutions: [
                 {
@@ -14016,7 +14016,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.digitalSpaceEast,
+                area: MapsList.dssxw.digitalSpaceEast,
                 version: DataNames.blue,
             },
             drops: [
@@ -14033,7 +14033,7 @@ export const DigimonList = {
         stage: Stage.stage2,
         dwds: {
             location: {
-                area: AreasList.dwds.junkFactory,
+                area: MapsList.dwds.junkFactory,
             },
             evolutions: [
                 {
@@ -14045,7 +14045,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.sunkenTunnel,
+                area: MapsList.dwdd.sunkenTunnel,
                 version: DataNames.both,
             },
             evolutions: [
@@ -14066,7 +14066,7 @@ export const DigimonList = {
         stage: Stage.stage2,
         dwds: {
             location: {
-                area: AreasList.dwds.drainTunnel,
+                area: MapsList.dwds.drainTunnel,
             },
             evolutions: [
                 {
@@ -14078,7 +14078,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.sunkenTunnel,
+                area: MapsList.dwdd.sunkenTunnel,
                 version: DataNames.both,
             },
             evolutions: [
@@ -14103,7 +14103,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.magnetMine,
+                area: MapsList.dsle.magnetMine,
             },
             drops: [
                 {
@@ -14127,7 +14127,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.digitalSpaceEast,
+                area: MapsList.dssxw.digitalSpaceEast,
                 version: DataNames.blue,
             },
             fusions: [DataNames.Chrysalimon],
@@ -14138,7 +14138,7 @@ export const DigimonList = {
         stage: Stage.stage2,
         dwdd: {
             location: {
-                area: AreasList.dwdd.proxyIsland,
+                area: MapsList.dwdd.proxyIsland,
                 version: DataNames.both,
             },
             evolutions: [
@@ -14167,7 +14167,7 @@ export const DigimonList = {
         stage: Stage.stage2,
         dwds: {
             location: {
-                area: AreasList.dwds.trainingPeak,
+                area: MapsList.dwds.trainingPeak,
             },
             evolutions: [
                 {
@@ -14183,7 +14183,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.sunkenTunnel,
+                area: MapsList.dwdd.sunkenTunnel,
                 version: DataNames.both,
             },
             evolutions: [
@@ -14208,7 +14208,7 @@ export const DigimonList = {
         stage: Stage.stage2,
         dwdd: {
             location: {
-                area: AreasList.dwdd.thrillerRuins,
+                area: MapsList.dwdd.thrillerRuins,
                 version: DataNames.both,
             },
             evolutions: [
@@ -14226,7 +14226,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Kokuwamon],
             location: {
-                area: AreasList.dsle.patchPrairie,
+                area: MapsList.dsle.patchPrairie,
             },
             drops: [
                 {
@@ -14249,7 +14249,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.flowerMeadow,
+                area: MapsList.dssxw.flowerMeadow,
                 version: DataNames.blue,
             },
             fusions: [DataNames.Tankmon],
@@ -14260,7 +14260,7 @@ export const DigimonList = {
         stage: Stage.stage2,
         dwds: {
             location: {
-                area: AreasList.dwds.trainingPeak,
+                area: MapsList.dwds.trainingPeak,
             },
             evolutions: [
                 {
@@ -14284,7 +14284,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.loginMountain,
+                area: MapsList.dwdd.loginMountain,
                 version: DataNames.both,
             },
             evolutions: [
@@ -14316,7 +14316,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.magnetMine,
+                area: MapsList.dsle.magnetMine,
             },
             evolutions: [
                 {
@@ -14328,7 +14328,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.darknessTunnel,
+                area: MapsList.dssxw.darknessTunnel,
                 version: DataNames.red,
             },
             drops: [
@@ -14345,7 +14345,7 @@ export const DigimonList = {
         stage: Stage.stage2,
         dwds: {
             location: {
-                area: AreasList.dwds.trainingPeak,
+                area: MapsList.dwds.trainingPeak,
             },
             evolutions: [
                 {
@@ -14357,7 +14357,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.thrillerRuins,
+                area: MapsList.dwdd.thrillerRuins,
                 version: DataNames.both,
             },
             evolutions: [
@@ -14382,7 +14382,7 @@ export const DigimonList = {
         stage: Stage.stage2,
         dwdd: {
             location: {
-                area: AreasList.dwdd.thrillerRuins,
+                area: MapsList.dwdd.thrillerRuins,
                 version: DataNames.both,
             },
             evolutions: [
@@ -14411,7 +14411,7 @@ export const DigimonList = {
         stage: Stage.stage2,
         dwds: {
             location: {
-                area: AreasList.dwds.chromeMine,
+                area: MapsList.dwds.chromeMine,
             },
             evolutions: [
                 {
@@ -14423,7 +14423,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -14448,7 +14448,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.none,
+                area: MapsList.dsle.none,
             },
             drops: [
                 {
@@ -14475,7 +14475,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.fortYard,
+                area: MapsList.dssxw.fortYard,
                 version: DataNames.both,
             },
             fusions: [DataNames.Devimon, DataNames.Bakemon],
@@ -14486,7 +14486,7 @@ export const DigimonList = {
         stage: Stage.stage2,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutions: [
                 {
@@ -14502,7 +14502,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.magnetMine,
+                area: MapsList.dwdd.magnetMine,
                 version: DataNames.dusk,
             },
             evolutions: [
@@ -14518,7 +14518,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.none,
+                area: MapsList.dsle.none,
             },
             evolutions: [
                 {
@@ -14533,7 +14533,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.digitalSpaceEast,
+                area: MapsList.dssxw.digitalSpaceEast,
                 version: DataNames.blue,
             },
             drops: [
@@ -14550,13 +14550,13 @@ export const DigimonList = {
         stage: Stage.stage2,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutionTree: DataNames.Pagumon,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.thrillerRuins,
+                area: MapsList.dwdd.thrillerRuins,
                 version: DataNames.both,
             },
             evolutions: [
@@ -14591,7 +14591,7 @@ export const DigimonList = {
         stage: Stage.stage2,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutions: [
                 {
@@ -14603,7 +14603,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.thrillerRuins,
+                area: MapsList.dwdd.thrillerRuins,
                 version: DataNames.both,
             },
             evolutions: [
@@ -14620,7 +14620,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.none,
+                area: MapsList.dsle.none,
             },
             evolutions: [
                 {
@@ -14637,7 +14637,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.darknessTunnel,
+                area: MapsList.dssxw.darknessTunnel,
                 version: DataNames.blue,
             },
             drops: [
@@ -14654,20 +14654,20 @@ export const DigimonList = {
         stage: Stage.stage2,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutionTree: DataNames.Koromon,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Koromon,
         },
         dsle: {
             location: {
-                area: AreasList.dsle.none,
+                area: MapsList.dsle.none,
             },
             evolutionTree: DataNames.Koromon,
         },
@@ -14677,20 +14677,20 @@ export const DigimonList = {
         stage: Stage.stage2,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutionTree: DataNames.Tokomon,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Tokomon,
         },
         dsle: {
             location: {
-                area: AreasList.dsle.none,
+                area: MapsList.dsle.none,
             },
             evolutionTree: DataNames.Chicchimon,
         },
@@ -14700,7 +14700,7 @@ export const DigimonList = {
         stage: Stage.stage2,
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -14717,7 +14717,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.registerJungle,
+                area: MapsList.dsle.registerJungle,
             },
             drops: [
                 {
@@ -14736,7 +14736,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.flowerMeadow,
+                area: MapsList.dssxw.flowerMeadow,
                 version: DataNames.blue,
             },
             drops: [
@@ -14753,7 +14753,7 @@ export const DigimonList = {
         stage: Stage.stage2,
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -14770,7 +14770,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.loopSwamp,
+                area: MapsList.dsle.loopSwamp,
             },
             drops: [
                 {
@@ -14794,7 +14794,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.spinningAmazon,
+                area: MapsList.dssxw.spinningAmazon,
                 version: DataNames.red,
             },
             drops: [
@@ -14811,7 +14811,7 @@ export const DigimonList = {
         stage: Stage.stage2,
         dsle: {
             location: {
-                area: AreasList.dsle.packetCoast,
+                area: MapsList.dsle.packetCoast,
             },
             drops: [
                 {
@@ -14830,7 +14830,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.fortYard,
+                area: MapsList.dssxw.fortYard,
                 version: DataNames.red,
             },
             fusions: [DataNames.KabuterimonHeart, DataNames.Buraimon],
@@ -14841,7 +14841,7 @@ export const DigimonList = {
         stage: Stage.stage2,
         dssxw: {
             location: {
-                area: AreasList.dssxw.lostSpace,
+                area: MapsList.dssxw.lostSpace,
                 version: DataNames.both,
             },
             fusions: [DataNames.LucemonFM, DataNames.Valdurmon],
@@ -14853,7 +14853,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.ShoutmonHeart, DataNames.ShoutmonSpade],
             location: {
-                area: AreasList.dssxw.digitalSpaceNorth,
+                area: MapsList.dssxw.digitalSpaceNorth,
                 version: DataNames.both,
             },
             drops: [
@@ -14878,7 +14878,7 @@ export const DigimonList = {
         stage: Stage.stage2,
         dssxw: {
             location: {
-                area: AreasList.dssxw.digitalSpaceNorth,
+                area: MapsList.dssxw.digitalSpaceNorth,
                 version: DataNames.both,
             },
             drops: [
@@ -14895,7 +14895,7 @@ export const DigimonList = {
         stage: Stage.stage2,
         dssxw: {
             location: {
-                area: AreasList.dssxw.digitalSpaceSouth,
+                area: MapsList.dssxw.digitalSpaceSouth,
                 version: DataNames.both,
             },
             drops: [
@@ -14912,7 +14912,7 @@ export const DigimonList = {
         stage: Stage.stage2,
         dssxw: {
             location: {
-                area: AreasList.dssxw.digitalSpaceNorth,
+                area: MapsList.dssxw.digitalSpaceNorth,
                 version: DataNames.both,
             },
             drops: [
@@ -14933,7 +14933,7 @@ export const DigimonList = {
         stage: Stage.stage2,
         dssxw: {
             location: {
-                area: AreasList.dssxw.digitalSpaceSouth,
+                area: MapsList.dssxw.digitalSpaceSouth,
                 version: DataNames.both,
             },
             drops: [
@@ -14949,7 +14949,7 @@ export const DigimonList = {
         stage: Stage.stage2,
         dssxw: {
             location: {
-                area: AreasList.dssxw.digitalSpaceNorth,
+                area: MapsList.dssxw.digitalSpaceNorth,
                 version: DataNames.both,
             },
         },
@@ -14960,7 +14960,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Spadamon],
             location: {
-                area: AreasList.dssxw.none,
+                area: MapsList.dssxw.none,
                 version: DataNames.both,
             },
             fusions: [DataNames.ShoutmonX4S, DataNames.ShoutmonX5S],
@@ -14971,7 +14971,7 @@ export const DigimonList = {
         stage: Stage.stage2,
         dssxw: {
             location: {
-                area: AreasList.dssxw.digitalSpaceSouth,
+                area: MapsList.dssxw.digitalSpaceSouth,
                 version: DataNames.both,
             },
         },
@@ -14981,7 +14981,7 @@ export const DigimonList = {
         stage: Stage.stage2,
         dssxw: {
             location: {
-                area: AreasList.dssxw.digitalSpaceNorth,
+                area: MapsList.dssxw.digitalSpaceNorth,
                 version: DataNames.both,
             },
         },
@@ -14991,7 +14991,7 @@ export const DigimonList = {
         stage: Stage.stage2,
         dssxw: {
             location: {
-                area: AreasList.dssxw.digitalSpaceNorth,
+                area: MapsList.dssxw.digitalSpaceNorth,
                 version: DataNames.both,
             },
         },
@@ -15001,7 +15001,7 @@ export const DigimonList = {
         stage: Stage.stage2,
         dssxw: {
             location: {
-                area: AreasList.dssxw.digitalSpaceSouth,
+                area: MapsList.dssxw.digitalSpaceSouth,
                 version: DataNames.both,
             },
         },
@@ -15012,7 +15012,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.StarSword],
             location: {
-                area: AreasList.dssxw.none,
+                area: MapsList.dssxw.none,
                 version: DataNames.both,
             },
         },
@@ -15025,7 +15025,7 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutions: [
                 {
@@ -15037,7 +15037,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.taskCanyon,
+                area: MapsList.dwdd.taskCanyon,
                 version: DataNames.dawn,
             },
             evolutions: [
@@ -15055,7 +15055,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Greymon],
             location: {
-                area: AreasList.dsle.none,
+                area: MapsList.dsle.none,
             },
             drops: [
                 {
@@ -15087,7 +15087,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Greymon],
             location: {
-                area: AreasList.dssxw.flowerMeadow,
+                area: MapsList.dssxw.flowerMeadow,
                 version: DataNames.blue,
             },
             drops: [
@@ -15104,7 +15104,7 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutions: [
                 {
@@ -15116,7 +15116,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -15134,7 +15134,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Garurumon],
             location: {
-                area: AreasList.dsle.labelForest,
+                area: MapsList.dsle.labelForest,
             },
             drops: [
                 {
@@ -15153,7 +15153,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Garurumon],
             location: {
-                area: AreasList.dssxw.skullIceberg,
+                area: MapsList.dssxw.skullIceberg,
                 version: DataNames.blue,
             },
             drops: [
@@ -15170,7 +15170,7 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwds: {
             location: {
-                area: AreasList.dwds.mangoveWoods,
+                area: MapsList.dwds.mangoveWoods,
             },
             evolutions: [
                 {
@@ -15182,7 +15182,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -15200,7 +15200,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Birdramon],
             location: {
-                area: AreasList.dsle.paletteAmazon,
+                area: MapsList.dsle.paletteAmazon,
             },
             drops: [
                 {
@@ -15227,7 +15227,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.spinningAmazon,
+                area: MapsList.dssxw.spinningAmazon,
                 version: DataNames.red,
             },
             fusions: [DataNames.Butenmon, DataNames.Zhuqiaomon],
@@ -15238,7 +15238,7 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwds: {
             location: {
-                area: AreasList.dwds.packetSwamp,
+                area: MapsList.dwds.packetSwamp,
             },
             evolutions: [
                 {
@@ -15250,7 +15250,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.paletteAmazon,
+                area: MapsList.dwdd.paletteAmazon,
                 version: DataNames.both,
             },
             evolutions: [
@@ -15268,7 +15268,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Togemon],
             location: {
-                area: AreasList.dsle.labelForest,
+                area: MapsList.dsle.labelForest,
             },
             drops: [
                 {
@@ -15291,7 +15291,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.flowerMeadow,
+                area: MapsList.dssxw.flowerMeadow,
                 version: DataNames.both,
             },
             fusions: [DataNames.Jureimon, DataNames.Blossomon, DataNames.Lilymon],
@@ -15302,7 +15302,7 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutions: [
                 {
@@ -15314,7 +15314,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -15333,7 +15333,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Kabuterimon],
             location: {
-                area: AreasList.dsle.loginMountain,
+                area: MapsList.dsle.loginMountain,
             },
             drops: [
                 {
@@ -15359,7 +15359,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.KabuterimonHeart, DataNames.KabuterimonSpade],
             location: {
-                area: AreasList.dssxw.none,
+                area: MapsList.dssxw.none,
                 version: DataNames.both,
             },
             fusions: [DataNames.Kimeramon, DataNames.Lilymon],
@@ -15370,7 +15370,7 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwds: {
             location: {
-                area: AreasList.dwds.drainTunnel,
+                area: MapsList.dwds.drainTunnel,
             },
             evolutions: [
                 {
@@ -15382,7 +15382,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -15399,7 +15399,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.paletteAmazon,
+                area: MapsList.dsle.paletteAmazon,
             },
             drops: [
                 {
@@ -15422,7 +15422,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.skullIceberg,
+                area: MapsList.dssxw.skullIceberg,
                 version: DataNames.both,
             },
             drops: [
@@ -15439,7 +15439,7 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutions: [
                 {
@@ -15455,7 +15455,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.accessGlacier,
+                area: MapsList.dwdd.accessGlacier,
                 version: DataNames.both,
             },
             evolutions: [
@@ -15474,7 +15474,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Angemon],
             location: {
-                area: AreasList.dsle.limitValley,
+                area: MapsList.dsle.limitValley,
             },
             drops: [
                 {
@@ -15510,7 +15510,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Angemon],
             location: {
-                area: AreasList.dssxw.none,
+                area: MapsList.dssxw.none,
                 version: DataNames.both,
             },
             fusions: [DataNames.Shakkoumon, DataNames.Magnamon, DataNames.LucemonFM, DataNames.HolyAngemon, DataNames.Beelzebumon2010Spade],
@@ -15521,7 +15521,7 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutions: [
                 {
@@ -15541,7 +15541,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.highlightHaven,
+                area: MapsList.dwdd.highlightHaven,
                 version: DataNames.dawn,
             },
             evolutions: [
@@ -15561,7 +15561,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Tailmon],
             location: {
-                area: AreasList.dsle.paletteAmazon,
+                area: MapsList.dsle.paletteAmazon,
             },
             drops: [
                 {
@@ -15596,7 +15596,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Tailmon],
             location: {
-                area: AreasList.dssxw.skullIceberg,
+                area: MapsList.dssxw.skullIceberg,
                 version: DataNames.red,
             },
             drops: [
@@ -15617,7 +15617,7 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutions: [
                 {
@@ -15647,7 +15647,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             dna: [DataNames.Dinobeemon, DataNames.Paildramon],
@@ -15656,7 +15656,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.ExVeemon],
             location: {
-                area: AreasList.dsle.paletteAmazon,
+                area: MapsList.dsle.paletteAmazon,
             },
             drops: [
                 {
@@ -15685,7 +15685,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.ExVeemon],
             location: {
-                area: AreasList.dssxw.flowerMeadow,
+                area: MapsList.dssxw.flowerMeadow,
                 version: DataNames.both,
             },
             fusions: [DataNames.Dinobeemon, DataNames.Paildramon, DataNames.AeroVeedramon, DataNames.HolyAngemon],
@@ -15696,7 +15696,7 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwds: {
             location: {
-                area: AreasList.dwds.packetSwamp,
+                area: MapsList.dwds.packetSwamp,
             },
             evolutions: [
                 {
@@ -15723,7 +15723,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             dna: [DataNames.Dinobeemon, DataNames.Paildramon],
@@ -15732,7 +15732,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Stingmon],
             location: {
-                area: AreasList.dsle.registerJungle,
+                area: MapsList.dsle.registerJungle,
             },
             drops: [
                 {
@@ -15765,7 +15765,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Stingmon],
             location: {
-                area: AreasList.dssxw.spinningAmazon,
+                area: MapsList.dssxw.spinningAmazon,
                 version: DataNames.both,
             },
             fusions: [DataNames.Tyilinmon, DataNames.Dinobeemon, DataNames.Paildramon],
@@ -15776,7 +15776,7 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwds: {
             location: {
-                area: AreasList.dwds.trainingPeak,
+                area: MapsList.dwds.trainingPeak,
             },
             evolutions: [
                 {
@@ -15799,7 +15799,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.loginMountain,
+                area: MapsList.dwdd.loginMountain,
                 version: DataNames.both,    // TODO: Check if it's Dawn exclusive
             },
             dna: [DataNames.Silphymon],
@@ -15808,7 +15808,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Aquilamon],
             location: {
-                area: AreasList.dsle.pixelDesert,
+                area: MapsList.dsle.pixelDesert,
             },
             drops: [
                 {
@@ -15833,7 +15833,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Aquilamon],
             location: {
-                area: AreasList.dssxw.papyrusDesert,
+                area: MapsList.dssxw.papyrusDesert,
                 version: DataNames.red,
             },
             fusions: [DataNames.Silphymon, DataNames.AeroVeedramon],
@@ -15844,7 +15844,7 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutions: [
                 {
@@ -15859,7 +15859,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             dna: [DataNames.Shakkoumon],
@@ -15868,7 +15868,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Ankylomon],
             location: {
-                area: AreasList.dsle.pixelDesert,
+                area: MapsList.dsle.pixelDesert,
             },
             drops: [
                 {
@@ -15893,7 +15893,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Ankylomon],
             location: {
-                area: AreasList.dssxw.none,
+                area: MapsList.dssxw.none,
                 version: DataNames.both,
             },
             fusions: [DataNames.Shakkoumon, DataNames.Magnamon],
@@ -15904,7 +15904,7 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwds: {
             location: {
-                area: AreasList.dwds.ancientCanyon,
+                area: MapsList.dwds.ancientCanyon,
             },
             evolutions: [
                 {
@@ -15920,7 +15920,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -15951,7 +15951,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.none,
+                area: MapsList.dsle.none,
             },
             evolutions: [
                 {
@@ -15965,7 +15965,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Growlmon],
             location: {
-                area: AreasList.dssxw.none,
+                area: MapsList.dssxw.none,
                 version: DataNames.both,
             },
             fusions: [DataNames.MegaloGrowlmon],
@@ -15976,7 +15976,7 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutions: [
                 {
@@ -15992,7 +15992,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.limitValley,
+                area: MapsList.dwdd.limitValley,
                 version: DataNames.both,
             },
             evolutions: [
@@ -16006,7 +16006,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Kyubimon],
             location: {
-                area: AreasList.dsle.pixelDesert,
+                area: MapsList.dsle.pixelDesert,
             },
             drops: [
                 {
@@ -16029,7 +16029,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Kyubimon],
             location: {
-                area: AreasList.dssxw.digitalSpaceEast,
+                area: MapsList.dssxw.digitalSpaceEast,
                 version: DataNames.red,
             },
             drops: [
@@ -16046,7 +16046,7 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutions: [
                 {
@@ -16073,7 +16073,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.resistorJungle,
+                area: MapsList.dwdd.resistorJungle,
                 version: DataNames.both,
             },
             evolutions: [
@@ -16091,7 +16091,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Gargomon],
             location: {
-                area: AreasList.dsle.registerJungle,
+                area: MapsList.dsle.registerJungle,
             },
             drops: [
                 {
@@ -16119,7 +16119,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Gargomon],
             location: {
-                area: AreasList.dssxw.spinningAmazon,
+                area: MapsList.dssxw.spinningAmazon,
                 version: DataNames.red,
             },
             drops: [
@@ -16136,7 +16136,7 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwds: {
             location: {
-                area: AreasList.dwds.trainingPeak,
+                area: MapsList.dwds.trainingPeak,
             },
             evolutions: [
                 {
@@ -16155,7 +16155,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -16169,7 +16169,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Guardromon],
             location: {
-                area: AreasList.dsle.palaceLaboratory,
+                area: MapsList.dsle.palaceLaboratory,
             },
             drops: [
                 {
@@ -16192,7 +16192,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.digitalSpaceEast,
+                area: MapsList.dssxw.digitalSpaceEast,
                 version: DataNames.both,
             },
             fusions: [DataNames.GrapLeomon, DataNames.MachGaogamon, DataNames.Megadramon],
@@ -16204,7 +16204,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Agunimon],
             location: {
-                area: AreasList.dssxw.crystalVolcano,
+                area: MapsList.dssxw.crystalVolcano,
                 version: DataNames.both,
             },
             fusions: [DataNames.Apollomon, DataNames.AncientGreymon, DataNames.ShineGreymon],
@@ -16215,7 +16215,7 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutions: [
                 {
@@ -16231,7 +16231,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -16254,7 +16254,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.pixelDesert,
+                area: MapsList.dsle.pixelDesert,
             },
             drops: [
                 {
@@ -16277,7 +16277,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.darknessTunnel,
+                area: MapsList.dssxw.darknessTunnel,
                 version: DataNames.red,
             },
             drops: [
@@ -16294,7 +16294,7 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutions: [
                 {
@@ -16310,7 +16310,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -16327,7 +16327,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.none,
+                area: MapsList.dsle.none,
             },
             evolutions: [
                 {
@@ -16341,7 +16341,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Gaogamon],
             location: {
-                area: AreasList.dssxw.spinningAmazon,
+                area: MapsList.dssxw.spinningAmazon,
                 version: DataNames.blue,
             },
             drops: [
@@ -16358,7 +16358,7 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutions: [
                 {
@@ -16374,7 +16374,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.paletteAmazon,
+                area: MapsList.dwdd.paletteAmazon,
                 version: DataNames.both,
             },
             evolutions: [
@@ -16388,7 +16388,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Sunflowmon],
             location: {
-                area: AreasList.dsle.paletteAmazon,
+                area: MapsList.dsle.paletteAmazon,
             },
             drops: [
                 {
@@ -16407,7 +16407,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.flowerMeadow,
+                area: MapsList.dssxw.flowerMeadow,
                 version: DataNames.red,
             },
             drops: [
@@ -16424,7 +16424,7 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutions: [
                 {
@@ -16436,7 +16436,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -16453,7 +16453,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.limitValley,
+                area: MapsList.dsle.limitValley,
             },
             drops: [
                 {
@@ -16477,7 +16477,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Peckmon],
             location: {
-                area: AreasList.dssxw.digitalSpaceEast,
+                area: MapsList.dssxw.digitalSpaceEast,
                 version: DataNames.blue,
             },
             drops: [
@@ -16498,13 +16498,13 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutionTree: DataNames.Poyomon,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -16521,7 +16521,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.loopSwamp,
+                area: MapsList.dsle.loopSwamp,
             },
             drops: [
                 {
@@ -16540,7 +16540,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.endlessSea,
+                area: MapsList.dssxw.endlessSea,
                 version: DataNames.blue,
             },
             fusions: [DataNames.Karatenmon],
@@ -16551,7 +16551,7 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwdd: {
             location: {
-                area: AreasList.dwdd.thrillerRuins,
+                area: MapsList.dwdd.thrillerRuins,
                 version: DataNames.both,
             },
             evolutions: [
@@ -16564,7 +16564,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.digitalSpaceEast,
+                area: MapsList.dssxw.digitalSpaceEast,
                 version: DataNames.blue,
             },
             drops: [
@@ -16581,7 +16581,7 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwdd: {
             location: {
-                area: AreasList.dwdd.thrillerRuins,
+                area: MapsList.dwdd.thrillerRuins,
                 version: DataNames.both,
             },
             evolutions: [
@@ -16598,7 +16598,7 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutions: [
                 {
@@ -16614,7 +16614,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -16632,7 +16632,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Reppamon],
             location: {
-                area: AreasList.dsle.limitValley,
+                area: MapsList.dsle.limitValley,
             },
             drops: [
                 {
@@ -16650,7 +16650,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.digitalSpaceEast,
+                area: MapsList.dssxw.digitalSpaceEast,
                 version: DataNames.red,
             },
             drops: [
@@ -16671,7 +16671,7 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -16689,7 +16689,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Veedramon],
             location: {
-                area: AreasList.dsle.limitValley,
+                area: MapsList.dsle.limitValley,
             },
             drops: [
                 {
@@ -16712,7 +16712,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.flowerMeadow,
+                area: MapsList.dssxw.flowerMeadow,
                 version: DataNames.red,
             },
             drops: [
@@ -16729,7 +16729,7 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutions: [
                 {
@@ -16745,7 +16745,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.loginMountain,
+                area: MapsList.dwdd.loginMountain,
                 version: DataNames.both,
             },
             evolutions: [
@@ -16768,7 +16768,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.none,
+                area: MapsList.dsle.none,
             },
             evolutions: [
                 {
@@ -16782,7 +16782,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Dorugamon],
             location: {
-                area: AreasList.dssxw.spinningAmazon,
+                area: MapsList.dssxw.spinningAmazon,
                 version: DataNames.red,
             },
             drops: [
@@ -16799,7 +16799,7 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwds: {
             location: {
-                area: AreasList.dwds.ancientCanyon,
+                area: MapsList.dwds.ancientCanyon,
             },
             evolutions: [
                 {
@@ -16811,14 +16811,14 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.accessGlacier,
+                area: MapsList.dwdd.accessGlacier,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Raptordramon,
         },
         dsle: {
             location: {
-                area: AreasList.dsle.limitValley,
+                area: MapsList.dsle.limitValley,
             },
             drops: [
                 {
@@ -16846,7 +16846,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Raptordramon],
             location: {
-                area: AreasList.dssxw.none,
+                area: MapsList.dssxw.none,
                 version: DataNames.both,
             },
             fusions: [DataNames.Grademon, DataNames.MegaloGrowlmon],
@@ -16858,7 +16858,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Strikedramon],
             location: {
-                area: AreasList.dsle.pixelDesert,
+                area: MapsList.dsle.pixelDesert,
             },
             drops: [
                 {
@@ -16880,7 +16880,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.crystalVolcano,
+                area: MapsList.dssxw.crystalVolcano,
                 version: DataNames.blue,
             },
             fusions: [DataNames.Flaremon],
@@ -16891,12 +16891,12 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwds: {
             location: {
-                area: AreasList.dwds.trainingPeak,
+                area: MapsList.dwds.trainingPeak,
             },
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.processFactory,
+                area: MapsList.dwdd.processFactory,
                 version: DataNames.dusk,
             },
             evolutions: [
@@ -16924,7 +16924,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.shadowHell,
+                area: MapsList.dsle.shadowHell,
             },
             drops: [
                 {
@@ -16960,7 +16960,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.digitalSpaceEast,
+                area: MapsList.dssxw.digitalSpaceEast,
                 version: DataNames.both,
             },
             fusions: [DataNames.Cerberumon, DataNames.SkullBaluchimon],
@@ -16971,7 +16971,7 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwds: {
             location: {
-                area: AreasList.dwds.sheerValley,
+                area: MapsList.dwds.sheerValley,
             },
             evolutions: [
                 {
@@ -16983,7 +16983,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.paletteAmazon,
+                area: MapsList.dwdd.paletteAmazon,
             },
             evolutions: [
                 {
@@ -17003,7 +17003,7 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -17024,7 +17024,7 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwds: {
             location: {
-                area: AreasList.dwds.sheerValley,
+                area: MapsList.dwds.sheerValley,
             },
             evolutions: [
                 {
@@ -17036,7 +17036,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.taskCanyon,
+                area: MapsList.dwdd.taskCanyon,
                 version: DataNames.dawn,
             },
             evolutions: [
@@ -17053,7 +17053,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.pixelDesert,
+                area: MapsList.dsle.pixelDesert,
             },
             drops: [
                 {
@@ -17077,7 +17077,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Tyrannomon],
             location: {
-                area: AreasList.dssxw.spinningAmazon,
+                area: MapsList.dssxw.spinningAmazon,
                 version: DataNames.both,
             },
             fusions: [DataNames.Cerberumon, DataNames.Dorugremon, DataNames.MetalGreymon],
@@ -17088,13 +17088,13 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwds: {
             location: {
-                area: AreasList.dwds.sheerValley,
+                area: MapsList.dwds.sheerValley,
             },
             evolutionTree: DataNames.Gotsumon,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.highlightHaven,
+                area: MapsList.dwdd.highlightHaven,
                 version: DataNames.dawn,
             },
             evolutions: [
@@ -17112,7 +17112,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Airdramon],
             location: {
-                area: AreasList.dsle.limitValley,
+                area: MapsList.dsle.limitValley,
             },
             drops: [
                 {
@@ -17131,7 +17131,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Airdramon],
             location: {
-                area: AreasList.dssxw.stealthValley,
+                area: MapsList.dssxw.stealthValley,
                 version: DataNames.both,
             },
             fusions: [DataNames.Gigadramon, DataNames.Megadramon, DataNames.Holydramon, DataNames.Qinglongmon],
@@ -17142,13 +17142,13 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutionTree: DataNames.Koromon,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Botamon,
@@ -17159,7 +17159,7 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwdd: {
             location: {
-                area: AreasList.dwdd.transfield,
+                area: MapsList.dwdd.transfield,
                 version: DataNames.both,
             },
             evolutions: [
@@ -17176,7 +17176,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.skullIceberg,
+                area: MapsList.dssxw.skullIceberg,
                 version: DataNames.blue,
             },
             drops: [
@@ -17193,7 +17193,7 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwds: {
             location: {
-                area: AreasList.dwds.ancientCanyon,
+                area: MapsList.dwds.ancientCanyon,
             },
             evolutions: [
                 {
@@ -17205,7 +17205,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.resistorJungle,
+                area: MapsList.dwdd.resistorJungle,
                 version: DataNames.both,
             },
             evolutions: [
@@ -17223,7 +17223,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Leomon],
             location: {
-                area: AreasList.dsle.registerJungle,
+                area: MapsList.dsle.registerJungle,
             },
             drops: [
                 {
@@ -17246,7 +17246,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.LeomonHeart, DataNames.LeomonSpade],
             location: {
-                area: AreasList.dssxw.spinningAmazon,
+                area: MapsList.dssxw.spinningAmazon,
                 version: DataNames.both,
             },
             fusions: [DataNames.GrapLeomon, DataNames.Flaremon, DataNames.WereGarurumonBlue, DataNames.SaberLeomon, DataNames.Spadamon],
@@ -17257,7 +17257,7 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwds: {
             location: {
-                area: AreasList.dwds.dataForest,
+                area: MapsList.dwds.dataForest,
             },
             evolutions: [
                 {
@@ -17277,7 +17277,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.chipForest,
+                area: MapsList.dwdd.chipForest,
                 version: DataNames.both,
             },
             evolutions: [
@@ -17295,7 +17295,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Ogremon],
             location: {
-                area: AreasList.dsle.registerJungle,
+                area: MapsList.dsle.registerJungle,
             },
             drops: [
                 {
@@ -17318,7 +17318,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.spinningAmazon,
+                area: MapsList.dssxw.spinningAmazon,
                 version: DataNames.blue,
             },
             drops: [
@@ -17335,7 +17335,7 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwdd: {
             location: {
-                area: AreasList.dwdd.paletteAmazon,
+                area: MapsList.dwdd.paletteAmazon,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Dorimon,
@@ -17346,7 +17346,7 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwdd: {
             location: {
-                area: AreasList.dwdd.accessGlacier,
+                area: MapsList.dwdd.accessGlacier,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.SnowGoburimon,
@@ -17357,7 +17357,7 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwds: {
             location: {
-                area: AreasList.dwds.steamyJungle,
+                area: MapsList.dwds.steamyJungle,
             },
             evolutions: [
                 {
@@ -17369,7 +17369,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -17401,13 +17401,13 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwds: {
             location: {
-                area: AreasList.dwds.ancientCanyon,
+                area: MapsList.dwds.ancientCanyon,
             },
             evolutionTree: DataNames.Poyomon,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.limitValley,
+                area: MapsList.dwdd.limitValley,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Gummymon,
@@ -17415,7 +17415,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Seasarmon],
             location: {
-                area: AreasList.dssxw.endlessCoast,
+                area: MapsList.dssxw.endlessCoast,
                 version: DataNames.red,
             },
             fusions: [DataNames.Cerberumon, DataNames.RizeGreymon, DataNames.Rapidmon, DataNames.Anubimon],
@@ -17426,7 +17426,7 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwds: {
             location: {
-                area: AreasList.dwds.ancientCanyon,
+                area: MapsList.dwds.ancientCanyon,
             },
             evolutions: [
                 {
@@ -17442,7 +17442,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.limitValley,
+                area: MapsList.dwdd.limitValley,
                 version: DataNames.both,
             },
             evolutions: [
@@ -17460,7 +17460,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Hanumon],
             location: {
-                area: AreasList.dssxw.stealthValley,
+                area: MapsList.dssxw.stealthValley,
                 version: DataNames.red,
             },
             fusions: [DataNames.Taomon, DataNames.Monzaemon],
@@ -17471,7 +17471,7 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwds: {
             location: {
-                area: AreasList.dwds.ancientCanyon,
+                area: MapsList.dwds.ancientCanyon,
             },
             evolutions: [
                 {
@@ -17487,7 +17487,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.transfield,
+                area: MapsList.dwdd.transfield,
                 version: DataNames.both,
             },
             evolutions: [
@@ -17505,7 +17505,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Minotarumon],
             location: {
-                area: AreasList.dssxw.fortYard,
+                area: MapsList.dssxw.fortYard,
                 version: DataNames.blue,
             },
             fusions: [DataNames.Vajramon, DataNames.LucemonFM],
@@ -17516,7 +17516,7 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwdd: {
             location: {
-                area: AreasList.dwdd.accessGlacier,
+                area: MapsList.dwdd.accessGlacier,
                 version: DataNames.both,
             },
             dna: [DataNames.Pandamon],
@@ -17525,7 +17525,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Yukidarumon],
             location: {
-                area: AreasList.dsle.accessGlacier,
+                area: MapsList.dsle.accessGlacier,
             },
             drops: [
                 {
@@ -17537,7 +17537,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.skullIceberg,
+                area: MapsList.dssxw.skullIceberg,
                 version: DataNames.both,
             },
             fusions: [DataNames.Crescemon, DataNames.Pandamon, DataNames.DaiPenmon],
@@ -17548,7 +17548,7 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwdd: {
             location: {
-                area: AreasList.dwdd.magnetMine,
+                area: MapsList.dwdd.magnetMine,
                 version: DataNames.dusk,
             },
             dna: [DataNames.Pandamon],
@@ -17556,7 +17556,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.darknessTunnel,
+                area: MapsList.dssxw.darknessTunnel,
                 version: DataNames.red,
             },
             drops: [
@@ -17573,7 +17573,7 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwdd: {
             location: {
-                area: AreasList.dwdd.proxyIsland,
+                area: MapsList.dwdd.proxyIsland,
                 version: DataNames.both,
             },
             evolutions: [
@@ -17597,7 +17597,7 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwdd: {
             location: {
-                area: AreasList.dwdd.chipForest,
+                area: MapsList.dwdd.chipForest,
                 version: DataNames.both,
             },
             dna: [DataNames.Vademon],
@@ -17609,7 +17609,7 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwdd: {
             location: {
-                area: AreasList.dwdd.magnetMine,
+                area: MapsList.dwdd.magnetMine,
                 version: DataNames.dusk,
             },
             evolutions: [
@@ -17626,7 +17626,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.magnetMine,
+                area: MapsList.dsle.magnetMine,
             },
             evolutions: [
                 {
@@ -17638,7 +17638,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.darknessTunnel,
+                area: MapsList.dssxw.darknessTunnel,
                 version: DataNames.red,
             },
             fusions: [DataNames.AncientVolcamonHeart],
@@ -17649,7 +17649,7 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwdd: {
             location: {
-                area: AreasList.dwdd.accessGlacier,
+                area: MapsList.dwdd.accessGlacier,
                 version: DataNames.both,
             },
             evolutions: [
@@ -17666,7 +17666,7 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwdd: {
             location: {
-                area: AreasList.dwdd.proxyIsland,
+                area: MapsList.dwdd.proxyIsland,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Tsunomon,
@@ -17677,14 +17677,14 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwdd: {
             location: {
-                area: AreasList.dwdd.loginMountain,
+                area: MapsList.dwdd.loginMountain,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Dorimon,
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.darknessTunnel,
+                area: MapsList.dssxw.darknessTunnel,
                 version: DataNames.blue,
             },
             drops: [
@@ -17701,7 +17701,7 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwdd: {
             location: {
-                area: AreasList.dwdd.limitValley,
+                area: MapsList.dwdd.limitValley,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Dorimon,
@@ -17712,13 +17712,13 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwds: {
             location: {
-                area: AreasList.dwds.skyPalace,
+                area: MapsList.dwds.skyPalace,
             },
             evolutionTree: DataNames.Penmon,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.proxyIsland,
+                area: MapsList.dwdd.proxyIsland,
                 version: DataNames.both,
             },
             evolutions: [
@@ -17738,7 +17738,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.endlessCoast,
+                area: MapsList.dssxw.endlessCoast,
                 version: DataNames.blue,
             },
             fusions: [DataNames.Yatagaramon],
@@ -17749,7 +17749,7 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwdd: {
             location: {
-                area: AreasList.dwdd.proxyIsland,
+                area: MapsList.dwdd.proxyIsland,
                 version: DataNames.both,
             },
             evolutions: [
@@ -17766,20 +17766,20 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwds: {
             location: {
-                area: AreasList.dwds.mangoveWoods,
+                area: MapsList.dwds.mangoveWoods,
             },
             evolutionTree: DataNames.Penmon,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.paletteAmazon,
+                area: MapsList.dwdd.paletteAmazon,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Chicchimon,
         },
         dsle: {
             location: {
-                area: AreasList.dsle.none,
+                area: MapsList.dsle.none,
             },
             evolutions: [
                 {
@@ -17792,7 +17792,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.spinningAmazon,
+                area: MapsList.dssxw.spinningAmazon,
                 version: DataNames.red,
             },
             drops: [
@@ -17809,13 +17809,13 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutionTree: DataNames.Kuramon,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -17842,7 +17842,7 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwds: {
             location: {
-                area: AreasList.dwds.mangoveWoods,
+                area: MapsList.dwds.mangoveWoods,
             },
             evolutions: [
                 {
@@ -17858,7 +17858,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.paletteAmazon,
+                area: MapsList.dwdd.paletteAmazon,
                 version: DataNames.both,
             },
             evolutions: [
@@ -17879,7 +17879,7 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwds: {
             location: {
-                area: AreasList.dwds.drainTunnel,
+                area: MapsList.dwds.drainTunnel,
             },
             evolutions: [
                 {
@@ -17891,7 +17891,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.loopSwamp,
+                area: MapsList.dwdd.loopSwamp,
                 version: DataNames.both,
             },
             evolutions: [
@@ -17908,7 +17908,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.paletteAmazon,
+                area: MapsList.dsle.paletteAmazon,
             },
             drops: [
                 {
@@ -17936,7 +17936,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.endlessSea,
+                area: MapsList.dssxw.endlessSea,
                 version: DataNames.blue,
             },
             drops: [
@@ -17953,13 +17953,13 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwds: {
             location: {
-                area: AreasList.dwds.hardMountains,
+                area: MapsList.dwds.hardMountains,
             },
             evolutionTree: DataNames.Gotsumon,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.accessGlacier,
+                area: MapsList.dwdd.accessGlacier,
                 version: DataNames.both,
             },
             evolutions: [
@@ -17976,7 +17976,7 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwds: {
             location: {
-                area: AreasList.dwds.packetSwamp,
+                area: MapsList.dwds.packetSwamp,
             },
             evolutions: [
                 {
@@ -17988,7 +17988,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.loopSwamp,
+                area: MapsList.dwdd.loopSwamp,
                 version: DataNames.both,
             },
             evolutions: [
@@ -18006,7 +18006,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Gekomon],
             location: {
-                area: AreasList.dssxw.spinningAmazon,
+                area: MapsList.dssxw.spinningAmazon,
                 version: DataNames.blue,
             },
             fusions: [DataNames.MachGaogamon],
@@ -18017,20 +18017,20 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutionTree: DataNames.Numemon,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.loopSwamp,
+                area: MapsList.dwdd.loopSwamp,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Otamamon,
         },
         dsle: {
             location: {
-                area: AreasList.dsle.southCity,
+                area: MapsList.dsle.southCity,
             },
             drops: [
                 {
@@ -18049,7 +18049,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.spiderwebRuins,
+                area: MapsList.dssxw.spiderwebRuins,
                 version: DataNames.both,
             },
             fusions: [DataNames.MarineDevimon, DataNames.Monzaemon],
@@ -18060,7 +18060,7 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Otamamon,
@@ -18071,7 +18071,7 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -18095,7 +18095,7 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwdd: {
             location: {
-                area: AreasList.dwdd.loopSwamp,
+                area: MapsList.dwdd.loopSwamp,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Syakomon,
@@ -18103,7 +18103,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Shellmon],
             location: {
-                area: AreasList.dssxw.endlessCoast,
+                area: MapsList.dssxw.endlessCoast,
                 version: DataNames.blue,
             },
             fusions: [DataNames.MegaSeadramon],
@@ -18114,7 +18114,7 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwdd: {
             location: {
-                area: AreasList.dwdd.paletteAmazon,
+                area: MapsList.dwdd.paletteAmazon,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Tanemon,
@@ -18125,7 +18125,7 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwdd: {
             location: {
-                area: AreasList.dwdd.proxyIsland,
+                area: MapsList.dwdd.proxyIsland,
                 version: DataNames.both,
             },
             dna: [DataNames.Dagomon],
@@ -18133,7 +18133,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.paletteAmazon,
+                area: MapsList.dsle.paletteAmazon,
             },
             drops: [
                 {
@@ -18152,7 +18152,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.skullIceberg,
+                area: MapsList.dssxw.skullIceberg,
                 version: DataNames.red,
             },
             fusions: [DataNames.Blossomon],
@@ -18163,7 +18163,7 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwdd: {
             location: {
-                area: AreasList.dwdd.proxyIsland,
+                area: MapsList.dwdd.proxyIsland,
                 version: DataNames.both,
             },
             dna: [DataNames.Dagomon],
@@ -18171,7 +18171,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.skullIceberg,
+                area: MapsList.dssxw.skullIceberg,
                 version: DataNames.blue,
             },
             drops: [
@@ -18188,7 +18188,7 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwdd: {
             location: {
-                area: AreasList.dwdd.macroSea,
+                area: MapsList.dwdd.macroSea,
                 version: DataNames.both,
             },
             evolutions: [
@@ -18206,7 +18206,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Coelamon],
             location: {
-                area: AreasList.dsle.paletteAmazon,
+                area: MapsList.dsle.paletteAmazon,
             },
             drops: [
                 {
@@ -18229,7 +18229,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Coelamon],
             location: {
-                area: AreasList.dssxw.endlessSea,
+                area: MapsList.dssxw.endlessSea,
                 version: DataNames.red,
             },
             fusions: [DataNames.Mermaimon, DataNames.AncientMermaimon],
@@ -18240,7 +18240,7 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwdd: {
             location: {
-                area: AreasList.dwdd.macroSea,
+                area: MapsList.dwdd.macroSea,
                 version: DataNames.both,
             },
             evolutions: [
@@ -18269,7 +18269,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Rukamon],
             location: {
-                area: AreasList.dssxw.endlessSea,
+                area: MapsList.dssxw.endlessSea,
                 version: DataNames.both,
             },
             fusions: [DataNames.Whamon],
@@ -18280,14 +18280,14 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwdd: {
             location: {
-                area: AreasList.dwdd.macroSea,
+                area: MapsList.dwdd.macroSea,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Poyomon,
         },
         dsle: {
             location: {
-                area: AreasList.dsle.loopSwamp,
+                area: MapsList.dsle.loopSwamp,
             },
             evolutions: [
                 {
@@ -18299,7 +18299,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.endlessSea,
+                area: MapsList.dssxw.endlessSea,
                 version: DataNames.red,
             },
             fusions: [DataNames.Mermaimon],
@@ -18310,7 +18310,7 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwds: {
             location: {
-                area: AreasList.dwds.steamyJungle,
+                area: MapsList.dwds.steamyJungle,
             },
             evolutions: [
                 {
@@ -18322,7 +18322,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.resistorJungle,
+                area: MapsList.dwdd.resistorJungle,
                 version: DataNames.both,
             },
             evolutions: [
@@ -18339,7 +18339,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.registerJungle,
+                area: MapsList.dsle.registerJungle,
             },
             drops: [
                 {
@@ -18358,7 +18358,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.flowerMeadow,
+                area: MapsList.dssxw.flowerMeadow,
                 version: DataNames.blue,
             },
             fusions: [DataNames.Kimeramon, DataNames.Phantomon],
@@ -18369,14 +18369,14 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Minomon,
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.spiderwebRuins,
+                area: MapsList.dssxw.spiderwebRuins,
                 version: DataNames.red,
             },
             fusions: [DataNames.Kyukimon],
@@ -18387,7 +18387,7 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwdd: {
             location: {
-                area: AreasList.dwdd.resistorJungle,
+                area: MapsList.dwdd.resistorJungle,
                 version: DataNames.both,
             },
             evolutions: [
@@ -18404,7 +18404,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.registerJungle,
+                area: MapsList.dsle.registerJungle,
             },
             drops: [
                 {
@@ -18427,7 +18427,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.spiderwebRuins,
+                area: MapsList.dssxw.spiderwebRuins,
                 version: DataNames.red,
             },
             fusions: [DataNames.Blossomon],
@@ -18438,7 +18438,7 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwds: {
             location: {
-                area: AreasList.dwds.steamyJungle,
+                area: MapsList.dwds.steamyJungle,
             },
             evolutions: [
                 {
@@ -18454,7 +18454,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.thrillerRuins,
+                area: MapsList.dwdd.thrillerRuins,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Budmon,
@@ -18465,7 +18465,7 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwdd: {
             location: {
-                area: AreasList.dwdd.chipForest,
+                area: MapsList.dwdd.chipForest,
                 version: DataNames.both,
             },
             evolutions: [
@@ -18485,7 +18485,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.endlessCoast,
+                area: MapsList.dssxw.endlessCoast,
                 version: DataNames.blue,
             },
             drops: [
@@ -18502,14 +18502,14 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwdd: {
             location: {
-                area: AreasList.dwdd.loopSwamp,
+                area: MapsList.dwdd.loopSwamp,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Minomon,
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.spinningAmazon,
+                area: MapsList.dssxw.spinningAmazon,
                 version: DataNames.red,
             },
             fusions: [DataNames.Lilymon],
@@ -18520,7 +18520,7 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwdd: {
             location: {
-                area: AreasList.dwdd.limitValley,
+                area: MapsList.dwdd.limitValley,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Minomon,
@@ -18531,7 +18531,7 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwds: {
             location: {
-                area: AreasList.dwds.packetSwamp,
+                area: MapsList.dwds.packetSwamp,
             },
             evolutions: [
                 {
@@ -18543,14 +18543,14 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Tanemon,
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.endlessCoast,
+                area: MapsList.dssxw.endlessCoast,
                 version: DataNames.blue,
             },
             fusions: [DataNames.Jureimon, DataNames.Pinocchimon],
@@ -18561,7 +18561,7 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwdd: {
             location: {
-                area: AreasList.dwdd.loopSwamp,
+                area: MapsList.dwdd.loopSwamp,
                 version: DataNames.both,
             },
             evolutions: [
@@ -18582,7 +18582,7 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwdd: {
             location: {
-                area: AreasList.dwdd.resistorJungle,
+                area: MapsList.dwdd.resistorJungle,
                 version: DataNames.both,
             },
             dna: [DataNames.Vademon],
@@ -18594,7 +18594,7 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwdd: {
             location: {
-                area: AreasList.dwdd.resistorJungle,
+                area: MapsList.dwdd.resistorJungle,
                 version: DataNames.both,
             },
             evolutions: [
@@ -18608,7 +18608,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Woodmon],
             location: {
-                area: AreasList.dsle.registerJungle,
+                area: MapsList.dsle.registerJungle,
             },
             drops: [
                 {
@@ -18633,7 +18633,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.spinningAmazon,
+                area: MapsList.dssxw.spinningAmazon,
                 version: DataNames.blue,
             },
             drops: [
@@ -18650,7 +18650,7 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwdd: {
             location: {
-                area: AreasList.dwdd.resistorJungle,
+                area: MapsList.dwdd.resistorJungle,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Budmon,
@@ -18658,7 +18658,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Igamon],
             location: {
-                area: AreasList.dsle.pixelDesert,
+                area: MapsList.dsle.pixelDesert,
             },
             drops: [
                 {
@@ -18681,7 +18681,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.spinningAmazon,
+                area: MapsList.dssxw.spinningAmazon,
                 version: DataNames.red,
             },
             fusions: [DataNames.Kabukimon],
@@ -18692,7 +18692,7 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwdd: {
             location: {
-                area: AreasList.dwdd.loopSwamp,
+                area: MapsList.dwdd.loopSwamp,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Budmon,
@@ -18703,7 +18703,7 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwdd: {
             location: {
-                area: AreasList.dwdd.processFactory,
+                area: MapsList.dwdd.processFactory,
                 version: DataNames.dusk,
             },
             evolutions: [
@@ -18720,7 +18720,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.digitalSpaceEast,
+                area: MapsList.dssxw.digitalSpaceEast,
                 version: DataNames.blue,
             },
             fusions: [DataNames.Gigadramon, DataNames.RookChessmon, DataNames.Greymon2010],
@@ -18731,7 +18731,7 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwdd: {
             location: {
-                area: AreasList.dwdd.processFactory,
+                area: MapsList.dwdd.processFactory,
                 version: DataNames.dusk,
             },
             evolutions: [
@@ -18749,7 +18749,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Tankmon],
             location: {
-                area: AreasList.dsle.pixelDesert,
+                area: MapsList.dsle.pixelDesert,
             },
             drops: [
                 {
@@ -18772,7 +18772,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Tankmon],
             location: {
-                area: AreasList.dssxw.papyrusDesert,
+                area: MapsList.dssxw.papyrusDesert,
                 version: DataNames.blue,
             },
             fusions: [DataNames.Gigadramon, DataNames.MetalGreymon, DataNames.Darkdramon],
@@ -18783,7 +18783,7 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwds: {
             location: {
-                area: AreasList.dwds.drainTunnel,
+                area: MapsList.dwds.drainTunnel,
             },
             evolutions: [
                 {
@@ -18795,14 +18795,14 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.sunkenTunnel,
+                area: MapsList.dwdd.sunkenTunnel,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Kapurimon,
         },
         dsle: {
             location: {
-                area: AreasList.dsle.none,
+                area: MapsList.dsle.none,
             },
             evolutions: [
                 {
@@ -18820,7 +18820,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.endlessCoast,
+                area: MapsList.dssxw.endlessCoast,
                 version: DataNames.red,
             },
             drops: [
@@ -18837,7 +18837,7 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -18855,7 +18855,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Revolmon],
             location: {
-                area: AreasList.dsle.palaceLaboratory,
+                area: MapsList.dsle.palaceLaboratory,
             },
             drops: [
                 {
@@ -18883,7 +18883,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.digitalSpaceEast,
+                area: MapsList.dssxw.digitalSpaceEast,
                 version: DataNames.red,
             },
             fusions: [DataNames.RizeGreymon],
@@ -18894,7 +18894,7 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwdd: {
             location: {
-                area: AreasList.dwdd.chaosBrain,
+                area: MapsList.dwdd.chaosBrain,
                 version: DataNames.both,
             },
             evolutions: [
@@ -18908,7 +18908,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Clockmon],
             location: {
-                area: AreasList.dsle.palaceLaboratory,
+                area: MapsList.dsle.palaceLaboratory,
             },
             drops: [
                 {
@@ -18931,7 +18931,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.digitalSpaceEast,
+                area: MapsList.dssxw.digitalSpaceEast,
                 version: DataNames.red,
             },
             fusions: [DataNames.Wisemon, DataNames.Alphamon],
@@ -18942,7 +18942,7 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -18955,7 +18955,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.digitalSpaceEast,
+                area: MapsList.dssxw.digitalSpaceEast,
                 version: DataNames.red,
             },
             fusions: [DataNames.Sinduramon],
@@ -18966,7 +18966,7 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -18983,14 +18983,14 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwdd: {
             location: {
-                area: AreasList.dwdd.magnetMine,
+                area: MapsList.dwdd.magnetMine,
                 version: DataNames.dusk,
             },
             evolutionTree: DataNames.Gotsumon,
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.darknessTunnel,
+                area: MapsList.dssxw.darknessTunnel,
                 version: DataNames.blue,
             },
             fusions: [DataNames.RookChessmon, DataNames.AncientVolcamonSpade],
@@ -19001,13 +19001,13 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwds: {
             location: {
-                area: AreasList.dwds.drainTunnel,
+                area: MapsList.dwds.drainTunnel,
             },
             evolutionTree: DataNames.Otamamon,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.sunkenTunnel,
+                area: MapsList.dwdd.sunkenTunnel,
                 version: DataNames.both,
             },
             evolutions: [
@@ -19028,7 +19028,7 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwds: {
             location: {
-                area: AreasList.dwds.drainTunnel,
+                area: MapsList.dwds.drainTunnel,
             },
             evolutions: [
                 {
@@ -19044,7 +19044,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.sunkenTunnel,
+                area: MapsList.dwdd.sunkenTunnel,
                 version: DataNames.both,
             },
             evolutions: [
@@ -19061,7 +19061,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.digitalSpaceEast,
+                area: MapsList.dssxw.digitalSpaceEast,
                 version: DataNames.red,
             },
             fusions: [DataNames.Monzaemon],
@@ -19072,7 +19072,7 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwds: {
             location: {
-                area: AreasList.dwds.drainTunnel,
+                area: MapsList.dwds.drainTunnel,
             },
             evolutions: [
                 {
@@ -19084,7 +19084,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.sunkenTunnel,
+                area: MapsList.dwdd.sunkenTunnel,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Kapurimon,
@@ -19095,7 +19095,7 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwds: {
             location: {
-                area: AreasList.dwds.sheerValley,
+                area: MapsList.dwds.sheerValley,
             },
             evolutions: [
                 {
@@ -19107,7 +19107,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.paletteAmazon,
+                area: MapsList.dwdd.paletteAmazon,
                 version: DataNames.both,
             },
             evolutions: [
@@ -19124,7 +19124,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.pixelDesert,
+                area: MapsList.dsle.pixelDesert,
             },
             drops: [
                 {
@@ -19147,7 +19147,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.papyrusDesert,
+                area: MapsList.dssxw.papyrusDesert,
                 version: DataNames.red,
             },
             fusions: [DataNames.Insekimon, DataNames.Angewomon],
@@ -19158,7 +19158,7 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwds: {
             location: {
-                area: AreasList.dwds.skyPalace,
+                area: MapsList.dwds.skyPalace,
             },
             evolutions: [
                 {
@@ -19170,7 +19170,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.highlightHaven,
+                area: MapsList.dwdd.highlightHaven,
                 version: DataNames.both,
             },
             evolutions: [
@@ -19187,7 +19187,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.skullIceberg,
+                area: MapsList.dssxw.skullIceberg,
                 version: DataNames.red,
             },
             fusions: [DataNames.Tyilinmon, DataNames.Ophanimon],
@@ -19198,13 +19198,13 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwds: {
             location: {
-                area: AreasList.dwds.junkFactory,
+                area: MapsList.dwds.junkFactory,
             },
             evolutionTree: DataNames.Impmon,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.highlightHaven,
+                area: MapsList.dwdd.highlightHaven,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Gummymon,
@@ -19215,7 +19215,7 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwds: {
             location: {
-                area: AreasList.dwds.chromeMine,
+                area: MapsList.dwds.chromeMine,
             },
             evolutions: [
                 {
@@ -19237,7 +19237,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.shadowAbyss,
+                area: MapsList.dwdd.shadowAbyss,
                 version: DataNames.both,
             },
             evolutions: [
@@ -19255,7 +19255,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Wizardmon],
             location: {
-                area: AreasList.dsle.pixelDesert,
+                area: MapsList.dsle.pixelDesert,
             },
             drops: [
                 {
@@ -19288,7 +19288,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Score],
             location: {
-                area: AreasList.dssxw.skullIceberg,
+                area: MapsList.dssxw.skullIceberg,
                 version: DataNames.red,
             },
             drops: [
@@ -19309,7 +19309,7 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwds: {
             location: {
-                area: AreasList.dwds.drainTunnel,
+                area: MapsList.dwds.drainTunnel,
             },
             evolutions: [
                 {
@@ -19325,7 +19325,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -19344,7 +19344,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Devimon],
             location: {
-                area: AreasList.dsle.magnetMine,
+                area: MapsList.dsle.magnetMine,
             },
             drops: [
                 {
@@ -19380,7 +19380,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Devimon],
             location: {
-                area: AreasList.dssxw.skullIceberg,
+                area: MapsList.dssxw.skullIceberg,
                 version: DataNames.both,
             },
             fusions: [DataNames.Vamdemon, DataNames.Kimeramon, DataNames.LadyDevimon],
@@ -19391,7 +19391,7 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwdd: {
             location: {
-                area: AreasList.dwdd.accessGlacier,
+                area: MapsList.dwdd.accessGlacier,
                 version: DataNames.both,
             },
             evolutions: [
@@ -19415,7 +19415,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.IceDevimon],
             location: {
-                area: AreasList.dssxw.skullIceberg,
+                area: MapsList.dssxw.skullIceberg,
                 version: DataNames.blue,
             },
             fusions: [DataNames.SkullBaluchimon, DataNames.MarineDevimon],
@@ -19426,7 +19426,7 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwdd: {
             location: {
-                area: AreasList.dwdd.shadowAbyss,
+                area: MapsList.dwdd.shadowAbyss,
                 version: DataNames.both,
             },
             evolutions: [
@@ -19454,7 +19454,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.labelForest,
+                area: MapsList.dsle.labelForest,
             },
             drops: [
                 {
@@ -19473,7 +19473,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.digitalSpaceEast,
+                area: MapsList.dssxw.digitalSpaceEast,
                 version: DataNames.red,
             },
             drops: [
@@ -19490,7 +19490,7 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwds: {
             location: {
-                area: AreasList.dwds.chromeMine,
+                area: MapsList.dwds.chromeMine,
             },
             evolutions: [
                 {
@@ -19502,7 +19502,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.thrillerRuins,
+                area: MapsList.dwdd.thrillerRuins,
                 version: DataNames.both,
             },
             evolutions: [
@@ -19519,7 +19519,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.spiderwebRuins,
+                area: MapsList.dssxw.spiderwebRuins,
                 version: DataNames.blue,
             },
             fusions: [DataNames.LucemonFM, DataNames.Devitamamon],
@@ -19530,13 +19530,13 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwds: {
             location: {
-                area: AreasList.dwds.chromeMine,
+                area: MapsList.dwds.chromeMine,
             },
             evolutionTree: DataNames.Goburimon,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.thrillerRuins,
+                area: MapsList.dwdd.thrillerRuins,
                 version: DataNames.both,
             },
             evolutions: [
@@ -19553,7 +19553,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.southCave,
+                area: MapsList.dsle.southCave,
             },
             drops: [
                 {
@@ -19572,7 +19572,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Bakemon],
             location: {
-                area: AreasList.dssxw.spiderwebRuins,
+                area: MapsList.dssxw.spiderwebRuins,
                 version: DataNames.both,
             },
             fusions: [DataNames.Infermon, DataNames.Vamdemon, DataNames.Phantomon],
@@ -19583,7 +19583,7 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutions: [
                 {
@@ -19595,7 +19595,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.magnetMine,
+                area: MapsList.dwdd.magnetMine,
                 version: DataNames.dusk,
             },
             evolutions: [
@@ -19616,7 +19616,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.magnetMine,
+                area: MapsList.dsle.magnetMine,
             },
             drops: [
                 {
@@ -19639,7 +19639,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Chrysalimon],
             location: {
-                area: AreasList.dssxw.digitalSpaceEast,
+                area: MapsList.dssxw.digitalSpaceEast,
                 version: DataNames.both,
             },
             fusions: [DataNames.Infermon, DataNames.Armagemon, DataNames.SkullKnightmon],
@@ -19650,7 +19650,7 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwdd: {
             location: {
-                area: AreasList.dwdd.resistorJungle,
+                area: MapsList.dwdd.resistorJungle,
                 version: DataNames.both,
             },
             evolutions: [
@@ -19663,7 +19663,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.southCave,
+                area: MapsList.dsle.southCave,
             },
             drops: [
                 {
@@ -19682,7 +19682,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.darknessTunnel,
+                area: MapsList.dssxw.darknessTunnel,
                 version: DataNames.red,
             },
             fusions: [DataNames.ArgomonUltimate, DataNames.Bastemon],
@@ -19693,13 +19693,13 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwds: {
             location: {
-                area: AreasList.dwds.chromeMine,
+                area: MapsList.dwds.chromeMine,
             },
             evolutionTree: DataNames.Kapurimon,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.shadowAbyss,
+                area: MapsList.dwdd.shadowAbyss,
                 version: DataNames.both,
             },
             evolutions: [
@@ -19720,7 +19720,7 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwdd: {
             location: {
-                area: AreasList.dwdd.loopSwamp,
+                area: MapsList.dwdd.loopSwamp,
                 version: DataNames.both,
             },
             evolutions: [
@@ -19737,7 +19737,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.loopSwamp,
+                area: MapsList.dsle.loopSwamp,
             },
             evolutions: [
                 {
@@ -19751,7 +19751,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Musyamon],
             location: {
-                area: AreasList.dssxw.spiderwebRuins,
+                area: MapsList.dssxw.spiderwebRuins,
                 version: DataNames.blue,
             },
             drops: [
@@ -19768,7 +19768,7 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutions: [
                 {
@@ -19780,7 +19780,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -19798,7 +19798,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Sangloupmon],
             location: {
-                area: AreasList.dsle.southCave,
+                area: MapsList.dsle.southCave,
             },
             drops: [
                 {
@@ -19820,7 +19820,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.spiderwebRuins,
+                area: MapsList.dssxw.spiderwebRuins,
                 version: DataNames.blue,
             },
             fusions: [DataNames.GranDracmon],
@@ -19831,7 +19831,7 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -19845,7 +19845,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Firamon],
             location: {
-                area: AreasList.dsle.palaceLaboratory,
+                area: MapsList.dsle.palaceLaboratory,
             },
             drops: [
                 {
@@ -19865,7 +19865,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Firamon],
             location: {
-                area: AreasList.dssxw.papyrusDesert,
+                area: MapsList.dssxw.papyrusDesert,
                 version: DataNames.blue,
             },
             drops: [
@@ -19882,7 +19882,7 @@ export const DigimonList = {
         stage: Stage.stage3,
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -19900,7 +19900,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Lekismon],
             location: {
-                area: AreasList.dsle.palaceLaboratory,
+                area: MapsList.dsle.palaceLaboratory,
             },
             drops: [
                 {
@@ -19928,7 +19928,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Lekismon],
             location: {
-                area: AreasList.dssxw.spiderwebRuins,
+                area: MapsList.dssxw.spiderwebRuins,
                 version: DataNames.red,
             },
             fusions: [DataNames.Crescemon, DataNames.Bastemon],
@@ -19940,7 +19940,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Buraimon],
             location: {
-                area: AreasList.dsle.limitValley,
+                area: MapsList.dsle.limitValley,
             },
             drops: [
                 {
@@ -19969,7 +19969,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Buraimon],
             location: {
-                area: AreasList.dssxw.endlessCoast,
+                area: MapsList.dssxw.endlessCoast,
                 version: DataNames.red,
             },
             fusions: [DataNames.Grademon, DataNames.Butenmon],
@@ -19981,7 +19981,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Score],
             location: {
-                area: AreasList.dssxw.digitalSpaceNorth,
+                area: MapsList.dssxw.digitalSpaceNorth,
                 version: DataNames.both,
             },
             drops: [
@@ -20003,7 +20003,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Greymon2010],
             location: {
-                area: AreasList.dssxw.digitalSpaceNorth,
+                area: MapsList.dssxw.digitalSpaceNorth,
                 version: DataNames.blue,
             },
             drops: [
@@ -20020,7 +20020,7 @@ export const DigimonList = {
         stage: Stage.stage3,
         dssxw: {
             location: {
-                area: AreasList.dssxw.digitalSpaceNorth,
+                area: MapsList.dssxw.digitalSpaceNorth,
                 version: DataNames.both,
             },
         },
@@ -20030,7 +20030,7 @@ export const DigimonList = {
         stage: Stage.stage3,
         dssxw: {
             location: {
-                area: AreasList.dssxw.digitalSpaceNorth,
+                area: MapsList.dssxw.digitalSpaceNorth,
                 version: DataNames.blue,
             },
             drops: [
@@ -20048,7 +20048,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.SkullKnightmon],
             location: {
-                area: AreasList.dssxw.digitalSpaceNorth,
+                area: MapsList.dssxw.digitalSpaceNorth,
                 version: DataNames.red,
             },
             drops: [
@@ -20065,7 +20065,7 @@ export const DigimonList = {
         stage: Stage.stage3,
         dssxw: {
             location: {
-                area: AreasList.dssxw.digitalSpaceNorth,
+                area: MapsList.dssxw.digitalSpaceNorth,
                 version: DataNames.both,
             },
         },
@@ -20075,7 +20075,7 @@ export const DigimonList = {
         stage: Stage.stage3,
         dssxw: {
             location: {
-                area: AreasList.dssxw.digitalSpaceNorth,
+                area: MapsList.dssxw.digitalSpaceNorth,
                 version: DataNames.red,
             },
             drops: [
@@ -20093,7 +20093,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.ShoutmonX2],
             location: {
-                area: AreasList.dssxw.none,
+                area: MapsList.dssxw.none,
                 version: DataNames.both,
             },
         },
@@ -20104,7 +20104,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.JetSparrow],
             location: {
-                area: AreasList.dssxw.none,
+                area: MapsList.dssxw.none,
                 version: DataNames.both,
             },
         },
@@ -20115,7 +20115,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.DoruluCannon],
             location: {
-                area: AreasList.dssxw.none,
+                area: MapsList.dssxw.none,
                 version: DataNames.both,
             },
         },
@@ -20128,20 +20128,20 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutionTree: DataNames.Chicomon,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Fladramon,
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.crystalVolcano,
+                area: MapsList.dssxw.crystalVolcano,
                 version: DataNames.both,
             },
             fusions: [DataNames.Apollomon, DataNames.Cannondramon, DataNames.ImperialdramonDM],
@@ -20152,7 +20152,7 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             dna: [DataNames.BelialVamdemon],
@@ -20160,7 +20160,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.none,
+                area: MapsList.dsle.none,
             },
             evolutions: [
                 {
@@ -20179,7 +20179,7 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Allomon,
@@ -20190,14 +20190,14 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Lynxmon,
         },
         dsle: {
             location: {
-                area: AreasList.dsle.none,
+                area: MapsList.dsle.none,
             },
             evolutions: [
                 {
@@ -20214,13 +20214,13 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutionTree: DataNames.Kapurimon,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             dna: [DataNames.GigaSeadramon],
@@ -20228,7 +20228,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.none,
+                area: MapsList.dsle.none,
             },
             evolutions: [
                 {
@@ -20241,7 +20241,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.crystalCave,
+                area: MapsList.dssxw.crystalCave,
                 version: DataNames.blue,
             },
             drops: [
@@ -20258,7 +20258,7 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Owlmon,
@@ -20269,7 +20269,7 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Pipismon,
@@ -20280,20 +20280,20 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutionTree: DataNames.Hawkmon,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.transfield,
+                area: MapsList.dwdd.transfield,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Shurimon,
         },
         dsle: {
             location: {
-                area: AreasList.dsle.none,
+                area: MapsList.dsle.none,
             },
             evolutions: [
                 {
@@ -20309,7 +20309,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.crystalCave,
+                area: MapsList.dssxw.crystalCave,
                 version: DataNames.red,
             },
             fusions: [DataNames.Lotusmon, DataNames.AncientWisemon],
@@ -20320,13 +20320,13 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutionTree: DataNames.Pagumon,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Ponchomon,
@@ -20337,7 +20337,7 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Kabukimon,
@@ -20345,7 +20345,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Kabukimon],
             location: {
-                area: AreasList.dssxw.crystalCave,
+                area: MapsList.dssxw.crystalCave,
                 version: DataNames.red,
             },
             drops: [
@@ -20362,7 +20362,7 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             dna: [DataNames.GigaSeadramon],
@@ -20370,7 +20370,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.endlessSea,
+                area: MapsList.dssxw.endlessSea,
                 version: DataNames.both,
             },
             fusions: [DataNames.Neptunemon, DataNames.MetalSeadramon],
@@ -20381,13 +20381,13 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutionTree: DataNames.Dorimon,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Seahomon,
@@ -20398,7 +20398,7 @@ export const DigimonList = {
         stage: Stage.stage4,
         dssxw: {
             location: {
-                area: AreasList.dssxw.papyrusDesert,
+                area: MapsList.dssxw.papyrusDesert,
                 version: DataNames.both,
             },
             fusions: [DataNames.Pharaohmon, DataNames.AncientSphinxmon],
@@ -20409,7 +20409,7 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Toucanmon,
@@ -20420,20 +20420,20 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutionTree: DataNames.Terriermon,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Prairiemon,
         },
         dsle: {
             location: {
-                area: AreasList.dsle.none,
+                area: MapsList.dsle.none,
             },
             evolutions: [
                 {
@@ -20446,7 +20446,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.papyrusDesert,
+                area: MapsList.dssxw.papyrusDesert,
                 version: DataNames.blue,
             },
             drops: [
@@ -20463,13 +20463,13 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutionTree: DataNames.Chicomon,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             dna: [DataNames.Susanoomon],
@@ -20477,7 +20477,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.none,
+                area: MapsList.dsle.none,
             },
             evolutions: [
                 {
@@ -20491,7 +20491,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Magnamon],
             location: {
-                area: AreasList.dssxw.none,
+                area: MapsList.dssxw.none,
                 version: DataNames.both,
             },
             fusions: [DataNames.Crossmon, DataNames.ImperialdramonFM],
@@ -20502,13 +20502,13 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutionTree: DataNames.Wormmon,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.transfield,
+                area: MapsList.dwdd.transfield,
                 version: DataNames.both,
             },
             dna: [DataNames.Susanoomon],
@@ -20516,7 +20516,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.papyrusDesert,
+                area: MapsList.dssxw.papyrusDesert,
                 version: DataNames.blue,
             },
             drops: [
@@ -20533,7 +20533,7 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutions: [
                 {
@@ -20560,7 +20560,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.chaosBrain,
+                area: MapsList.dwdd.chaosBrain,
                 version: DataNames.both,
             },
             evolutions: [
@@ -20577,7 +20577,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.MetalGreymon],
             location: {
-                area: AreasList.dsle.limitValley,
+                area: MapsList.dsle.limitValley,
             },
             drops: [
                 {
@@ -20609,7 +20609,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.MetalGreymon],
             location: {
-                area: AreasList.dssxw.crystalVolcano,
+                area: MapsList.dssxw.crystalVolcano,
                 version: DataNames.both,
             },
             drops: [
@@ -20630,7 +20630,7 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutions: [
                 {
@@ -20650,7 +20650,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -20666,7 +20666,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.palaceLaboratory,
+                area: MapsList.dsle.palaceLaboratory,
             },
             drops: [
                 {
@@ -20698,7 +20698,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.WereGarurumon],
             location: {
-                area: AreasList.dssxw.stealthValley,
+                area: MapsList.dssxw.stealthValley,
                 version: DataNames.blue,
             },
             drops: [
@@ -20719,7 +20719,7 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutions: [
                 {
@@ -20735,7 +20735,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.taskCanyon,
+                area: MapsList.dwdd.taskCanyon,
                 version: DataNames.dawn,
             },
             evolutions: [
@@ -20754,7 +20754,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Garudamon],
             location: {
-                area: AreasList.dsle.taskCanyon,
+                area: MapsList.dsle.taskCanyon,
             },
             drops: [
                 {
@@ -20777,7 +20777,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.papyrusDesert,
+                area: MapsList.dssxw.papyrusDesert,
                 version: DataNames.both,
             },
             fusions: [DataNames.Anubimon, DataNames.Valkyrimon, DataNames.DukemonSpade, DataNames.Hououmon, DataNames.AncientIrismon, DataNames.UlforceVeedramon],
@@ -20788,7 +20788,7 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutions: [
                 {
@@ -20800,7 +20800,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Tanemon,
@@ -20808,7 +20808,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Lilymon],
             location: {
-                area: AreasList.dsle.registerJungle,
+                area: MapsList.dsle.registerJungle,
             },
             drops: [
                 {
@@ -20827,7 +20827,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Lilymon],
             location: {
-                area: AreasList.dssxw.knuckleCoast,
+                area: MapsList.dssxw.knuckleCoast,
                 version: DataNames.red,
             },
             drops: [
@@ -20844,7 +20844,7 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutions: [
                 {
@@ -20860,7 +20860,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             dna: [DataNames.HeraclesKabuterimon],
@@ -20869,7 +20869,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.AtlurKabuterimon],
             location: {
-                area: AreasList.dsle.registerJungle,
+                area: MapsList.dsle.registerJungle,
             },
             drops: [
                 {
@@ -20905,7 +20905,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.endlessCoast,
+                area: MapsList.dssxw.endlessCoast,
                 version: DataNames.both,
             },
             fusions: [DataNames.Holydramon, DataNames.AncientBeatmon, DataNames.HeraclesKabuterimon, DataNames.VenomVamdemon],
@@ -20916,7 +20916,7 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwds: {
             location: {
-                area: AreasList.dwds.hardMountains,
+                area: MapsList.dwds.hardMountains,
             },
             evolutions: [
                 {
@@ -20940,7 +20940,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.accessGlacier,
+                area: MapsList.dwdd.accessGlacier,
                 version: DataNames.both,
             },
             evolutions: [
@@ -20954,7 +20954,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Zudomon],
             location: {
-                area: AreasList.dsle.accessGlacier,
+                area: MapsList.dsle.accessGlacier,
             },
             drops: [
                 {
@@ -20982,7 +20982,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.endlessSea,
+                area: MapsList.dssxw.endlessSea,
                 version: DataNames.red,
             },
             drops: [
@@ -21003,7 +21003,7 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutions: [
                 {
@@ -21015,7 +21015,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.highlightHaven,
+                area: MapsList.dwdd.highlightHaven,
                 version: DataNames.both,
             },
             evolutions: [
@@ -21041,7 +21041,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.HolyAngemon],
             location: {
-                area: AreasList.dsle.palaceLaboratory,
+                area: MapsList.dsle.palaceLaboratory,
             },
             drops: [
                 {
@@ -21074,7 +21074,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.HolyAngemon],
             location: {
-                area: AreasList.dssxw.skullIceberg,
+                area: MapsList.dssxw.skullIceberg,
                 version: DataNames.both,
             },
             drops: [
@@ -21091,7 +21091,7 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwds: {
             location: {
-                area: AreasList.dwds.skyPalace,
+                area: MapsList.dwds.skyPalace,
             },
             evolutions: [
                 {
@@ -21103,7 +21103,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.highlightHaven,
+                area: MapsList.dwdd.highlightHaven,
                 version: DataNames.dawn,
             },
             evolutions: [
@@ -21121,7 +21121,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Angewomon],
             location: {
-                area: AreasList.dsle.accessGlacier,
+                area: MapsList.dsle.accessGlacier,
             },
             drops: [
                 {
@@ -21150,7 +21150,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Angewomon],
             location: {
-                area: AreasList.dssxw.skullIceberg,
+                area: MapsList.dssxw.skullIceberg,
                 version: DataNames.both,
             },
             fusions: [DataNames.Ophanimon, DataNames.Seraphimon, DataNames.Holydramon],
@@ -21161,7 +21161,7 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutions: [
                 {
@@ -21185,7 +21185,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -21213,7 +21213,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.PaildramonAlpha, DataNames.PaildramonBeta],
             location: {
-                area: AreasList.dsle.none,
+                area: MapsList.dsle.none,
             },
             evolutions: [
                 {
@@ -21226,7 +21226,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Paildramon],
             location: {
-                area: AreasList.dssxw.papyrusDesert,
+                area: MapsList.dssxw.papyrusDesert,
                 version: DataNames.blue,
             },
             drops: [
@@ -21243,7 +21243,7 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwds: {
             location: {
-                area: AreasList.dwds.tropicalIsles,
+                area: MapsList.dwds.tropicalIsles,
             },
             evolutions: [
                 {
@@ -21259,7 +21259,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.transfield,
+                area: MapsList.dwdd.transfield,
                 version: DataNames.both,
             },
             evolutions: [
@@ -21278,7 +21278,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.SilphymonAlpha, DataNames.SilphymonBeta],
             location: {
-                area: AreasList.dsle.none,
+                area: MapsList.dsle.none,
             },
             evolutions: [
                 {
@@ -21296,7 +21296,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Silphymon],
             location: {
-                area: AreasList.dssxw.none,
+                area: MapsList.dssxw.none,
                 version: DataNames.both,
             },
             fusions: [DataNames.Valkyrimon, DataNames.AncientIrismon],
@@ -21307,7 +21307,7 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwdd: {
             location: {
-                area: AreasList.dwdd.taskCanyon,
+                area: MapsList.dwdd.taskCanyon,
                 version: DataNames.dawn,
             },
             evolutionTree: DataNames.Shakkoumon,
@@ -21315,7 +21315,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.ShakkoumonAlpha, DataNames.ShakkoumonBeta],
             location: {
-                area: AreasList.dsle.none,
+                area: MapsList.dsle.none,
             },
             evolutions: [
                 {
@@ -21329,7 +21329,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Shakkoumon],
             location: {
-                area: AreasList.dssxw.crystalMine,
+                area: MapsList.dssxw.crystalMine,
                 version: DataNames.both,
             },
             fusions: [DataNames.Vikemon, DataNames.Seraphimon, DataNames.DaiPenmon],
@@ -21340,7 +21340,7 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutions: [
                 {
@@ -21352,7 +21352,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -21380,7 +21380,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.MegaloGrowlmon],
             location: {
-                area: AreasList.dsle.none,
+                area: MapsList.dsle.none,
             },
             evolutions: [
                 {
@@ -21409,7 +21409,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.MegaloGrowlmon],
             location: {
-                area: AreasList.dssxw.crystalVolcano,
+                area: MapsList.dssxw.crystalVolcano,
                 version: DataNames.red,
             },
             drops: [
@@ -21430,7 +21430,7 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwds: {
             location: {
-                area: AreasList.dwds.skyPalace,
+                area: MapsList.dwds.skyPalace,
             },
             evolutions: [
                 {
@@ -21450,7 +21450,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -21471,7 +21471,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.wizardTemple,
+                area: MapsList.dsle.wizardTemple,
             },
             drops: [
                 {
@@ -21494,7 +21494,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Taomon],
             location: {
-                area: AreasList.dssxw.spiderwebRuins,
+                area: MapsList.dssxw.spiderwebRuins,
                 version: DataNames.both,
             },
             fusions: [DataNames.ChronomonHM, DataNames.Sakuyamon, DataNames.Dianamon, DataNames.Ravemon],
@@ -21505,7 +21505,7 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwds: {
             location: {
-                area: AreasList.dwds.tropicalIsles,
+                area: MapsList.dwds.tropicalIsles,
             },
             evolutions: [
                 {
@@ -21521,7 +21521,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -21545,7 +21545,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Rapidmon],
             location: {
-                area: AreasList.dsle.northCity,
+                area: MapsList.dsle.northCity,
             },
             drops: [
                 {
@@ -21572,7 +21572,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Rapidmon],
             location: {
-                area: AreasList.dssxw.stealthValley,
+                area: MapsList.dssxw.stealthValley,
                 version: DataNames.red,
             },
             drops: [
@@ -21589,7 +21589,7 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwds: {
             location: {
-                area: AreasList.dwds.lavaRiver,
+                area: MapsList.dwds.lavaRiver,
             },
             evolutions: [
                 {
@@ -21605,7 +21605,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.accessGlacier,
+                area: MapsList.dwdd.accessGlacier,
                 version: DataNames.both,
             },
             evolutions: [
@@ -21622,7 +21622,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.graboCentral,
+                area: MapsList.dsle.graboCentral,
             },
             drops: [
                 {
@@ -21645,7 +21645,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Score],
             location: {
-                area: AreasList.dssxw.crystalVolcano,
+                area: MapsList.dssxw.crystalVolcano,
                 version: DataNames.blue,
             },
             drops: [
@@ -21662,7 +21662,7 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutions: [
                 {
@@ -21693,7 +21693,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -21719,7 +21719,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Antylamon],
             location: {
-                area: AreasList.dsle.thrillerRuins,
+                area: MapsList.dsle.thrillerRuins,
             },
             drops: [
                 {
@@ -21745,7 +21745,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.spiderwebRuins,
+                area: MapsList.dssxw.spiderwebRuins,
                 version: DataNames.red,
             },
             drops: [
@@ -21762,13 +21762,13 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutionTree: DataNames.Koromon,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -21797,7 +21797,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.RizeGreymon],
             location: {
-                area: AreasList.dsle.pixelDesert,
+                area: MapsList.dsle.pixelDesert,
             },
             drops: [
                 {
@@ -21828,7 +21828,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.RizeGreymon],
             location: {
-                area: AreasList.dssxw.none,
+                area: MapsList.dssxw.none,
                 version: DataNames.both,
             },
             fusions: [DataNames.Examon, DataNames.ShineGreymon, DataNames.ShineGreymonBM],
@@ -21839,13 +21839,13 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutionTree: DataNames.Tsunomon,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -21870,7 +21870,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.MachGaogamon],
             location: {
-                area: AreasList.dsle.palaceLaboratory,
+                area: MapsList.dsle.palaceLaboratory,
             },
             drops: [
                 {
@@ -21897,7 +21897,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.MachGaogamon],
             location: {
-                area: AreasList.dssxw.papyrusDesert,
+                area: MapsList.dssxw.papyrusDesert,
                 version: DataNames.blue,
             },
             drops: [
@@ -21914,13 +21914,13 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutionTree: DataNames.Tanemon,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.paletteAmazon,
+                area: MapsList.dwdd.paletteAmazon,
                 version: DataNames.both,
             },
             evolutions: [
@@ -21949,7 +21949,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Lilamon],
             location: {
-                area: AreasList.dsle.none,
+                area: MapsList.dsle.none,
             },
             evolutions: [
                 {
@@ -21965,7 +21965,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.spinningAmazon,
+                area: MapsList.dssxw.spinningAmazon,
                 version: DataNames.red,
             },
             drops: [
@@ -21986,7 +21986,7 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwds: {
             location: {
-                area: AreasList.dwds.coreField,
+                area: MapsList.dwds.coreField,
             },
             evolutions: [
                 {
@@ -21999,7 +21999,7 @@ export const DigimonList = {
         dwdd: {
             sprite: "_2",
             location: {
-                area: AreasList.dwdd.highlightHaven,
+                area: MapsList.dwdd.highlightHaven,
                 version: DataNames.both,
             },
             evolutions: [
@@ -22019,7 +22019,7 @@ export const DigimonList = {
             sprite: "_2",
             platesRequired: [DataNames.Yatagaramon],
             location: {
-                area: AreasList.dsle.none,
+                area: MapsList.dsle.none,
             },
             evolutions: [
                 {
@@ -22036,7 +22036,7 @@ export const DigimonList = {
             sprite: "_2",
             digiScores: [DataNames.Yatagaramon],
             location: {
-                area: AreasList.dssxw.stealthValley,
+                area: MapsList.dssxw.stealthValley,
                 version: DataNames.blue,
             },
             drops: [
@@ -22053,7 +22053,7 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwdd: {
             location: {
-                area: AreasList.dwdd.transfield,
+                area: MapsList.dwdd.transfield,
                 version: DataNames.both,
             },
             evolutions: [
@@ -22071,7 +22071,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Shawujinmon],
             location: {
-                area: AreasList.dsle.anglerTunnel,
+                area: MapsList.dsle.anglerTunnel,
             },
             drops: [
                 {
@@ -22094,7 +22094,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.endlessCoast,
+                area: MapsList.dssxw.endlessCoast,
                 version: DataNames.blue,
             },
             drops: [
@@ -22111,7 +22111,7 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwdd: {
             location: {
-                area: AreasList.dwdd.chaosBrain,
+                area: MapsList.dwdd.chaosBrain,
                 version: DataNames.both,
             },
             evolutions: [
@@ -22128,7 +22128,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.crystalMine,
+                area: MapsList.dssxw.crystalMine,
                 version: DataNames.blue,
             },
             fusions: [DataNames.JumboGamemon, DataNames.HiAndromon],
@@ -22139,7 +22139,7 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwdd: {
             location: {
-                area: AreasList.dwdd.processFactory,
+                area: MapsList.dwdd.processFactory,
                 version: DataNames.dusk,
             },
             evolutions: [
@@ -22157,7 +22157,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.RookChessmon],
             location: {
-                area: AreasList.dssxw.spiderwebRuins,
+                area: MapsList.dssxw.spiderwebRuins,
                 version: DataNames.blue,
             },
             fusions: [DataNames.JumboGamemon, DataNames.AncientTroiamon],
@@ -22168,7 +22168,7 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutions: [
                 {
@@ -22184,7 +22184,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.highlightHaven,
+                area: MapsList.dwdd.highlightHaven,
                 version: DataNames.dawn,
             },
             evolutions: [
@@ -22201,7 +22201,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.none,
+                area: MapsList.dsle.none,
             },
             evolutions: [
                 {
@@ -22215,7 +22215,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Tyilinmon],
             location: {
-                area: AreasList.dssxw.stealthValley,
+                area: MapsList.dssxw.stealthValley,
                 version: DataNames.both,
             },
             fusions: [DataNames.Sleipmon, DataNames.AncientGarurumon, DataNames.Valdurmon, DataNames.Spadamon],
@@ -22226,7 +22226,7 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutions: [
                 {
@@ -22238,7 +22238,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -22256,7 +22256,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Dorugremon],
             location: {
-                area: AreasList.dsle.taskCanyon,
+                area: MapsList.dsle.taskCanyon,
             },
             drops: [
                 {
@@ -22276,7 +22276,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Dorugremon],
             location: {
-                area: AreasList.dssxw.papyrusDesert,
+                area: MapsList.dssxw.papyrusDesert,
                 version: DataNames.red,
             },
             drops: [
@@ -22294,7 +22294,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Grademon],
             location: {
-                area: AreasList.dsle.classDesert,
+                area: MapsList.dsle.classDesert,
             },
             drops: [
                 {
@@ -22321,7 +22321,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Grademon],
             location: {
-                area: AreasList.dssxw.papyrusDesert,
+                area: MapsList.dssxw.papyrusDesert,
                 version: DataNames.red,
             },
             drops: [
@@ -22338,7 +22338,7 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwdd: {
             location: {
-                area: AreasList.dwdd.taskCanyon,
+                area: MapsList.dwdd.taskCanyon,
                 version: DataNames.dawn,
             },
             evolutions: [
@@ -22359,7 +22359,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.AeroVeedramon],
             location: {
-                area: AreasList.dsle.taskCanyon,
+                area: MapsList.dsle.taskCanyon,
             },
             drops: [
                 {
@@ -22391,7 +22391,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.AeroVeedramon],
             location: {
-                area: AreasList.dssxw.stealthValley,
+                area: MapsList.dssxw.stealthValley,
                 version: DataNames.red,
             },
             drops: [
@@ -22408,13 +22408,13 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwds: {
             location: {
-                area: AreasList.dwds.lavaRiver,
+                area: MapsList.dwds.lavaRiver,
             },
             evolutionTree: DataNames.Kuramon,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.shadowAbyss,
+                area: MapsList.dwdd.shadowAbyss,
                 version: DataNames.both,
             },
             dna: [DataNames.ChaosDukemon],
@@ -22427,7 +22427,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.MasterTyrannomon],
             location: {
-                area: AreasList.dsle.taskCanyon,
+                area: MapsList.dsle.taskCanyon,
             },
             drops: [
                 {
@@ -22454,7 +22454,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.endlessCoast,
+                area: MapsList.dssxw.endlessCoast,
                 version: DataNames.both,
             },
             fusions: [DataNames.Examon, DataNames.Goddramon, DataNames.AncientGreymon, DataNames.ShineGreymon, DataNames.Greymon2010],
@@ -22465,7 +22465,7 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwds: {
             location: {
-                area: AreasList.dwds.ancientCanyon,
+                area: MapsList.dwds.ancientCanyon,
             },
             evolutions: [
                 {
@@ -22477,7 +22477,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.proxyIsland,
+                area: MapsList.dwdd.proxyIsland,
                 version: DataNames.both,
             },
             evolutions: [
@@ -22494,7 +22494,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.knuckleCoast,
+                area: MapsList.dssxw.knuckleCoast,
                 version: DataNames.blue,
             },
             drops: [
@@ -22511,7 +22511,7 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwdd: {
             location: {
-                area: AreasList.dwdd.proxyIsland,
+                area: MapsList.dwdd.proxyIsland,
                 version: DataNames.both,
             },
             evolutions: [
@@ -22528,7 +22528,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.crystalVolcano,
+                area: MapsList.dssxw.crystalVolcano,
                 version: DataNames.both,
             },
             fusions: [DataNames.Examon, DataNames.Cannondramon, DataNames.AncientVolcamonHeart, DataNames.DukemonCM],
@@ -22539,14 +22539,14 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwdd: {
             location: {
-                area: AreasList.dwdd.accessGlacier,
+                area: MapsList.dwdd.accessGlacier,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.ToyAgumon,
         },
         dsle: {
             location: {
-                area: AreasList.dsle.graboCave,
+                area: MapsList.dsle.graboCave,
             },
             drops: [
                 {
@@ -22565,7 +22565,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.crystalCave,
+                area: MapsList.dssxw.crystalCave,
                 version: DataNames.red,
             },
             fusions: [DataNames.PrinceMamemon, DataNames.Megidramon],
@@ -22576,7 +22576,7 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwdd: {
             location: {
-                area: AreasList.dwdd.paletteAmazon,
+                area: MapsList.dwdd.paletteAmazon,
                 version: DataNames.both,
             },
             evolutions: [
@@ -22594,7 +22594,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.wizardTemple,
+                area: MapsList.dsle.wizardTemple,
             },
             drops: [
                 {
@@ -22631,7 +22631,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.GrapLeomon],
             location: {
-                area: AreasList.dssxw.papyrusDesert,
+                area: MapsList.dssxw.papyrusDesert,
                 version: DataNames.red,
             },
             drops: [
@@ -22656,7 +22656,7 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutions: [
                 {
@@ -22668,7 +22668,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -22689,7 +22689,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Kyukimon],
             location: {
-                area: AreasList.dssxw.spiderwebRuins,
+                area: MapsList.dssxw.spiderwebRuins,
                 version: DataNames.red,
             },
             fusions: [DataNames.Craniummon, DataNames.Holydramon],
@@ -22700,7 +22700,7 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwds: {
             location: {
-                area: AreasList.dwds.tropicalIsles,
+                area: MapsList.dwds.tropicalIsles,
             },
             evolutions: [
                 {
@@ -22716,7 +22716,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.proxyIsland,
+                area: MapsList.dwdd.proxyIsland,
                 version: DataNames.both,
             },
             evolutions: [
@@ -22733,7 +22733,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.knuckleCoast,
+                area: MapsList.dssxw.knuckleCoast,
                 version: DataNames.blue,
             },
             drops: [
@@ -22750,7 +22750,7 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             dna: [DataNames.BanchoLeomon],
@@ -22758,7 +22758,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.limitValley,
+                area: MapsList.dsle.limitValley,
             },
             drops: [
                 {
@@ -22781,7 +22781,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Pandamon],
             location: {
-                area: AreasList.dssxw.stealthValley,
+                area: MapsList.dssxw.stealthValley,
                 version: DataNames.both,
             },
             fusions: [DataNames.Justimon, DataNames.Minervamon, DataNames.BanchoLeomon, DataNames.Spadamon],
@@ -22792,7 +22792,7 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwdd: {
             location: {
-                area: AreasList.dwdd.accessGlacier,
+                area: MapsList.dwdd.accessGlacier,
                 version: DataNames.both,
             },
             evolutions: [
@@ -22815,7 +22815,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.skullIceberg,
+                area: MapsList.dssxw.skullIceberg,
                 version: DataNames.blue,
             },
             drops: [
@@ -22833,7 +22833,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Cerberumon],
             location: {
-                area: AreasList.dssxw.crystalVolcano,
+                area: MapsList.dssxw.crystalVolcano,
                 version: DataNames.both,
             },
             fusions: [DataNames.Anubimon, DataNames.Gaioumon, DataNames.BelialVamdemon],
@@ -22845,7 +22845,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Bastemon],
             location: {
-                area: AreasList.dssxw.papyrusDesert,
+                area: MapsList.dssxw.papyrusDesert,
                 version: DataNames.both,
             },
             fusions: [DataNames.GranDracmon, DataNames.Dianamon],
@@ -22856,7 +22856,7 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwdd: {
             location: {
-                area: AreasList.dwdd.transfield,
+                area: MapsList.dwdd.transfield,
                 version: DataNames.both,
             },
             dna: [DataNames.Valdurmon],
@@ -22865,7 +22865,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Sinduramon],
             location: {
-                area: AreasList.dssxw.papyrusDesert,
+                area: MapsList.dssxw.papyrusDesert,
                 version: DataNames.both,
             },
             fusions: [DataNames.Crossmon, DataNames.ChronomonHM, DataNames.Hououmon, DataNames.Boltmon],
@@ -22876,7 +22876,7 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwdd: {
             location: {
-                area: AreasList.dwdd.chaosBrain,
+                area: MapsList.dwdd.chaosBrain,
                 version: DataNames.both,
             },
             dna: [DataNames.Anubimon, DataNames.Kuzuhamon],
@@ -22884,7 +22884,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.riskFactory,
+                area: MapsList.dsle.riskFactory,
             },
             drops: [
                 {
@@ -22908,7 +22908,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Karatenmon],
             location: {
-                area: AreasList.dssxw.stealthValley,
+                area: MapsList.dssxw.stealthValley,
                 version: DataNames.blue,
             },
             fusions: [DataNames.Ravemon, DataNames.TigerVespamon, DataNames.Beelzebumon2010Spade],
@@ -22919,7 +22919,7 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwds: {
             location: {
-                area: AreasList.dwds.mangoveWoods,
+                area: MapsList.dwds.mangoveWoods,
             },
             evolutions: [
                 {
@@ -22935,7 +22935,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.paletteAmazon,
+                area: MapsList.dwdd.paletteAmazon,
                 version: DataNames.both,
             },
             evolutions: [
@@ -22952,7 +22952,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.proxyIsland,
+                area: MapsList.dsle.proxyIsland,
             },
             drops: [
                 {
@@ -22971,7 +22971,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.endlessCoast,
+                area: MapsList.dssxw.endlessCoast,
                 version: DataNames.both,
             },
             fusions: [DataNames.Crossmon, DataNames.Seraphimon, DataNames.Hououmon],
@@ -22982,13 +22982,13 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwds: {
             location: {
-                area: AreasList.dwds.mangoveWoods,
+                area: MapsList.dwds.mangoveWoods,
             },
             evolutionTree: DataNames.Penmon,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.paletteAmazon,
+                area: MapsList.dwdd.paletteAmazon,
                 version: DataNames.both,
             },
             evolutions: [
@@ -23015,13 +23015,13 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwds: {
             location: {
-                area: AreasList.dwds.drainTunnel,
+                area: MapsList.dwds.drainTunnel,
             },
             evolutionTree: DataNames.Betamon,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.macroSea,
+                area: MapsList.dwdd.macroSea,
                 version: DataNames.both,
             },
             evolutions: [
@@ -23039,7 +23039,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Dagomon],
             location: {
-                area: AreasList.dsle.accessGlacier,
+                area: MapsList.dsle.accessGlacier,
             },
             drops: [
                 {
@@ -23062,7 +23062,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.endlessSea,
+                area: MapsList.dssxw.endlessSea,
                 version: DataNames.red,
             },
             fusions: [DataNames.Demon, DataNames.Neptunemon, DataNames.AncientMegatheriumon, DataNames.VenomVamdemon],
@@ -23074,7 +23074,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Mermaimon],
             location: {
-                area: AreasList.dsle.anglerTunnel,
+                area: MapsList.dsle.anglerTunnel,
             },
             drops: [
                 {
@@ -23102,7 +23102,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Mermaimon],
             location: {
-                area: AreasList.dssxw.skullIceberg,
+                area: MapsList.dssxw.skullIceberg,
                 version: DataNames.red,
             },
             drops: [
@@ -23119,7 +23119,7 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwds: {
             location: {
-                area: AreasList.dwds.underseaDrive,
+                area: MapsList.dwds.underseaDrive,
             },
             evolutions: [
                 {
@@ -23135,7 +23135,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.macroSea,
+                area: MapsList.dwdd.macroSea,
                 version: DataNames.both,
             },
             evolutions: [
@@ -23160,7 +23160,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Whamon],
             location: {
-                area: AreasList.dssxw.endlessCoast,
+                area: MapsList.dssxw.endlessCoast,
                 version: DataNames.both,
             },
             fusions: [DataNames.JumboGamemon, DataNames.Neptunemon, DataNames.AncientMermaimon, DataNames.MarineAngemon],
@@ -23171,7 +23171,7 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwds: {
             location: {
-                area: AreasList.dwds.mangoveWoods,
+                area: MapsList.dwds.mangoveWoods,
             },
             evolutions: [
                 {
@@ -23195,7 +23195,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -23230,7 +23230,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.MegaSeadramon],
             location: {
-                area: AreasList.dsle.none,
+                area: MapsList.dsle.none,
             },
             evolutions: [
                 {
@@ -23249,7 +23249,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.MegaSeadramon],
             location: {
-                area: AreasList.dssxw.endlessCoast,
+                area: MapsList.dssxw.endlessCoast,
                 version: DataNames.blue,
             },
             drops: [
@@ -23271,7 +23271,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.WaruSeadramon],
             location: {
-                area: AreasList.dsle.anglerTunnel,
+                area: MapsList.dsle.anglerTunnel,
             },
             drops: [
                 {
@@ -23294,7 +23294,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.endlessSea,
+                area: MapsList.dssxw.endlessSea,
                 version: DataNames.blue,
             },
             drops: [
@@ -23311,7 +23311,7 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwdd: {
             location: {
-                area: AreasList.dwdd.transfield,
+                area: MapsList.dwdd.transfield,
                 version: DataNames.both,
             },
             evolutions: [
@@ -23328,7 +23328,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.proxyIsland,
+                area: MapsList.dsle.proxyIsland,
             },
             evolutions: [
                 {
@@ -23340,7 +23340,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.endlessCoast,
+                area: MapsList.dssxw.endlessCoast,
                 version: DataNames.red,
             },
             drops: [
@@ -23357,20 +23357,20 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwds: {
             location: {
-                area: AreasList.dwds.underseaDrive,
+                area: MapsList.dwds.underseaDrive,
             },
             evolutionTree: DataNames.Gizamon,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.macroSea,
+                area: MapsList.dwdd.macroSea,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Betamon,
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.endlessCoast,
+                area: MapsList.dssxw.endlessCoast,
                 version: DataNames.red,
             },
             drops: [
@@ -23387,14 +23387,14 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwdd: {
             location: {
-                area: AreasList.dwdd.loopSwamp,
+                area: MapsList.dwdd.loopSwamp,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Otamamon,
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.spinningAmazon,
+                area: MapsList.dssxw.spinningAmazon,
                 version: DataNames.blue,
             },
             fusions: [DataNames.GigaSeadramon, DataNames.MetalEtemon],
@@ -23405,7 +23405,7 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwdd: {
             location: {
-                area: AreasList.dwdd.proxyIsland,
+                area: MapsList.dwdd.proxyIsland,
                 version: DataNames.both,
             },
             evolutions: [
@@ -23422,7 +23422,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.paletteAmazon,
+                area: MapsList.dsle.paletteAmazon,
             },
             drops: [
                 {
@@ -23440,7 +23440,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.endlessCoast,
+                area: MapsList.dssxw.endlessCoast,
                 version: DataNames.red,
             },
             fusions: [DataNames.PiemonHeart, DataNames.AncientMermaimon],
@@ -23451,7 +23451,7 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwdd: {
             location: {
-                area: AreasList.dwdd.macroSea,
+                area: MapsList.dwdd.macroSea,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Gizamon,
@@ -23459,7 +23459,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.MarineDevimon],
             location: {
-                area: AreasList.dssxw.skullIceberg,
+                area: MapsList.dssxw.skullIceberg,
                 version: DataNames.blue,
             },
             fusions: [DataNames.Diaboromon, DataNames.PiemonSpade],
@@ -23470,13 +23470,13 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutionTree: DataNames.Impmon,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.resistorJungle,
+                area: MapsList.dwdd.resistorJungle,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Minomon,
@@ -23487,7 +23487,7 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutions: [
                 {
@@ -23499,7 +23499,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -23517,7 +23517,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.DinobeemonAlpha, DataNames.DinobeemonBeta],
             location: {
-                area: AreasList.dsle.limitValley,
+                area: MapsList.dsle.limitValley,
             },
             drops: [
                 {
@@ -23541,7 +23541,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Dinobeemon],
             location: {
-                area: AreasList.dssxw.spinningAmazon,
+                area: MapsList.dssxw.spinningAmazon,
                 version: DataNames.blue,
             },
             fusions: [DataNames.GranKuwagamon, DataNames.ImperialdramonDM, DataNames.TigerVespamon],
@@ -23552,7 +23552,7 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwds: {
             location: {
-                area: AreasList.dwds.packetSwamp,
+                area: MapsList.dwds.packetSwamp,
             },
             evolutions: [
                 {
@@ -23564,7 +23564,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.proxyIsland,
+                area: MapsList.dwdd.proxyIsland,
                 version: DataNames.both,
             },
             evolutions: [
@@ -23583,7 +23583,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Ookuwamon],
             location: {
-                area: AreasList.dsle.northCity,
+                area: MapsList.dsle.northCity,
             },
             drops: [
                 {
@@ -23606,7 +23606,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.endlessCoast,
+                area: MapsList.dssxw.endlessCoast,
                 version: DataNames.blue,
             },
             drops: [
@@ -23623,7 +23623,7 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwds: {
             location: {
-                area: AreasList.dwds.steamyJungle,
+                area: MapsList.dwds.steamyJungle,
             },
             evolutions: [
                 {
@@ -23635,7 +23635,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.resistorJungle,
+                area: MapsList.dwdd.resistorJungle,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Budmon,
@@ -23643,7 +23643,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Arukenimon],
             location: {
-                area: AreasList.dsle.wizardTemple,
+                area: MapsList.dsle.wizardTemple,
             },
             drops: [
                 {
@@ -23664,7 +23664,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.spiderwebRuins,
+                area: MapsList.dssxw.spiderwebRuins,
                 version: DataNames.red,
             },
             drops: [
@@ -23681,14 +23681,14 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwdd: {
             location: {
-                area: AreasList.dwdd.resistorJungle,
+                area: MapsList.dwdd.resistorJungle,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Tanemon,
         },
         dsle: {
             location: {
-                area: AreasList.dsle.proxyIsland,
+                area: MapsList.dsle.proxyIsland,
             },
             drops: [
                 {
@@ -23716,7 +23716,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Jureimon],
             location: {
-                area: AreasList.dssxw.stealthValley,
+                area: MapsList.dssxw.stealthValley,
                 version: DataNames.both,
             },
             fusions: [DataNames.Pinocchimon, DataNames.AncientTroiamon, DataNames.Xuanwumon],
@@ -23727,13 +23727,13 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwds: {
             location: {
-                area: AreasList.dwds.packetSwamp,
+                area: MapsList.dwds.packetSwamp,
             },
             evolutionTree: DataNames.Floramon,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.loopSwamp,
+                area: MapsList.dwdd.loopSwamp,
                 version: DataNames.both,
             },
             dna: [DataNames.Anubimon],
@@ -23741,7 +23741,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.proxyIsland,
+                area: MapsList.dsle.proxyIsland,
             },
             drops: [
                 {
@@ -23761,7 +23761,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Blossomon],
             location: {
-                area: AreasList.dssxw.spinningAmazon,
+                area: MapsList.dssxw.spinningAmazon,
                 version: DataNames.red,
             },
             drops: [
@@ -23778,7 +23778,7 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwdd: {
             location: {
-                area: AreasList.dwdd.thrillerRuins,
+                area: MapsList.dwdd.thrillerRuins,
                 version: DataNames.dusk,
             },
             evolutions: [
@@ -23796,7 +23796,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.ArgomonUltimate],
             location: {
-                area: AreasList.dsle.thrillerRuins,
+                area: MapsList.dsle.thrillerRuins,
             },
             drops: [
                 {
@@ -23819,7 +23819,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.ArgomonUltimate],
             location: {
-                area: AreasList.dssxw.spiderwebRuins,
+                area: MapsList.dssxw.spiderwebRuins,
                 version: DataNames.red,
             },
             fusions: [DataNames.Duftmon, DataNames.PiemonHeart],
@@ -23830,7 +23830,7 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwds: {
             location: {
-                area: AreasList.dwds.hardMountains,
+                area: MapsList.dwds.hardMountains,
             },
             evolutions: [
                 {
@@ -23846,7 +23846,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.chaosBrain,
+                area: MapsList.dwdd.chaosBrain,
                 version: DataNames.both,
             },
             evolutions: [
@@ -23864,7 +23864,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Andromon],
             location: {
-                area: AreasList.dsle.palaceLaboratory,
+                area: MapsList.dsle.palaceLaboratory,
             },
             drops: [
                 {
@@ -23893,7 +23893,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.crystalCave,
+                area: MapsList.dssxw.crystalCave,
                 version: DataNames.blue,
             },
             drops: [
@@ -23910,7 +23910,7 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwdd: {
             location: {
-                area: AreasList.dwdd.accessGlacier,
+                area: MapsList.dwdd.accessGlacier,
                 version: DataNames.both,
             },
             dna: [DataNames.Mugendramon],
@@ -23919,7 +23919,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.MetalTyrannomon],
             location: {
-                area: AreasList.dsle.palaceLaboratory,
+                area: MapsList.dsle.palaceLaboratory,
             },
             drops: [
                 {
@@ -23942,7 +23942,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.crystalVolcano,
+                area: MapsList.dssxw.crystalVolcano,
                 version: DataNames.blue,
             },
             drops: [
@@ -23959,7 +23959,7 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwds: {
             location: {
-                area: AreasList.dwds.junkFactory,
+                area: MapsList.dwds.junkFactory,
             },
             evolutions: [
                 {
@@ -23971,7 +23971,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.accessGlacier,
+                area: MapsList.dwdd.accessGlacier,
                 version: DataNames.both,
             },
             evolutions: [
@@ -23995,7 +23995,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.palaceLaboratory,
+                area: MapsList.dsle.palaceLaboratory,
             },
             drops: [
                 {
@@ -24008,7 +24008,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Megadramon],
             location: {
-                area: AreasList.dssxw.none,
+                area: MapsList.dssxw.none,
                 version: DataNames.both,
             },
             fusions: [DataNames.Goddramon, DataNames.Darkdramon, DataNames.MugendramonSpade, DataNames.MetalSeadramon],
@@ -24019,13 +24019,13 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutionTree: DataNames.Hawkmon,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.processFactory,
+                area: MapsList.dwdd.processFactory,
                 version: DataNames.dusk,
             },
             dna: [DataNames.GigaSeadramon, DataNames.Mugendramon, DataNames.ZeedMillenniumon],
@@ -24033,7 +24033,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.shadowHell,
+                area: MapsList.dsle.shadowHell,
             },
             drops: [
                 {
@@ -24053,7 +24053,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Gigadramon],
             location: {
-                area: AreasList.dssxw.lostSpace,
+                area: MapsList.dssxw.lostSpace,
                 version: DataNames.blue,
             },
             fusions: [DataNames.GigaSeadramon, DataNames.Darkdramon, DataNames.Diaboromon],
@@ -24064,7 +24064,7 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwds: {
             location: {
-                area: AreasList.dwds.junkFactory,
+                area: MapsList.dwds.junkFactory,
             },
             evolutions: [
                 {
@@ -24080,7 +24080,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.proxyIsland,
+                area: MapsList.dwdd.proxyIsland,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Kokuwamon,
@@ -24088,7 +24088,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Mamemon],
             location: {
-                area: AreasList.dsle.anglerTunnel,
+                area: MapsList.dsle.anglerTunnel,
             },
             drops: [
                 {
@@ -24111,7 +24111,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.crystalCave,
+                area: MapsList.dssxw.crystalCave,
                 version: DataNames.red,
             },
             fusions: [DataNames.PrinceMamemon],
@@ -24122,7 +24122,7 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwds: {
             location: {
-                area: AreasList.dwds.hardMountains,
+                area: MapsList.dwds.hardMountains,
             },
             evolutions: [
                 {
@@ -24134,7 +24134,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.chaosBrain,
+                area: MapsList.dwdd.chaosBrain,
                 version: DataNames.both,
             },
             evolutions: [
@@ -24152,7 +24152,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.MetalMamemon],
             location: {
-                area: AreasList.dsle.graboCentral,
+                area: MapsList.dsle.graboCentral,
             },
             drops: [
                 {
@@ -24164,7 +24164,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.crystalMine,
+                area: MapsList.dssxw.crystalMine,
                 version: DataNames.red,
             },
             drops: [
@@ -24181,7 +24181,7 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwdd: {
             location: {
-                area: AreasList.dwdd.transfield,
+                area: MapsList.dwdd.transfield,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.BigMamemon,
@@ -24192,14 +24192,14 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwdd: {
             location: {
-                area: AreasList.dwdd.chaosBrain,
+                area: MapsList.dwdd.chaosBrain,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Solarmon,
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.crystalMine,
+                area: MapsList.dssxw.crystalMine,
                 version: DataNames.blue,
             },
             fusions: [DataNames.HiAndromon],
@@ -24210,7 +24210,7 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwdd: {
             location: {
-                area: AreasList.dwdd.magnetMine,
+                area: MapsList.dwdd.magnetMine,
                 version: DataNames.blue,
             },
             evolutions: [
@@ -24235,7 +24235,7 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwdd: {
             location: {
-                area: AreasList.dwdd.chaosBrain,
+                area: MapsList.dwdd.chaosBrain,
                 version: DataNames.both,
             },
             evolutions: [
@@ -24252,7 +24252,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.papyrusDesert,
+                area: MapsList.dssxw.papyrusDesert,
                 version: DataNames.blue,
             },
             fusions: [DataNames.MetalEtemon],
@@ -24263,7 +24263,7 @@ export const DigimonList = {
         stage: Stage.stage4,
         dssxw: {
             location: {
-                area: AreasList.dssxw.crystalVolcano,
+                area: MapsList.dssxw.crystalVolcano,
                 version: DataNames.both,
             },
             fusions: [DataNames.Demon, DataNames.PiemonSpade, DataNames.AncientVolcamonSpade],
@@ -24274,13 +24274,13 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwds: {
             location: {
-                area: AreasList.dwds.chromeMine,
+                area: MapsList.dwds.chromeMine,
             },
             evolutionTree: DataNames.Kapurimon,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.magnetMine,
+                area: MapsList.dwdd.magnetMine,
                 version: DataNames.dusk,
             },
             evolutionTree: DataNames.Gotsumon,
@@ -24288,7 +24288,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Insekimon],
             location: {
-                area: AreasList.dssxw.papyrusDesert,
+                area: MapsList.dssxw.papyrusDesert,
                 version: DataNames.red,
             },
             drops: [
@@ -24305,20 +24305,20 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwds: {
             location: {
-                area: AreasList.dwds.junkFactory,
+                area: MapsList.dwds.junkFactory,
             },
             evolutionTree: DataNames.Betamon,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.processFactory,
+                area: MapsList.dwdd.processFactory,
                 version: DataNames.dusk,
             },
             evolutionTree: DataNames.Minomon,
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.papyrusDesert,
+                area: MapsList.dssxw.papyrusDesert,
                 version: DataNames.red,
             },
             fusions: [DataNames.AncientWisemon],
@@ -24329,7 +24329,7 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -24346,7 +24346,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.riskCave,
+                area: MapsList.dsle.riskCave,
             },
             evolutions: [
                 {
@@ -24358,7 +24358,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.crystalCave,
+                area: MapsList.dssxw.crystalCave,
                 version: DataNames.blue,
             },
             fusions: [DataNames.Pinocchimon],
@@ -24369,7 +24369,7 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwdd: {
             location: {
-                area: AreasList.dwdd.shadowAbyss,
+                area: MapsList.dwdd.shadowAbyss,
                 version: DataNames.both,
             },
             dna: [DataNames.Boltmon],
@@ -24377,7 +24377,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.shadowHell,
+                area: MapsList.dsle.shadowHell,
             },
             drops: [
                 {
@@ -24403,7 +24403,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.crystalVolcano,
+                area: MapsList.dssxw.crystalVolcano,
                 version: DataNames.red,
             },
             drops: [
@@ -24420,7 +24420,7 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwds: {
             location: {
-                area: AreasList.dwds.skyPalace,
+                area: MapsList.dwds.skyPalace,
             },
             evolutions: [
                 {
@@ -24436,7 +24436,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.highlightHaven,
+                area: MapsList.dwdd.highlightHaven,
                 version: DataNames.both,
             },
             evolutions: [
@@ -24454,7 +24454,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Piccolomon],
             location: {
-                area: AreasList.dsle.palaceLaboratory,
+                area: MapsList.dsle.palaceLaboratory,
             },
             drops: [
                 {
@@ -24477,7 +24477,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Score],
             location: {
-                area: AreasList.dssxw.lostSpace,
+                area: MapsList.dssxw.lostSpace,
                 version: DataNames.both,
             },
             fusions: [DataNames.CulumonHeart, DataNames.CulumonSpade, DataNames.Ophanimon, DataNames.CherubimonZen, DataNames.MarineAngemon],
@@ -24488,7 +24488,7 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwdd: {
             location: {
-                area: AreasList.dwdd.transfield,
+                area: MapsList.dwdd.transfield,
                 version: DataNames.both,
             },
             evolutions: [
@@ -24508,7 +24508,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.northCity,
+                area: MapsList.dsle.northCity,
             },
             drops: [
                 {
@@ -24535,7 +24535,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.crystalMine,
+                area: MapsList.dssxw.crystalMine,
                 version: DataNames.both,
             },
             fusions: [DataNames.Craniummon, DataNames.DukemonHeart, DataNames.DukemonSpade, DataNames.MirageGaogamon, DataNames.ChaosDukemon, DataNames.SkullKnightmon],
@@ -24546,7 +24546,7 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwds: {
             location: {
-                area: AreasList.dwds.junkFactory,
+                area: MapsList.dwds.junkFactory,
             },
             evolutions: [
                 {
@@ -24562,7 +24562,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.transfield,
+                area: MapsList.dwdd.transfield,
                 version: DataNames.both,
             },
             dna: [DataNames.Susanoomon],
@@ -24571,7 +24571,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.SuperStarmon],
             location: {
-                area: AreasList.dsle.none,
+                area: MapsList.dsle.none,
             },
             evolutions: [
                 {
@@ -24587,7 +24587,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.papyrusDesert,
+                area: MapsList.dssxw.papyrusDesert,
                 version: DataNames.red,
             },
             fusions: [DataNames.PrinceMamemon, DataNames.AncientWisemon],
@@ -24598,7 +24598,7 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwds: {
             location: {
-                area: AreasList.dwds.sheerValley,
+                area: MapsList.dwds.sheerValley,
             },
             evolutions: [
                 {
@@ -24614,7 +24614,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.proxyIsland,
+                area: MapsList.dwdd.proxyIsland,
                 version: DataNames.both,
             },
             evolutions: [
@@ -24632,7 +24632,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Monzaemon],
             location: {
-                area: AreasList.dsle.palaceLaboratory,
+                area: MapsList.dsle.palaceLaboratory,
             },
             drops: [
                 {
@@ -24651,7 +24651,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Monzaemon],
             location: {
-                area: AreasList.dssxw.none,
+                area: MapsList.dssxw.none,
                 version: DataNames.both,
             },
             fusions: [DataNames.CherubimonZen, DataNames.Minervamon],
@@ -24662,7 +24662,7 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutions: [
                 {
@@ -24678,7 +24678,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.thrillerRuins,
+                area: MapsList.dwdd.thrillerRuins,
                 version: DataNames.both,
             },
             evolutions: [
@@ -24704,7 +24704,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Digitamamon],
             location: {
-                area: AreasList.dsle.southCave,
+                area: MapsList.dsle.southCave,
             },
             drops: [
                 {
@@ -24722,7 +24722,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.spiderwebRuins,
+                area: MapsList.dssxw.spiderwebRuins,
                 version: DataNames.blue,
             },
             drops: [
@@ -24740,7 +24740,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Wisemon],
             location: {
-                area: AreasList.dsle.wizardTemple,
+                area: MapsList.dsle.wizardTemple,
             },
             drops: [
                 {
@@ -24764,7 +24764,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Wisemon],
             location: {
-                area: AreasList.dssxw.lostSpace,
+                area: MapsList.dssxw.lostSpace,
                 version: DataNames.red,
             },
             drops: [
@@ -24781,13 +24781,13 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwds: {
             location: {
-                area: AreasList.dwds.steamyJungle,
+                area: MapsList.dwds.steamyJungle,
             },
             evolutionTree: DataNames.Kumamon,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.thrillerRuins,
+                area: MapsList.dwdd.thrillerRuins,
                 version: DataNames.both,
             },
             evolutions: [
@@ -24811,7 +24811,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.WereGarurumonBlack],
             location: {
-                area: AreasList.dsle.shadowHell,
+                area: MapsList.dsle.shadowHell,
             },
             drops: [
                 {
@@ -24843,7 +24843,7 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwds: {
             location: {
-                area: AreasList.dwds.lavaRiver,
+                area: MapsList.dwds.lavaRiver,
             },
             evolutions: [
                 {
@@ -24859,7 +24859,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.processFactory,
+                area: MapsList.dwdd.processFactory,
                 version: DataNames.dusk,
             },
             evolutions: [
@@ -24886,7 +24886,7 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwdd: {
             location: {
-                area: AreasList.dwdd.shadowAbyss,
+                area: MapsList.dwdd.shadowAbyss,
                 version: DataNames.dusk,
             },
             evolutions: [
@@ -24903,7 +24903,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.SkullGreymon],
             location: {
-                area: AreasList.dsle.shadowHell,
+                area: MapsList.dsle.shadowHell,
             },
             drops: [
                 {
@@ -24926,7 +24926,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.crystalVolcano,
+                area: MapsList.dssxw.crystalVolcano,
                 version: DataNames.both,
             },
             fusions: [DataNames.SkullMammon, DataNames.MugendramonHeart, DataNames.Megidramon],
@@ -24937,7 +24937,7 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -24955,7 +24955,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.KimeramonAlpha, DataNames.KimeramonBeta],
             location: {
-                area: AreasList.dsle.none,
+                area: MapsList.dsle.none,
             },
             evolutions: [
                 {
@@ -24972,7 +24972,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Kimeramon],
             location: {
-                area: AreasList.dssxw.none,
+                area: MapsList.dssxw.none,
                 version: DataNames.both,
             },
             fusions: [DataNames.Millenniumon],
@@ -24983,7 +24983,7 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwds: {
             location: {
-                area: AreasList.dwds.chromeMine,
+                area: MapsList.dwds.chromeMine,
             },
             evolutions: [
                 {
@@ -25006,7 +25006,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.thrillerRuins,
+                area: MapsList.dwdd.thrillerRuins,
                 version: DataNames.both,
             },
             evolutions: [
@@ -25028,7 +25028,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Vamdemon],
             location: {
-                area: AreasList.dsle.wizardTemple,
+                area: MapsList.dsle.wizardTemple,
             },
             drops: [
                 {
@@ -25054,7 +25054,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Vamdemon],
             location: {
-                area: AreasList.dssxw.spiderwebRuins,
+                area: MapsList.dssxw.spiderwebRuins,
                 version: DataNames.red,
             },
             drops: [
@@ -25075,13 +25075,13 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwds: {
             location: {
-                area: AreasList.dwds.lavaRiver,
+                area: MapsList.dwds.lavaRiver,
             },
             evolutionTree: DataNames.Puttomon,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.shadowAbyss,
+                area: MapsList.dwdd.shadowAbyss,
                 version: DataNames.both,
             },
             evolutions: [
@@ -25099,7 +25099,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.LadyDevimon],
             location: {
-                area: AreasList.dsle.shadowHell,
+                area: MapsList.dsle.shadowHell,
             },
             drops: [
                 {
@@ -25123,7 +25123,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.LadyDevimon],
             location: {
-                area: AreasList.dssxw.spiderwebRuins,
+                area: MapsList.dssxw.spiderwebRuins,
                 version: DataNames.both,
             },
             fusions: [DataNames.Demon, DataNames.Devitamamon, DataNames.Lilithmon],
@@ -25134,7 +25134,7 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwds: {
             location: {
-                area: AreasList.dwds.lavaRiver,
+                area: MapsList.dwds.lavaRiver,
             },
             evolutions: [
                 {
@@ -25150,7 +25150,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.thrillerRuins,
+                area: MapsList.dwdd.thrillerRuins,
                 version: DataNames.both,
             },
             evolutions: [
@@ -25174,7 +25174,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.wizardTemple,
+                area: MapsList.dsle.wizardTemple,
             },
             drops: [
                 {
@@ -25215,7 +25215,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.papyrusDesert,
+                area: MapsList.dssxw.papyrusDesert,
                 version: DataNames.red,
             },
             drops: [
@@ -25232,7 +25232,7 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutions: [
                 {
@@ -25251,7 +25251,7 @@ export const DigimonList = {
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.chaosBrain,
+                area: MapsList.dwdd.chaosBrain,
                 version: DataNames.both,
             },
             evolutions: [
@@ -25273,7 +25273,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Infermon],
             location: {
-                area: AreasList.dsle.shadowHell,
+                area: MapsList.dsle.shadowHell,
             },
             drops: [
                 {
@@ -25307,7 +25307,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Infermon],
             location: {
-                area: AreasList.dssxw.crystalCave,
+                area: MapsList.dssxw.crystalCave,
                 version: DataNames.blue,
             },
             drops: [
@@ -25324,7 +25324,7 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwdd: {
             location: {
-                area: AreasList.dwdd.transfield,
+                area: MapsList.dwdd.transfield,
                 version: DataNames.both,
             },
             evolutions: [
@@ -25353,7 +25353,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Vajramon],
             location: {
-                area: AreasList.dssxw.papyrusDesert,
+                area: MapsList.dssxw.papyrusDesert,
                 version: DataNames.blue,
             },
             fusions: [DataNames.Zanbamon, DataNames.AncientGarurumon],
@@ -25364,7 +25364,7 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwdd: {
             location: {
-                area: AreasList.dwdd.thrillerRuins,
+                area: MapsList.dwdd.thrillerRuins,
                 version: DataNames.both,
             },
             evolutions: [
@@ -25392,7 +25392,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.shadowHell,
+                area: MapsList.dsle.shadowHell,
             },
             drops: [
                 {
@@ -25416,7 +25416,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Phantomon],
             location: {
-                area: AreasList.dssxw.spiderwebRuins,
+                area: MapsList.dssxw.spiderwebRuins,
                 version: DataNames.blue,
             },
             drops: [
@@ -25433,13 +25433,13 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutionTree: DataNames.Tsunomon,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.shadowAbyss,
+                area: MapsList.dwdd.shadowAbyss,
                 version: DataNames.both,
             },
             evolutions: [
@@ -25461,7 +25461,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.wizardTemple,
+                area: MapsList.dsle.wizardTemple,
             },
             drops: [
                 {
@@ -25480,7 +25480,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.spiderwebRuins,
+                area: MapsList.dssxw.spiderwebRuins,
                 version: DataNames.blue,
             },
             drops: [
@@ -25497,7 +25497,7 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -25511,7 +25511,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.EXTyrannomon],
             location: {
-                area: AreasList.dsle.thrillerRuins,
+                area: MapsList.dsle.thrillerRuins,
             },
             drops: [
                 {
@@ -25534,7 +25534,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.spiderwebRuins,
+                area: MapsList.dssxw.spiderwebRuins,
                 version: DataNames.both,
             },
             fusions: [DataNames.MugendramonSpade, DataNames.MugendramonHeart, DataNames.VenomVamdemon],
@@ -25546,7 +25546,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.SkullBaluchimon],
             location: {
-                area: AreasList.dsle.thrillerRuins,
+                area: MapsList.dsle.thrillerRuins,
             },
             drops: [
                 {
@@ -25586,7 +25586,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.SkullBaluchimon],
             location: {
-                area: AreasList.dssxw.spiderwebRuins,
+                area: MapsList.dssxw.spiderwebRuins,
                 version: DataNames.blue,
             },
             drops: [
@@ -25603,7 +25603,7 @@ export const DigimonList = {
         stage: Stage.stage4,
         dssxw: {
             location: {
-                area: AreasList.dssxw.papyrusDesert,
+                area: MapsList.dssxw.papyrusDesert,
                 version: DataNames.both,
             },
             fusions: [DataNames.Lilithmon, DataNames.AncientSphinxmon, DataNames.AncientBeatmon],
@@ -25614,7 +25614,7 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -25632,7 +25632,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Flaremon],
             location: {
-                area: AreasList.dsle.proxyIsland,
+                area: MapsList.dsle.proxyIsland,
             },
             drops: [
                 {
@@ -25656,7 +25656,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Flaremon],
             location: {
-                area: AreasList.dssxw.crystalVolcano,
+                area: MapsList.dssxw.crystalVolcano,
                 version: DataNames.blue,
             },
             drops: [
@@ -25673,7 +25673,7 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -25691,7 +25691,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Crescemon],
             location: {
-                area: AreasList.dsle.thrillerRuins,
+                area: MapsList.dsle.thrillerRuins,
             },
             drops: [
                 {
@@ -25715,7 +25715,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Crescemon],
             location: {
-                area: AreasList.dssxw.spiderwebRuins,
+                area: MapsList.dssxw.spiderwebRuins,
                 version: DataNames.red,
             },
             drops: [
@@ -25733,7 +25733,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Butenmon],
             location: {
-                area: AreasList.dsle.proxyIsland,
+                area: MapsList.dsle.proxyIsland,
             },
             drops: [
                 {
@@ -25760,7 +25760,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Butenmon],
             location: {
-                area: AreasList.dssxw.knuckleCoast,
+                area: MapsList.dssxw.knuckleCoast,
                 version: DataNames.red,
             },
             drops: [
@@ -25777,7 +25777,7 @@ export const DigimonList = {
         stage: Stage.stage4,
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -25795,7 +25795,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.LucemonFMAlpha, DataNames.LucemonFMBeta],
             location: {
-                area: AreasList.dsle.none,
+                area: MapsList.dsle.none,
             },
             evolutions: [
                 {
@@ -25813,7 +25813,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.LucemonFM],
             location: {
-                area: AreasList.dssxw.none,
+                area: MapsList.dssxw.none,
                 version: DataNames.both,
             },
             fusions: [DataNames.GranDracmon],
@@ -25824,7 +25824,7 @@ export const DigimonList = {
         stage: Stage.stage4,
         dssxw: {
             location: {
-                area: AreasList.dssxw.digitalSpaceSouth,
+                area: MapsList.dssxw.digitalSpaceSouth,
                 version: DataNames.both,
             },
         },
@@ -25835,7 +25835,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.ShoutmonX3],
             location: {
-                area: AreasList.dssxw.none,
+                area: MapsList.dssxw.none,
                 version: DataNames.both,
             },
         },
@@ -25846,7 +25846,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.ShoutmonX4],
             location: {
-                area: AreasList.dssxw.none,
+                area: MapsList.dssxw.none,
                 version: DataNames.both,
             },
         },
@@ -25857,7 +25857,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.MetalGreymon2010],
             location: {
-                area: AreasList.dssxw.none,
+                area: MapsList.dssxw.none,
                 version: DataNames.both,
             },
         },
@@ -25868,7 +25868,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.DarkKnightmon],
             location: {
-                area: AreasList.dssxw.none,
+                area: MapsList.dssxw.none,
                 version: DataNames.both,
             },
         },
@@ -25882,13 +25882,13 @@ export const DigimonList = {
         stage: Stage.stage5,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutionTree: DataNames.Koromon,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             dna: [DataNames.Omegamon],
@@ -25897,7 +25897,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.WarGreymon],
             location: {
-                area: AreasList.dsle.taskCanyon,
+                area: MapsList.dsle.taskCanyon,
             },
             drops: [
                 {
@@ -25922,7 +25922,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.WarGreymon],
             location: {
-                area: AreasList.dssxw.stealthValley,
+                area: MapsList.dssxw.stealthValley,
                 version: DataNames.blue,
             },
             fusions: [DataNames.Omegamon],
@@ -25933,13 +25933,13 @@ export const DigimonList = {
         stage: Stage.stage5,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutionTree: DataNames.Tsunomon,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             dna: [DataNames.Omegamon],
@@ -25948,7 +25948,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.MetalGarurumon],
             location: {
-                area: AreasList.dsle.accessGlacier,
+                area: MapsList.dsle.accessGlacier,
             },
             drops: [
                 {
@@ -25973,7 +25973,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.MetalGarurumon],
             location: {
-                area: AreasList.dssxw.none,
+                area: MapsList.dssxw.none,
                 version: DataNames.both,
             },
             fusions: [DataNames.Omegamon],
@@ -25984,13 +25984,13 @@ export const DigimonList = {
         stage: Stage.stage5,
         dwds: {
             location: {
-                area: AreasList.dwds.skyPalace,
+                area: MapsList.dwds.skyPalace,
             },
             evolutionTree: DataNames.Piyomon,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.highlightHaven,
+                area: MapsList.dwdd.highlightHaven,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Chicchimon,
@@ -25998,7 +25998,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Hououmon],
             location: {
-                area: AreasList.dsle.taskCanyon,
+                area: MapsList.dsle.taskCanyon,
             },
             drops: [
                 {
@@ -26018,7 +26018,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Hououmon],
             location: {
-                area: AreasList.dssxw.stealthValley,
+                area: MapsList.dssxw.stealthValley,
                 version: DataNames.red,
             },
             drops: [
@@ -26035,13 +26035,13 @@ export const DigimonList = {
         stage: Stage.stage5,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutionTree: DataNames.Tanemon,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.transfield,
+                area: MapsList.dwdd.transfield,
                 version: DataNames.both,
             },
             dna: [DataNames.RosemonBM],
@@ -26049,7 +26049,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.proxyIsland,
+                area: MapsList.dsle.proxyIsland,
             },
             drops: [
                 {
@@ -26073,7 +26073,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Rosemon],
             location: {
-                area: AreasList.dssxw.flowerMeadow,
+                area: MapsList.dssxw.flowerMeadow,
                 version: DataNames.red,
             },
             fusions: [DataNames.RosemonBM],
@@ -26084,13 +26084,13 @@ export const DigimonList = {
         stage: Stage.stage5,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutionTree: DataNames.Tentomon,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.HeraclesKabuterimon,
@@ -26098,7 +26098,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.HeraclesKabuterimon],
             location: {
-                area: AreasList.dsle.proxyIsland,
+                area: MapsList.dsle.proxyIsland,
             },
             drops: [
                 {
@@ -26115,7 +26115,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.HeraclesKabuterimon],
             location: {
-                area: AreasList.dssxw.none,
+                area: MapsList.dssxw.none,
                 version: DataNames.both,
             },
         },
@@ -26125,13 +26125,13 @@ export const DigimonList = {
         stage: Stage.stage5,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutionTree: DataNames.Poyomon,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.accessGlacier,
+                area: MapsList.dwdd.accessGlacier,
                 version: DataNames.both,
             },
             dna: [DataNames.MirageGaogamonBM],
@@ -26140,7 +26140,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Vikemon],
             location: {
-                area: AreasList.dsle.accessGlacier,
+                area: MapsList.dsle.accessGlacier,
             },
             drops: [
                 {
@@ -26153,7 +26153,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Vikemon],
             location: {
-                area: AreasList.dssxw.none,
+                area: MapsList.dssxw.none,
                 version: DataNames.both,
             },
             fusions: [DataNames.Baihumon],
@@ -26164,13 +26164,13 @@ export const DigimonList = {
         stage: Stage.stage5,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutionTree: DataNames.Tokomon,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             dna: [DataNames.DukemonCM],
@@ -26179,7 +26179,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Seraphimon],
             location: {
-                area: AreasList.dsle.northCity,
+                area: MapsList.dsle.northCity,
             },
             drops: [
                 {
@@ -26196,7 +26196,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Seraphimon],
             location: {
-                area: AreasList.dssxw.none,
+                area: MapsList.dssxw.none,
                 version: DataNames.both,
             },
         },
@@ -26206,7 +26206,7 @@ export const DigimonList = {
         stage: Stage.stage5,
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Holydramon,
@@ -26214,14 +26214,14 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Holydramon],
             location: {
-                area: AreasList.dsle.none,
+                area: MapsList.dsle.none,
             },
             evolutionTree: DataNames.Puttomon,
         },
         dssxw: {
             digiScores: [DataNames.Holydramon],
             location: {
-                area: AreasList.dssxw.lostSpace,
+                area: MapsList.dssxw.lostSpace,
                 version: DataNames.red,
             },
             drops: [
@@ -26238,20 +26238,20 @@ export const DigimonList = {
         stage: Stage.stage5,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutionTree: DataNames.Chicomon,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Paildramon,
         },
         dsle: {
             location: {
-                area: AreasList.dsle.classDesert,
+                area: MapsList.dsle.classDesert,
             },
             drops: [
                 {
@@ -26281,7 +26281,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.ImperialdramonDM],
             location: {
-                area: AreasList.dssxw.none,
+                area: MapsList.dssxw.none,
                 version: DataNames.both,
             },
             fusions: [DataNames.ImperialdramonFM],
@@ -26292,13 +26292,13 @@ export const DigimonList = {
         stage: Stage.stage5,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutionTree: DataNames.Kuramon,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             dna: [DataNames.DukemonCM, DataNames.ShineGreymonBM],
@@ -26307,7 +26307,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Dukemon],
             location: {
-                area: AreasList.dsle.none,
+                area: MapsList.dsle.none,
             },
             evolutions: [
                 {
@@ -26321,7 +26321,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.DukemonHeart, DataNames.DukemonSpade],
             location: {
-                area: AreasList.dssxw.crystalVolcano,
+                area: MapsList.dssxw.crystalVolcano,
                 version: DataNames.both,
             },
             fusions: [DataNames.Chaosdramon, DataNames.DukemonCM],
@@ -26332,13 +26332,13 @@ export const DigimonList = {
         stage: Stage.stage5,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutionTree: DataNames.Tanemon,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Gummymon,
@@ -26346,14 +26346,14 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Sakuyamon],
             location: {
-                area: AreasList.dsle.none,
+                area: MapsList.dsle.none,
             },
             evolutionTree: DataNames.Puttomon,
         },
         dssxw: {
             digiScores: [DataNames.Sakuyamon],
             location: {
-                area: AreasList.dssxw.none,
+                area: MapsList.dssxw.none,
                 version: DataNames.both,
             },
         },
@@ -26363,13 +26363,13 @@ export const DigimonList = {
         stage: Stage.stage5,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutionTree: DataNames.Terriermon,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.chaosBrain,
+                area: MapsList.dwdd.chaosBrain,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Gummymon,
@@ -26377,14 +26377,14 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.SaintGargomon],
             location: {
-                area: AreasList.dsle.none,
+                area: MapsList.dsle.none,
             },
             evolutionTree: DataNames.Gummymon,
         },
         dssxw: {
             digiScores: [DataNames.SaintGargomon],
             location: {
-                area: AreasList.dssxw.lostSpace,
+                area: MapsList.dssxw.lostSpace,
                 version: DataNames.red,
             },
         },
@@ -26394,13 +26394,13 @@ export const DigimonList = {
         stage: Stage.stage5,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutionTree: DataNames.Koromon,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Chicomon,
@@ -26408,7 +26408,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Justimon],
             location: {
-                area: AreasList.dsle.riskCave,
+                area: MapsList.dsle.riskCave,
             },
             drops: [
                 {
@@ -26421,7 +26421,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Justimon],
             location: {
-                area: AreasList.dssxw.crystalMine,
+                area: MapsList.dssxw.crystalMine,
                 version: DataNames.blue,
             },
         },
@@ -26431,27 +26431,27 @@ export const DigimonList = {
         stage: Stage.stage5,
         dwds: {
             location: {
-                area: AreasList.dwds.underseaDrive,
+                area: MapsList.dwds.underseaDrive,
             },
             evolutionTree: DataNames.Puttomon,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.macroSea,
+                area: MapsList.dwdd.macroSea,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Betamon,
         },
         dsle: {
             location: {
-                area: AreasList.dsle.anglerTunnel,
+                area: MapsList.dsle.anglerTunnel,
             },
             evolutionTree: DataNames.Poyomon,
         },
         dssxw: {
             digiScores: [DataNames.MarineAngemon],
             location: {
-                area: AreasList.dssxw.endlessCoast,
+                area: MapsList.dssxw.endlessCoast,
                 version: DataNames.red,
             },
         },
@@ -26461,7 +26461,7 @@ export const DigimonList = {
         stage: Stage.stage5,
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             dna: [DataNames.ShineGreymonBM, DataNames.ShineGreymonRM],
@@ -26470,7 +26470,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.ShineGreymon],
             location: {
-                area: AreasList.dsle.riskFactory,
+                area: MapsList.dsle.riskFactory,
             },
             drops: [
                 {
@@ -26501,7 +26501,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.ShineGreymon],
             location: {
-                area: AreasList.dssxw.digitalSpaceEast,
+                area: MapsList.dssxw.digitalSpaceEast,
                 version: DataNames.red,
             },
             drops: [
@@ -26522,7 +26522,7 @@ export const DigimonList = {
         stage: Stage.stage5,
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             dna: [DataNames.MirageGaogamonBM],
@@ -26531,7 +26531,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.MirageGaogamon],
             location: {
-                area: AreasList.dsle.riskFactory,
+                area: MapsList.dsle.riskFactory,
             },
             drops: [
                 {
@@ -26555,7 +26555,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.MirageGaogamon],
             location: {
-                area: AreasList.dssxw.knuckleCoast,
+                area: MapsList.dssxw.knuckleCoast,
                 version: DataNames.blue,
             },
             drops: [
@@ -26572,7 +26572,7 @@ export const DigimonList = {
         stage: Stage.stage5,
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             dna: [DataNames.RavemonBM],
@@ -26580,7 +26580,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.riskCave,
+                area: MapsList.dsle.riskCave,
             },
             drops: [
                 {
@@ -26604,7 +26604,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Ravemon],
             location: {
-                area: AreasList.dssxw.darknessTunnel,
+                area: MapsList.dssxw.darknessTunnel,
                 version: DataNames.blue,
             },
             drops: [
@@ -26621,13 +26621,13 @@ export const DigimonList = {
         stage: Stage.stage5,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutionTree: DataNames.Puttomon,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Puttomon,
@@ -26635,7 +26635,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Sleipmon],
             location: {
-                area: AreasList.dsle.accessGlacier,
+                area: MapsList.dsle.accessGlacier,
             },
             drops: [
                 {
@@ -26648,7 +26648,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Sleipmon],
             location: {
-                area: AreasList.dssxw.skullIceberg,
+                area: MapsList.dssxw.skullIceberg,
                 version: DataNames.red,
             },
         },
@@ -26658,13 +26658,13 @@ export const DigimonList = {
         stage: Stage.stage5,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutionTree: DataNames.Kumamon,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             dna: [DataNames.BeelzebumonBM, DataNames.Chaosmon],
@@ -26673,7 +26673,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.BanchoLeomon],
             location: {
-                area: AreasList.dsle.classDesert,
+                area: MapsList.dsle.classDesert,
             },
             drops: [
                 {
@@ -26698,7 +26698,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.BanchoLeomon],
             location: {
-                area: AreasList.dssxw.lostSpace,
+                area: MapsList.dssxw.lostSpace,
                 version: DataNames.both,
             },
             fusions: [DataNames.Chaosmon],
@@ -26709,20 +26709,20 @@ export const DigimonList = {
         stage: Stage.stage5,
         dwds: {
             location: {
-                area: AreasList.dwds.coreField,
+                area: MapsList.dwds.coreField,
             },
             evolutionTree: DataNames.Koromon,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.transfield,
+                area: MapsList.dwdd.transfield,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Botamon,
         },
         dsle: {
             location: {
-                area: AreasList.dsle.taskCanyon,
+                area: MapsList.dsle.taskCanyon,
             },
             drops: [
                 {
@@ -26738,7 +26738,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.lostSpace,
+                area: MapsList.dssxw.lostSpace,
                 version: DataNames.blue,
             },
         },
@@ -26748,13 +26748,13 @@ export const DigimonList = {
         stage: Stage.stage5,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutionTree: DataNames.Digitamamon,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.transfield,
+                area: MapsList.dwdd.transfield,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Minomon,
@@ -26765,14 +26765,14 @@ export const DigimonList = {
         stage: Stage.stage5,
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Gigimon,
         },
         dsle: {
             location: {
-                area: AreasList.dsle.graboCentral,
+                area: MapsList.dsle.graboCentral,
             },
             drops: [
                 {
@@ -26795,7 +26795,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Megidramon],
             location: {
-                area: AreasList.dssxw.knuckleCoast,
+                area: MapsList.dssxw.knuckleCoast,
                 version: DataNames.red,
             },
             drops: [
@@ -26812,20 +26812,20 @@ export const DigimonList = {
         stage: Stage.stage6,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutionTree: DataNames.Pagumon,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.ChaosDukemon,
         },
         dsle: {
             location: {
-                area: AreasList.dsle.chromeMine,
+                area: MapsList.dsle.chromeMine,
             },
             drops: [
                 {
@@ -26838,7 +26838,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.ChaosDukemon],
             location: {
-                area: AreasList.dssxw.none,
+                area: MapsList.dssxw.none,
                 version: DataNames.both,
             },
         },
@@ -26848,13 +26848,13 @@ export const DigimonList = {
         stage: Stage.stage5,
         dwds: {
             location: {
-                area: AreasList.dwds.coreField,
+                area: MapsList.dwds.coreField,
             },
             evolutionTree: DataNames.Tanemon,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Dorimon,
@@ -26865,13 +26865,13 @@ export const DigimonList = {
         stage: Stage.stage5,
         dwds: {
             location: {
-                area: AreasList.dwds.destroyedBelt,
+                area: MapsList.dwds.destroyedBelt,
             },
             evolutionTree: DataNames.Terriermon,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.transfield,
+                area: MapsList.dwdd.transfield,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Kokomon,
@@ -26882,20 +26882,20 @@ export const DigimonList = {
         stage: Stage.stage5,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutionTree: DataNames.Pagumon,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.transfield,
+                area: MapsList.dwdd.transfield,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Kokomon,
         },
         dsle: {
             location: {
-                area: AreasList.dsle.graboCentral,
+                area: MapsList.dsle.graboCentral,
             },
             drops: [
                 {
@@ -26911,7 +26911,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.lostSpace,
+                area: MapsList.dssxw.lostSpace,
                 version: DataNames.red,
             },
             fusions: [DataNames.ShineGreymonRM],
@@ -26922,13 +26922,13 @@ export const DigimonList = {
         stage: Stage.stage5,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutionTree: DataNames.Pagumon,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.highlightHaven,
+                area: MapsList.dwdd.highlightHaven,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Kokomon,
@@ -26936,14 +26936,14 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.CherubimonZen],
             location: {
-                area: AreasList.dsle.none,
+                area: MapsList.dsle.none,
             },
             evolutionTree: DataNames.Kokomon,
         },
         dssxw: {
             digiScores: [DataNames.CherubimonZen],
             location: {
-                area: AreasList.dssxw.lostSpace,
+                area: MapsList.dssxw.lostSpace,
                 version: DataNames.red,
             },
             fusions: [DataNames.Qinglongmon],
@@ -26954,7 +26954,7 @@ export const DigimonList = {
         stage: Stage.stage5,
         dwdd: {
             location: {
-                area: AreasList.dwdd.highlightHaven,
+                area: MapsList.dwdd.highlightHaven,
                 version: DataNames.dawn,
             },
             evolutionTree: DataNames.Chicomon,
@@ -26962,7 +26962,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Goddramon],
             location: {
-                area: AreasList.dsle.classDesert,
+                area: MapsList.dsle.classDesert,
             },
             drops: [
                 {
@@ -26982,7 +26982,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Goddramon],
             location: {
-                area: AreasList.dssxw.stealthValley,
+                area: MapsList.dssxw.stealthValley,
                 version: DataNames.both,
             },
             fusions: [DataNames.Qinglongmon, DataNames.MirageGaogamonBM],
@@ -26993,13 +26993,13 @@ export const DigimonList = {
         stage: Stage.stage5,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutionTree: DataNames.Dorimon,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Dorimon,
@@ -27007,7 +27007,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Dorugoramon],
             location: {
-                area: AreasList.dsle.taskCanyon,
+                area: MapsList.dsle.taskCanyon,
             },
             drops: [
                 {
@@ -27020,7 +27020,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Dorugoramon],
             location: {
-                area: AreasList.dssxw.lostSpace,
+                area: MapsList.dssxw.lostSpace,
                 version: DataNames.red,
             },
         },
@@ -27030,13 +27030,13 @@ export const DigimonList = {
         stage: Stage.stage5,
         dwds: {
             location: {
-                area: AreasList.dwds.destroyedBelt,
+                area: MapsList.dwds.destroyedBelt,
             },
             evolutionTree: DataNames.Tsunomon,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.accessGlacier,
+                area: MapsList.dwdd.accessGlacier,
                 version: DataNames.dawn,
             },
             dna: [DataNames.Chaosmon, DataNames.ShineGreymonRM],
@@ -27045,7 +27045,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Darkdramon],
             location: {
-                area: AreasList.dsle.graboCentral,
+                area: MapsList.dsle.graboCentral,
             },
             drops: [
                 {
@@ -27070,7 +27070,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Darkdramon],
             location: {
-                area: AreasList.dssxw.lostSpace,
+                area: MapsList.dssxw.lostSpace,
                 version: DataNames.blue,
             },
             drops: [
@@ -27091,13 +27091,13 @@ export const DigimonList = {
         stage: Stage.stage5,
         dwds: {
             location: {
-                area: AreasList.dwds.sheerValley,
+                area: MapsList.dwds.sheerValley,
             },
             evolutionTree: DataNames.Goburimon,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.transfield,
+                area: MapsList.dwdd.transfield,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Gigimon,
@@ -27105,7 +27105,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Cannondramon],
             location: {
-                area: AreasList.dssxw.stealthValley,
+                area: MapsList.dssxw.stealthValley,
                 version: DataNames.red,
             },
         },
@@ -27115,13 +27115,13 @@ export const DigimonList = {
         stage: Stage.stage5,
         dwds: {
             location: {
-                area: AreasList.dwds.tropicalIsles,
+                area: MapsList.dwds.tropicalIsles,
             },
             evolutionTree: DataNames.Terriermon,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.proxyIsland,
+                area: MapsList.dwdd.proxyIsland,
                 version: DataNames.dusk,
             },
             evolutionTree: DataNames.Wanyamon,
@@ -27129,7 +27129,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.SaberLeomon],
             location: {
-                area: AreasList.dsle.proxyIsland,
+                area: MapsList.dsle.proxyIsland,
             },
             drops: [
                 {
@@ -27146,7 +27146,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.SaberLeomon],
             location: {
-                area: AreasList.dssxw.endlessCoast,
+                area: MapsList.dssxw.endlessCoast,
                 version: DataNames.red,
             },
             drops: [
@@ -27163,13 +27163,13 @@ export const DigimonList = {
         stage: Stage.stage5,
         dwds: {
             location: {
-                area: AreasList.dwds.destroyedBelt,
+                area: MapsList.dwds.destroyedBelt,
             },
             evolutionTree: DataNames.Goburimon,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.chaosBrain,
+                area: MapsList.dwdd.chaosBrain,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Tsunomon,
@@ -27177,7 +27177,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.MetalEtemon],
             location: {
-                area: AreasList.dssxw.lostSpace,
+                area: MapsList.dssxw.lostSpace,
                 version: DataNames.blue,
             },
         },
@@ -27187,14 +27187,14 @@ export const DigimonList = {
         stage: Stage.stage5,
         dwdd: {
             location: {
-                area: AreasList.dwdd.taskCanyon,
+                area: MapsList.dwdd.taskCanyon,
                 version: DataNames.dawn,
             },
             evolutionTree: DataNames.Piyomon,
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.fortYard,
+                area: MapsList.dssxw.fortYard,
                 version: DataNames.blue,
             },
         },
@@ -27204,7 +27204,7 @@ export const DigimonList = {
         stage: Stage.stage5,
         dwdd: {
             location: {
-                area: AreasList.dwdd.transfield,
+                area: MapsList.dwdd.transfield,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Wanyamon,
@@ -27212,7 +27212,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.SkullMammon],
             location: {
-                area: AreasList.dssxw.spiderwebRuins,
+                area: MapsList.dssxw.spiderwebRuins,
                 version: DataNames.blue,
             },
         },
@@ -27222,13 +27222,13 @@ export const DigimonList = {
         stage: Stage.stage5,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutionTree: DataNames.Hawkmon,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             dna: [DataNames.RavemonBM],
@@ -27237,7 +27237,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Valkyrimon],
             location: {
-                area: AreasList.dsle.accessGlacier,
+                area: MapsList.dsle.accessGlacier,
             },
             drops: [
                 {
@@ -27257,7 +27257,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Valkyrimon],
             location: {
-                area: AreasList.dssxw.skullIceberg,
+                area: MapsList.dssxw.skullIceberg,
                 version: DataNames.both,
             },
             fusions: [DataNames.Valdurmon],
@@ -27268,13 +27268,13 @@ export const DigimonList = {
         stage: Stage.stage5,
         dwds: {
             location: {
-                area: AreasList.dwds.tropicalIsles,
+                area: MapsList.dwds.tropicalIsles,
             },
             evolutionTree: DataNames.Parrotmon,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.transfield,
+                area: MapsList.dwdd.transfield,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Chicchimon,
@@ -27282,7 +27282,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Crossmon],
             location: {
-                area: AreasList.dsle.classDesert,
+                area: MapsList.dsle.classDesert,
             },
             drops: [
                 {
@@ -27295,7 +27295,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Crossmon],
             location: {
-                area: AreasList.dssxw.none,
+                area: MapsList.dssxw.none,
                 version: DataNames.both,
             },
             fusions: [DataNames.Aegisdramon],
@@ -27306,20 +27306,20 @@ export const DigimonList = {
         stage: Stage.stage5,
         dwds: {
             location: {
-                area: AreasList.dwds.underseaDrive,
+                area: MapsList.dwds.underseaDrive,
             },
             evolutionTree: DataNames.Otamamon,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Poyomon,
         },
         dsle: {
             location: {
-                area: AreasList.dsle.graboMarine,
+                area: MapsList.dsle.graboMarine,
             },
             evolutions: [
                 {
@@ -27340,7 +27340,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.endlessSea,
+                area: MapsList.dssxw.endlessSea,
                 version: DataNames.blue,
             },
             drops: [
@@ -27357,7 +27357,7 @@ export const DigimonList = {
         stage: Stage.stage5,
         dwdd: {
             location: {
-                area: AreasList.dwdd.transfield,
+                area: MapsList.dwdd.transfield,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Poyomon,
@@ -27365,7 +27365,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.JumboGamemon],
             location: {
-                area: AreasList.dsle.riskFactory,
+                area: MapsList.dsle.riskFactory,
             },
             drops: [
                 {
@@ -27385,7 +27385,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.JumboGamemon],
             location: {
-                area: AreasList.dssxw.spinningAmazon,
+                area: MapsList.dssxw.spinningAmazon,
                 version: DataNames.blue,
             },
             fusions: [DataNames.Xuanwumon],
@@ -27396,20 +27396,20 @@ export const DigimonList = {
         stage: Stage.stage5,
         dwdd: {
             location: {
-                area: AreasList.dwdd.macroSea,
+                area: MapsList.dwdd.macroSea,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Syakomon,
         },
         dsle: {
             location: {
-                area: AreasList.dsle.anglerTunnel,
+                area: MapsList.dsle.anglerTunnel,
             },
             evolutionTree: DataNames.Poyomon,
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.knuckleCoast,
+                area: MapsList.dssxw.knuckleCoast,
                 version: DataNames.red,
             },
         },
@@ -27419,13 +27419,13 @@ export const DigimonList = {
         stage: Stage.stage5,
         dwds: {
             location: {
-                area: AreasList.dwds.destroyedBelt,
+                area: MapsList.dwds.destroyedBelt,
             },
             evolutionTree: DataNames.Tentomon,  // TODO: And Wormmon
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.transfield,
+                area: MapsList.dwdd.transfield,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Budmon,
@@ -27433,7 +27433,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.GranKuwagamon],
             location: {
-                area: AreasList.dsle.wizardTemple,
+                area: MapsList.dsle.wizardTemple,
             },
             drops: [
                 {
@@ -27446,7 +27446,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.GranKuwagamon],
             location: {
-                area: AreasList.dssxw.none,
+                area: MapsList.dssxw.none,
                 version: DataNames.both,
             },
         },
@@ -27457,7 +27457,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.TigerVespamon],
             location: {
-                area: AreasList.dsle.proxyIsland,
+                area: MapsList.dsle.proxyIsland,
             },
             drops: [
                 {
@@ -27470,7 +27470,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.TigerVespamon],
             location: {
-                area: AreasList.dssxw.spinningAmazon,
+                area: MapsList.dssxw.spinningAmazon,
                 version: DataNames.blue,
             },
         },
@@ -27480,7 +27480,7 @@ export const DigimonList = {
         stage: Stage.stage5,
         dwdd: {
             location: {
-                area: AreasList.dwdd.transfield,
+                area: MapsList.dwdd.transfield,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Budmon,
@@ -27488,14 +27488,14 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Lotusmon],
             location: {
-                area: AreasList.dsle.none,
+                area: MapsList.dsle.none,
             },
             evolutionTree: DataNames.Tanemon,
         },
         dssxw: {
             digiScores: [DataNames.Lotusmon],
             location: {
-                area: AreasList.dssxw.none,
+                area: MapsList.dssxw.none,
                 version: DataNames.both,
             },
         },
@@ -27505,20 +27505,20 @@ export const DigimonList = {
         stage: Stage.stage5,
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Tsumemon,
         },
         dsle: {
             location: {
-                area: AreasList.dsle.chromeMine,
+                area: MapsList.dsle.chromeMine,
             },
             evolutionTree: DataNames.Kuramon,
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.crystalCave,
+                area: MapsList.dssxw.crystalCave,
                 version: DataNames.red,
             },
         },
@@ -27528,14 +27528,14 @@ export const DigimonList = {
         stage: Stage.stage5,
         dwdd: {
             location: {
-                area: AreasList.dwdd.transfield,
+                area: MapsList.dwdd.transfield,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Kapurimon,
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.digitalSpaceEast,
+                area: MapsList.dssxw.digitalSpaceEast,
                 version: DataNames.blue,
             },
         },
@@ -27545,14 +27545,14 @@ export const DigimonList = {
         stage: Stage.stage5,
         dwdd: {
             location: {
-                area: AreasList.dwdd.transfield,
+                area: MapsList.dwdd.transfield,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Puttomon,
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.digitalSpaceEast,
+                area: MapsList.dssxw.digitalSpaceEast,
                 version: DataNames.blue,
             },
         },
@@ -27562,13 +27562,13 @@ export const DigimonList = {
         stage: Stage.stage5,
         dwds: {
             location: {
-                area: AreasList.dwds.coreField,
+                area: MapsList.dwds.coreField,
             },
             evolutionTree: DataNames.Kapurimon,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Kapurimon,
@@ -27576,7 +27576,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.HiAndromon],
             location: {
-                area: AreasList.dsle.thrillerRuins,
+                area: MapsList.dsle.thrillerRuins,
             },
             drops: [
                 {
@@ -27589,7 +27589,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.HiAndromon],
             location: {
-                area: AreasList.dssxw.crystalMine,
+                area: MapsList.dssxw.crystalMine,
                 version: DataNames.blue,
             },
         },
@@ -27599,13 +27599,13 @@ export const DigimonList = {
         stage: Stage.stage5,
         dwds: {
             location: {
-                area: AreasList.dwds.junkFactory,
+                area: MapsList.dwds.junkFactory,
             },
             evolutionTree: DataNames.Kapurimon,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.magnetMine,
+                area: MapsList.dwdd.magnetMine,
                 version: DataNames.dusk,
             },
             dna: [DataNames.MirageGaogamonBM],
@@ -27614,7 +27614,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.PrinceMamemon],
             location: {
-                area: AreasList.dsle.chromeMine,
+                area: MapsList.dsle.chromeMine,
             },
             drops: [
                 {
@@ -27627,7 +27627,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.PrinceMamemon],
             location: {
-                area: AreasList.dssxw.crystalMine,
+                area: MapsList.dssxw.crystalMine,
                 version: DataNames.red,
             },
         },
@@ -27637,26 +27637,26 @@ export const DigimonList = {
         stage: Stage.stage5,
         dwds: {
             location: {
-                area: AreasList.dwds.coreField,
+                area: MapsList.dwds.coreField,
             },
             evolutionTree: DataNames.Goburimon,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Gizamon,
         },
         dsle: {
             location: {
-                area: AreasList.dsle.riskFactory,
+                area: MapsList.dsle.riskFactory,
             },
             evolutionTree: DataNames.Minomon,
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.crystalMine,
+                area: MapsList.dssxw.crystalMine,
                 version: DataNames.red,
             },
         },
@@ -27666,21 +27666,21 @@ export const DigimonList = {
         stage: Stage.stage5,
         dwdd: {
             location: {
-                area: AreasList.dwdd.thrillerRuins,
+                area: MapsList.dwdd.thrillerRuins,
                 version: DataNames.both,    // TODO: Dusk only?
             },
             evolutionTree: DataNames.Pagumon,
         },
         dsle: {
             location: {
-                area: AreasList.dsle.anglerTunnel,
+                area: MapsList.dsle.anglerTunnel,
             },
             evolutionTree: DataNames.Kapurimon,
         },
         dssxw: {
             digiScores: [DataNames.Boltmon],
             location: {
-                area: AreasList.dssxw.crystalMine,
+                area: MapsList.dssxw.crystalMine,
                 version: DataNames.blue,
             },
         },
@@ -27690,20 +27690,20 @@ export const DigimonList = {
         stage: Stage.stage5,
         dwdd: {
             location: {
-                area: AreasList.dwdd.chaosBrain,
+                area: MapsList.dwdd.chaosBrain,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Vademon,
         },
         dsle: {
             location: {
-                area: AreasList.dsle.thrillerRuins,
+                area: MapsList.dsle.thrillerRuins,
             },
             evolutionTree: DataNames.Budmon,
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.crystalCave,
+                area: MapsList.dssxw.crystalCave,
                 version: DataNames.blue,
             },
         },
@@ -27713,7 +27713,7 @@ export const DigimonList = {
         stage: Stage.stage5,
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             dna: [DataNames.RosemonBM],
@@ -27722,14 +27722,14 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Ophanimon],
             location: {
-                area: AreasList.dsle.none,
+                area: MapsList.dsle.none,
             },
             evolutionTree: DataNames.Puttomon,
         },
         dssxw: {
             digiScores: [DataNames.Ophanimon],
             location: {
-                area: AreasList.dssxw.none,
+                area: MapsList.dssxw.none,
                 version: DataNames.both,
             },
             fusions: [DataNames.DukemonCM],
@@ -27740,13 +27740,13 @@ export const DigimonList = {
         stage: Stage.stage5,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutionTree: DataNames.Kapurimon,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.chaosBrain,
+                area: MapsList.dwdd.chaosBrain,
                 version: DataNames.both,
             },
             dna: [DataNames.Duftmon],
@@ -27755,7 +27755,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.SlashAngemon],
             location: {
-                area: AreasList.dsle.northCity,
+                area: MapsList.dsle.northCity,
             },
             drops: [
                 {
@@ -27767,7 +27767,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.stealthValley,
+                area: MapsList.dssxw.stealthValley,
                 version: DataNames.blue,
             },
             fusions: [DataNames.RavemonBM],
@@ -27778,20 +27778,20 @@ export const DigimonList = {
         stage: Stage.stage5,
         dwds: {
             location: {
-                area: AreasList.dwds.ancientCanyon,
+                area: MapsList.dwds.ancientCanyon,
             },
             evolutionTree: DataNames.Bakumon,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.transfield,
+                area: MapsList.dwdd.transfield,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Gummymon,
         },
         dsle: {
             location: {
-                area: AreasList.dsle.graboCave,
+                area: MapsList.dsle.graboCave,
             },
             drops: [
                 {
@@ -27803,7 +27803,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.crystalCave,
+                area: MapsList.dssxw.crystalCave,
                 version: DataNames.blue,
             },
             drops: [
@@ -27820,13 +27820,13 @@ export const DigimonList = {
         stage: Stage.stage5,
         dwds: {
             location: {
-                area: AreasList.dwds.ancientCanyon,
+                area: MapsList.dwds.ancientCanyon,
             },
             evolutionTree: DataNames.Bakumon,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.transfield,
+                area: MapsList.dwdd.transfield,
                 version: DataNames.both,
             },
             dna: [DataNames.RosemonBM],
@@ -27834,13 +27834,13 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.graboCave,
+                area: MapsList.dsle.graboCave,
             },
             evolutionTree: DataNames.Poyomon,
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.crystalCave,
+                area: MapsList.dssxw.crystalCave,
                 version: DataNames.red,
             },
             fusions: [DataNames.RosemonBM],
@@ -27851,21 +27851,21 @@ export const DigimonList = {
         stage: Stage.stage5,
         dwdd: {
             location: {
-                area: AreasList.dwdd.thrillerRuins,
+                area: MapsList.dwdd.thrillerRuins,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Pagumon,
         },
         dsle: {
             location: {
-                area: AreasList.dsle.classDesert,
+                area: MapsList.dsle.classDesert,
             },
             evolutionTree: DataNames.Kuramon,
         },
         dssxw: {
             digiScores: [DataNames.Pharaohmon],
             location: {
-                area: AreasList.dssxw.papyrusDesert,
+                area: MapsList.dssxw.papyrusDesert,
                 version: DataNames.both,
             },
         },
@@ -27875,7 +27875,7 @@ export const DigimonList = {
         stage: Stage.stage5,
         dwdd: {
             location: {
-                area: AreasList.dwdd.thrillerRuins,
+                area: MapsList.dwdd.thrillerRuins,
                 version: DataNames.dawn,
             },
             evolutionTree: DataNames.Anubimon,
@@ -27883,7 +27883,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Anubimon],
             location: {
-                area: AreasList.dsle.classDesert,
+                area: MapsList.dsle.classDesert,
             },
             drops: [
                 {
@@ -27896,7 +27896,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Anubimon],
             location: {
-                area: AreasList.dssxw.none,
+                area: MapsList.dssxw.none,
                 version: DataNames.both,
             },
         },
@@ -27906,13 +27906,13 @@ export const DigimonList = {
         stage: Stage.stage5,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutionTree: DataNames.ChronomonHM,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.ChronomonHM,
@@ -27920,14 +27920,14 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.ChronomonHMAlpha, DataNames.ChronomonHMBeta],
             location: {
-                area: AreasList.dsle.none,
+                area: MapsList.dsle.none,
             },
             evolutionTree: DataNames.Chicchimon,
         },
         dssxw: {
             digiScores: [DataNames.ChronomonHM],
             location: {
-                area: AreasList.dssxw.none,
+                area: MapsList.dssxw.none,
                 version: DataNames.both,
             },
             fusions: [DataNames.Zhuqiaomon, DataNames.ShineGreymonBM],
@@ -27938,20 +27938,20 @@ export const DigimonList = {
         stage: Stage.stage5,
         dwds: {
             location: {
-                area: AreasList.dwds.destroyedBelt,
+                area: MapsList.dwds.destroyedBelt,
             },
             evolutionTree: DataNames.PicoDevimon,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.shadowAbyss,
+                area: MapsList.dwdd.shadowAbyss,
                 version: DataNames.both,    // TODO: Check if it's Dusk-Only
             },
             evolutionTree: DataNames.Pagumon,
         },
         dsle: {
             location: {
-                area: AreasList.dsle.thrillerRuins,
+                area: MapsList.dsle.thrillerRuins,
             },
             drops: [
                 {
@@ -27979,7 +27979,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.VenomVamdemon],
             location: {
-                area: AreasList.dssxw.spiderwebRuins,
+                area: MapsList.dssxw.spiderwebRuins,
                 version: DataNames.red,
             },
             drops: [
@@ -27996,13 +27996,13 @@ export const DigimonList = {
         stage: Stage.stage5,
         dwds: {
             location: {
-                area: AreasList.dwds.coreField,
+                area: MapsList.dwds.coreField,
             },
             evolutionTree: DataNames.Kuramon,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             dna: [DataNames.Armagemon, DataNames.ChaosDukemon],
@@ -28011,7 +28011,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Diaboromon],
             location: {
-                area: AreasList.dsle.anglerTunnel,
+                area: MapsList.dsle.anglerTunnel,
             },
             drops: [
                 {
@@ -28038,7 +28038,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Diaboromon],
             location: {
-                area: AreasList.dssxw.lostSpace,
+                area: MapsList.dssxw.lostSpace,
                 version: DataNames.blue,
             },
             drops: [
@@ -28055,14 +28055,14 @@ export const DigimonList = {
         stage: Stage.stage5,
         dwdd: {
             location: {
-                area: AreasList.dwdd.transfield,
+                area: MapsList.dwdd.transfield,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Tsunomon,
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.lostSpace,
+                area: MapsList.dssxw.lostSpace,
                 version: DataNames.blue,
             },
             drops: [
@@ -28079,14 +28079,14 @@ export const DigimonList = {
         stage: Stage.stage5,
         dwdd: {
             location: {
-                area: AreasList.dwdd.chaosBrain,
+                area: MapsList.dwdd.chaosBrain,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Syakomon,
         },
         dsle: {
             location: {
-                area: AreasList.dsle.chromeMine,
+                area: MapsList.dsle.chromeMine,
             },
             drops: [
                 {
@@ -28099,7 +28099,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Devitamamon],
             location: {
-                area: AreasList.dssxw.lostSpace,
+                area: MapsList.dssxw.lostSpace,
                 version: DataNames.blue,
             },
             drops: [
@@ -28116,7 +28116,7 @@ export const DigimonList = {
         stage: Stage.stage5,
         dwdd: {
             location: {
-                area: AreasList.dwdd.shadowAbyss,
+                area: MapsList.dwdd.shadowAbyss,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Pagumon,
@@ -28124,7 +28124,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Zanbamon],
             location: {
-                area: AreasList.dsle.northCity,
+                area: MapsList.dsle.northCity,
             },
             drops: [
                 {
@@ -28137,7 +28137,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Zanbamon],
             location: {
-                area: AreasList.dssxw.none,
+                area: MapsList.dssxw.none,
                 version: DataNames.both,
             },
         },
@@ -28147,13 +28147,13 @@ export const DigimonList = {
         stage: Stage.stage5,
         dwds: {
             location: {
-                area: AreasList.dwds.coreField,
+                area: MapsList.dwds.coreField,
             },
             evolutionTree: DataNames.Impmon,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.chaosBrain,
+                area: MapsList.dwdd.chaosBrain,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.ToyAgumonB,
@@ -28161,7 +28161,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Deathmon],
             location: {
-                area: AreasList.dsle.thrillerRuins,
+                area: MapsList.dsle.thrillerRuins,
             },
             drops: [
                 {
@@ -28173,7 +28173,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.lostSpace,
+                area: MapsList.dssxw.lostSpace,
                 version: DataNames.red,
             },
             fusions: [DataNames.BelialVamdemon],
@@ -28184,13 +28184,13 @@ export const DigimonList = {
         stage: Stage.stage5,
         dwds: {
             location: {
-                area: AreasList.dwds.destroyedBelt,
+                area: MapsList.dwds.destroyedBelt,
             },
             evolutionTree: DataNames.Gotsumon,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.chaosBrain,
+                area: MapsList.dwdd.chaosBrain,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Kuramon,
@@ -28201,7 +28201,7 @@ export const DigimonList = {
         stage: Stage.stage5,
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Syakomon,
@@ -28212,13 +28212,13 @@ export const DigimonList = {
         stage: Stage.stage5,
         dwds: {
             location: {
-                area: AreasList.dwds.underseaDrive,
+                area: MapsList.dwds.underseaDrive,
             },
             evolutionTree: DataNames.Betamon,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.macroSea,
+                area: MapsList.dwdd.macroSea,
                 version: DataNames.both,
             },
             dna: [DataNames.Apocalymon],
@@ -28227,7 +28227,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.MetalSeadramon],
             location: {
-                area: AreasList.dsle.graboMarine,
+                area: MapsList.dsle.graboMarine,
             },
             drops: [
                 {
@@ -28244,7 +28244,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.MetalSeadramon],
             location: {
-                area: AreasList.dssxw.endlessCoast,
+                area: MapsList.dssxw.endlessCoast,
                 version: DataNames.blue,
             },
             drops: [
@@ -28261,13 +28261,13 @@ export const DigimonList = {
         stage: Stage.stage5,
         dwds: {
             location: {
-                area: AreasList.dwds.underseaDrive,
+                area: MapsList.dwds.underseaDrive,
             },
             evolutionTree: DataNames.Betamon,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.YukiAgumon,
@@ -28275,7 +28275,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.GigaSeadramon],
             location: {
-                area: AreasList.dsle.graboMarine,
+                area: MapsList.dsle.graboMarine,
             },
             drops: [
                 {
@@ -28292,7 +28292,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.GigaSeadramon],
             location: {
-                area: AreasList.dssxw.none,
+                area: MapsList.dssxw.none,
                 version: DataNames.both,
             },
         },
@@ -28302,13 +28302,13 @@ export const DigimonList = {
         stage: Stage.stage5,
         dwds: {
             location: {
-                area: AreasList.dwds.junkFactory,
+                area: MapsList.dwds.junkFactory,
             },
             evolutionTree: DataNames.ToyAgumonB,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             dna: [DataNames.Apocalymon],
@@ -28317,7 +28317,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Pinocchimon],
             location: {
-                area: AreasList.dsle.riskFactory,
+                area: MapsList.dsle.riskFactory,
             },
             drops: [
                 {
@@ -28330,7 +28330,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Pinocchimon],
             location: {
-                area: AreasList.dssxw.none,
+                area: MapsList.dssxw.none,
                 version: DataNames.both,
             },
             fusions: [DataNames.Apocalymon],
@@ -28341,13 +28341,13 @@ export const DigimonList = {
         stage: Stage.stage5,
         dwds: {
             location: {
-                area: AreasList.dwds.hardMountains,
+                area: MapsList.dwds.hardMountains,
             },
             evolutionTree: DataNames.Wormmon,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.processFactory,
+                area: MapsList.dwdd.processFactory,
                 version: DataNames.dusk,
             },
             dna: [DataNames.Apocalymon, DataNames.Millenniumon],
@@ -28356,7 +28356,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.MugendramonAlpha, DataNames.MugendramonBeta],
             location: {
-                area: AreasList.dsle.riskFactory,
+                area: MapsList.dsle.riskFactory,
             },
             drops: [
                 {
@@ -28381,7 +28381,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.MugendramonSpade, DataNames.MugendramonHeart],
             location: {
-                area: AreasList.dssxw.lostSpace,
+                area: MapsList.dssxw.lostSpace,
                 version: DataNames.both,
             },
             fusions: [DataNames.Millenniumon, DataNames.Apocalymon, DataNames.Chaosdramon],
@@ -28392,7 +28392,7 @@ export const DigimonList = {
         stage: Stage.stage5,
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Millenniumon,
@@ -28400,7 +28400,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.MilleniumonAlpha, DataNames.MilleniumonBeta],
             location: {
-                area: AreasList.dsle.riskFactory,
+                area: MapsList.dsle.riskFactory,
             },
             drops: [
                 {
@@ -28431,7 +28431,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Millenniumon],
             location: {
-                area: AreasList.dssxw.none,
+                area: MapsList.dssxw.none,
                 version: DataNames.both,
             },
             fusions: [DataNames.MoonMillenniumon, DataNames.ZeedMillenniumon],
@@ -28442,13 +28442,13 @@ export const DigimonList = {
         stage: Stage.stage5,
         dwds: {
             location: {
-                area: AreasList.dwds.lavaRiver,
+                area: MapsList.dwds.lavaRiver,
             },
             evolutionTree: DataNames.Goburimon,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.shadowAbyss,
+                area: MapsList.dwdd.shadowAbyss,
                 version: DataNames.dusk,
             },
             dna: [DataNames.Apocalymon],
@@ -28457,7 +28457,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Piemon],
             location: {
-                area: AreasList.dsle.graboCentral,
+                area: MapsList.dsle.graboCentral,
             },
             drops: [
                 {
@@ -28482,7 +28482,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.PiemonSpade, DataNames.PiemonHeart],
             location: {
-                area: AreasList.dssxw.lostSpace,
+                area: MapsList.dssxw.lostSpace,
                 version: DataNames.both,
             },
             fusions: [DataNames.Apocalymon, DataNames.Beelzebumon2010Spade],
@@ -28493,7 +28493,7 @@ export const DigimonList = {
         stage: Stage.stage5,
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Sunmon,
@@ -28501,14 +28501,14 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Apollomon],
             location: {
-                area: AreasList.dsle.none,
+                area: MapsList.dsle.none,
             },
             evolutionTree: DataNames.Sunmon,
         },
         dssxw: {
             digiScores: [DataNames.Apollomon],
             location: {
-                area: AreasList.dssxw.none,
+                area: MapsList.dssxw.none,
                 version: DataNames.both,
             },
         },
@@ -28518,7 +28518,7 @@ export const DigimonList = {
         stage: Stage.stage5,
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Moonmon,
@@ -28526,14 +28526,14 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Dianamon],
             location: {
-                area: AreasList.dsle.none,
+                area: MapsList.dsle.none,
             },
             evolutionTree: DataNames.Moonmon,
         },
         dssxw: {
             digiScores: [DataNames.Dianamon],
             location: {
-                area: AreasList.dssxw.none,
+                area: MapsList.dssxw.none,
                 version: DataNames.both,
             },
         },
@@ -28543,7 +28543,7 @@ export const DigimonList = {
         stage: Stage.stage5,
         dwdd: {
             location: {
-                area: AreasList.dwdd.paletteAmazon,
+                area: MapsList.dwdd.paletteAmazon,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Minervamon,
@@ -28551,7 +28551,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Minervamon],
             location: {
-                area: AreasList.dsle.proxyIsland,
+                area: MapsList.dsle.proxyIsland,
             },
             drops: [
                 {
@@ -28568,7 +28568,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Minervamon],
             location: {
-                area: AreasList.dssxw.spinningAmazon,
+                area: MapsList.dssxw.spinningAmazon,
                 version: DataNames.red,
             },
         },
@@ -28578,13 +28578,13 @@ export const DigimonList = {
         stage: Stage.stage5,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutionTree: DataNames.Poyomon,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Dagomon,
@@ -28592,7 +28592,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Neptunemon],
             location: {
-                area: AreasList.dsle.graboMarine,
+                area: MapsList.dsle.graboMarine,
             },
             drops: [
                 {
@@ -28605,7 +28605,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Neptunemon],
             location: {
-                area: AreasList.dssxw.none,
+                area: MapsList.dssxw.none,
                 version: DataNames.both,
             },
         },
@@ -28616,7 +28616,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Mercurymon],
             location: {
-                area: AreasList.dsle.accessGlacier,
+                area: MapsList.dsle.accessGlacier,
             },
             drops: [
                 {
@@ -28629,7 +28629,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Mercurymon],
             location: {
-                area: AreasList.dssxw.none,
+                area: MapsList.dssxw.none,
                 version: DataNames.both,
             },
         },
@@ -28640,7 +28640,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Spinomon],
             location: {
-                area: AreasList.dsle.classDesert,
+                area: MapsList.dsle.classDesert,
             },
             drops: [
                 {
@@ -28652,7 +28652,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.flowerMeadow,
+                area: MapsList.dssxw.flowerMeadow,
                 version: DataNames.both,
             },
         },
@@ -28663,7 +28663,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Gaioumon],
             location: {
-                area: AreasList.dsle.riskCave,
+                area: MapsList.dsle.riskCave,
             },
             drops: [
                 {
@@ -28680,7 +28680,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Gaioumon],
             location: {
-                area: AreasList.dssxw.none,
+                area: MapsList.dssxw.none,
                 version: DataNames.both,
             },
         },
@@ -28691,7 +28691,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.GranDracmon],
             location: {
-                area: AreasList.dsle.wizardTemple,
+                area: MapsList.dsle.wizardTemple,
             },
             drops: [
                 {
@@ -28708,7 +28708,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.GranDracmon],
             location: {
-                area: AreasList.dssxw.none,
+                area: MapsList.dssxw.none,
                 version: DataNames.both,
             },
             fusions: [DataNames.MoonMillenniumon],
@@ -28719,13 +28719,13 @@ export const DigimonList = {
         stage: Stage.stage5,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutionTree: DataNames.Kuramon,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             dna: [DataNames.BeelzebumonBM],
@@ -28734,7 +28734,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Beelzebumon],
             location: {
-                area: AreasList.dsle.anglerTunnel,
+                area: MapsList.dsle.anglerTunnel,
             },
             drops: [
                 {
@@ -28757,7 +28757,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Beelzebumon],
             location: {
-                area: AreasList.dssxw.crystalVolcano,
+                area: MapsList.dssxw.crystalVolcano,
                 version: DataNames.red,
             },
             fusions: [DataNames.Beelzebumon2010Heart],
@@ -28768,20 +28768,20 @@ export const DigimonList = {
         stage: Stage.stage5,
         dwds: {
             location: {
-                area: AreasList.dwds.lavaRiver,
+                area: MapsList.dwds.lavaRiver,
             },
             evolutionTree: DataNames.Impmon,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.LucemonFM,
         },
         dsle: {
             location: {
-                area: AreasList.dsle.chromeMine,
+                area: MapsList.dsle.chromeMine,
             },
             drops: [
                 {
@@ -28798,7 +28798,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Demon],
             location: {
-                area: AreasList.dssxw.none,
+                area: MapsList.dssxw.none,
                 version: DataNames.both,
             },
         },
@@ -28808,7 +28808,7 @@ export const DigimonList = {
         stage: Stage.stage5,
         dwdd: {
             location: {
-                area: AreasList.dwdd.transfield,
+                area: MapsList.dwdd.transfield,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Pagumon,
@@ -28816,7 +28816,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Lilithmon],
             location: {
-                area: AreasList.dsle.wizardTemple,
+                area: MapsList.dsle.wizardTemple,
             },
             drops: [
                 {
@@ -28833,7 +28833,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Lilithmon],
             location: {
-                area: AreasList.dssxw.darknessTunnel,
+                area: MapsList.dssxw.darknessTunnel,
                 version: DataNames.red,
             },
         },
@@ -28844,7 +28844,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Barbamon],
             location: {
-                area: AreasList.dsle.wizardTemple,
+                area: MapsList.dsle.wizardTemple,
             },
             drops: [
                 {
@@ -28860,7 +28860,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.lostSpace,
+                area: MapsList.dssxw.lostSpace,
                 version: DataNames.red,
             },
         },
@@ -28870,7 +28870,7 @@ export const DigimonList = {
         stage: Stage.stage5,
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Solarmon,
@@ -28878,14 +28878,14 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Alphamon],
             location: {
-                area: AreasList.dsle.none,
+                area: MapsList.dsle.none,
             },
             evolutionTree: DataNames.Dorimon,
         },
         dssxw: {
             digiScores: [DataNames.Alphamon],
             location: {
-                area: AreasList.dssxw.none,
+                area: MapsList.dssxw.none,
                 version: DataNames.both,
             },
         },
@@ -28896,7 +28896,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Dynasmon],
             location: {
-                area: AreasList.dsle.taskCanyon,
+                area: MapsList.dsle.taskCanyon,
             },
             drops: [
                 {
@@ -28908,7 +28908,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.stealthValley,
+                area: MapsList.dssxw.stealthValley,
                 version: DataNames.red,
             },
         },
@@ -28919,7 +28919,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.LordKnightmon],
             location: {
-                area: AreasList.dsle.riskCave,
+                area: MapsList.dsle.riskCave,
             },
             drops: [
                 {
@@ -28931,7 +28931,7 @@ export const DigimonList = {
         },
         dssxw: {
             location: {
-                area: AreasList.dssxw.flowerMeadow,
+                area: MapsList.dssxw.flowerMeadow,
                 version: DataNames.red,
             },
         },
@@ -28941,7 +28941,7 @@ export const DigimonList = {
         stage: Stage.stage5,
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Duftmon,
@@ -28949,7 +28949,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Duftmon],
             location: {
-                area: AreasList.dsle.chromeMine,
+                area: MapsList.dsle.chromeMine,
             },
             drops: [
                 {
@@ -28962,7 +28962,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Duftmon],
             location: {
-                area: AreasList.dssxw.digitalSpaceEast,
+                area: MapsList.dssxw.digitalSpaceEast,
                 version: DataNames.red,
             },
         },
@@ -28973,7 +28973,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.UlforceVeedramonAlpha, DataNames.UlforceVeedramonBeta],
             location: {
-                area: AreasList.dsle.patchPrairie,
+                area: MapsList.dsle.patchPrairie,
             },
             drops: [
                 {
@@ -28990,7 +28990,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.UlforceVeedramon],
             location: {
-                area: AreasList.dssxw.none,
+                area: MapsList.dssxw.none,
                 version: DataNames.both,
             },
         },
@@ -29001,7 +29001,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Craniummon],
             location: {
-                area: AreasList.dsle.northCave, // Login Mountain - Magnet Mine version
+                area: MapsList.dsle.northCave, // Login Mountain - Magnet Mine version
             },
             drops: [
                 {
@@ -29014,7 +29014,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Craniummon],
             location: {
-                area: AreasList.dssxw.crystalMine,
+                area: MapsList.dssxw.crystalMine,
                 version: DataNames.red,
             },
         },
@@ -29025,7 +29025,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Examon],
             location: {
-                area: AreasList.dsle.loginMountain,
+                area: MapsList.dsle.loginMountain,
             },
             drops: [
                 {
@@ -29038,7 +29038,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Examon],
             location: {
-                area: AreasList.dssxw.none,
+                area: MapsList.dssxw.none,
                 version: DataNames.both,
             },
         },
@@ -29049,7 +29049,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.DaiPenmon],
             location: {
-                area: AreasList.dssxw.none,
+                area: MapsList.dssxw.none,
                 version: DataNames.both,
             },
             fusions: [DataNames.Xuanwumon],
@@ -29061,7 +29061,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.AncientGreymon],
             location: {
-                area: AreasList.dsle.taskCanyon,
+                area: MapsList.dsle.taskCanyon,
             },
             drops: [
                 {
@@ -29086,7 +29086,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.AncientGreymon],
             location: {
-                area: AreasList.dssxw.crystalVolcano,
+                area: MapsList.dssxw.crystalVolcano,
                 version: DataNames.blue,
             },
             fusions: [DataNames.SusanoomonSpade],
@@ -29098,7 +29098,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.AncientGarurumon],
             location: {
-                area: AreasList.dsle.accessGlacier,
+                area: MapsList.dsle.accessGlacier,
             },
             drops: [
                 {
@@ -29128,7 +29128,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.AncientGarurumon],
             location: {
-                area: AreasList.dssxw.skullIceberg,
+                area: MapsList.dssxw.skullIceberg,
                 version: DataNames.blue,
             },
             fusions: [DataNames.SusanoomonSpade],
@@ -29140,7 +29140,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.AncientMegatheriumon],
             location: {
-                area: AreasList.dsle.accessGlacier,
+                area: MapsList.dsle.accessGlacier,
             },
             drops: [
                 {
@@ -29157,7 +29157,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.AncientMegatheriumon],
             location: {
-                area: AreasList.dssxw.skullIceberg,
+                area: MapsList.dssxw.skullIceberg,
                 version: DataNames.red,
             },
             fusions: [DataNames.SusanoomonHeart],
@@ -29169,7 +29169,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.AncientIrismon],
             location: {
-                area: AreasList.dsle.pixelDesert,
+                area: MapsList.dsle.pixelDesert,
             },
             drops: [
                 {
@@ -29186,7 +29186,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.AncientIrismon],
             location: {
-                area: AreasList.dssxw.fortYard,
+                area: MapsList.dssxw.fortYard,
                 version: DataNames.red,
             },
             drops: [
@@ -29204,7 +29204,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.AncientBeatmonAlpha, DataNames.AncientBeatmonBeta],
             location: {
-                area: AreasList.dsle.proxyIsland,
+                area: MapsList.dsle.proxyIsland,
             },
             drops: [
                 {
@@ -29221,7 +29221,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.AncientBeatmon],
             location: {
-                area: AreasList.dssxw.endlessCoast,
+                area: MapsList.dssxw.endlessCoast,
                 version: DataNames.blue,
             },
             fusions: [DataNames.SusanoomonSpade],
@@ -29233,7 +29233,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.AncientSphinxmon],
             location: {
-                area: AreasList.dsle.thrillerRuins,
+                area: MapsList.dsle.thrillerRuins,
             },
             drops: [
                 {
@@ -29250,7 +29250,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.AncientSphinxmon],
             location: {
-                area: AreasList.dssxw.papyrusDesert,
+                area: MapsList.dssxw.papyrusDesert,
                 version: DataNames.blue,
             },
             fusions: [DataNames.SusanoomonSpade],
@@ -29262,7 +29262,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.AncientVolcamon],
             location: {
-                area: AreasList.dsle.shadowHell,
+                area: MapsList.dsle.shadowHell,
             },
             drops: [
                 {
@@ -29279,7 +29279,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.AncientVolcamonHeart, DataNames.AncientVolcamonSpade],
             location: {
-                area: AreasList.dssxw.crystalVolcano,
+                area: MapsList.dssxw.crystalVolcano,
                 version: DataNames.both,
             },
             fusions: [DataNames.Chaosdramon, DataNames.SusanoomonHeart],
@@ -29291,7 +29291,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.AncientTroiamonAlpha, DataNames.AncientTroiamonBeta],
             location: {
-                area: AreasList.dsle.proxyIsland,
+                area: MapsList.dsle.proxyIsland,
             },
             drops: [
                 {
@@ -29308,7 +29308,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.AncientTroiamon],
             location: {
-                area: AreasList.dssxw.stealthValley,
+                area: MapsList.dssxw.stealthValley,
                 version: DataNames.blue,
             },
             fusions: [DataNames.SusanoomonSpade],
@@ -29320,7 +29320,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.AncientMermaimon],
             location: {
-                area: AreasList.dsle.graboMarine,
+                area: MapsList.dsle.graboMarine,
             },
             drops: [
                 {
@@ -29337,7 +29337,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.AncientMermaimon],
             location: {
-                area: AreasList.dssxw.endlessSea,
+                area: MapsList.dssxw.endlessSea,
                 version: DataNames.red,
             },
             fusions: [DataNames.SusanoomonHeart],
@@ -29349,7 +29349,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.AncientWisemon],
             location: {
-                area: AreasList.dsle.wizardTemple,
+                area: MapsList.dsle.wizardTemple,
             },
             drops: [
                 {
@@ -29366,7 +29366,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.AncientWisemon],
             location: {
-                area: AreasList.dssxw.crystalMine,
+                area: MapsList.dssxw.crystalMine,
                 version: DataNames.red,
             },
             fusions: [DataNames.SusanoomonHeart, DataNames.Baihumon],
@@ -29377,14 +29377,14 @@ export const DigimonList = {
         stage: Stage.stage5,
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Koromon,
         },
         dsle: {
             location: {
-                area: AreasList.dsle.none,
+                area: MapsList.dsle.none,
             },
             evolutionTree: DataNames.Koromon,
         },
@@ -29394,14 +29394,14 @@ export const DigimonList = {
         stage: Stage.stage5,
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Wanyamon,
         },
         dsle: {
             location: {
-                area: AreasList.dsle.none,
+                area: MapsList.dsle.none,
             },
             evolutionTree: DataNames.Wanyamon,
         },
@@ -29411,7 +29411,7 @@ export const DigimonList = {
         stage: Stage.stage5,
         dssxw: {
             location: {
-                area: AreasList.dssxw.digitalSpaceSouth,
+                area: MapsList.dssxw.digitalSpaceSouth,
                 version: DataNames.both,
             },
         },
@@ -29421,7 +29421,7 @@ export const DigimonList = {
         stage: Stage.stage5,
         dssxw: {
             location: {
-                area: AreasList.dssxw.digitalSpaceSouth,
+                area: MapsList.dssxw.digitalSpaceSouth,
                 version: DataNames.both,
             },
         },
@@ -29431,7 +29431,7 @@ export const DigimonList = {
         stage: Stage.stage5,
         dssxw: {
             location: {
-                area: AreasList.dssxw.digitalSpaceSouth,
+                area: MapsList.dssxw.digitalSpaceSouth,
                 version: DataNames.both,
             },
         },
@@ -29442,7 +29442,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Beelzebumon2010Heart, DataNames.Beelzebumon2010Spade],
             location: {
-                area: AreasList.dssxw.digitalSpaceNorth,
+                area: MapsList.dssxw.digitalSpaceNorth,
                 version: DataNames.both,
             },
             drops: [
@@ -29460,7 +29460,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.ShoutmonX4B],
             location: {
-                area: AreasList.dssxw.none,
+                area: MapsList.dssxw.none,
                 version: DataNames.both,
             },
         },
@@ -29471,7 +29471,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.ShoutmonX4S],
             location: {
-                area: AreasList.dssxw.none,
+                area: MapsList.dssxw.none,
                 version: DataNames.both,
             },
         },
@@ -29482,7 +29482,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.ShoutmonX5],
             location: {
-                area: AreasList.dssxw.none,
+                area: MapsList.dssxw.none,
                 version: DataNames.both,
             },
             fusions: [DataNames.ShoutmonX5S],
@@ -29494,7 +29494,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.ShoutmonX3GM],
             location: {
-                area: AreasList.dssxw.none,
+                area: MapsList.dssxw.none,
                 version: DataNames.both,
             },
         },
@@ -29505,7 +29505,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.ShoutmonX3SD],
             location: {
-                area: AreasList.dssxw.none,
+                area: MapsList.dssxw.none,
                 version: DataNames.both,
             },
         },
@@ -29516,7 +29516,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.GreyKnightsmon],
             location: {
-                area: AreasList.dssxw.none,
+                area: MapsList.dssxw.none,
                 version: DataNames.both,
             },
         },
@@ -29529,13 +29529,13 @@ export const DigimonList = {
         stage: Stage.stage6,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutionTree: DataNames.Koromon,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             dna: [DataNames.ImperialdramonPM],
@@ -29544,14 +29544,14 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.OmegamonAlpha, DataNames.OmegamonBeta],
             location: {
-                area: AreasList.dsle.none,
+                area: MapsList.dsle.none,
             },
             evolutionTree: DataNames.Omegamon,
         },
         dssxw: {
             digiScores: [DataNames.Omegamon],
             location: {
-                area: AreasList.dssxw.none,
+                area: MapsList.dssxw.none,
                 version: DataNames.both,
             },
             fusions: [DataNames.ImperialdramonPM],
@@ -29562,13 +29562,13 @@ export const DigimonList = {
         stage: Stage.stage6,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutionTree: DataNames.Chicomon,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.taskCanyon,
+                area: MapsList.dwdd.taskCanyon,
                 version: DataNames.dawn,
             },
             dna: [DataNames.ImperialdramonPM, DataNames.ShineGreymonBM],
@@ -29576,7 +29576,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.classDesert,
+                area: MapsList.dsle.classDesert,
             },
             drops: [
                 {
@@ -29589,7 +29589,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.ImperialdramonFM],
             location: {
-                area: AreasList.dssxw.none,
+                area: MapsList.dssxw.none,
                 version: DataNames.both,
             },
             fusions: [DataNames.ImperialdramonPM],
@@ -29600,13 +29600,13 @@ export const DigimonList = {
         stage: Stage.stage6,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutionTree: DataNames.Chicomon,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.ImperialdramonPM,
@@ -29614,14 +29614,14 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.ImperialdramonPMAlpha, DataNames.ImperialdramonPMBeta],
             location: {
-                area: AreasList.dsle.none,
+                area: MapsList.dsle.none,
             },
             evolutionTree: DataNames.Paildramon,
         },
         dssxw: {
             digiScores: [DataNames.ImperialdramonPM],
             location: {
-                area: AreasList.dssxw.none,
+                area: MapsList.dssxw.none,
                 version: DataNames.both,
             },
         },
@@ -29631,13 +29631,13 @@ export const DigimonList = {
         stage: Stage.stage6,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutionTree: DataNames.DukemonCM,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.DukemonCM,
@@ -29645,14 +29645,14 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.DukemonCMAlpha, DataNames.DukemonCMBeta],
             location: {
-                area: AreasList.dsle.none,
+                area: MapsList.dsle.none,
             },
             evolutionTree: DataNames.Gigimon,
         },
         dssxw: {
             digiScores: [DataNames.DukemonCM],
             location: {
-                area: AreasList.dssxw.none,
+                area: MapsList.dssxw.none,
                 version: DataNames.both,
             },
         },
@@ -29662,7 +29662,7 @@ export const DigimonList = {
         stage: Stage.stage6,
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.BeelzebumonBM,
@@ -29670,7 +29670,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.BeelzebumonBMAlpha, DataNames.BeelzebumonBMBeta],
             location: {
-                area: AreasList.dsle.none,
+                area: MapsList.dsle.none,
             },
             evolutionTree: DataNames.Kuramon,
         },
@@ -29680,7 +29680,7 @@ export const DigimonList = {
         stage: Stage.stage6,
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             dna: [DataNames.ChronomonHM],
@@ -29689,14 +29689,14 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.SusanoomonAlpha, DataNames.SusanoomonBeta],
             location: {
-                area: AreasList.dsle.none,
+                area: MapsList.dsle.none,
             },
             evolutionTree: DataNames.Susanoomon,
         },
         dssxw: {
             digiScores: [DataNames.SusanoomonHeart, DataNames.SusanoomonSpade],
             location: {
-                area: AreasList.dssxw.none,
+                area: MapsList.dssxw.none,
                 version: DataNames.both,
             },
         },
@@ -29706,14 +29706,14 @@ export const DigimonList = {
         stage: Stage.stage6,
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.ShineGreymonRM,
         },
         dsle: {
             location: {
-                area: AreasList.dsle.riskCave,
+                area: MapsList.dsle.riskCave,
             },
             drops: [
                 {
@@ -29730,7 +29730,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.ShineGreymonRM],
             location: {
-                area: AreasList.dssxw.none,
+                area: MapsList.dssxw.none,
                 version: DataNames.both,
             },
         },
@@ -29740,7 +29740,7 @@ export const DigimonList = {
         stage: Stage.stage6,
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.ShineGreymonBM,
@@ -29748,14 +29748,14 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.ShineGreymonBMAlpha, DataNames.ShineGreymonBMBeta],
             location: {
-                area: AreasList.dsle.none,
+                area: MapsList.dsle.none,
             },
             evolutionTree: DataNames.Koromon,
         },
         dssxw: {
             digiScores: [DataNames.ShineGreymonBM],
             location: {
-                area: AreasList.dssxw.none,
+                area: MapsList.dssxw.none,
                 version: DataNames.both,
             },
         },
@@ -29765,7 +29765,7 @@ export const DigimonList = {
         stage: Stage.stage6,
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.MirageGaogamonBM,
@@ -29773,14 +29773,14 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.MirageGaogamonBMAlpha, DataNames.MirageGaogamonBMBeta],
             location: {
-                area: AreasList.dsle.none,
+                area: MapsList.dsle.none,
             },
             evolutionTree: DataNames.Wanyamon,
         },
         dssxw: {
             digiScores: [DataNames.MirageGaogamonBM],
             location: {
-                area: AreasList.dssxw.none,
+                area: MapsList.dssxw.none,
                 version: DataNames.both,
             },
         },
@@ -29790,7 +29790,7 @@ export const DigimonList = {
         stage: Stage.stage6,
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.RosemonBM,
@@ -29798,14 +29798,14 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.RosemonBM],
             location: {
-                area: AreasList.dsle.none,
+                area: MapsList.dsle.none,
             },
             evolutionTree: DataNames.Budmon,
         },
         dssxw: {
             digiScores: [DataNames.RosemonBM],
             location: {
-                area: AreasList.dssxw.none,
+                area: MapsList.dssxw.none,
                 version: DataNames.both,
             },
         },
@@ -29815,7 +29815,7 @@ export const DigimonList = {
         stage: Stage.stage6,
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.RavemonBM,
@@ -29823,14 +29823,14 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.RavemonBM],
             location: {
-                area: AreasList.dsle.none,
+                area: MapsList.dsle.none,
             },
             evolutionTree: DataNames.Chicchimon,
         },
         dssxw: {
             digiScores: [DataNames.RavemonBM],
             location: {
-                area: AreasList.dssxw.none,
+                area: MapsList.dssxw.none,
                 version: DataNames.both,
             },
         },
@@ -29840,7 +29840,7 @@ export const DigimonList = {
         stage: Stage.stage6,
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Kuramon,
@@ -29848,14 +29848,14 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.ApocalymonAlpha, DataNames.ApocalymonBeta],
             location: {
-                area: AreasList.dsle.none,
+                area: MapsList.dsle.none,
             },
             evolutionTree: DataNames.Apocalymon,
         },
         dssxw: {
             digiScores: [DataNames.Apocalymon],
             location: {
-                area: AreasList.dssxw.none,
+                area: MapsList.dssxw.none,
                 version: DataNames.both,
             },
         },
@@ -29865,13 +29865,13 @@ export const DigimonList = {
         stage: Stage.stage6,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutionTree: DataNames.PicoDevimon,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.BelialVamdemon,
@@ -29879,14 +29879,14 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.BelialVamdemonAlpha, DataNames.BelialVamdemonBeta],
             location: {
-                area: AreasList.dsle.none,
+                area: MapsList.dsle.none,
             },
             evolutionTree: DataNames.Pagumon,
         },
         dssxw: {
             digiScores: [DataNames.BelialVamdemon],
             location: {
-                area: AreasList.dssxw.none,
+                area: MapsList.dssxw.none,
                 version: DataNames.both,
             },
         },
@@ -29896,7 +29896,7 @@ export const DigimonList = {
         stage: Stage.stage6,
         dwdd: {
             location: {
-                area: AreasList.dwdd.magnetMine,
+                area: MapsList.dwdd.magnetMine,
                 version: DataNames.dusk,
             },
             evolutionTree: DataNames.Armagemon,
@@ -29904,7 +29904,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.ArmagemonAlpha, DataNames.ArmagemonBeta],
             location: {
-                area: AreasList.dsle.chromeMine,
+                area: MapsList.dsle.chromeMine,
             },
             drops: [
                 {
@@ -29921,7 +29921,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Armagemon],
             location: {
-                area: AreasList.dssxw.none,
+                area: MapsList.dssxw.none,
                 version: DataNames.both,
             },
         },
@@ -29931,13 +29931,13 @@ export const DigimonList = {
         stage: Stage.stage6,
         dwds: {
             location: {
-                area: AreasList.dwds.none,
+                area: MapsList.dwds.none,
             },
             evolutionTree: DataNames.Tokomon,
         },
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             dna: [DataNames.Chaosmon, DataNames.ChronomonHM, DataNames.RavemonBM],
@@ -29946,14 +29946,14 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Valdurmon],
             location: {
-                area: AreasList.dsle.none,
+                area: MapsList.dsle.none,
             },
             evolutionTree: DataNames.Silphymon,
         },
         dssxw: {
             digiScores: [DataNames.Valdurmon],
             location: {
-                area: AreasList.dssxw.none,
+                area: MapsList.dssxw.none,
                 version: DataNames.both,
             },
         },
@@ -29964,7 +29964,7 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Aegisdramon],
             location: {
-                area: AreasList.dsle.northMarine,
+                area: MapsList.dsle.northMarine,
             },
             drops: [
                 {
@@ -29977,7 +29977,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Aegisdramon],
             location: {
-                area: AreasList.dssxw.none,
+                area: MapsList.dssxw.none,
                 version: DataNames.both,
             },
         },
@@ -29988,7 +29988,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.Chaosdramon],
             location: {
-                area: AreasList.dssxw.none,
+                area: MapsList.dssxw.none,
                 version: DataNames.both,
             },
         },
@@ -29998,7 +29998,7 @@ export const DigimonList = {
         stage: Stage.stage6,
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Chaosmon,
@@ -30006,14 +30006,14 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.ChaosmonAlpha, DataNames.ChaosmonBeta],
             location: {
-                area: AreasList.dsle.none,
+                area: MapsList.dsle.none,
             },
             evolutionTree: DataNames.Chaosmon,
         },
         dssxw: {
             digiScores: [DataNames.Chaosmon],
             location: {
-                area: AreasList.dssxw.none,
+                area: MapsList.dssxw.none,
                 version: DataNames.both,
             },
         },
@@ -30024,14 +30024,14 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.QinglongmonAlpha, DataNames.QinglongmonBeta],
             location: {
-                area: AreasList.dsle.none,
+                area: MapsList.dsle.none,
             },
             evolutionTree: DataNames.Tokomon,
         },
         dssxw: {
             digiScores: [DataNames.Qinglongmon],
             location: {
-                area: AreasList.dssxw.none,
+                area: MapsList.dssxw.none,
                 version: DataNames.both,
             },
         },
@@ -30042,14 +30042,14 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.XuanwumonAlpha, DataNames.XuanwumonBeta],
             location: {
-                area: AreasList.dsle.none,
+                area: MapsList.dsle.none,
             },
             evolutionTree: DataNames.Poyomon,
         },
         dssxw: {
             digiScores: [DataNames.Xuanwumon],
             location: {
-                area: AreasList.dssxw.none,
+                area: MapsList.dssxw.none,
                 version: DataNames.both,
             },
         },
@@ -30060,14 +30060,14 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Baihumon],
             location: {
-                area: AreasList.dsle.none,
+                area: MapsList.dsle.none,
             },
             evolutionTree: DataNames.Tsunomon,
         },
         dssxw: {
             digiScores: [DataNames.Baihumon],
             location: {
-                area: AreasList.dssxw.none,
+                area: MapsList.dssxw.none,
                 version: DataNames.both,
             },
         },
@@ -30078,14 +30078,14 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.Zhuqiaomon],
             location: {
-                area: AreasList.dsle.none,
+                area: MapsList.dsle.none,
             },
             evolutionTree: DataNames.Tokomon,
         },
         dssxw: {
             digiScores: [DataNames.Zhuqiaomon],
             location: {
-                area: AreasList.dssxw.none,
+                area: MapsList.dssxw.none,
                 version: DataNames.both,
             },
         },
@@ -30095,7 +30095,7 @@ export const DigimonList = {
         stage: Stage.stage6,
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             dna: [DataNames.ZeedMillenniumon],
@@ -30103,7 +30103,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                area: AreasList.dsle.chromeMine,
+                area: MapsList.dsle.chromeMine,
             },
             drops: [
                 {
@@ -30120,7 +30120,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.MoonMillenniumon],
             location: {
-                area: AreasList.dssxw.none,
+                area: MapsList.dssxw.none,
                 version: DataNames.both,
             },
             fusions: [DataNames.ZeedMillenniumon],
@@ -30131,7 +30131,7 @@ export const DigimonList = {
         stage: Stage.stage6,
         dwdd: {
             location: {
-                area: AreasList.dwdd.none,
+                area: MapsList.dwdd.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.ZeedMillenniumon,
@@ -30139,14 +30139,14 @@ export const DigimonList = {
         dsle: {
             platesRequired: [DataNames.ZeedMillenniumon],
             location: {
-                area: AreasList.dsle.none,
+                area: MapsList.dsle.none,
             },
             evolutionTree: DataNames.Kimeramon,
         },
         dssxw: {
             digiScores: [DataNames.ZeedMillenniumon],
             location: {
-                area: AreasList.dssxw.none,
+                area: MapsList.dssxw.none,
                 version: DataNames.both,
             },
         },
@@ -30157,7 +30157,7 @@ export const DigimonList = {
         dssxw: {
             digiScores: [DataNames.ShoutmonX5S],
             location: {
-                area: AreasList.dssxw.none,
+                area: MapsList.dssxw.none,
                 version: DataNames.both,
             },
         },

@@ -1,13 +1,6 @@
 import { DigimonList } from "../constants.js";
 
 export class Digimon {
-    // Initialize the Digimon with the given dataname and level
-    // maxLevel is the maximum level the Player has reached with a Digimon. It will be maxLevel + 1 when defeating a wild Digimon of the same of higher level
-    constructor(dataName, level = 1) {
-        this.dataName = dataName;
-        this.level = level;
-        this.recalculateStats();
-    }
     // String to access the Digimon's information
     dataName;
     level = 0;
@@ -18,6 +11,14 @@ export class Digimon {
 
     // Battle-only variables
     currHP;
+
+    // Initialize the Digimon with the given dataname and level
+    // maxLevel is the maximum level the Player has reached with a Digimon. It will be maxLevel + 1 when defeating a wild Digimon of the same of higher level
+    constructor(dataName, level = 1) {
+        this.dataName = dataName;
+        this.level = level;
+        this.recalculateStats();
+    }
 
     // Function to increase the Digimon's Level by a certain amount (Culumon will make it increase by more than 1 at a time)
     // - maxLevel: if this is -1, the Digimon's level can increase past the Player's Max Level. This will happen when beating an enemy in battle

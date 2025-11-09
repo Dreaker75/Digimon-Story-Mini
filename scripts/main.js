@@ -1,6 +1,5 @@
-import { DWDSGame } from './classes/dwds classes/dwds_game.js'
-import { Digimon } from './classes/digimon.js'
-import { AreasList, DataNames, DigimonList, Locations, Names } from './constants.js'
+import { DWDSGameManager } from './managers/dwds classes/dwds_game_manager.js'
+import { DigimonList, Locations, Names } from './constants.js'
 
 let language_chosen = "japanese"
 // var pair_game_chosen = "dawn/dusk/red/blue"
@@ -256,46 +255,40 @@ let enemyDigimonDiv;
 let digimonInfoModal;
 let starterSelection;
 let attackButton;
+
+// Locations Elements
 let locationButtons;
 let locationDivs;
 
-// Areas Elements
-let areasMenuDiv;
-let prevSectionButton;
-let nextSectionButton;
+// Maps Elements
+let mapsMenuDiv;
+let prevAreaButton;
+let nextAreaButton;
 
 /*************************
  * Menu Functions
  *************************/
-// Returns the players from the current area to the main hub (Town)
+// Returns the players from the current map to the main hub (Town)
 let moveToLocation = (newLocation) => {
-    // TODO: Will have to make this stop any behavior from the current location, like resetting battles from Areas (remove enemy Digimon, heal player Digimon, etc etc)
-
-    // Enable the button for the old area
-    locationButtons[game.currLocation].disabled = false;
-
-    // TODO: Hide the old location's div
-    locationDivs[game.currLocation].style.display = "none";
-
-    handleLeavingLocation(game.currLocation);
+    handleLeavingLocation(game.getCurrentLocation());
 
     // Update the current location
-    game.currLocation = newLocation;
+    game.changeLocation(newLocation);
 
-    // Disable the button for the new area
-    locationButtons[game.currLocation].disabled = true;
-    
-    // Show the new location's div
-    locationDivs[game.currLocation].style.display = "block";
-
-    // TODO: Might have to handle the specific behavior for each location, like moving sections for Areas
-    handleEnteringLocation(game.currLocation);
+    // Handle the specific behavior for each location, like moving areas for Maps
+    handleEnteringLocation(game.getCurrentLocation());
 }
 
 let handleLeavingLocation = (location) => {
+    // Enable the button for the old area
+    locationButtons[location].disabled = false;
+
+    // Hide the old location's div
+    locationDivs[location].style.display = "none";
+
     switch (location) {
-        case Locations.Areas:
-            game.battleSystem.endBattle();
+        case Locations.Maps:
+            // TODO: This is getting called before the BattleSystem ends the battle, will have to find a better place to call this
             displayUpdatedPlayerDigimonBattleInformation();
             break;
         case Locations.Town:
@@ -306,9 +299,15 @@ let handleLeavingLocation = (location) => {
 }
 
 let handleEnteringLocation = (location) => {
+    // Disable the button for the new map
+    locationButtons[location].disabled = true;
+    
+    // Show the new location's div
+    locationDivs[location].style.display = "block";
+
     switch (location) {
-        case Locations.Areas:
-            movedToNewSection();
+        case Locations.Maps:
+            movedToNewArea();
             break;
         case Locations.Town:
             break;
@@ -321,17 +320,12 @@ let handleEnteringLocation = (location) => {
  * Modify Player Info
  *********************/
 let assignStarter = starterId => {
-    var starter = new Digimon(game.getStarterDigimon(starterId), 3);
-    game.player.addNewDigimon(starter);
-    game.encounter.setStarterDigimon(game.getStarterDigimon(starterId));
-    setPartyDigimon(0, starter);
+    game.assignStarter(starterId);
     document.getElementById("starter-modal").style.display = "none";
 
-    // DEBUG: Multiple starters for demo
-    game.player.addNewDigimon(new Digimon(DataNames.DotAgumon, 3));
-    game.player.addNewDigimon(new Digimon(DataNames.DotFalcomon, 3));
-    setPartyDigimon(1, game.player.party[1]);
-    setPartyDigimon(2, game.player.party[2]);
+    game.getDigimonParty().forEach((digimon, index) => {
+        setPartyDigimon(index, digimon);
+    });
 }
 
 let setPartyDigimon = (id, digimon) => {
@@ -345,42 +339,33 @@ let setPartyDigimon = (id, digimon) => {
 }
 
 /*************************
- * Area Functions
+ * Map Functions
  *************************/
-let movedToNewSection = () => {
-    updatePrevNextSectionButtons();
+let movedToNewArea = () => {
+    updatePrevNextAreaButtons();
 
     let availableDigimonDisplay = document.getElementById("wild-digimon-list");
-    availableDigimonDisplay.innerHTML = "";
-    document.getElementById("area-name").textContent = AreasList[game.gameChosen][game.areasManager.currArea].name;
+    availableDigimonDisplay.textContent = "";
+    document.getElementById("map-name").textContent = game.getCurrentMapName();
 
-    // DEBUG: Will need to fix up the location for this line
-    game.encounter.newAreaEntered(game.areasManager.currArea, game.areasManager.currSection);
-
-    // FIXME! (Make it look better)
-    game.encounter.getDigimonAvailable().forEach(digimon => {
-        document.getElementById("wild-digimon-list").innerHTML += Names[digimon.digimon][language_chosen] ?? digimon.digimon + ", ";
+    // TODO: FIXME! (Make it look better and/or remove it)
+    game._encountersManager.getDigimonAvailable().forEach(digimon => {
+        document.getElementById("wild-digimon-list").textContent += Names[digimon.getDataName()][language_chosen] ?? digimon.getDataName() + ", ";
     });
 
+    // TODO: Make a button the player must press to find an encounter?
     generateNewDigimonEncounter();
 }
 
-let updatePrevNextSectionButtons = () => {
-    prevSectionButton.disabled = !game.areasManager.isPreviousSectionUnlocked();
-    nextSectionButton.disabled = !game.areasManager.isNextSectionUnlocked();
+let updatePrevNextAreaButtons = () => {
+    prevAreaButton.disabled = !game.isPreviousAreaUnlocked();
+    nextAreaButton.disabled = !game.isNextAreaUnlocked();
 }
 
 /*********************
  * Battle Functions
  *********************/
-let generateNewDigimonEncounter = () => {
-    let enemyDigimons = [];
-    let enemySpawned = game.encounter.generateRandomEncounter();
-    let enemyDigimon = new Digimon(enemySpawned.digimon, enemySpawned.level);
-    enemyDigimons.push(enemyDigimon);
-    setEnemyDigimon(enemyDigimon);
-    game.battleSystem.startBattle(enemyDigimons);
-}
+let generateNewDigimonEncounter = () => setEnemyDigimon(game.generateNewDigimonEncounter());
 
 let setEnemyDigimon = digimon => {
     let dataName = digimon.dataName;
@@ -397,7 +382,7 @@ let setEnemyDigimon = digimon => {
  * Player Feedback Functions
  ****************************/
 let displayDigimonInfo = partySlot => {
-    let digimon = game.player.party[partySlot];
+    let digimon = game.player.getPartyDigimon(partySlot);
     let dataName = digimon.dataName;
     let displayName = Names[dataName][language_chosen] ?? dataName;
     digimonNameDisplay.innerHTML = displayName;
@@ -414,11 +399,11 @@ let updatePartyDigimonInformation = (partyDigimonDiv, digimon) => {
 
 let displayUpdatedEnemyDigimonInformation = digimon => enemyDigimonDiv.querySelectorAll("p")[1].innerHTML = "HP " + digimon.currHP + " / " + digimon.maxHP;
 
-let displayUpdatedPlayerDigimonBattleInformation = () => game.player.party.forEach((digimon, id) => updatePartyDigimonInformation(partyDigimonDivs[id], digimon));
+let displayUpdatedPlayerDigimonBattleInformation = () => game.getDigimonParty().forEach((digimon, id) => updatePartyDigimonInformation(partyDigimonDivs[id], digimon));
 
 let closeModal = () => digimonInfoModal.style.display = "none";
 
-const game = new DWDSGame();
+const game = new DWDSGameManager();
 
 document.addEventListener("DOMContentLoaded", _ => {
     locationButtons = {};
@@ -426,13 +411,14 @@ document.addEventListener("DOMContentLoaded", _ => {
 
     starterSelection = document.getElementById("starter-modal");
 
-    if (game.player.party.length == 0) {
+    if (game.getCurrPartySize() == 0) {
+        // TODO: Change the code to be less hardcoded (Everything is still happening in the background while having no Digimon)
         starterSelection.style.display = "block";
     }
 
     // DEBUG: Change to not be hardcoded
-    document.getElementById("current-area-dwds").style.backgroundImage = "url(images/areas/dataForest.png)";
-    document.getElementById("current-area-dwds").style.backgroundSize = "100%";
+    document.getElementById("current-map-dwds").style.backgroundImage = "url(images/maps/dataForest.png)";
+    document.getElementById("current-map-dwds").style.backgroundSize = "100%";
 
     digimonInfoModal = document.getElementById("digimon-info-modal");
     digimonNameDisplay = digimonInfoModal.querySelector("h2");
@@ -440,7 +426,9 @@ document.addEventListener("DOMContentLoaded", _ => {
     digimonLevelDisplay = document.getElementById("level-info");
     partyDigimonBox = document.getElementById("party-box");
     let partyDigimonTemplate = document.getElementById("party-digimon-template");
-    for (let index = 0; index < game.player.partySize; index++) {
+
+    // Create the default Party boxes
+    for (let index = 0; index < game.getMaxPartySize(); index++) {
         partyDigimonBox.appendChild(partyDigimonTemplate.content.cloneNode(true));
     }
 
@@ -450,14 +438,14 @@ document.addEventListener("DOMContentLoaded", _ => {
     enemyDigimonDiv.style.display = "none";
 
     /***************
-     * Areas Data
+     * Maps Data
      ***************/
-    areasMenuDiv = document.getElementById("areas-menu-dwds");
-    let areasButton = document.getElementById("areas-button");
-    locationButtons[Locations.Areas] = areasButton;
-    locationDivs[Locations.Areas] = areasMenuDiv;
-    areasButton.addEventListener("click", function () {
-        moveToLocation(Locations.Areas);
+    mapsMenuDiv = document.getElementById("maps-menu-dwds");
+    let mapsButton = document.getElementById("maps-button");
+    locationButtons[Locations.Maps] = mapsButton;
+    locationDivs[Locations.Maps] = mapsMenuDiv;
+    mapsButton.addEventListener("click", function () {
+        moveToLocation(Locations.Maps);
     });
     
     let townButton = document.getElementById("town-button");
@@ -471,17 +459,25 @@ document.addEventListener("DOMContentLoaded", _ => {
     attackButton.addEventListener("click", () => {
         let battleWon = game.battleSystem.playerAttack();
         if (battleWon) {
-            // TODO: Temporary code, need to do it less hardcoded and possibly elsewhere
             // The player won the battle
-            // Tell the Story Manager that we've defeated a Digimon, so it updates the Story Tasks if it applies
-            if (game.storyManager.digimonDefeated()) {
-                // We completed the Story Task, so a new Section might have unlocked
-                updatePrevNextSectionButtons();
+            // Tell the game we've defeated a Digimon, so it updates the Story tasks if it applies, among other things
+            if (game.digimonDefeated()) {
+                // If a boss was defeated, we send the player back to Town to reset the Maps. Otherwise, a new area might have unlocked so update the prev/next Area buttons
+                if(game.wasBossDefeated()) {
+                    moveToLocation(Locations.Town);
+                    game.clearBossEncounter();
+                } else {
+                    updatePrevNextAreaButtons();
+                }
             }
+
+            // TODO: Move to a place where the player triggers the next encounter? (Maybe a "NEXT" button appears after defeating a Digimon)
             generateNewDigimonEncounter();
-            setPartyDigimon(0, game.player.party[0]);
-            setPartyDigimon(1, game.player.party[1]);
-            setPartyDigimon(2, game.player.party[2]);
+
+            // TODO: Temporary code, need to do it less hardcoded and possibly elsewhere
+            setPartyDigimon(0, game.getPartyDigimon(0));
+            setPartyDigimon(1, game.getPartyDigimon(1));
+            setPartyDigimon(2, game.getPartyDigimon(2));
         } else {
             // TODO: Update so it shows feedback for a Digimon that was defeated before showing the next one? Might not be necessary since some clickers ignore this last feedback in favor of making the game faster
             displayUpdatedEnemyDigimonInformation(game.battleSystem.getCurrentEnemyDigimon());
@@ -497,18 +493,18 @@ document.addEventListener("DOMContentLoaded", _ => {
     // TODO: Rerolls the current enemy Digimon, might need tweaking in the future
     document.getElementById("flee-button-dwds").addEventListener("click", generateNewDigimonEncounter);
 
-    prevSectionButton = document.getElementById("prev-section-button");
-    nextSectionButton = document.getElementById("next-section-button");
+    prevAreaButton = document.getElementById("prev-area-button");
+    nextAreaButton = document.getElementById("next-area-button");
 
-    prevSectionButton.addEventListener("click", () => {
-        if (game.areasManager.changeSection(-1)) {
-            movedToNewSection();
+    prevAreaButton.addEventListener("click", () => {
+        if (game.changeArea(-1)) {
+            movedToNewArea();
         }
     });
 
-    nextSectionButton.addEventListener("click", () => {
-        if (game.areasManager.changeSection(1)) {
-            movedToNewSection();
+    nextAreaButton.addEventListener("click", () => {
+        if (game.changeArea(1)) {
+            movedToNewArea();
         }
     });
     

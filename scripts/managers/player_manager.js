@@ -1,13 +1,13 @@
 import { MAX_SPECIES_EXP, MAX_TOTAL_EXP, DataNames, DigimonIDs, Species } from "../constants.js";
 
-export class Player {
+export class PlayerManager {
     currStory = 0;
     // Maximum Level reached with a Digimon (Can only increase by battling)
     // DEBUG: This is set to 3 for demo purposes since the party starts at lv3, check if it need to be changed back to 1 for the official release
     maxLevel = 3;
     levelUpBoost = 1;
-    party = []; // Array of class Digimon
-    partySize;
+    #party = []; // Array of class Digimon
+    #partySize;
     // Amount of Digimon the player has defeated of each Species,
     // - Baby Digimon add 1, Child add 2, Adult 4, Perfect 8, Ultimate 16 and Ultimate2 32
     amountDefeated = {};
@@ -16,7 +16,7 @@ export class Player {
     digimonItems = [];
 
     constructor(partySize) {
-        this.partySize = partySize;
+        this.#partySize = partySize;
         // Initialize the array to 0 since default value for undeclared arrays is undefined
         // TODO: Might need to rewrite this to use the DWDS order, but might be fine since it's always the same amount of Digimon
         this.digimonItems = new Array(Object.keys(DigimonIDs).length).fill(0);
@@ -25,8 +25,21 @@ export class Player {
         });
     }
 
+    // TODO: Figure out if there's a better way to send this to display all the Digimon in the party
+    getDigimonParty() {
+        return this.#party;
+    }
+
+    getMaxPartySize() {
+        return this.#partySize;
+    }
+
+    getCurrPartySize() {
+        return this.#party.length;
+    }
+
     isPartyFull() {
-        return this.party.length >= this.partySize;
+        return this.#party.length >= this.#partySize;
     }
 
     addNewDigimon(digimon) {
@@ -39,12 +52,12 @@ export class Player {
         // TODO: Remove the Digimon from the Digi-Bank?
 
         // Add the Digimon to the party
-        this.party.push(digimon);
+        this.#party.push(digimon);
     }
 
     removeDigimon(index) {
         // If the Digimon removed was a Culumon
-        if (this.party[index].dataName == DataNames.Culumon) {
+        if (this.#party[index].dataName == DataNames.Culumon) {
             // Decrease the amount of levels gained per win
             this.levelUpBoost--;
         }
@@ -52,7 +65,7 @@ export class Player {
         // TODO: Add the Digimon to the Digi-Bank?
 
         // Remove the Digimon from the party
-        this.party.splice(index, 1);
+        this.#party.splice(index, 1);
     }
 
     addDigimonItem(digimon) {
@@ -70,13 +83,13 @@ export class Player {
 
     // TODO: Might move all the Party functions to a new Party class
     getPartyDigimon(index) {
-        if (index >= 0 && index < this.party.length) {
-            return this.party.at(index);
+        if (index >= 0 && index < this.#party.length) {
+            return this.#party.at(index);
         }
     }
 
     getRandomActiveDigimon() {
         // TODO: Currently, the first 3 Digimon are always active and the party is filled in order
-        return this.getPartyDigimon(Math.floor(Math.random() * Math.min(this.partySize, 3)));
+        return this.getPartyDigimon(Math.floor(Math.random() * Math.min(this.#partySize, 3)));
     }
 }

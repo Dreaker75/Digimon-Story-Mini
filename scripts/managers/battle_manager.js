@@ -1,10 +1,12 @@
 import { MAX_LEVEL, DigimonList } from "../constants.js";
+import { Digimon } from "../entities/digimon.js";
 
-export class Battle {
+export class BattleManager {
     constructor(player) {
         this.player = player;
     }
 
+    // Array of Digimon objects representing the enemy Digimon in this battle
     enemyDigimon = [];
     currEnemy = 0;
     playerDamage = 0;
@@ -12,18 +14,28 @@ export class Battle {
     // Reference to the Player
     player;
 
+    /**
+     * Initializes all the battle variables
+     * @param enemyDigimon - a DigimonPool object (like found in constants.js)
+     */
     startBattle(enemyDigimon) {
         this.currEnemy = 0;
-        this.enemyDigimon = enemyDigimon;
+        this.enemyDigimon = [];
+        enemyDigimon.forEach(digimonData => {
+            // TODO: Error, enemyDigimon array is an array of DataNames for Bosses
+            let newEnemyDigimon = new Digimon(digimonData.getDataName(), digimonData.getLevel());
+            newEnemyDigimon.startBattle();
+            this.enemyDigimon.push(newEnemyDigimon);
+        });
         this.updatePlayerBattleInfo();
     }
 
     endBattle() {
         this.currEnemy = 0;
         this.enemyDigimon = [];
-        this.player.party.forEach(digimon => {
+        this.player.getDigimonParty().forEach(digimon => {
             digimon.startBattle();
-        })
+        });
     }
 
     playerAttack() {
@@ -38,7 +50,7 @@ export class Battle {
             // Save whether the current Player's Max Level is higher, or the Enemy Digimon's Level + 1 is (Level + 1 because defeating a higher Level Digimon can increase the Max Level up to 1 higher than its own)
             let maxLevel = Math.min(Math.max(this.player.maxLevel, enemyLevel + 1), MAX_LEVEL);
 
-            this.player.party.forEach(digimon => {
+            this.player.getDigimonParty().forEach(digimon => {
                 if (enemyLevel >= digimon.level) {
                     // Level up the Digimon with the max level found and the current level up boost
                     digimon.levelUp(maxLevel, this.player.levelUpBoost);
@@ -88,7 +100,7 @@ export class Battle {
         // Update the damage
         this.playerDamage = 0;
         // TODO: Currently uses even reserve Digimon's damage, might need to change to only use active ones, depends on game
-        this.player.party.forEach(digimon => {
+        this.player.getDigimonParty().forEach(digimon => {
             // Don't include the damage from defeated Digimon
             if (digimon.currHP > 0) {
                 this.playerDamage += digimon.damage;

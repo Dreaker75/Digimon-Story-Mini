@@ -14,12 +14,12 @@ div#starter-modal section {
     background: linear-gradient(to bottom, rgb(14, 160, 99), rgb(12, 80, 38));
 }
 
-div.areas {
+div.maps {
     text-transform: uppercase;
     font-size: 2em;
 }
 
-div.areas a {
+div.maps a {
     text-decoration: none;
     color: black;
 }
@@ -96,8 +96,8 @@ td+td{
     font-weight: bold;
 }
 
-/* AREA INFO */
-#areas-menu-dwds {
+/* MAP INFO */
+#maps-menu-dwds {
     display: none;
     left: 10%;
     width: 100%;
@@ -105,7 +105,7 @@ td+td{
     background-color: yellow;
 }
 
-#current-area-dwds {
+#current-map-dwds {
     margin: 1%;
     height: 100%;
     width: 98%;
@@ -142,11 +142,6 @@ td+td{
 #party-box {
     padding: 2%;
     background-color: rgb(36, 49, 233);
-}
-
-section#area-info {
-    text-align: center;
-    padding: 2%;
 }
 
 div#game-info {
