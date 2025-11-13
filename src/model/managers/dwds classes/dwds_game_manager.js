@@ -1,7 +1,7 @@
 import { Game as GameManager } from '../game_manager.js'
 import { DWDSPlayerManager } from "./dwds_player_manager.js";
 import { BattleManager } from "../battle_manager.js";
-import { DataNames } from "../../constants.js";
+import { DataNames } from "../../data/constants.js";
 import { Digimon } from '../../entities/digimon.js';
 
 /*

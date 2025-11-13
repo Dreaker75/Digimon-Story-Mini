@@ -1,4 +1,4 @@
-import { DigimonList } from "../constants.js";
+import { DigimonList } from "../data/constants.js";
 
 export class Digimon {
     // String to access the Digimon's information

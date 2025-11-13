@@ -1,4 +1,4 @@
-import { MAX_LEVEL, DigimonList } from "../constants.js";
+import { MAX_LEVEL, DigimonList } from "../data/constants.js";
 import { Digimon } from "../entities/digimon.js";
 
 export class BattleManager {

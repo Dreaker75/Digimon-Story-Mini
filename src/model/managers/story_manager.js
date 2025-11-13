@@ -1,4 +1,4 @@
-import { GameProgress, SpecialValues } from "../constants.js";
+import { GameProgress, SpecialValues } from "../data/constants.js";
 import { MapArea } from "../entities/map_area.js";
 
 export class StoryManager {
@@ -24,10 +24,6 @@ export class StoryManager {
 
     wasBossDefeated() {
         return this.#bossDefeated;
-    }
-
-    resetBossDefeated() {
-        this.#bossDefeated = false;
     }
 
     getCurrentStory() {

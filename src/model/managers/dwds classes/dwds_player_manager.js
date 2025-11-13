@@ -1,5 +1,5 @@
 import { PlayerManager } from "../player_manager.js";
-import { DigimonIDs } from "../../constants.js";
+import { DigimonIDs } from "../../data/constants.js";
 
 export class DWDSPlayerManager extends PlayerManager {
     

@@ -1,4 +1,4 @@
-import { MapsList, GameProgress, SpecialValues } from "../constants.js";
+import { MapsList, GameProgress, SpecialValues } from "../data/constants.js";
 import { DigimonEncounterData } from "../entities/digimon_encounter_data.js";
 
 export class EncountersManager {

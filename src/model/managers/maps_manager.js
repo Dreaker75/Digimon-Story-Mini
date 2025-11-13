@@ -1,4 +1,4 @@
-import { MapsList, DataNames } from "../constants.js";
+import { MapsList, DataNames } from "../data/constants.js";
 import { MapArea } from "../entities/map_area.js";
 
 export class MapsManager {

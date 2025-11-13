@@ -1,7 +1,7 @@
 import { MapsManager as MapsManager } from './maps_manager.js';
 import { StoryManager } from './story_manager.js';
 import { EncountersManager as EncountersManager } from './encounters_manager.js';
-import { Locations } from '../constants.js';
+import { Locations } from '../data/constants.js';
 import { Digimon } from '../entities/digimon.js';
 import { MapArea } from '../entities/map_area.js';
 
@@ -61,6 +61,13 @@ export class Game {
         return false;
     }
 
+    /**********************
+     * ENCOUNTER FUNCTIONS
+     **********************/
+    getDigimonInCurrentMapArea() {
+        return this._encountersManager.getDigimonAvailable();
+    }
+
     enteredNewMapArea(newMapDataName, newAreaId) {
         this.#mapsManager.moveToMapArea(newMapDataName, newAreaId);
 
@@ -117,14 +124,14 @@ export class Game {
         return this.storyManager.wasBossDefeated();
     }
 
-    clearBossEncounter() {
-        this.storyManager.resetBossDefeated();
-    }
+    /**********************
+     * BATTLE FUNCTIONS
+     **********************/
+    handlePlayerAttack = () => this.battleSystem.playerAttack(); 
 
     /*********************
      * HELPER FUNCTIONS
      *********************/
-    
     handleLeavingLocation = (location) => {
         switch (location) {
             case Locations.Maps:

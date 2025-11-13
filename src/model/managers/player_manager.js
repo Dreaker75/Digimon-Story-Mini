@@ -1,4 +1,4 @@
-import { MAX_SPECIES_EXP, MAX_TOTAL_EXP, DataNames, DigimonIDs, Species } from "../constants.js";
+import { MAX_SPECIES_EXP, MAX_TOTAL_EXP, DataNames, DigimonIDs, Species } from "../data/constants.js";
 
 export class PlayerManager {
     currStory = 0;
