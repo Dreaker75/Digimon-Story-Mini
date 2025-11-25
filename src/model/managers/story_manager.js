@@ -11,9 +11,7 @@ export class StoryManager {
     // Elements to return to game_manager when finishing a story task
     #mapAreaUnlocked;
 
-    // TODO: Remove MapsManager from here and leave the connections to GameManager
-    constructor(mapsManager) {
-        this.mapsManager = mapsManager;
+    constructor() {
         // TODO: Change to account for multiple games
         // Add all bosses to the boss array, which will be a way to translate it to story progress, to check if an area or Digimon should be unlocked
         this.#currStory = -1;
