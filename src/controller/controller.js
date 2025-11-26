@@ -1,6 +1,6 @@
 import { View } from "../view/view.js";
-import { DataNames, Locations } from "../model/data/constants.js";
-import { DWDSPlayerManager } from "../model/managers/dwds classes/dwds_player_manager.js";
+import { DataNames, DigimonList, EnemyTypes, Locations } from "../model/data/constants.js";
+import { DSPlayerManager } from "../model/managers/ds classes/ds_player_manager.js";
 import { Digimon } from "../model/entities/digimon.js";
 import { EncountersManager } from "../model/managers/encounters_manager.js";
 import { MapsManager } from "../model/managers/maps_manager.js";
@@ -10,9 +10,12 @@ import { BattleManager } from "../model/managers/battle_manager.js";
 export class Controller {
     #currLocation = "town";
     // TODO: Might have to be rethought when implementing multiple games
-    #gameChosen = "dwds";
+    _gameChosen = "ds";
     #starterDigimonList = [DataNames.Koromon, DataNames.Tsunomon, DataNames.Tanemon];
+    #playerManagers = [];
+    #battleManagers = [];
 
+    // General Managers
     #view;
     #battleManager;
     #encountersManager;
@@ -21,9 +24,15 @@ export class Controller {
     #storyManager;
 
     constructor() {
-        this.#playerManager = new DWDSPlayerManager(6);
-        this.#battleManager = new BattleManager(this.#playerManager);
-        this.#encountersManager = new EncountersManager(this.#gameChosen);
+        // Digimon Story Managers
+        this.#playerManagers[DataNames.ds] = new DSPlayerManager(6, 3);
+        this.#battleManagers[DataNames.ds] = new BattleManager();
+
+        // Manager references
+        // TODO: Need to add the references that will be used based on the game chosen. This will be done on a button function in the future
+        this.#playerManager = this.#playerManagers[this._gameChosen];
+        this.#battleManager = this.#battleManagers[this._gameChosen];
+        this.#encountersManager = new EncountersManager(this._gameChosen);
         this.#mapsManager = new MapsManager();
         this.#storyManager = new StoryManager();
 
@@ -34,8 +43,10 @@ export class Controller {
             document.getElementById("party-box").appendChild(partyDigimonTemplate.content.cloneNode(true));
         }
 
-        this.#view = new View(this.#gameChosen, this.#playerManager.getMaxPartySize());
+        this.#view = new View(this._gameChosen);
 
+        // TODO: Add game and/or language chooser? All the objects are initialized first, but then only the respective ones are used once a game is selected
+        
         if (this.#playerManager.getCurrPartySize() == 0) {
             // TODO: Change the code to be less hardcoded (Everything is still happening in the background while having no Digimon)
             this.#view.showStarterModal();
@@ -52,7 +63,7 @@ export class Controller {
 
         this.#view.handleLeavingLocation(this.#currLocation);
 
-        this.handleLeavingLocation(newLocation);
+        this.handleLeavingLocation(this.#currLocation);
         
         // Update the current location
         this.#currLocation = newLocation;
@@ -62,23 +73,6 @@ export class Controller {
         // Handle the specific behavior for each location, like moving areas for Maps
         this.#view.handleEnteringLocation(newLocation);
 
-        switch (newLocation) {
-            case Locations.Maps:
-                // TODO: This handles entering a MapArea and getting the new encounters
-                this.movedToNewArea();
-                break;
-            case Locations.Town:
-                break;
-            default:
-                break;
-        }
-
-        // Update the player's party display. Should only be necessary after returning from a Map, but I don't know if it's checking for when it needs to be updated every time. Alternatively, I could have a boolean in gameManager to know when the party needs to be updated (If nothing changed, there is no need to run this)
-        // if (this.#game.isPartyDirty()) {
-        //     this.#view.updatedPlayerDigimonBattleInformation(this.#playerManager.getDigimonParty());
-
-        //     this.#game.partyDisplayUpdated();
-        // }
         switch (oldLocation) {
             case Locations.Maps:
                 // We update the battle information only, the Digimon could only have suffered damage between moving to town. If the party is modified while in an area it calls its own update function
@@ -96,7 +90,7 @@ export class Controller {
         // We get the array of enemy Digimon from EncountersManager
         let enemyDigimonArray = this.#encountersManager.getNewDigimonEncounter();
         // We pass the array to the Battle System to start the battle
-        this.#battleManager.startBattle(enemyDigimonArray);
+        this.#battleManager.startBattle(enemyDigimonArray, this.#playerManager.getDigimonParty(), this.#encountersManager.isInBosssArea());
         // We grab the first enemy on the array
         let firstEnemySpawned = enemyDigimonArray[0];
         // We create a Digimon object and  display its information to the player
@@ -106,6 +100,7 @@ export class Controller {
     handleLeavingLocation = (location) => {
         switch (location) {
             case Locations.Maps:
+                // We end any currently active battles
                 this.#battleManager.endBattle();
                 break;
             case Locations.Town:
@@ -119,9 +114,8 @@ export class Controller {
         switch (location) {
             case Locations.Maps:
                 // TODO: Will need a way to know which area the player is entering (when area selection is implemented)
-                // this.enteredNewMapArea(new MapArea(this.#mapsManager.getCurrentMapArea().getMapDataName(), 0));
                 this.changeMap(this.#mapsManager.getCurrentMapArea().getMapDataName());
-
+                this.movedToNewArea();
                 break;
             case Locations.Town:
                 break;
@@ -135,7 +129,7 @@ export class Controller {
     movedToNewArea = () => {
         this.updatePrevNextAreaButtons();
 
-        this.#view.movedToNewArea(this.#mapsManager.getCurrentMapName(this.#gameChosen), this.#encountersManager.getDigimonAvailable());
+        this.#view.movedToNewArea(this.#mapsManager.getCurrentMapName(this._gameChosen), this.#encountersManager.getDigimonAvailable());
 
         // TODO: Make a button the player must press to find an encounter?
         this.generateNewDigimonEncounter();
@@ -179,15 +173,29 @@ export class Controller {
 
     //#region BATTLE FUNCTIONS
     handlePlayerAttack() {
+        // If the player defeated the Digimon
         if (this.#battleManager.playerAttack()) {
-            // The player won the battle
+            // Grab the Digimon defeated
+            let defeatedDigimon = this.#battleManager.getDefeatedDigimon();
+            // Grab the information of the Digimon defeated
+            let defeatedDigimonInfo = DigimonList[defeatedDigimon.dataName];
+
+            // Increase the Player's Species EXP based on the Digimon defeated
+            this.#playerManager.increaseSpeciesExperience(this.getDigimonSpecies(defeatedDigimon.dataName), defeatedDigimonInfo.stage.value);
+            this.#playerManager.tryBattleLevelUp(defeatedDigimon.level);
+
+            // If the fight dropped Scan Data (or DigiMelodies in DSSXW)
+            if (this.#battleManager.didDigimonDropData()) {
+                this.#playerManager.addDigimonData(defeatedDigimon.dataName);
+            }
+
             // Check if the Digimon defeated was from the current Map and Area from the Story task
             if (this.#mapsManager.isInMapArea(this.#storyManager.getTargetMapArea())) {
                 // Tell the StoryManager a Digimon in the Story Area was defeated
                 this.#storyManager.digimonDefeated();
 
                 // TODO: It's currently hacked together, try to make it better
-                // Obtained a MapArea thaat was unlocked, if any
+                // Obtained a MapArea that was unlocked, if any
                 let mapAreaUnlocked = this.#storyManager.getLastMapAreaUnlocked();
 
                 if (mapAreaUnlocked !== null) {
@@ -212,9 +220,29 @@ export class Controller {
             // TODO: Update so it shows feedback for a Digimon that was defeated before showing the next one? Might not be necessary since some clickers ignore this last feedback in favor of making the game faster
             this.#view.displayUpdatedEnemyDigimonInformation(this.#battleManager.getCurrentEnemyDigimon());
             // If this returns false, the player was defeated
-            if (this.#battleManager.handleEnemyAttack()) {
+            let enemyAttack = this.#battleManager.getEnemyTurn();
+            let attacksDealt = (() => {switch (enemyAttack.attackType) {
+                case EnemyTypes.doubleHit:
+                    return 2;
+                case EnemyTypes.tripleHit:
+                    return 3;
+                default:
+                    return 1;
+            }})();
+
+            let playerDefeated = false;
+            for (let index = 0; index < attacksDealt && !playerDefeated; index++) {
+                this.#playerManager.dealDamage(enemyAttack.damage, enemyAttack.attackType == EnemyTypes.aoe);
+                
+                playerDefeated = this.#playerManager.wasPlayerDefeated();
+
+                // Show feedback here
                 this.#view.updatedPlayerPartyBattleInformation(this.#playerManager.getDigimonParty());
-            } else {
+            }
+
+            // If the player was defeated
+            if (playerDefeated) {
+                // Return them to Town
                 this.moveToLocation(Locations.Town);
             }
         }
@@ -238,5 +266,18 @@ export class Controller {
     closeDetailedDigimonModal = () => this.#view.closeDetailedDigimonInfoModal();
 
     displayDetailedDigimonInfo = index => this.#view.displayDetailedDigimonInfo(this.#playerManager.getPartyDigimon(index));
+    //#endregion
+
+    //#region HELPER FUNCTIONS
+    // Returns the Species of the Digimon based on the current game
+    getDigimonSpecies = digimonDataName => {
+        let speciesArray = DigimonList[digimonDataName].species;
+        // Digimon Story Super Xros Wars always uses the last Species in the array, Digimon Story and Sunburst/Moonlight always use the first. Digimon Story Lost Evolution can use the first one (if there is only one) or the second one otherwise
+        let index = this._gameChosen === DataNames.dssxw ? speciesArray.length - 1 : 0;
+        if (this._gameChosen === DataNames.dsle && speciesArray.length > 1) {
+            index = 1;
+        }
+        return speciesArray[index];
+    } 
     //#endregion
 }

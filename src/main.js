@@ -1,7 +1,7 @@
 import { Locations } from './model/data/constants.js'
 import { Controller } from './controller/controller.js';
 
-// const digimondwds = [
+// const digimonds = [
 //     "Koromon",
 //     "Tsunomon",
 //     "Poyomon",
@@ -257,10 +257,10 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("town-button").addEventListener("click", () => controller.moveToLocation(Locations.Town));
 
     // NOTE: Need to call it as a function, since I can't directly assign private fields?
-    document.getElementById("attack-button-dwds").addEventListener("click", () => controller.handlePlayerAttack());
+    document.getElementById("attack-button-ds").addEventListener("click", () => controller.handlePlayerAttack());
 
     // TODO: Rerolls the current enemy Digimon, might need tweaking in the future
-    document.getElementById("flee-button-dwds").addEventListener("click", controller.generateNewDigimonEncounter);
+    document.getElementById("flee-button-ds").addEventListener("click", controller.generateNewDigimonEncounter);
 
     document.getElementById("prev-area-button").addEventListener("click", () => controller.changeArea(-1));
 

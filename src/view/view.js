@@ -22,13 +22,13 @@ export class View {
     // Enemy information elements
     enemyDigimonDiv;
     
-    constructor(gameChosen, partySize) {
+    constructor(gameChosen) {
         this.gameChosen = gameChosen;
         this.locationButtons[Locations.Maps] = document.getElementById("maps-button");
         this.locationButtons[Locations.Town] = document.getElementById("town-button")
-        this.locationDivs[Locations.Maps] = document.getElementById("maps-menu-dwds");
-        this.locationDivs[Locations.Town] = document.getElementById("town-menu-dwds");
-        this.enemyDigimonDiv = document.getElementById("enemy-digimon-dwds");
+        this.locationDivs[Locations.Maps] = document.getElementById("maps-menu-ds");
+        this.locationDivs[Locations.Town] = document.getElementById("town-menu-ds");
+        this.enemyDigimonDiv = document.getElementById("enemy-digimon-ds");
         this.enemyDigimonDiv.style.display = "none";
         this.prevAreaButton = document.getElementById("prev-area-button");
         this.nextAreaButton = document.getElementById("next-area-button");
@@ -38,8 +38,8 @@ export class View {
         this.digimonLevelDisplay = document.getElementById("level-info");
 
         // DEBUG: Change to not be hardcoded
-        document.getElementById("current-map-dwds").style.backgroundImage = "url(images/maps/dataForest.png)";
-        document.getElementById("current-map-dwds").style.backgroundSize = "100%";
+        document.getElementById("current-map-ds").style.backgroundImage = "url(images/maps/dataForest.png)";
+        document.getElementById("current-map-ds").style.backgroundSize = "100%";
 
         // Store the party Digimon's divs
         this.partyDigimonDivs = document.getElementById("party-box").querySelectorAll(".party-digimon");

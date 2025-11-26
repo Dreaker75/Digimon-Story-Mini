@@ -35,7 +35,7 @@ export class Digimon {
     //////////////////////////////
     // BATTLE-ONLY FUNCTIONS
     //////////////////////////////
-    startBattle() {
+    initializeForBattle() {
         this.currHP = this.maxHP;
     }
 

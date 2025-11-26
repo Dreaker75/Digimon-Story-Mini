@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- TODO: Convert this to a Home screen where the player can choose the game to play, among other things. Ideally it wouldn't be a different html for each game, but it would all be in the same html -->
 
 <head>
   <meta charset="UTF-8">
@@ -10,27 +11,27 @@
 </head>
 
 <body>
-    <template id="party-digimon-template">
-      <div class="party-digimon">
-        <h2><span class="digimon-name">Digimon Name</span> - Lv <span class="level"></span></h2>
-        <p>
-          <img src="" alt="Digimon Image">
-        </p>
-        <table>
-          <tr>
-            <td><img src="https://cdn3.iconfinder.com/data/icons/retro-game-items/100/retro-11-512.png" width="100px"
-                alt="Health heart"></td>
-            <td><span class="hp-info">1000</span></td>
-          </tr>
-          <tr>
-            <td><img src="https://th.bing.com/th/id/OIP.qyBr7Q3TibsSmP1PdvFOfgHaHa?pid=ImgDet&rs=1" width="100px"
-                alt="Damage sword"></td>
-            <td><span class="attack-info">100</span></td>
-          </tr>
-        </table>
-        <button>Digivolve</button>
-      </div>
-    </template>
+  <template id="party-digimon-template">
+    <div class="party-digimon">
+      <h2><span class="digimon-name">Digimon Name</span> - Lv <span class="level"></span></h2>
+      <p>
+        <img src="" alt="Digimon Image">
+      </p>
+      <table>
+        <tr>
+          <td><img src="https://cdn3.iconfinder.com/data/icons/retro-game-items/100/retro-11-512.png" width="100px"
+              alt="Health heart"></td>
+          <td><span class="hp-info">1000</span></td>
+        </tr>
+        <tr>
+          <td><img src="https://th.bing.com/th/id/OIP.qyBr7Q3TibsSmP1PdvFOfgHaHa?pid=ImgDet&rs=1" width="100px"
+              alt="Damage sword"></td>
+          <td><span class="attack-info">100</span></td>
+        </tr>
+      </table>
+      <button>Digivolve</button>
+    </div>
+  </template>
   <div id="starter-modal" class="modal">
     <section>
       <h2>Choose a Starter Digimon</h2>
@@ -65,7 +66,7 @@
   <!-- Div for the game window -->
   <div id="game-info">
     <!-- div for game info. Will put map/town information here -->
-    <nav id="game-hub-dwds">
+    <nav id="game-hub-ds">
       <img
         src="https://vignette.wikia.nocookie.net/digimon/images/d/d3/Digimon_world_ds_logo.png/revision/latest?cb=20161124161643"
         alt="Digimon World DS Logo">
@@ -78,26 +79,27 @@
         <button class="unimplemented">Quests</button>
       </nav>
     </nav>
-    <section id="town-menu-dwds">
+    <section id="town-menu-ds">
 
     </section>
-    <section id="maps-menu-dwds">
-      <div id="current-map-dwds">
+    <section id="maps-menu-ds">
+      <div id="current-map-ds">
         <div class="maps">
-          <button id="prev-area-button">Prev</button> | <button class="unimplemented">Select Map</button> | <button id="next-area-button">Next</button>
+          <button id="prev-area-button">Prev</button> | <button class="unimplemented">Select Map</button> | <button
+            id="next-area-button">Next</button>
         </div>
         <h2 id="map-name">Map Name</h2>
         <p><span class="bold">Wild Digimon: </span><span id="wild-digimon-list"></span></p>
         <!-- <img src="images/maps/dataForest.png" alt="Data Forest background"> -->
-        <div id="enemy-digimon-dwds">
+        <div id="enemy-digimon-ds">
           <h3>Enemy Name</h3>
           <img src="" alt="Enemy Image">
           <p>Level X</p>
           <p>HP BAR GOES HERE</p>
         </div>
       </div>
-      <button id="attack-button-dwds">Attack</button>
-      <button id="flee-button-dwds">Flee</button>
+      <button id="attack-button-ds">Attack</button>
+      <button id="flee-button-ds">Flee</button>
     </section>
     <section id="party-box">
     </section>

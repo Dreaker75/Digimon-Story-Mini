@@ -1,106 +1,94 @@
-import { MAX_LEVEL, DigimonList } from "../data/constants.js";
+import { EnemyTypes } from "../data/constants.js";
 import { Digimon } from "../entities/digimon.js";
+import { EnemyAttack } from "../entities/enemy_attack.js";
 
 export class BattleManager {
-    constructor(player) {
-        this.player = player;
-    }
-
     // Array of Digimon objects representing the enemy Digimon in this battle
     enemyDigimon = [];
     currEnemy = 0;
     playerDamage = 0;
-    isBossFight = false;
-    // Reference to the Player
-    player;
+    bossFight = false;
+    defeatedDigimon = null;
+    // Reference to the Player's party
+    playerParty = [];
 
     /**
      * Initializes all the battle variables
      * @param enemyDigimon - a DigimonPool object (like found in constants.js)
      */
-    startBattle(enemyDigimon) {
+    startBattle(enemyDigimon, playerParty, bossFight = false) {
         this.currEnemy = 0;
         this.enemyDigimon = [];
+        this.bossFight = bossFight;
+        this.playerParty = playerParty;
+
         enemyDigimon.forEach(digimonData => {
-            // TODO: Error, enemyDigimon array is an array of DataNames for Bosses
             let newEnemyDigimon = new Digimon(digimonData.getDataName(), digimonData.getLevel());
-            newEnemyDigimon.startBattle();
+            newEnemyDigimon.initializeForBattle();
             this.enemyDigimon.push(newEnemyDigimon);
         });
-        this.updatePlayerBattleInfo();
     }
 
     endBattle() {
         this.currEnemy = 0;
         this.enemyDigimon = [];
-        this.player.getDigimonParty().forEach(digimon => {
-            digimon.startBattle();
+        this.playerParty.forEach(digimon => {
+            digimon.initializeForBattle();
         });
     }
 
     playerAttack() {
+        this.updatePlayerBattleInfo();
+
         if (this.enemyDigimon[this.currEnemy].takeDamage(this.playerDamage)) {
-            // Grab the information of the Digimon defeated
-            var enemyDigimonInfo = DigimonList[this.enemyDigimon[this.currEnemy].dataName];
-            // Increase the Species EXP based on the Digimon defeated
-            // TODO: Need to grab the appropiate Species for Digimon that change Species between games
-            this.player.increaseSpeciesExperience(enemyDigimonInfo.species, enemyDigimonInfo.stage.value)
-
-            let enemyLevel = this.enemyDigimon[this.currEnemy].level;
-            // Save whether the current Player's Max Level is higher, or the Enemy Digimon's Level + 1 is (Level + 1 because defeating a higher Level Digimon can increase the Max Level up to 1 higher than its own)
-            let maxLevel = Math.min(Math.max(this.player.maxLevel, enemyLevel + 1), MAX_LEVEL);
-
-            this.player.getDigimonParty().forEach(digimon => {
-                if (enemyLevel >= digimon.level) {
-                    // Level up the Digimon with the max level found and the current level up boost
-                    digimon.levelUp(maxLevel, this.player.levelUpBoost);
-                    // The current Digimon levelled up past the Max Level
-                    if (this.player.maxLevel < MAX_LEVEL && digimon.level > this.player.maxLevel) {
-                        this.player.maxLevel = maxLevel;
-                    }
-                }
-            });
-
-            if (!this.isBossFight) {
-                // Drop the enemy Digimon item for converting it
-                this.dropDigimonItem();
-            }
-
+            // Save the Digimon defeated to return to the Controller
+            this.defeatedDigimon = this.enemyDigimon[this.currEnemy];
+            
             this.currEnemy++;
             // Returns true if the battle is won, false otherwise
             return this.currEnemy >= this.enemyDigimon.length;
+        } else {
+            this.defeatedDigimon = null;
         }
     }
 
-    handleEnemyAttack() {
-        // TODO: Add extra behavior for boss fights.
-        //  1 - Random chance to attack multiple Digimon at once
-        //  2 - Random chance to hit multiple times
-        //  3 - Higher HP and/or Atk than normal Digimon?
-        if (this.isBossFight) {
-
-        }
-        else {
-            // Select a target that is still able to fight
-            let targetDigimon;
-            do {
-                targetDigimon = this.player.getRandomActiveDigimon();
-            } while (targetDigimon.currHP == 0);
-
-            if (targetDigimon.takeDamage(this.enemyDigimon[this.currEnemy].damage)) {
-                // A Digimon from the player's party died, recalculate the damage
-                return this.updatePlayerBattleInfo();
+    /**
+     * Obtain the enemy turn
+     * @returns an EnemyAttack object with how much damage and what type of attack the enemy Digimon made
+     */
+    getEnemyTurn() {
+        if (this.bossFight) {
+            // As of right now, all bosses will have a 1/4 chance to deal an aoe hit instead of a normal hit.
+            // TODO: Revisit this for the final version of the game or future games
+            let enemyType = EnemyTypes.normal;
+            let randomNumber = Math.floor(Math.random() * 100);
+            if (randomNumber < 25) {
+                enemyType = EnemyTypes.aoe;
             }
+            // let enemyType = (() => {
+            //     switch (Math.floor(Math.random() * 2)) {
+            //         case 1:
+            //             return EnemyTypes.aoe;
+            //         // TODO: These 2 might be too strong at the moment to implement, come back to this when the full game is done, or for DSSXW
+            //         // case 2:
+            //         //     return EnemyTypes.doubleHit;
+            //         // case 3:
+            //         //     return EnemyTypes.tripleHit;
+            //         default:
+            //             return EnemyTypes.normal;
+            //     }
+            // })();
+            return new EnemyAttack(this.enemyDigimon[this.currEnemy].damage, enemyType);
         }
 
-        return true;
+        return new EnemyAttack(this.enemyDigimon[this.currEnemy].damage);
     }
 
     updatePlayerBattleInfo() {
         // Update the damage
         this.playerDamage = 0;
         // TODO: Currently uses even reserve Digimon's damage, might need to change to only use active ones, depends on game
-        this.player.getDigimonParty().forEach(digimon => {
+        this.playerParty.forEach(digimon => {
             // Don't include the damage from defeated Digimon
             if (digimon.currHP > 0) {
                 this.playerDamage += digimon.damage;
@@ -116,8 +104,18 @@ export class BattleManager {
         return true;
     }
 
-    dropDigimonItem() {
-        this.player.addDigimonItem(this.enemyDigimon[this.currEnemy].dataName)
+    getDefeatedDigimon() {
+        return this.defeatedDigimon;
+    }
+
+    /**
+     * 
+     * @returns true if the Digimon drop Scan Data / DigiMelody, false otherwise
+     */
+    // TODO: DSSXW will override this to include whether the Digimon dropped a DigiMelody
+    didDigimonDropData() {
+        // Boss Digimon don't drop Scan Data
+        return !this.bossFight;
     }
 
     // TODO: Use to give feedback on battle, might need to be changed in the future as it feels a bit hacky at the moment

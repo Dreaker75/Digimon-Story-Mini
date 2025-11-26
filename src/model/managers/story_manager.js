@@ -51,7 +51,7 @@ export class StoryManager {
     // Returns the array of bosses that need to be defeated for the current story, or an empty array if the current story is not a boss story
     getCurrentBosses() {
         if (this.storyType === SpecialValues.bosses){
-            return GameProgress.dwds[this.#currStory].bosses;
+            return GameProgress.ds[this.#currStory].bosses;
         }
         else
             return [];
@@ -72,7 +72,7 @@ export class StoryManager {
     storyTaskCompleted() {
         // TODO: Change to account for multiple games
         // Obtain the task the player completed
-        let lastStoryTask = GameProgress.dwds[this.#currStory];
+        let lastStoryTask = GameProgress.ds[this.#currStory];
         
         this.#bossDefeated = lastStoryTask.type == SpecialValues.bosses;
         if (lastStoryTask.unlocks === undefined) {
@@ -87,7 +87,7 @@ export class StoryManager {
     nextStory() {
         this.#currStory++;
         // TODO: Adapt based on game
-        let nextStoryTask = GameProgress.dwds[this.#currStory];
+        let nextStoryTask = GameProgress.ds[this.#currStory];
         this.storyType = nextStoryTask.type;
 
         if (this.storyType == SpecialValues.defeat) {

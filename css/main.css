@@ -97,7 +97,7 @@ td+td{
 }
 
 /* MAP INFO */
-#maps-menu-dwds {
+#maps-menu-ds {
     display: none;
     left: 10%;
     width: 100%;
@@ -105,14 +105,14 @@ td+td{
     background-color: yellow;
 }
 
-#current-map-dwds {
+#current-map-ds {
     margin: 1%;
     height: 100%;
     width: 98%;
     background-color: pink;
 }
 
-#attack-button-dwds, #flee-button-dwds {
+#attack-button-ds, #flee-button-ds {
     display: block;
     margin: auto;   /* This line centers items */
 }

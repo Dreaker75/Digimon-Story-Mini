@@ -12,8 +12,14 @@ export const Locations = {
 
 export const DataNames = {
     //#region Games
-    dawn: "Dawn",
-    dusk: "Dusk",
+    ds: "ds",
+    dssm: "dssm",
+    dsle: "dsle",
+    dssxw: "dssxw",
+    //#endregion
+    //#region Versions
+    sunburst: "Sunburst",
+    moonlight: "Moonlight",
     red: "Red",
     blue: "Blue",
     both: "Both",
@@ -660,10 +666,17 @@ export const DataNames = {
     //#endregion
 }
 
+export const EnemyTypes = {
+    normal: "normal",
+    aoe: "AoE",
+    doubleHit: "double hit",
+    tripleHit: "triple hit"
+}
+
 export const Names = {
     //#region Games
-    dawn: "Dawn",
-    dusk: "Dusk",
+    sunburst: "Sunburst",
+    moonlight: "Moonlight",
     red: "Red",
     blue: "Blue",
     both: "Both",
@@ -2183,7 +2196,7 @@ export const SpecialValues = {
     // Game Progress Types
     defeat: "defeat",
     bosses: "bosses",
-    // DWDS
+    // DS
     GrandLocomon: "GrandLocomon",
     ChronomonDM: "ChronomonDM",
 }
@@ -2427,7 +2440,7 @@ const DNAEvolutions = {
             amount: 1200,
         }],
     },
-    Mugendramon: {  // TODO: Decide if I wanna keep it or just make it a Dusk-exclusive
+    Mugendramon: {  // TODO: Decide if I wanna keep it or just make it a Moonlight-exclusive
         components: [
             [DataNames.MetalTyrannomon, DataNames.Megadramon],
             [DataNames.MetalTyrannomon, DataNames.Gigadramon],
@@ -5891,3382 +5904,3382 @@ const DigiScores = {
 export const DigimonIDs = {
     Koromon: {
         base: 1,
-        dwds: 1,
-        dwdd: 2,
+        ds: 1,
+        dssm: 2,
         dsle: 2,
         dssxw: 3,
     },
     Tsunomon: {
         base: 2,
-        dwds: 2,
-        dwdd: 3,
+        ds: 2,
+        dssm: 3,
         dsle: 3,
         dssxw: 394,
     },
     Tanemon: {
         base: 3,
-        dwds: 5,
-        dwdd: 6,
+        ds: 5,
+        dssm: 6,
         dsle: 6,
         dssxw: 395,
     },
     Poyomon: {
         base: 4,
-        dwds: 3,
-        dwdd: 4,
+        ds: 3,
+        dssm: 4,
         dsle: 4,
         dssxw: 396,
     },
     Tokomon: {
         base: 5,
-        dwds: 4,
-        dwdd: 5,
+        ds: 4,
+        dssm: 5,
         dsle: 5,
         dssxw: 397,
     },
     Puttomon: {
         base: 6,
-        dwds: 9,
-        dwdd: 10,
+        ds: 9,
+        dssm: 10,
         dsle: 10,
         dssxw: 398,
     },
     Chicomon: {
         base: 7,
-        dwds: 10,
-        dwdd: 11,
+        ds: 10,
+        dssm: 11,
         dsle: 11,
         dssxw: 399,
     },
     Minomon: {
         base: 8,
-        dwds: 240,
-        dwdd: 18,
+        ds: 240,
+        dssm: 18,
         dsle: 17,
         dssxw: 400,
     },
     Gigimon: {
         base: 9,
-        dwds: 241,
-        dwdd: 14,
+        ds: 241,
+        dssm: 14,
         dsle: 14,
         dssxw: 401,
     },
     Gummymon: {
         base: 10,
-        dwds: 242,
-        dwdd: 15,
+        ds: 242,
+        dssm: 15,
         dsle: 15,
         dssxw: 402,
     },
     Kokomon: {
         base: 11,
-        dwds: 243,
-        dwdd: 16,
+        ds: 243,
+        dssm: 16,
         dsle: 315,
         dssxw: 403,
     },
     Wanyamon: {
         base: 12,
-        dwds: 244,
-        dwdd: 19,
+        ds: 244,
+        dssm: 19,
         dsle: 18,
         dssxw: 404,
     },
     Budmon: {
         base: 13,
-        dwds: 245,
-        dwdd: 20,
+        ds: 245,
+        dssm: 20,
         dsle: 19,
         dssxw: 405,
     },
     Botamon: {
         base: 14,
-        dwds: 246,
-        dwdd: 21,
+        ds: 246,
+        dssm: 21,
         dsle: 20,
         dssxw: 406,
     },
     Pagumon: {
         base: 15,
-        dwds: 6,
-        dwdd: 7,
+        ds: 6,
+        dssm: 7,
         dsle: 7,
         dssxw: 407,
     },
     Kuramon: {
         base: 16,
-        dwds: 8,
-        dwdd: 9,
+        ds: 8,
+        dssm: 9,
         dsle: 9,
         dssxw: 1,
     },
     Tsumemon: {
         base: 17,
-        dwds: 247,
-        dwdd: 17,
+        ds: 247,
+        dssm: 17,
         dsle: 16,
         dssxw: 408,
     },
     Kapurimon: {
         base: 18,
-        dwds: 7,
-        dwdd: 8,
+        ds: 7,
+        dssm: 8,
         dsle: 8,
         dssxw: 409,
     },
     Dorimon: {
         base: 19,
-        dwds: 11,
-        dwdd: 12,
+        ds: 11,
+        dssm: 12,
         dsle: 12,
         dssxw: 410,
     },
     Sunmon: {
         base: 20,
-        dwds: 248,
-        dwdd: 22,
+        ds: 248,
+        dssm: 22,
         dsle: 21,
         dssxw: 411,
     },
     Moonmon: {
         base: 21,
-        dwds: 249,
-        dwdd: 23,
+        ds: 249,
+        dssm: 23,
         dsle: 22,
         dssxw: 412,
     },
     Chicchimon: {
         base: 22,
-        dwds: 250,
-        dwdd: 1,
+        ds: 250,
+        dssm: 1,
         dsle: 1,
         dssxw: 413,
     },
     Culumon: {
         base: 23,
-        dwds: 12,
-        dwdd: 13,
+        ds: 12,
+        dssm: 13,
         dsle: 13,
         dssxw: 2,
     },
     Pickmon: {
         base: 24,
-        dwds: 251,
-        dwdd: 398,
+        ds: 251,
+        dssm: 398,
         dsle: 316,
         dssxw: 377,
     },
     Bombmon: {
         base: 25,
-        dwds: 252,
-        dwdd: 399,
+        ds: 252,
+        dssm: 399,
         dsle: 317,
         dssxw: 380,
     },
     Agumon: {
         base: 26,
-        dwds: 13,
-        dwdd: 25,
+        ds: 13,
+        dssm: 25,
         dsle: 24,
         dssxw: 4,
     },
     Gabumon: {
         base: 27,
-        dwds: 18,
-        dwdd: 30,
+        ds: 18,
+        dssm: 30,
         dsle: 29,
         dssxw: 11,
     },
     Piyomon: {
         base: 28,
-        dwds: 20,
-        dwdd: 32,
+        ds: 20,
+        dssm: 32,
         dsle: 31,
         dssxw: 31,
     },
     Palmon: {
         base: 29,
-        dwds: 21,
-        dwdd: 33,
+        ds: 21,
+        dssm: 33,
         dsle: 32,
         dssxw: 28,
     },
     Tentomon: {
         base: 30,
-        dwds: 22,
-        dwdd: 34,
+        ds: 22,
+        dssm: 34,
         dsle: 33,
         dssxw: 22,
     },
     Gomamon: {
         base: 31,
-        dwds: 25,
-        dwdd: 37,
+        ds: 25,
+        dssm: 37,
         dsle: 35,
         dssxw: 19,
     },
     Patamon: {
         base: 32,
-        dwds: 19,
-        dwdd: 31,
+        ds: 19,
+        dssm: 31,
         dsle: 30,
         dssxw: 27,
     },
     Plotmon: {
         base: 33,
-        dwds: 30,
-        dwdd: 42,
+        ds: 30,
+        dssm: 42,
         dsle: 39,
         dssxw: 35,
     },
     Veemon: {
         base: 34,
-        dwds: 14,
-        dwdd: 26,
+        ds: 14,
+        dssm: 26,
         dsle: 25,
         dssxw: 34,
     },
     Wormmon: {
         base: 35,
-        dwds: 31,
-        dwdd: 43,
+        ds: 31,
+        dssm: 43,
         dsle: 40,
         dssxw: 47,
     },
     Hawkmon: {
         base: 36,
-        dwds: 32,
-        dwdd: 44,
+        ds: 32,
+        dssm: 44,
         dsle: 41,
         dssxw: 38,
     },
     Armadimon: {
         base: 37,
-        dwds: 33,
-        dwdd: 45,
+        ds: 33,
+        dssm: 45,
         dsle: 42,
         dssxw: 5,
     },
     Guilmon: {
         base: 38,
-        dwds: 15,
-        dwdd: 27,
+        ds: 15,
+        dssm: 27,
         dsle: 26,
         dssxw: 12,
     },
     Renamon: {
         base: 39,
-        dwds: 36,
-        dwdd: 48,
+        ds: 36,
+        dssm: 48,
         dsle: 45,
         dssxw: 45,
     },
     Terriermon: {
         base: 40,
-        dwds: 34,
-        dwdd: 46,
+        ds: 34,
+        dssm: 46,
         dsle: 43,
         dssxw: 21,
     },
     Lopmon: {
         base: 41,
-        dwds: 35,
-        dwdd: 47,
+        ds: 35,
+        dssm: 47,
         dsle: 44,
         dssxw: 46,
     },
     Impmon: {
         base: 42,
-        dwds: 37,
-        dwdd: 49,
+        ds: 37,
+        dssm: 49,
         dsle: 46,
         dssxw: 6,
     },
     Lalamon: {
         base: 43,
-        dwds: 50,
-        dwdd: 65,
+        ds: 50,
+        dssm: 65,
         dsle: 53,
         dssxw: 42,
     },
     Gaomon: {
         base: 44,
-        dwds: 55,
-        dwdd: 70,
+        ds: 55,
+        dssm: 70,
         dsle: 54,
         dssxw: 9,
     },
     Falcomon: {
         base: 45,
-        dwds: 39,
-        dwdd: 51,
+        ds: 39,
+        dssm: 51,
         dsle: 48,
         dssxw: 32,
     },
     PawnChessmonB: {
         base: 46,
-        dwds: 54,
-        dwdd: 69,
+        ds: 54,
+        dssm: 69,
         dsle: 318,
         dssxw: 414,
     },
     PawnChessmonW: {
         base: 47,
-        dwds: 60,
-        dwdd: 75,
+        ds: 60,
+        dssm: 75,
         dsle: 319,
         dssxw: 48,
     },
     Kudamon: {
         base: 48,
-        dwds: 57,
-        dwdd: 72,
+        ds: 57,
+        dssm: 72,
         dsle: 56,
         dssxw: 13,
     },
     Kamemon: {
         base: 49,
-        dwds: 58,
-        dwdd: 73,
+        ds: 58,
+        dssm: 73,
         dsle: 57,
         dssxw: 8,
     },
     Dorumon: {
         base: 50,
-        dwds: 16,
-        dwdd: 28,
+        ds: 16,
+        dssm: 28,
         dsle: 27,
         dssxw: 25,
     },
     Monodramon: {
         base: 51,
-        dwds: 253,
-        dwdd: 24,
+        ds: 253,
+        dssm: 24,
         dsle: 23,
         dssxw: 40,
     },
     BlackAgumon: {
         base: 52,
-        dwds: 45,
-        dwdd: 60,
+        ds: 45,
+        dssm: 60,
         dsle: 51,
         dssxw: 415,
     },
     YukiAgumon: {
         base: 53,
-        dwds: 44,
-        dwdd: 59,
+        ds: 44,
+        dssm: 59,
         dsle: 320,
         dssxw: 41,
     },
     Goburimon: {
         base: 54,
-        dwds: 41,
-        dwdd: 53,
+        ds: 41,
+        dssm: 53,
         dsle: 49,
         dssxw: 18,
     },
     Shamamon: {
         base: 55,
-        dwds: 254,
-        dwdd: 56,
+        ds: 254,
+        dssm: 56,
         dsle: 321,
         dssxw: 416,
     },
     SnowGoburimon: {
         base: 56,
-        dwds: 255,
-        dwdd: 57,
+        ds: 255,
+        dssm: 57,
         dsle: 322,
         dssxw: 417,
     },
     Kumamon: {
         base: 57,
-        dwds: 42,
-        dwdd: 54,
+        ds: 42,
+        dssm: 54,
         dsle: 323,
         dssxw: 418,
     },
     Penmon: {
         base: 58,
-        dwds: 40,
-        dwdd: 52,
+        ds: 40,
+        dssm: 52,
         dsle: 324,
         dssxw: 37,
     },
     Muchomon: {
         base: 59,
-        dwds: 46,
-        dwdd: 61,
+        ds: 46,
+        dssm: 61,
         dsle: 325,
         dssxw: 419,
     },
     Betamon: {
         base: 60,
-        dwds: 17,
-        dwdd: 29,
+        ds: 17,
+        dssm: 29,
         dsle: 28,
         dssxw: 36,
     },
     Otamamon: {
         base: 61,
-        dwds: 24,
-        dwdd: 36,
+        ds: 24,
+        dssm: 36,
         dsle: 326,
         dssxw: 7,
     },
     Ganimon: {
         base: 62,
-        dwds: 47,
-        dwdd: 62,
+        ds: 47,
+        dssm: 62,
         dsle: 327,
         dssxw: 10,
     },
     Gizamon: {
         base: 63,
-        dwds: 49,
-        dwdd: 64,
+        ds: 49,
+        dssm: 64,
         dsle: 328,
         dssxw: 420,
     },
     Syakomon: {
         base: 64,
-        dwds: 256,
-        dwdd: 58,
+        ds: 256,
+        dssm: 58,
         dsle: 50,
         dssxw: 20,
     },
     Kunemon: {
         base: 65,
-        dwds: 257,
-        dwdd: 77,
+        ds: 257,
+        dssm: 77,
         dsle: 329,
         dssxw: 421,
     },
     DoKunemon: {
         base: 66,
-        dwds: 258,
-        dwdd: 82,
+        ds: 258,
+        dssm: 82,
         dsle: 330,
         dssxw: 422,
     },
     Floramon: {
         base: 67,
-        dwds: 48,
-        dwdd: 63,
+        ds: 48,
+        dssm: 63,
         dsle: 52,
         dssxw: 33,
     },
     Aruraumon: {
         base: 68,
-        dwds: 51,
-        dwdd: 66,
+        ds: 51,
+        dssm: 66,
         dsle: 331,
         dssxw: 423,
     },
     Mushroomon: {
         base: 69,
-        dwds: 259,
-        dwdd: 78,
+        ds: 259,
+        dssm: 78,
         dsle: 332,
         dssxw: 39,
     },
     ToyAgumon: {
         base: 70,
-        dwds: 28,
-        dwdd: 40,
+        ds: 28,
+        dssm: 40,
         dsle: 37,
         dssxw: 23,
     },
     ToyAgumonB: {
         base: 71,
-        dwds: 52,
-        dwdd: 67,
+        ds: 52,
+        dssm: 67,
         dsle: 333,
         dssxw: 424,
     },
     Hagurumon: {
         base: 72,
-        dwds: 29,
-        dwdd: 41,
+        ds: 29,
+        dssm: 41,
         dsle: 38,
         dssxw: 26,
     },
     Solarmon: {
         base: 73,
-        dwds: 260,
-        dwdd: 79,
+        ds: 260,
+        dssm: 79,
         dsle: 334,
         dssxw: 425,
     },
     Kotemon: {
         base: 74,
-        dwds: 43,
-        dwdd: 55,
+        ds: 43,
+        dssm: 55,
         dsle: 335,
         dssxw: 426,
     },
     Kokuwamon: {
         base: 75,
-        dwds: 261,
-        dwdd: 81,
+        ds: 261,
+        dssm: 81,
         dsle: 60,
         dssxw: 15,
     },
     Gotsumon: {
         base: 76,
-        dwds: 23,
-        dwdd: 35,
+        ds: 23,
+        dssm: 35,
         dsle: 34,
         dssxw: 17,
     },
     Bakumon: {
         base: 77,
-        dwds: 26,
-        dwdd: 38,
+        ds: 26,
+        dssm: 38,
         dsle: 336,
         dssxw: 427,
     },
     Candlemon: {
         base: 78,
-        dwds: 262,
-        dwdd: 80,
+        ds: 262,
+        dssm: 80,
         dsle: 337,
         dssxw: 428,
     },
     PicoDevimon: {
         base: 79,
-        dwds: 27,
-        dwdd: 39,
+        ds: 27,
+        dssm: 39,
         dsle: 36,
         dssxw: 30,
     },
     Keramon: {
         base: 80,
-        dwds: 38,
-        dwdd: 50,
+        ds: 38,
+        dssm: 50,
         dsle: 47,
         dssxw: 14,
     },
     Tsukaimon: {
         base: 81,
-        dwds: 53,
-        dwdd: 68,
+        ds: 53,
+        dssm: 68,
         dsle: 338,
         dssxw: 429,
     },
     Dracmon: {
         base: 82,
-        dwds: 59,
-        dwdd: 74,
+        ds: 59,
+        dssm: 74,
         dsle: 58,
         dssxw: 24,
     },
     DotAgumon: {
         base: 83,
-        dwds: 61,
-        dwdd: 76,
+        ds: 61,
+        dssm: 76,
         dsle: 59,
         dssxw: 430,
     },
     DotFalcomon: {
         base: 84,
-        dwds: 56,
-        dwdd: 71,
+        ds: 56,
+        dssm: 71,
         dsle: 55,
         dssxw: 431,
     },
     Coronamon: {
         base: 85,
-        dwds: 263,
-        dwdd: 83,
+        ds: 263,
+        dssm: 83,
         dsle: 61,
         dssxw: 16,
     },
     Lunamon: {
         base: 86,
-        dwds: 264,
-        dwdd: 84,
+        ds: 264,
+        dssm: 84,
         dsle: 62,
         dssxw: 44,
     },
     Hyokomon: {
         base: 87,
-        dwds: 265,
-        dwdd: 400,
+        ds: 265,
+        dssm: 400,
         dsle: 63,
         dssxw: 29,
     },
     Lucemon: {
         base: 88,
-        dwds: 266,
-        dwdd: 401,
+        ds: 266,
+        dssm: 401,
         dsle: 339,
         dssxw: 43,
     },
     Shoutmon: {
         base: 89,
-        dwds: 267,
-        dwdd: 402,
+        ds: 267,
+        dssm: 402,
         dsle: 340,
         dssxw: 357,
     },
     Ballistamon: {
         base: 90,
-        dwds: 268,
-        dwdd: 403,
+        ds: 268,
+        dssm: 403,
         dsle: 341,
         dssxw: 376,
     },
     Starmon2010: {
         base: 91,
-        dwds: 269,
-        dwdd: 404,
+        ds: 269,
+        dssm: 404,
         dsle: 342,
         dssxw: 367,
     },
     Sparrowmon: {
         base: 92,
-        dwds: 270,
-        dwdd: 405,
+        ds: 270,
+        dssm: 405,
         dsle: 343,
         dssxw: 368,
     },
     Cutemon: {
         base: 93,
-        dwds: 271,
-        dwdd: 406,
+        ds: 271,
+        dssm: 406,
         dsle: 344,
         dssxw: 354,
     },
     Monitormon: {
         base: 94,
-        dwds: 272,
-        dwdd: 407,
+        ds: 272,
+        dssm: 407,
         dsle: 345,
         dssxw: 383,
     },
     Spadamon: {
         base: 95,
-        dwds: 273,
-        dwdd: 408,
+        ds: 273,
+        dssm: 408,
         dsle: 346,
         dssxw: 393,
     },
     Dondokomon: {
         base: 96,
-        dwds: 274,
-        dwdd: 409,
+        ds: 274,
+        dssm: 409,
         dsle: 347,
         dssxw: 375,
     },
     Gaosmon: {
         base: 97,
-        dwds: 275,
-        dwdd: 410,
+        ds: 275,
+        dssm: 410,
         dsle: 348,
         dssxw: 353,
     },
     ShoutmonB: {
         base: 98,
-        dwds: 276,
-        dwdd: 411,
+        ds: 276,
+        dssm: 411,
         dsle: 349,
         dssxw: 358,
     },
     Chikurimon: {
         base: 99,
-        dwds: 277,
-        dwdd: 412,
+        ds: 277,
+        dssm: 412,
         dsle: 350,
         dssxw: 371,
     },
     Troopmon: {
         base: 100,
-        dwds: 278,
-        dwdd: 413,
+        ds: 278,
+        dssm: 413,
         dsle: 351,
         dssxw: 372,
     },
     StarSword: {
         base: 101,
-        dwds: 279,
-        dwdd: 414,
+        ds: 279,
+        dssm: 414,
         dsle: 352,
         dssxw: 366,
     },
     Greymon: {
         base: 102,
-        dwds: 62,
-        dwdd: 86,
+        ds: 62,
+        dssm: 86,
         dsle: 64,
         dssxw: 76,
     },
     Garurumon: {
         base: 103,
-        dwds: 69,
-        dwdd: 93,
+        ds: 69,
+        dssm: 93,
         dsle: 71,
         dssxw: 69,
     },
     Birdramon: {
         base: 104,
-        dwds: 86,
-        dwdd: 110,
+        ds: 86,
+        dssm: 110,
         dsle: 84,
         dssxw: 106,
     },
     Togemon: {
         base: 105,
-        dwds: 82,
-        dwdd: 106,
+        ds: 82,
+        dssm: 106,
         dsle: 80,
         dssxw: 100,
     },
     Kabuterimon: {
         base: 106,
-        dwds: 68,
-        dwdd: 92,
+        ds: 68,
+        dssm: 92,
         dsle: 70,
         dssxw: 65,
     },
     Ikkakumon: {
         base: 107,
-        dwds: 109,
-        dwdd: 134,
+        ds: 109,
+        dssm: 134,
         dsle: 97,
         dssxw: 54,
     },
     Angemon: {
         base: 108,
-        dwds: 70,
-        dwdd: 94,
+        ds: 70,
+        dssm: 94,
         dsle: 72,
         dssxw: 62,
     },
     Tailmon: {
         base: 109,
-        dwds: 80,
-        dwdd: 104,
+        ds: 80,
+        dssm: 104,
         dsle: 78,
         dssxw: 96,
     },
     ExVeemon: {
         base: 110,
-        dwds: 84,
-        dwdd: 108,
+        ds: 84,
+        dssm: 108,
         dsle: 82,
         dssxw: 60,
     },
     Stingmon: {
         base: 111,
-        dwds: 85,
-        dwdd: 109,
+        ds: 85,
+        dssm: 109,
         dsle: 83,
         dssxw: 91,
     },
     Aquilamon: {
         base: 112,
-        dwds: 94,
-        dwdd: 118,
+        ds: 94,
+        dssm: 118,
         dsle: 90,
         dssxw: 50,
     },
     Ankylomon: {
         base: 113,
-        dwds: 87,
-        dwdd: 111,
+        ds: 87,
+        dssm: 111,
         dsle: 85,
         dssxw: 52,
     },
     Growlmon: {
         base: 114,
-        dwds: 89,
-        dwdd: 113,
+        ds: 89,
+        dssm: 113,
         dsle: 87,
         dssxw: 75,
     },
     Kyubimon: {
         base: 115,
-        dwds: 90,
-        dwdd: 114,
+        ds: 90,
+        dssm: 114,
         dsle: 88,
         dssxw: 71,
     },
     Gargomon: {
         base: 116,
-        dwds: 88,
-        dwdd: 112,
+        ds: 88,
+        dssm: 112,
         dsle: 86,
         dssxw: 68,
     },
     Guardromon: {
         base: 117,
-        dwds: 83,
-        dwdd: 107,
+        ds: 83,
+        dssm: 107,
         dsle: 81,
         dssxw: 66,
     },
     Agunimon: {
         base: 118,
-        dwds: 280,
-        dwdd: 415,
+        ds: 280,
+        dssm: 415,
         dsle: 353,
         dssxw: 51,
     },
     GeoGreymon: {
         base: 119,
-        dwds: 114,
-        dwdd: 139,
+        ds: 114,
+        dssm: 139,
         dsle: 98,
         dssxw: 88,
     },
     Gaogamon: {
         base: 120,
-        dwds: 115,
-        dwdd: 140,
+        ds: 115,
+        dssm: 140,
         dsle: 99,
         dssxw: 67,
     },
     Sunflowmon: {
         base: 121,
-        dwds: 118,
-        dwdd: 143,
+        ds: 118,
+        dssm: 143,
         dsle: 101,
         dssxw: 83,
     },
     Peckmon: {
         base: 122,
-        dwds: 121,
-        dwdd: 146,
+        ds: 121,
+        dssm: 146,
         dsle: 104,
         dssxw: 114,
     },
     Gawappamon: {
         base: 123,
-        dwds: 119,
-        dwdd: 144,
+        ds: 119,
+        dssm: 144,
         dsle: 102,
         dssxw: 70,
     },
     KnightChessmonW: {
         base: 124,
-        dwds: 281,
-        dwdd: 190,
+        ds: 281,
+        dssm: 190,
         dsle: 354,
         dssxw: 129,
     },
     KnightChessmonB: {
         base: 125,
-        dwds: 282,
-        dwdd: 191,
+        ds: 282,
+        dssm: 191,
         dsle: 355,
         dssxw: 432,
     },
     Reppamon: {
         base: 126,
-        dwds: 117,
-        dwdd: 142,
+        ds: 117,
+        dssm: 142,
         dsle: 100,
         dssxw: 127,
     },
     Veedramon: {
         base: 127,
-        dwds: 283,
-        dwdd: 188,
+        ds: 283,
+        dssm: 188,
         dsle: 117,
         dssxw: 111,
     },
     Dorugamon: {
         base: 128,
-        dwds: 99,
-        dwdd: 123,
+        ds: 99,
+        dssm: 123,
         dsle: 92,
         dssxw: 103,
     },
     Raptordramon: {
         base: 129,
-        dwds: 100,
-        dwdd: 124,
+        ds: 100,
+        dssm: 124,
         dsle: 93,
         dssxw: 122,
     },
     Strikedramon: {
         base: 130,
-        dwds: 284,
-        dwdd: 416,
+        ds: 284,
+        dssm: 416,
         dsle: 121,
         dssxw: 130,
     },
     DarkTyrannomon: {
         base: 131,
-        dwds: 106,
-        dwdd: 131,
+        ds: 106,
+        dssm: 131,
         dsle: 96,
         dssxw: 128,
     },
     Dinohumon: {
         base: 132,
-        dwds: 96,
-        dwdd: 120,
+        ds: 96,
+        dssm: 120,
         dsle: 356,
         dssxw: 433,
     },
     Monochromon: {
         base: 133,
-        dwds: 285,
-        dwdd: 181,
+        ds: 285,
+        dssm: 181,
         dsle: 357,
         dssxw: 434,
     },
     Tyrannomon: {
         base: 134,
-        dwds: 63,
-        dwdd: 87,
+        ds: 63,
+        dssm: 87,
         dsle: 65,
         dssxw: 95,
     },
     Airdramon: {
         base: 135,
-        dwds: 65,
-        dwdd: 89,
+        ds: 65,
+        dssm: 89,
         dsle: 67,
         dssxw: 59,
     },
     Flarerizamon: {
         base: 136,
-        dwds: 113,
-        dwdd: 138,
+        ds: 113,
+        dssm: 138,
         dsle: 358,
         dssxw: 435,
     },
     Centalmon: {
         base: 137,
-        dwds: 286,
-        dwdd: 185,
+        ds: 286,
+        dssm: 185,
         dsle: 359,
         dssxw: 77,
     },
     Leomon: {
         base: 138,
-        dwds: 76,
-        dwdd: 100,
+        ds: 76,
+        dssm: 100,
         dsle: 76,
         dssxw: 125,
     },
     Ogremon: {
         base: 139,
-        dwds: 72,
-        dwdd: 96,
+        ds: 72,
+        dssm: 96,
         dsle: 73,
         dssxw: 63,
     },
     Fugamon: {
         base: 140,
-        dwds: 287,
-        dwdd: 151,
+        ds: 287,
+        dssm: 151,
         dsle: 360,
         dssxw: 436,
     },
     Hyogamon: {
         base: 141,
-        dwds: 288,
-        dwdd: 161,
+        ds: 288,
+        dssm: 161,
         dsle: 361,
         dssxw: 437,
     },
     Grizzmon: {
         base: 142,
-        dwds: 98,
-        dwdd: 122,
+        ds: 98,
+        dssm: 122,
         dsle: 362,
         dssxw: 438,
     },
     Seasarmon: {
         base: 143,
-        dwds: 92,
-        dwdd: 116,
+        ds: 92,
+        dssm: 116,
         dsle: 363,
         dssxw: 84,
     },
     Hanumon: {
         base: 144,
-        dwds: 101,
-        dwdd: 125,
+        ds: 101,
+        dssm: 125,
         dsle: 364,
         dssxw: 105,
     },
     Minotarumon: {
         base: 145,
-        dwds: 110,
-        dwdd: 135,
+        ds: 110,
+        dssm: 135,
         dsle: 365,
         dssxw: 116,
     },
     Yukidarumon: {
         base: 146,
-        dwds: 289,
-        dwdd: 159,
+        ds: 289,
+        dssm: 159,
         dsle: 109,
         dssxw: 120,
     },
     Tsuchidarumon: {
         base: 147,
-        dwds: 290,
-        dwdd: 152,
+        ds: 290,
+        dssm: 152,
         dsle: 366,
         dssxw: 94,
     },
     Tortamon: {
         base: 148,
-        dwds: 291,
-        dwdd: 153,
+        ds: 291,
+        dssm: 153,
         dsle: 367,
         dssxw: 439,
     },
     Nanimon: {
         base: 149,
-        dwds: 292,
-        dwdd: 179,
+        ds: 292,
+        dssm: 179,
         dsle: 368,
         dssxw: 440,
     },
     BomberNanimon: {
         base: 150,
-        dwds: 293,
-        dwdd: 127,
+        ds: 293,
+        dssm: 127,
         dsle: 95,
         dssxw: 115,
     },
     Mojyamon: {
         base: 151,
-        dwds: 294,
-        dwdd: 182,
+        ds: 294,
+        dssm: 182,
         dsle: 369,
         dssxw: 441,
     },
     JungleMojyamon: {
         base: 152,
-        dwds: 295,
-        dwdd: 183,
+        ds: 295,
+        dssm: 183,
         dsle: 370,
         dssxw: 442,
     },
     Drimogemon: {
         base: 153,
-        dwds: 296,
-        dwdd: 147,
+        ds: 296,
+        dssm: 147,
         dsle: 371,
         dssxw: 102,
     },
     NiseDrimogemon: {
         base: 154,
-        dwds: 297,
-        dwdd: 148,
+        ds: 297,
+        dssm: 148,
         dsle: 372,
         dssxw: 443,
     },
     Diatrymon: {
         base: 155,
-        dwds: 116,
-        dwdd: 141,
+        ds: 116,
+        dssm: 141,
         dsle: 373,
         dssxw: 97,
     },
     Saberdramon: {
         base: 156,
-        dwds: 298,
-        dwdd: 165,
+        ds: 298,
+        dssm: 165,
         dsle: 374,
         dssxw: 444,
     },
     Kokatorimon: {
         base: 157,
-        dwds: 75,
-        dwdd: 99,
+        ds: 75,
+        dssm: 99,
         dsle: 75,
         dssxw: 80,
     },
     Akatorimon: {
         base: 158,
-        dwds: 107,
-        dwdd: 132,
+        ds: 107,
+        dssm: 132,
         dsle: 375,
         dssxw: 445,
     },
     Kiwimon: {
         base: 159,
-        dwds: 103,
-        dwdd: 128,
+        ds: 103,
+        dssm: 128,
         dsle: 376,
         dssxw: 446,
     },
     Seadramon: {
         base: 160,
-        dwds: 66,
-        dwdd: 90,
+        ds: 66,
+        dssm: 90,
         dsle: 68,
         dssxw: 85,
     },
     Icemon: {
         base: 161,
-        dwds: 111,
-        dwdd: 136,
+        ds: 111,
+        dssm: 136,
         dsle: 377,
         dssxw: 447,
     },
     Gekomon: {
         base: 162,
-        dwds: 79,
-        dwdd: 103,
+        ds: 79,
+        dssm: 103,
         dsle: 378,
         dssxw: 78,
     },
     Numemon: {
         base: 163,
-        dwds: 67,
-        dwdd: 91,
+        ds: 67,
+        dssm: 91,
         dsle: 69,
         dssxw: 104,
     },
     Geremon: {
         base: 164,
-        dwds: 299,
-        dwdd: 160,
+        ds: 299,
+        dssm: 160,
         dsle: 379,
         dssxw: 448,
     },
     KaratsukiNumemon: {
         base: 165,
-        dwds: 300,
-        dwdd: 162,
+        ds: 300,
+        dssm: 162,
         dsle: 380,
         dssxw: 449,
     },
     Shellmon: {
         base: 166,
-        dwds: 301,
-        dwdd: 158,
+        ds: 301,
+        dssm: 158,
         dsle: 381,
         dssxw: 87,
     },
     MoriShellmon: {
         base: 167,
-        dwds: 302,
-        dwdd: 149,
+        ds: 302,
+        dssm: 149,
         dsle: 382,
         dssxw: 450,
     },
     Octomon: {
         base: 168,
-        dwds: 303,
-        dwdd: 155,
+        ds: 303,
+        dssm: 155,
         dsle: 107,
         dssxw: 64,
     },
     Gesomon: {
         base: 169,
-        dwds: 304,
-        dwdd: 156,
+        ds: 304,
+        dssm: 156,
         dsle: 383,
         dssxw: 79,
     },
     Coelamon: {
         base: 170,
-        dwds: 305,
-        dwdd: 157,
+        ds: 305,
+        dssm: 157,
         dsle: 108,
         dssxw: 86,
     },
     Rukamon: {
         base: 171,
-        dwds: 306,
-        dwdd: 164,
+        ds: 306,
+        dssm: 164,
         dsle: 384,
         dssxw: 124,
     },
     Ebidramon: {
         base: 172,
-        dwds: 307,
-        dwdd: 154,
+        ds: 307,
+        dssm: 154,
         dsle: 106,
         dssxw: 61,
     },
     Kuwagamon: {
         base: 173,
-        dwds: 77,
-        dwdd: 101,
+        ds: 77,
+        dssm: 101,
         dsle: 77,
         dssxw: 74,
     },
     Snimon: {
         base: 174,
-        dwds: 308,
-        dwdd: 167,
+        ds: 308,
+        dssm: 167,
         dsle: 385,
         dssxw: 92,
     },
     Dokugumon: {
         base: 175,
-        dwds: 309,
-        dwdd: 187,
+        ds: 309,
+        dssm: 187,
         dsle: 116,
         dssxw: 101,
     },
     Gokimon: {
         base: 176,
-        dwds: 95,
-        dwdd: 119,
+        ds: 95,
+        dssm: 119,
         dsle: 386,
         dssxw: 451,
     },
     Flymon: {
         base: 177,
-        dwds: 310,
-        dwdd: 168,
+        ds: 310,
+        dssm: 168,
         dsle: 387,
         dssxw: 110,
     },
     Yanmamon: {
         base: 178,
-        dwds: 311,
-        dwdd: 169,
+        ds: 311,
+        dssm: 169,
         dsle: 388,
         dssxw: 119,
     },
     SandYanmamon: {
         base: 179,
-        dwds: 312,
-        dwdd: 170,
+        ds: 312,
+        dssm: 170,
         dsle: 389,
         dssxw: 452,
     },
     Vegiemon: {
         base: 180,
-        dwds: 71,
-        dwdd: 95,
+        ds: 71,
+        dssm: 95,
         dsle: 390,
         dssxw: 113,
     },
     Weedmon: {
         base: 181,
-        dwds: 313,
-        dwdd: 172,
+        ds: 313,
+        dssm: 172,
         dsle: 391,
         dssxw: 453,
     },
     RedVegiemon: {
         base: 182,
-        dwds: 314,
-        dwdd: 171,
+        ds: 314,
+        dssm: 171,
         dsle: 392,
         dssxw: 454,
     },
     Woodmon: {
         base: 183,
-        dwds: 315,
-        dwdd: 166,
+        ds: 315,
+        dssm: 166,
         dsle: 110,
         dssxw: 58,
     },
     Igamon: {
         base: 184,
-        dwds: 316,
-        dwdd: 173,
+        ds: 316,
+        dssm: 173,
         dsle: 111,
         dssxw: 53,
     },
     Kogamon: {
         base: 185,
-        dwds: 317,
-        dwdd: 174,
+        ds: 317,
+        dssm: 174,
         dsle: 393,
         dssxw: 455,
     },
     Mechanorimon: {
         base: 186,
-        dwds: 318,
-        dwdd: 85,
+        ds: 318,
+        dssm: 85,
         dsle: 394,
         dssxw: 118,
     },
     Tankmon: {
         base: 187,
-        dwds: 319,
-        dwdd: 178,
+        ds: 319,
+        dssm: 178,
         dsle: 113,
         dssxw: 93,
     },
     Hookmon: {
         base: 188,
-        dwds: 97,
-        dwdd: 121,
+        ds: 97,
+        dssm: 121,
         dsle: 91,
         dssxw: 109,
     },
     Revolmon: {
         base: 189,
-        dwds: 320,
-        dwdd: 184,
+        ds: 320,
+        dssm: 184,
         dsle: 114,
         dssxw: 123,
     },
     Clockmon: {
         base: 190,
-        dwds: 321,
-        dwdd: 176,
+        ds: 321,
+        dssm: 176,
         dsle: 112,
         dssxw: 73,
     },
     Thunderballmon: {
         base: 191,
-        dwds: 322,
-        dwdd: 177,
+        ds: 322,
+        dssm: 177,
         dsle: 395,
         dssxw: 131,
     },
     Omekamon: {
         base: 192,
-        dwds: 323,
-        dwdd: 175,
+        ds: 323,
+        dssm: 175,
         dsle: 396,
         dssxw: 456,
     },
     Golemon: {
         base: 193,
-        dwds: 324,
-        dwdd: 180,
+        ds: 324,
+        dssm: 180,
         dsle: 397,
         dssxw: 81,
     },
     Raremon: {
         base: 194,
-        dwds: 78,
-        dwdd: 102,
+        ds: 78,
+        dssm: 102,
         dsle: 398,
         dssxw: 457,
     },
     Sukamon: {
         base: 195,
-        dwds: 74,
-        dwdd: 98,
+        ds: 74,
+        dssm: 98,
         dsle: 399,
         dssxw: 89,
     },
     PlatinumSukamon: {
         base: 196,
-        dwds: 108,
-        dwdd: 133,
+        ds: 108,
+        dssm: 133,
         dsle: 400,
         dssxw: 458,
     },
     Starmon: {
         base: 197,
-        dwds: 102,
-        dwdd: 126,
+        ds: 102,
+        dssm: 126,
         dsle: 94,
         dssxw: 90,
     },
     Unimon: {
         base: 198,
-        dwds: 104,
-        dwdd: 129,
+        ds: 104,
+        dssm: 129,
         dsle: 401,
         dssxw: 121,
     },
     Sorcerymon: {
         base: 199,
-        dwds: 105,
-        dwdd: 130,
+        ds: 105,
+        dssm: 130,
         dsle: 402,
         dssxw: 459,
     },
     Wizardmon: {
         base: 200,
-        dwds: 81,
-        dwdd: 105,
+        ds: 81,
+        dssm: 105,
         dsle: 79,
         dssxw: 56,
     },
     Devimon: {
         base: 201,
-        dwds: 64,
-        dwdd: 88,
+        ds: 64,
+        dssm: 88,
         dsle: 66,
         dssxw: 99,
     },
     IceDevimon: {
         base: 202,
-        dwds: 325,
-        dwdd: 163,
+        ds: 325,
+        dssm: 163,
         dsle: 403,
         dssxw: 49,
     },
     Devidramon: {
         base: 203,
-        dwds: 326,
-        dwdd: 186,
+        ds: 326,
+        dssm: 186,
         dsle: 115,
         dssxw: 98,
     },
     Evilmon: {
         base: 204,
-        dwds: 93,
-        dwdd: 117,
+        ds: 93,
+        dssm: 117,
         dsle: 404,
         dssxw: 55,
     },
     Bakemon: {
         base: 205,
-        dwds: 73,
-        dwdd: 97,
+        ds: 73,
+        dssm: 97,
         dsle: 74,
         dssxw: 107,
     },
     Chrysalimon: {
         base: 206,
-        dwds: 91,
-        dwdd: 115,
+        ds: 91,
+        dssm: 115,
         dsle: 89,
         dssxw: 72,
     },
     Wendimon: {
         base: 207,
-        dwds: 327,
-        dwdd: 150,
+        ds: 327,
+        dssm: 150,
         dsle: 105,
         dssxw: 57,
     },
     DarkLizardmon: {
         base: 208,
-        dwds: 112,
-        dwdd: 137,
+        ds: 112,
+        dssm: 137,
         dsle: 405,
         dssxw: 460,
     },
     Musyamon: {
         base: 209,
-        dwds: 328,
-        dwdd: 189,
+        ds: 328,
+        dssm: 189,
         dsle: 118,
         dssxw: 117,
     },
     Sangloupmon: {
         base: 210,
-        dwds: 120,
-        dwdd: 145,
+        ds: 120,
+        dssm: 145,
         dsle: 103,
         dssxw: 82,
     },
     Firamon: {
         base: 211,
-        dwds: 329,
-        dwdd: 192,
+        ds: 329,
+        dssm: 192,
         dsle: 119,
         dssxw: 108,
     },
     Lekismon: {
         base: 212,
-        dwds: 330,
-        dwdd: 193,
+        ds: 330,
+        dssm: 193,
         dsle: 120,
         dssxw: 126,
     },
     Buraimon: {
         base: 213,
-        dwds: 331,
-        dwdd: 417,
+        ds: 331,
+        dssm: 417,
         dsle: 122,
         dssxw: 112,
     },
     Dorulumon: {
         base: 214,
-        dwds: 332,
-        dwdd: 418,
+        ds: 332,
+        dssm: 418,
         dsle: 406,
         dssxw: 374,
     },
     Greymon2010: {
         base: 215,
-        dwds: 333,
-        dwdd: 419,
+        ds: 333,
+        dssm: 419,
         dsle: 407,
         dssxw: 355,
     },
     GreymonO2010: {
         base: 216,
-        dwds: 334,
-        dwdd: 420,
+        ds: 334,
+        dssm: 420,
         dsle: 408,
         dssxw: 356,
     },
     MailBirdramon: {
         base: 217,
-        dwds: 335,
-        dwdd: 421,
+        ds: 335,
+        dssm: 421,
         dsle: 409,
         dssxw: 386,
     },
     SkullKnightmon: {
         base: 218,
-        dwds: 336,
-        dwdd: 422,
+        ds: 336,
+        dssm: 422,
         dsle: 410,
         dssxw: 365,
     },
     SkullKnightmonBR: {
         base: 219,
-        dwds: 337,
-        dwdd: 423,
+        ds: 337,
+        dssm: 423,
         dsle: 411,
         dssxw: 387,
     },
     DeadlyAxemon: {
         base: 220,
-        dwds: 338,
-        dwdd: 424,
+        ds: 338,
+        dssm: 424,
         dsle: 412,
         dssxw: 385,
     },
     ShoutmonX2: {
         base: 221,
-        dwds: 339,
-        dwdd: 425,
+        ds: 339,
+        dssm: 425,
         dsle: 413,
         dssxw: 359,
     },
     JetSparrow: {
         base: 222,
-        dwds: 340,
-        dwdd: 426,
+        ds: 340,
+        dssm: 426,
         dsle: 414,
         dssxw: 364,
     },
     DoruluCannon: {
         base: 223,
-        dwds: 341,
-        dwdd: 427,
+        ds: 341,
+        dssm: 427,
         dsle: 415,
         dssxw: 373,
     },
     Fladramon: {
         base: 224,
-        dwds: 122,
-        dwdd: 288,
+        ds: 122,
+        dssm: 288,
         dsle: 416,
         dssxw: 189,
     },
     Shadramon: {
         base: 225,
-        dwds: 342,
-        dwdd: 260,
+        ds: 342,
+        dssm: 260,
         dsle: 170,
         dssxw: 461,
     },
     Allomon: {
         base: 226,
-        dwds: 343,
-        dwdd: 280,
+        ds: 343,
+        dssm: 280,
         dsle: 417,
         dssxw: 462,
     },
     Lynxmon: {
         base: 227,
-        dwds: 344,
-        dwdd: 281,
+        ds: 344,
+        dssm: 281,
         dsle: 183,
         dssxw: 463,
     },
     Kenkimon: {
         base: 228,
-        dwds: 128,
-        dwdd: 294,
+        ds: 128,
+        dssm: 294,
         dsle: 191,
         dssxw: 157,
     },
     Owlmon: {
         base: 229,
-        dwds: 345,
-        dwdd: 253,
+        ds: 345,
+        dssm: 253,
         dsle: 418,
         dssxw: 464,
     },
     Pipismon: {
         base: 230,
-        dwds: 346,
-        dwdd: 240,
+        ds: 346,
+        dssm: 240,
         dsle: 419,
         dssxw: 465,
     },
     Shurimon: {
         base: 231,
-        dwds: 127,
-        dwdd: 293,
+        ds: 127,
+        dssm: 293,
         dsle: 190,
         dssxw: 161,
     },
     Ponchomon: {
         base: 232,
-        dwds: 129,
-        dwdd: 295,
+        ds: 129,
+        dssm: 295,
         dsle: 420,
         dssxw: 466,
     },
     Kabukimon: {
         base: 233,
-        dwds: 347,
-        dwdd: 262,
+        ds: 347,
+        dssm: 262,
         dsle: 421,
         dssxw: 145,
     },
     Tylomon: {
         base: 234,
-        dwds: 348,
-        dwdd: 209,
+        ds: 348,
+        dssm: 209,
         dsle: 422,
         dssxw: 172,
     },
     Seahomon: {
         base: 235,
-        dwds: 126,
-        dwdd: 292,
+        ds: 126,
+        dssm: 292,
         dsle: 423,
         dssxw: 467,
     },
     Nefertimon: {
         base: 236,
-        dwds: 349,
-        dwdd: 428,
+        ds: 349,
+        dssm: 428,
         dsle: 424,
         dssxw: 180,
     },
     Toucanmon: {
         base: 237,
-        dwds: 350,
-        dwdd: 252,
+        ds: 350,
+        dssm: 252,
         dsle: 425,
         dssxw: 468,
     },
     Prairiemon: {
         base: 238,
-        dwds: 124,
-        dwdd: 290,
+        ds: 124,
+        dssm: 290,
         dsle: 189,
         dssxw: 194,
     },
     Magnamon: {
         base: 239,
-        dwds: 123,
-        dwdd: 289,
+        ds: 123,
+        dssm: 289,
         dsle: 188,
         dssxw: 199,
     },
     Kongoumon: {
         base: 240,
-        dwds: 125,
-        dwdd: 291,
+        ds: 125,
+        dssm: 291,
         dsle: 426,
         dssxw: 158,
     },
     MetalGreymon: {
         base: 241,
-        dwds: 130,
-        dwdd: 195,
+        ds: 130,
+        dssm: 195,
         dsle: 124,
         dssxw: 229,
     },
     WereGarurumonBlue: {
         base: 242,
-        dwds: 144,
-        dwdd: 214,
+        ds: 144,
+        dssm: 214,
         dsle: 138,
         dssxw: 220,
     },
     Garudamon: {
         base: 243,
-        dwds: 147,
-        dwdd: 217,
+        ds: 147,
+        dssm: 217,
         dsle: 141,
         dssxw: 148,
     },
     Lilymon: {
         base: 244,
-        dwds: 149,
-        dwdd: 219,
+        ds: 149,
+        dssm: 219,
         dsle: 143,
         dssxw: 216,
     },
     AtlurKabuterimonR: {
         base: 245,
-        dwds: 150,
-        dwdd: 220,
+        ds: 150,
+        dssm: 220,
         dsle: 144,
         dssxw: 223,
     },
     Zudomon: {
         base: 246,
-        dwds: 172,
-        dwdd: 249,
+        ds: 172,
+        dssm: 249,
         dsle: 163,
         dssxw: 168,
     },
     HolyAngemon: {
         base: 247,
-        dwds: 152,
-        dwdd: 223,
+        ds: 152,
+        dssm: 223,
         dsle: 146,
         dssxw: 228,
     },
     Angewomon: {
         base: 248,
-        dwds: 140,
-        dwdd: 208,
+        ds: 140,
+        dssm: 208,
         dsle: 133,
         dssxw: 143,
     },
     MegaloGrowlmon: {
         base: 249,
-        dwds: 158,
-        dwdd: 229,
+        ds: 158,
+        dssm: 229,
         dsle: 152,
         dssxw: 209,
     },
     Taomon: {
         base: 250,
-        dwds: 160,
-        dwdd: 231,
+        ds: 160,
+        dssm: 231,
         dsle: 154,
         dssxw: 169,
     },
     Rapidmon: {
         base: 251,
-        dwds: 159,
-        dwdd: 230,
+        ds: 159,
+        dssm: 230,
         dsle: 153,
         dssxw: 215,
     },
     Cyberdramon: {
         base: 252,
-        dwds: 151,
-        dwdd: 222,
+        ds: 151,
+        dssm: 222,
         dsle: 145,
         dssxw: 226,
     },
     Antylamon: {
         base: 253,
-        dwds: 155,
-        dwdd: 226,
+        ds: 155,
+        dssm: 226,
         dsle: 149,
         dssxw: 135,
     },
     Paildramon: {
         base: 254,
-        dwds: 153,
-        dwdd: 224,
+        ds: 153,
+        dssm: 224,
         dsle: 147,
         dssxw: 183,
     },
     Silphymon: {
         base: 255,
-        dwds: 169,
-        dwdd: 246,
+        ds: 169,
+        dssm: 246,
         dsle: 161,
         dssxw: 162,
     },
     Shakkoumon: {
         base: 256,
-        dwds: 351,
-        dwdd: 297,
+        ds: 351,
+        dssm: 297,
         dsle: 193,
         dssxw: 160,
     },
     RizeGreymon: {
         base: 257,
-        dwds: 177,
-        dwdd: 256,
+        ds: 177,
+        dssm: 256,
         dsle: 166,
         dssxw: 213,
     },
     MachGaogamon: {
         base: 258,
-        dwds: 178,
-        dwdd: 257,
+        ds: 178,
+        dssm: 257,
         dsle: 167,
         dssxw: 201,
     },
     Lilamon: {
         base: 259,
-        dwds: 181,
-        dwdd: 259,
+        ds: 181,
+        dssm: 259,
         dsle: 169,
         dssxw: 214,
     },
     Yatagaramon: {
         base: 260,
-        dwds: 179,
-        dwdd: 283,
+        ds: 179,
+        dssm: 283,
         dsle: 185,
         dssxw: 212,
     },
     Shawujinmon: {
         base: 261,
-        dwds: 352,
-        dwdd: 282,
+        ds: 352,
+        dssm: 282,
         dsle: 184,
         dssxw: 159,
     },
     BishopChessmon: {
         base: 262,
-        dwds: 353,
-        dwdd: 284,
+        ds: 353,
+        dssm: 284,
         dsle: 427,
         dssxw: 225,
     },
     RookChessmon: {
         base: 263,
-        dwds: 354,
-        dwdd: 285,
+        ds: 354,
+        dssm: 285,
         dsle: 428,
         dssxw: 217,
     },
     Tyilinmon: {
         base: 264,
-        dwds: 180,
-        dwdd: 258,
+        ds: 180,
+        dssm: 258,
         dsle: 168,
         dssxw: 171,
     },
     Dorugremon: {
         base: 265,
-        dwds: 165,
-        dwdd: 241,
+        ds: 165,
+        dssm: 241,
         dsle: 159,
         dssxw: 177,
     },
     Grademon: {
         base: 266,
-        dwds: 355,
-        dwdd: 429,
+        ds: 355,
+        dssm: 429,
         dsle: 196,
         dssxw: 155,
     },
     AeroVeedramon: {
         base: 267,
-        dwds: 356,
-        dwdd: 276,
+        ds: 356,
+        dssm: 276,
         dsle: 179,
         dssxw: 224,
     },
     BlackMegaloGrowlmon: {
         base: 268,
-        dwds: 171,
-        dwdd: 248,
+        ds: 171,
+        dssm: 248,
         dsle: 429,
         dssxw: 469,
     },
     MasterTyrannomon: {
         base: 269,
-        dwds: 357,
-        dwdd: 430,
+        ds: 357,
+        dssm: 430,
         dsle: 197,
         dssxw: 231,
     },
     Triceramon: {
         base: 270,
-        dwds: 167,
-        dwdd: 244,
+        ds: 167,
+        dssm: 244,
         dsle: 430,
         dssxw: 176,
     },
     Vermillimon: {
         base: 271,
-        dwds: 358,
-        dwdd: 273,
+        ds: 358,
+        dssm: 273,
         dsle: 431,
         dssxw: 139,
     },
     Mametyramon: {
         base: 272,
-        dwds: 359,
-        dwdd: 266,
+        ds: 359,
+        dssm: 266,
         dsle: 174,
         dssxw: 203,
     },
     GrapLeomon: {
         base: 273,
-        dwds: 360,
-        dwdd: 277,
+        ds: 360,
+        dssm: 277,
         dsle: 180,
         dssxw: 154,
     },
     Kyukimon: {
         base: 274,
-        dwds: 164,
-        dwdd: 238,
+        ds: 164,
+        dssm: 238,
         dsle: 432,
         dssxw: 150,
     },
     Etemon: {
         base: 275,
-        dwds: 134,
-        dwdd: 200,
+        ds: 134,
+        dssm: 200,
         dsle: 433,
         dssxw: 142,
     },
     Pandamon: {
         base: 276,
-        dwds: 361,
-        dwdd: 235,
+        ds: 361,
+        dssm: 235,
         dsle: 157,
         dssxw: 185,
     },
     Mammon: {
         base: 277,
-        dwds: 362,
-        dwdd: 204,
+        ds: 362,
+        dssm: 204,
         dsle: 434,
         dssxw: 206,
     },
     Cerberumon: {
         base: 278,
-        dwds: 363,
-        dwdd: 431,
+        ds: 363,
+        dssm: 431,
         dsle: 435,
         dssxw: 156,
     },
     Bastemon: {
         base: 279,
-        dwds: 364,
-        dwdd: 432,
+        ds: 364,
+        dssm: 432,
         dsle: 436,
         dssxw: 182,
     },
     Sinduramon: {
         base: 280,
-        dwds: 365,
-        dwdd: 239,
+        ds: 365,
+        dssm: 239,
         dsle: 437,
         dssxw: 163,
     },
     Karatenmon: {
         base: 281,
-        dwds: 366,
-        dwdd: 237,
+        ds: 366,
+        dssm: 237,
         dsle: 158,
         dssxw: 146,
     },
     Parrotmon: {
         base: 282,
-        dwds: 161,
-        dwdd: 232,
+        ds: 161,
+        dssm: 232,
         dsle: 155,
         dssxw: 184,
     },
     Deramon: {
         base: 283,
-        dwds: 168,
-        dwdd: 245,
+        ds: 168,
+        dssm: 245,
         dsle: 438,
         dssxw: 470,
     },
     Dagomon: {
         base: 284,
-        dwds: 142,
-        dwdd: 212,
+        ds: 142,
+        dssm: 212,
         dsle: 136,
         dssxw: 170,
     },
     Mermaimon: {
         base: 285,
-        dwds: 367,
-        dwdd: 433,
+        ds: 367,
+        dssm: 433,
         dsle: 199,
         dssxw: 198,
     },
     Whamon: {
         base: 286,
-        dwds: 173,
-        dwdd: 250,
+        ds: 173,
+        dssm: 250,
         dsle: 439,
         dssxw: 196,
     },
     MegaSeadramon: {
         base: 287,
-        dwds: 141,
-        dwdd: 211,
+        ds: 141,
+        dssm: 211,
         dsle: 135,
         dssxw: 207,
     },
     WaruSeadramon: {
         base: 288,
-        dwds: 368,
-        dwdd: 434,
+        ds: 368,
+        dssm: 434,
         dsle: 194,
         dssxw: 222,
     },
     Brachimon: {
         base: 289,
-        dwds: 369,
-        dwdd: 279,
+        ds: 369,
+        dssm: 279,
         dsle: 182,
         dssxw: 191,
     },
     Hangyomon: {
         base: 290,
-        dwds: 166,
-        dwdd: 242,
+        ds: 166,
+        dssm: 242,
         dsle: 440,
         dssxw: 181,
     },
     TonosamaGekomon: {
         base: 291,
-        dwds: 370,
-        dwdd: 207,
+        ds: 370,
+        dssm: 207,
         dsle: 441,
         dssxw: 175,
     },
     Anomalocarimon: {
         base: 292,
-        dwds: 371,
-        dwdd: 210,
+        ds: 371,
+        dssm: 210,
         dsle: 134,
         dssxw: 132,
     },
     MarineDevimon: {
         base: 293,
-        dwds: 372,
-        dwdd: 236,
+        ds: 372,
+        dssm: 236,
         dsle: 442,
         dssxw: 205,
     },
     AtlurKabuterimonB: {
         base: 294,
-        dwds: 138,
-        dwdd: 205,
+        ds: 138,
+        dssm: 205,
         dsle: 443,
         dssxw: 471,
     },
     Dinobeemon: {
         base: 295,
-        dwds: 154,
-        dwdd: 225,
+        ds: 154,
+        dssm: 225,
         dsle: 148,
         dssxw: 173,
     },
     Ookuwamon: {
         base: 296,
-        dwds: 139,
-        dwdd: 206,
+        ds: 139,
+        dssm: 206,
         dsle: 132,
         dssxw: 144,
     },
     Arukenimon: {
         base: 297,
-        dwds: 156,
-        dwdd: 227,
+        ds: 156,
+        dssm: 227,
         dsle: 150,
         dssxw: 133,
     },
     Jureimon: {
         base: 298,
-        dwds: 373,
-        dwdd: 263,
+        ds: 373,
+        dssm: 263,
         dsle: 172,
         dssxw: 164,
     },
     Blossomon: {
         base: 299,
-        dwds: 148,
-        dwdd: 218,
+        ds: 148,
+        dssm: 218,
         dsle: 142,
         dssxw: 193,
     },
     ArgomonUltimate: {
         base: 300,
-        dwds: 374,
-        dwdd: 296,
+        ds: 374,
+        dssm: 296,
         dsle: 192,
         dssxw: 134,
     },
     Andromon: {
         base: 301,
-        dwds: 133,
-        dwdd: 199,
+        ds: 133,
+        dssm: 199,
         dsle: 128,
         dssxw: 136,
     },
     MetalTyrannomon: {
         base: 302,
-        dwds: 375,
-        dwdd: 269,
+        ds: 375,
+        dssm: 269,
         dsle: 176,
         dssxw: 230,
     },
     Megadramon: {
         base: 303,
-        dwds: 135,
-        dwdd: 201,
+        ds: 135,
+        dssm: 201,
         dsle: 129,
         dssxw: 208,
     },
     Gigadramon: {
         base: 304,
-        dwds: 176,
-        dwdd: 255,
+        ds: 176,
+        dssm: 255,
         dsle: 165,
         dssxw: 151,
     },
     Mamemon: {
         base: 305,
-        dwds: 174,
-        dwdd: 251,
+        ds: 174,
+        dssm: 251,
         dsle: 164,
         dssxw: 204,
     },
     MetalMamemon: {
         base: 306,
-        dwds: 132,
-        dwdd: 198,
+        ds: 132,
+        dssm: 198,
         dsle: 127,
         dssxw: 210,
     },
     BigMamemon: {
         base: 307,
-        dwds: 376,
-        dwdd: 271,
+        ds: 376,
+        dssm: 271,
         dsle: 444,
         dssxw: 472,
     },
     Giromon: {
         base: 308,
-        dwds: 377,
-        dwdd: 267,
+        ds: 377,
+        dssm: 267,
         dsle: 445,
         dssxw: 152,
     },
     Tekkamon: {
         base: 309,
-        dwds: 378,
-        dwdd: 270,
+        ds: 378,
+        dssm: 270,
         dsle: 446,
         dssxw: 473,
     },
     Nanomon: {
         base: 310,
-        dwds: 379,
-        dwdd: 221,
+        ds: 379,
+        dssm: 221,
         dsle: 447,
         dssxw: 179,
     },
     BlueMeramon: {
         base: 311,
-        dwds: 380,
-        dwdd: 435,
+        ds: 380,
+        dssm: 435,
         dsle: 448,
         dssxw: 192,
     },
     Insekimon: {
         base: 312,
-        dwds: 175,
-        dwdd: 254,
+        ds: 175,
+        dssm: 254,
         dsle: 449,
         dssxw: 137,
     },
     Garbemon: {
         base: 313,
-        dwds: 183,
-        dwdd: 264,
+        ds: 183,
+        dssm: 264,
         dsle: 450,
         dssxw: 147,
     },
     Vademon: {
         base: 314,
-        dwds: 381,
-        dwdd: 268,
+        ds: 381,
+        dssm: 268,
         dsle: 175,
         dssxw: 195,
     },
     Volcamon: {
         base: 315,
-        dwds: 382,
-        dwdd: 194,
+        ds: 382,
+        dssm: 194,
         dsle: 123,
         dssxw: 197,
     },
     Piccolomon: {
         base: 316,
-        dwds: 136,
-        dwdd: 202,
+        ds: 136,
+        dssm: 202,
         dsle: 130,
         dssxw: 186,
     },
     Knightmon: {
         base: 317,
-        dwds: 383,
-        dwdd: 278,
+        ds: 383,
+        dssm: 278,
         dsle: 181,
         dssxw: 178,
     },
     SuperStarmon: {
         base: 318,
-        dwds: 170,
-        dwdd: 247,
+        ds: 170,
+        dssm: 247,
         dsle: 162,
         dssxw: 232,
     },
     Monzaemon: {
         base: 319,
-        dwds: 131,
-        dwdd: 196,
+        ds: 131,
+        dssm: 196,
         dsle: 125,
         dssxw: 211,
     },
     Digitamamon: {
         base: 320,
-        dwds: 137,
-        dwdd: 203,
+        ds: 137,
+        dssm: 203,
         dsle: 131,
         dssxw: 174,
     },
     Wisemon: {
         base: 321,
-        dwds: 384,
-        dwdd: 436,
+        ds: 384,
+        dssm: 436,
         dsle: 198,
         dssxw: 221,
     },
     WereGarurumonBlack: {
         base: 322,
-        dwds: 143,
-        dwdd: 213,
+        ds: 143,
+        dssm: 213,
         dsle: 137,
         dssxw: 474,
     },
     BlackRapidmon: {
         base: 323,
-        dwds: 163,
-        dwdd: 234,
+        ds: 163,
+        dssm: 234,
         dsle: 451,
         dssxw: 475,
     },
     SkullGreymon: {
         base: 324,
-        dwds: 385,
-        dwdd: 197,
+        ds: 385,
+        dssm: 197,
         dsle: 126,
         dssxw: 165,
     },
     Kimeramon: {
         base: 325,
-        dwds: 386,
-        dwdd: 243,
+        ds: 386,
+        dssm: 243,
         dsle: 160,
         dssxw: 149,
     },
     Vamdemon: {
         base: 326,
-        dwds: 145,
-        dwdd: 215,
+        ds: 145,
+        dssm: 215,
         dsle: 139,
         dssxw: 141,
     },
     LadyDevimon: {
         base: 327,
-        dwds: 146,
-        dwdd: 216,
+        ds: 146,
+        dssm: 216,
         dsle: 140,
         dssxw: 219,
     },
     Mummymon: {
         base: 328,
-        dwds: 157,
-        dwdd: 228,
+        ds: 157,
+        dssm: 228,
         dsle: 151,
         dssxw: 202,
     },
     Infermon: {
         base: 329,
-        dwds: 162,
-        dwdd: 233,
+        ds: 162,
+        dssm: 233,
         dsle: 156,
         dssxw: 138,
     },
     Vajramon: {
         base: 330,
-        dwds: 387,
-        dwdd: 275,
+        ds: 387,
+        dssm: 275,
         dsle: 452,
         dssxw: 140,
     },
     Phantomon: {
         base: 331,
-        dwds: 388,
-        dwdd: 274,
+        ds: 388,
+        dssm: 274,
         dsle: 178,
         dssxw: 187,
     },
     Matadormon: {
         base: 332,
-        dwds: 182,
-        dwdd: 261,
+        ds: 182,
+        dssm: 261,
         dsle: 171,
         dssxw: 200,
     },
     EXTyrannomon: {
         base: 333,
-        dwds: 389,
-        dwdd: 272,
+        ds: 389,
+        dssm: 272,
         dsle: 177,
         dssxw: 227,
     },
     SkullBaluchimon: {
         base: 334,
-        dwds: 390,
-        dwdd: 437,
+        ds: 390,
+        dssm: 437,
         dsle: 195,
         dssxw: 166,
     },
     Scorpiomon: {
         base: 335,
-        dwds: 391,
-        dwdd: 438,
+        ds: 391,
+        dssm: 438,
         dsle: 453,
         dssxw: 167,
     },
     Flaremon: {
         base: 336,
-        dwds: 392,
-        dwdd: 286,
+        ds: 392,
+        dssm: 286,
         dsle: 186,
         dssxw: 188,
     },
     Crescemon: {
         base: 337,
-        dwds: 393,
-        dwdd: 287,
+        ds: 393,
+        dssm: 287,
         dsle: 187,
         dssxw: 153,
     },
     Butenmon: {
         base: 338,
-        dwds: 394,
-        dwdd: 439,
+        ds: 394,
+        dssm: 439,
         dsle: 200,
         dssxw: 190,
     },
     LucemonFM: {
         base: 339,
-        dwds: 395,
-        dwdd: 265,
+        ds: 395,
+        dssm: 265,
         dsle: 173,
         dssxw: 218,
     },
     MadLeomon: {
         base: 340,
-        dwds: 396,
-        dwdd: 440,
+        ds: 396,
+        dssm: 440,
         dsle: 454,
         dssxw: 381,
     },
     ShoutmonX3: {
         base: 341,
-        dwds: 397,
-        dwdd: 441,
+        ds: 397,
+        dssm: 441,
         dsle: 455,
         dssxw: 360,
     },
     ShoutmonX4: {
         base: 342,
-        dwds: 398,
-        dwdd: 442,
+        ds: 398,
+        dssm: 442,
         dsle: 456,
         dssxw: 361,
     },
     MetalGreymon2010: {
         base: 343,
-        dwds: 399,
-        dwdd: 443,
+        ds: 399,
+        dssm: 443,
         dsle: 457,
         dssxw: 382,
     },
     DarkKnightmon: {
         base: 344,
-        dwds: 400,
-        dwdd: 444,
+        ds: 400,
+        dssm: 444,
         dsle: 458,
         dssxw: 370,
     },
     WarGreymon: {
         base: 345,
-        dwds: 194,
-        dwdd: 309,
+        ds: 194,
+        dssm: 309,
         dsle: 210,
         dssxw: 238,
     },
     MetalGarurumon: {
         base: 346,
-        dwds: 195,
-        dwdd: 310,
+        ds: 195,
+        dssm: 310,
         dsle: 211,
         dssxw: 298,
     },
     Hououmon: {
         base: 347,
-        dwds: 191,
-        dwdd: 306,
+        ds: 191,
+        dssm: 306,
         dsle: 207,
         dssxw: 290,
     },
     Rosemon: {
         base: 348,
-        dwds: 193,
-        dwdd: 308,
+        ds: 193,
+        dssm: 308,
         dsle: 209,
         dssxw: 303,
     },
     HeraclesKabuterimon: {
         base: 349,
-        dwds: 184,
-        dwdd: 299,
+        ds: 184,
+        dssm: 299,
         dsle: 201,
         dssxw: 318,
     },
     Vikemon: {
         base: 350,
-        dwds: 232,
-        dwdd: 362,
+        ds: 232,
+        dssm: 362,
         dsle: 247,
         dssxw: 239,
     },
     Seraphimon: {
         base: 351,
-        dwds: 203,
-        dwdd: 318,
+        ds: 203,
+        dssm: 318,
         dsle: 216,
         dssxw: 265,
     },
     Holydramon: {
         base: 352,
-        dwds: 401,
-        dwdd: 369,
+        ds: 401,
+        dssm: 369,
         dsle: 252,
         dssxw: 291,
     },
     ImperialdramonDM: {
         base: 353,
-        dwds: 199,
-        dwdd: 314,
+        ds: 199,
+        dssm: 314,
         dsle: 214,
         dssxw: 319,
     },
     Dukemon: {
         base: 354,
-        dwds: 207,
-        dwdd: 323,
+        ds: 207,
+        dssm: 323,
         dsle: 221,
         dssxw: 274,
     },
     Sakuyamon: {
         base: 355,
-        dwds: 210,
-        dwdd: 326,
+        ds: 210,
+        dssm: 326,
         dsle: 223,
         dssxw: 257,
     },
     SaintGargomon: {
         base: 356,
-        dwds: 209,
-        dwdd: 325,
+        ds: 209,
+        dssm: 325,
         dsle: 222,
         dssxw: 266,
     },
     Justimon: {
         base: 357,
-        dwds: 231,
-        dwdd: 361,
+        ds: 231,
+        dssm: 361,
         dsle: 246,
         dssxw: 260,
     },
     MarineAngemon: {
         base: 358,
-        dwds: 187,
-        dwdd: 302,
+        ds: 187,
+        dssm: 302,
         dsle: 203,
         dssxw: 320,
     },
     ShineGreymon: {
         base: 359,
-        dwds: 402,
-        dwdd: 374,
+        ds: 402,
+        dssm: 374,
         dsle: 256,
         dssxw: 325,
     },
     MirageGaogamon: {
         base: 360,
-        dwds: 403,
-        dwdd: 375,
+        ds: 403,
+        dssm: 375,
         dsle: 257,
         dssxw: 322,
     },
     Ravemon: {
         base: 361,
-        dwds: 404,
-        dwdd: 377,
+        ds: 404,
+        dssm: 377,
         dsle: 259,
         dssxw: 301,
     },
     Sleipmon: {
         base: 362,
-        dwds: 235,
-        dwdd: 373,
+        ds: 235,
+        dssm: 373,
         dsle: 255,
         dssxw: 264,
     },
     BanchoLeomon: {
         base: 363,
-        dwds: 224,
-        dwdd: 349,
+        ds: 224,
+        dssm: 349,
         dsle: 240,
         dssxw: 315,
     },
     BlackWarGreymon: {
         base: 364,
-        dwds: 233,
-        dwdd: 363,
+        ds: 233,
+        dssm: 363,
         dsle: 248,
         dssxw: 316,
     },
     ImperialdramonDMB: {
         base: 365,
-        dwds: 214,
-        dwdd: 334,
+        ds: 214,
+        dssm: 334,
         dsle: 459,
         dssxw: 476,
     },
     Megidramon: {
         base: 366,
-        dwds: 405,
-        dwdd: 372,
+        ds: 405,
+        dssm: 372,
         dsle: 254,
         dssxw: 296,
     },
     ChaosDukemon: {
         base: 367,
-        dwds: 228,
-        dwdd: 358,
+        ds: 228,
+        dssm: 358,
         dsle: 299,
         dssxw: 345,
     },
     Kuzuhamon: {
         base: 368,
-        dwds: 227,
-        dwdd: 357,
+        ds: 227,
+        dssm: 357,
         dsle: 460,
         dssxw: 477,
     },
     BlackSaintGargomon: {
         base: 369,
-        dwds: 216,
-        dwdd: 339,
+        ds: 216,
+        dssm: 339,
         dsle: 461,
         dssxw: 478,
     },
     CherubimonAku: {
         base: 370,
-        dwds: 206,
-        dwdd: 322,
+        ds: 206,
+        dssm: 322,
         dsle: 220,
         dssxw: 253,
     },
     CherubimonZen: {
         base: 371,
-        dwds: 205,
-        dwdd: 321,
+        ds: 205,
+        dssm: 321,
         dsle: 219,
         dssxw: 254,
     },
     Goddramon: {
         base: 372,
-        dwds: 406,
-        dwdd: 354,
+        ds: 406,
+        dssm: 354,
         dsle: 243,
         dssxw: 255,
     },
     Dorugoramon: {
         base: 373,
-        dwds: 223,
-        dwdd: 347,
+        ds: 223,
+        dssm: 347,
         dsle: 238,
         dssxw: 277,
     },
     Darkdramon: {
         base: 374,
-        dwds: 225,
-        dwdd: 350,
+        ds: 225,
+        dssm: 350,
         dsle: 241,
         dssxw: 267,
     },
     Cannondramon: {
         base: 375,
-        dwds: 220,
-        dwdd: 344,
+        ds: 220,
+        dssm: 344,
         dsle: 462,
         dssxw: 245,
     },
     SaberLeomon: {
         base: 376,
-        dwds: 185,
-        dwdd: 300,
+        ds: 185,
+        dssm: 300,
         dsle: 202,
         dssxw: 256,
     },
     MetalEtemon: {
         base: 377,
-        dwds: 186,
-        dwdd: 301,
+        ds: 186,
+        dssm: 301,
         dsle: 463,
         dssxw: 297,
     },
     Gryphomon: {
         base: 378,
-        dwds: 407,
-        dwdd: 330,
+        ds: 407,
+        dssm: 330,
         dsle: 464,
         dssxw: 252,
     },
     SkullMammon: {
         base: 379,
-        dwds: 408,
-        dwdd: 364,
+        ds: 408,
+        dssm: 364,
         dsle: 465,
         dssxw: 262,
     },
     Valkyrimon: {
         base: 380,
-        dwds: 230,
-        dwdd: 360,
+        ds: 230,
+        dssm: 360,
         dsle: 245,
         dssxw: 240,
     },
     Crossmon: {
         base: 381,
-        dwds: 222,
-        dwdd: 346,
+        ds: 222,
+        dssm: 346,
         dsle: 237,
         dssxw: 249,
     },
     Plesiomon: {
         base: 382,
-        dwds: 212,
-        dwdd: 331,
+        ds: 212,
+        dssm: 331,
         dsle: 227,
         dssxw: 288,
     },
     JumboGamemon: {
         base: 383,
-        dwds: 409,
-        dwdd: 376,
+        ds: 409,
+        dssm: 376,
         dsle: 258,
         dssxw: 261,
     },
     Pukumon: {
         base: 384,
-        dwds: 410,
-        dwdd: 329,
+        ds: 410,
+        dssm: 329,
         dsle: 226,
         dssxw: 286,
     },
     GranKuwagamon: {
         base: 385,
-        dwds: 234,
-        dwdd: 365,
+        ds: 234,
+        dssm: 365,
         dsle: 249,
         dssxw: 317,
     },
     TigerVespamon: {
         base: 386,
-        dwds: 411,
-        dwdd: 445,
+        ds: 411,
+        dssm: 445,
         dsle: 287,
         dssxw: 326,
     },
     Lotusmon: {
         base: 387,
-        dwds: 412,
-        dwdd: 389,
+        ds: 412,
+        dssm: 389,
         dsle: 264,
         dssxw: 304,
     },
     ArgomonMega: {
         base: 388,
-        dwds: 413,
-        dwdd: 394,
+        ds: 413,
+        dssm: 394,
         dsle: 267,
         dssxw: 235,
     },
     QueenChessmon: {
         base: 389,
-        dwds: 414,
-        dwdd: 378,
+        ds: 414,
+        dssm: 378,
         dsle: 466,
         dssxw: 323,
     },
     KingChessmon: {
         base: 390,
-        dwds: 415,
-        dwdd: 379,
+        ds: 415,
+        dssm: 379,
         dsle: 467,
         dssxw: 246,
     },
     HiAndromon: {
         base: 391,
-        dwds: 204,
-        dwdd: 319,
+        ds: 204,
+        dssm: 319,
         dsle: 217,
         dssxw: 279,
     },
     PrinceMamemon: {
         base: 392,
-        dwds: 215,
-        dwdd: 336,
+        ds: 215,
+        dssm: 336,
         dsle: 229,
         dssxw: 287,
     },
     Parasimon: {
         base: 393,
-        dwds: 219,
-        dwdd: 343,
+        ds: 219,
+        dssm: 343,
         dsle: 235,
         dssxw: 282,
     },
     Boltmon: {
         base: 394,
-        dwds: 416,
-        dwdd: 335,
+        ds: 416,
+        dssm: 335,
         dsle: 228,
         dssxw: 292,
     },
     Ebemon: {
         base: 395,
-        dwds: 417,
-        dwdd: 352,
+        ds: 417,
+        dssm: 352,
         dsle: 242,
         dssxw: 237,
     },
     Ophanimon: {
         base: 396,
-        dwds: 418,
-        dwdd: 337,
+        ds: 418,
+        dssm: 337,
         dsle: 230,
         dssxw: 242,
     },
     SlashAngemon: {
         base: 397,
-        dwds: 221,
-        dwdd: 345,
+        ds: 221,
+        dssm: 345,
         dsle: 236,
         dssxw: 324,
     },
     Jijimon: {
         base: 398,
-        dwds: 217,
-        dwdd: 340,
+        ds: 217,
+        dssm: 340,
         dsle: 232,
         dssxw: 259,
     },
     Babamon: {
         base: 399,
-        dwds: 218,
-        dwdd: 341,
+        ds: 218,
+        dssm: 341,
         dsle: 233,
         dssxw: 280,
     },
     Pharaohmon: {
         base: 400,
-        dwds: 419,
-        dwdd: 366,
+        ds: 419,
+        dssm: 366,
         dsle: 250,
         dssxw: 285,
     },
     Anubimon: {
         base: 401,
-        dwds: 420,
-        dwdd: 342,
+        ds: 420,
+        dssm: 342,
         dsle: 234,
         dssxw: 233,
     },
     ChronomonHM: {
         base: 402,
-        dwds: 239,
-        dwdd: 380,
+        ds: 239,
+        dssm: 380,
         dsle: 260,
         dssxw: 250,
     },
     VenomVamdemon: {
         base: 403,
-        dwds: 197,
-        dwdd: 312,
+        ds: 197,
+        dssm: 312,
         dsle: 213,
         dssxw: 328,
     },
     Diaboromon: {
         base: 404,
-        dwds: 211,
-        dwdd: 327,
+        ds: 211,
+        dssm: 327,
         dsle: 224,
         dssxw: 270,
     },
     Gulfmon: {
         base: 405,
-        dwds: 421,
-        dwdd: 353,
+        ds: 421,
+        dssm: 353,
         dsle: 468,
         dssxw: 244,
     },
     Devitamamon: {
         base: 406,
-        dwds: 422,
-        dwdd: 320,
+        ds: 422,
+        dssm: 320,
         dsle: 218,
         dssxw: 273,
     },
     Zanbamon: {
         base: 407,
-        dwds: 423,
-        dwdd: 338,
+        ds: 423,
+        dssm: 338,
         dsle: 231,
         dssxw: 258,
     },
     Deathmon: {
         base: 408,
-        dwds: 202,
-        dwdd: 317,
+        ds: 202,
+        dssm: 317,
         dsle: 215,
         dssxw: 272,
     },
     DeathmonB: {
         base: 409,
-        dwds: 226,
-        dwdd: 356,
+        ds: 226,
+        dssm: 356,
         dsle: 469,
         dssxw: 479,
     },
     Lampmon: {
         base: 410,
-        dwds: 424,
-        dwdd: 298,
+        ds: 424,
+        dssm: 298,
         dsle: 470,
         dssxw: 480,
     },
     MetalSeadramon: {
         base: 411,
-        dwds: 229,
-        dwdd: 359,
+        ds: 229,
+        dssm: 359,
         dsle: 244,
         dssxw: 321,
     },
     GigaSeadramon: {
         base: 412,
-        dwds: 188,
-        dwdd: 303,
+        ds: 188,
+        dssm: 303,
         dsle: 204,
         dssxw: 247,
     },
     Pinocchimon: {
         base: 413,
-        dwds: 192,
-        dwdd: 307,
+        ds: 192,
+        dssm: 307,
         dsle: 208,
         dssxw: 284,
     },
     Mugendramon: {
         base: 414,
-        dwds: 196,
-        dwdd: 311,
+        ds: 196,
+        dssm: 311,
         dsle: 212,
         dssxw: 295,
     },
     Millenniumon: {
         base: 415,
-        dwds: 425,
-        dwdd: 370,
+        ds: 425,
+        dssm: 370,
         dsle: 253,
         dssxw: 294,
     },
     Piemon: {
         base: 416,
-        dwds: 189,
-        dwdd: 304,
+        ds: 189,
+        dssm: 304,
         dsle: 205,
         dssxw: 283,
     },
     Apollomon: {
         base: 417,
-        dwds: 426,
-        dwdd: 383,
+        ds: 426,
+        dssm: 383,
         dsle: 262,
         dssxw: 234,
     },
     Dianamon: {
         base: 418,
-        dwds: 427,
-        dwdd: 384,
+        ds: 427,
+        dssm: 384,
         dsle: 263,
         dssxw: 269,
     },
     Minervamon: {
         base: 419,
-        dwds: 428,
-        dwdd: 395,
+        ds: 428,
+        dssm: 395,
         dsle: 268,
         dssxw: 293,
     },
     Neptunemon: {
         base: 420,
-        dwds: 238,
-        dwdd: 328,
+        ds: 238,
+        dssm: 328,
         dsle: 225,
         dssxw: 278,
     },
     Mercurimon: {
         base: 421,
-        dwds: 429,
-        dwdd: 446,
+        ds: 429,
+        dssm: 446,
         dsle: 271,
         dssxw: 299,
     },
     Spinomon: {
         base: 422,
-        dwds: 430,
-        dwdd: 447,
+        ds: 430,
+        dssm: 447,
         dsle: 270,
         dssxw: 263,
     },
     Gaioumon: {
         base: 423,
-        dwds: 431,
-        dwdd: 448,
+        ds: 431,
+        dssm: 448,
         dsle: 272,
         dssxw: 243,
     },
     GranDracmon: {
         base: 424,
-        dwds: 432,
-        dwdd: 449,
+        ds: 432,
+        dssm: 449,
         dsle: 273,
         dssxw: 251,
     },
     Beelzebumon: {
         base: 425,
-        dwds: 236,
-        dwdd: 348,
+        ds: 236,
+        dssm: 348,
         dsle: 239,
         dssxw: 289,
     },
     Demon: {
         base: 426,
-        dwds: 190,
-        dwdd: 205,
+        ds: 190,
+        dssm: 205,
         dsle: 206,
         dssxw: 271,
     },
     Lilithmon: {
         base: 427,
-        dwds: 433,
-        dwdd: 381,
+        ds: 433,
+        dssm: 381,
         dsle: 261,
         dssxw: 300,
     },
     Barbamon: {
         base: 428,
-        dwds: 434,
-        dwdd: 450,
+        ds: 434,
+        dssm: 450,
         dsle: 286,
         dssxw: 281,
     },
     Alphamon: {
         base: 429,
-        dwds: 435,
-        dwdd: 368,
+        ds: 435,
+        dssm: 368,
         dsle: 251,
         dssxw: 236,
     },
     Dynasmon: {
         base: 430,
-        dwds: 436,
-        dwdd: 451,
+        ds: 436,
+        dssm: 451,
         dsle: 288,
         dssxw: 275,
     },
     LordKnightmon: {
         base: 431,
-        dwds: 437,
-        dwdd: 452,
+        ds: 437,
+        dssm: 452,
         dsle: 289,
         dssxw: 302,
     },
     Duftmon: {
         base: 432,
-        dwds: 438,
-        dwdd: 396,
+        ds: 438,
+        dssm: 396,
         dsle: 269,
         dssxw: 276,
     },
     UlforceVeedramon: {
         base: 433,
-        dwds: 439,
-        dwdd: 453,
+        ds: 439,
+        dssm: 453,
         dsle: 284,
         dssxw: 327,
     },
     Craniummon: {
         base: 434,
-        dwds: 440,
-        dwdd: 454,
+        ds: 440,
+        dssm: 454,
         dsle: 285,
         dssxw: 248,
     },
     Examon: {
         base: 435,
-        dwds: 441,
-        dwdd: 455,
+        ds: 441,
+        dssm: 455,
         dsle: 290,
         dssxw: 241,
     },
     DaiPenmon: {
         base: 436,
-        dwds: 442,
-        dwdd: 456,
+        ds: 442,
+        dssm: 456,
         dsle: 471,
         dssxw: 268,
     },
     AncientGreymon: {
         base: 437,
-        dwds: 443,
-        dwdd: 457,
+        ds: 443,
+        dssm: 457,
         dsle: 277,
         dssxw: 307,
     },
     AncientGarurumon: {
         base: 438,
-        dwds: 444,
-        dwdd: 458,
+        ds: 444,
+        dssm: 458,
         dsle: 275,
         dssxw: 306,
     },
     AncientMegatheriumon: {
         base: 439,
-        dwds: 445,
-        dwdd: 459,
+        ds: 445,
+        dssm: 459,
         dsle: 276,
         dssxw: 313,
     },
     AncientIrismon: {
         base: 440,
-        dwds: 446,
-        dwdd: 460,
+        ds: 446,
+        dssm: 460,
         dsle: 274,
         dssxw: 305,
     },
     AncientBeatmon: {
         base: 441,
-        dwds: 447,
-        dwdd: 461,
+        ds: 447,
+        dssm: 461,
         dsle: 282,
         dssxw: 310,
     },
     AncientSphinxmon: {
         base: 442,
-        dwds: 448,
-        dwdd: 462,
+        ds: 448,
+        dssm: 462,
         dsle: 280,
         dssxw: 308,
     },
     AncientVolcamon: {
         base: 443,
-        dwds: 449,
-        dwdd: 463,
+        ds: 449,
+        dssm: 463,
         dsle: 283,
         dssxw: 311,
     },
     AncientTroiamon: {
         base: 444,
-        dwds: 450,
-        dwdd: 464,
+        ds: 450,
+        dssm: 464,
         dsle: 281,
         dssxw: 309,
     },
     AncientMermaimon: {
         base: 445,
-        dwds: 451,
-        dwdd: 465,
+        ds: 451,
+        dssm: 465,
         dsle: 278,
         dssxw: 312,
     },
     AncientWisemon: {
         base: 446,
-        dwds: 452,
-        dwdd: 466,
+        ds: 452,
+        dssm: 466,
         dsle: 279,
         dssxw: 314,
     },
     DotShineGreymon: {
         base: 447,
-        dwds: 453,
-        dwdd: 390,
+        ds: 453,
+        dssm: 390,
         dsle: 265,
         dssxw: 481,
     },
     DotMirageGaogamon: {
         base: 448,
-        dwds: 454,
-        dwdd: 391,
+        ds: 454,
+        dssm: 391,
         dsle: 266,
         dssxw: 482,
     },
     Tactimon: {
         base: 449,
-        dwds: 455,
-        dwdd: 467,
+        ds: 455,
+        dssm: 467,
         dsle: 472,
         dssxw: 369,
     },
     Blastmon: {
         base: 450,
-        dwds: 456,
-        dwdd: 468,
+        ds: 456,
+        dssm: 468,
         dsle: 473,
         dssxw: 378,
     },
     Lilithmon2010: {
         base: 451,
-        dwds: 457,
-        dwdd: 469,
+        ds: 457,
+        dssm: 469,
         dsle: 474,
         dssxw: 384,
     },
     Beelzebumon2010: {
         base: 452,
-        dwds: 458,
-        dwdd: 470,
+        ds: 458,
+        dssm: 470,
         dsle: 475,
         dssxw: 379,
     },
     ShoutmonX4B: {
         base: 453,
-        dwds: 459,
-        dwdd: 471,
+        ds: 459,
+        dssm: 471,
         dsle: 476,
         dssxw: 363,
     },
     ShoutmonX4S: {
         base: 454,
-        dwds: 460,
-        dwdd: 472,
+        ds: 460,
+        dssm: 472,
         dsle: 477,
         dssxw: 391,
     },
     ShoutmonX5: {
         base: 455,
-        dwds: 461,
-        dwdd: 473,
+        ds: 461,
+        dssm: 473,
         dsle: 478,
         dssxw: 362,
     },
     ShoutmonX3GM: {
         base: 456,
-        dwds: 462,
-        dwdd: 474,
+        ds: 462,
+        dssm: 474,
         dsle: 479,
         dssxw: 389,
     },
     ShoutmonX3SD: {
         base: 457,
-        dwds: 463,
-        dwdd: 475,
+        ds: 463,
+        dssm: 475,
         dsle: 480,
         dssxw: 390,
     },
     GreyKnightsmon: {
         base: 458,
-        dwds: 464,
-        dwdd: 476,
+        ds: 464,
+        dssm: 476,
         dsle: 481,
         dssxw: 388,
     },
     Omegamon: {
         base: 459,
-        dwds: 198,
-        dwdd: 313,
+        ds: 198,
+        dssm: 313,
         dsle: 291,
         dssxw: 333,
     },
     ImperialdramonFM: {
         base: 460,
-        dwds: 200,
-        dwdd: 315,
+        ds: 200,
+        dssm: 315,
         dsle: 292,
         dssxw: 346,
     },
     ImperialdramonPM: {
         base: 461,
-        dwds: 201,
-        dwdd: 316,
+        ds: 201,
+        dssm: 316,
         dsle: 293,
         dssxw: 347,
     },
     DukemonCM: {
         base: 462,
-        dwds: 208,
-        dwdd: 324,
+        ds: 208,
+        dssm: 324,
         dsle: 294,
         dssxw: 340,
     },
     BeelzebumonBM: {
         base: 463,
-        dwds: 465,
-        dwdd: 392,
+        ds: 465,
+        dssm: 392,
         dsle: 307,
         dssxw: 483,
     },
     Susanoomon: {
         base: 464,
-        dwds: 466,
-        dwdd: 367,
+        ds: 466,
+        dssm: 367,
         dsle: 300,
         dssxw: 338,
     },
     ShineGreymonRM: {
         base: 465,
-        dwds: 467,
-        dwdd: 386,
+        ds: 467,
+        dssm: 386,
         dsle: 304,
         dssxw: 351,
     },
     ShineGreymonBM: {
         base: 466,
-        dwds: 468,
-        dwdd: 385,
+        ds: 468,
+        dssm: 385,
         dsle: 303,
         dssxw: 350,
     },
     MirageGaogamonBM: {
         base: 467,
-        dwds: 469,
-        dwdd: 387,
+        ds: 469,
+        dssm: 387,
         dsle: 305,
         dssxw: 348,
     },
     RosemonBM: {
         base: 468,
-        dwds: 470,
-        dwdd: 393,
+        ds: 470,
+        dssm: 393,
         dsle: 308,
         dssxw: 343,
     },
     RavemonBM: {
         base: 469,
-        dwds: 471,
-        dwdd: 388,
+        ds: 471,
+        dssm: 388,
         dsle: 306,
         dssxw: 342,
     },
     Apocalymon: {
         base: 470,
-        dwds: 472,
-        dwdd: 351,
+        ds: 472,
+        dssm: 351,
         dsle: 297,
         dssxw: 330,
     },
     BelialVamdemon: {
         base: 471,
-        dwds: 213,
-        dwdd: 333,
+        ds: 213,
+        dssm: 333,
         dsle: 296,
         dssxw: 344,
     },
     Armagemon: {
         base: 472,
-        dwds: 473,
-        dwdd: 332,
+        ds: 473,
+        dssm: 332,
         dsle: 295,
         dssxw: 329,
     },
     Valdurmon: {
         base: 473,
-        dwds: 237,
-        dwdd: 382,
+        ds: 237,
+        dssm: 382,
         dsle: 302,
         dssxw: 332,
     },
     Aegisdramon: {
         base: 474,
-        dwds: 474,
-        dwdd: 477,
+        ds: 474,
+        dssm: 477,
         dsle: 314,
         dssxw: 331,
     },
     Chaosdramon: {
         base: 475,
-        dwds: 475,
-        dwdd: 478,
+        ds: 475,
+        dssm: 478,
         dsle: 482,
         dssxw: 334,
     },
     Chaosmon: {
         base: 476,
-        dwds: 476,
-        dwdd: 397,
+        ds: 476,
+        dssm: 397,
         dsle: 309,
         dssxw: 335,
     },
     Qinglongmon: {
         base: 477,
-        dwds: 477,
-        dwdd: 479,
+        ds: 477,
+        dssm: 479,
         dsle: 310,
         dssxw: 339,
     },
     Xuanwumon: {
         base: 478,
-        dwds: 478,
-        dwdd: 480,
+        ds: 478,
+        dssm: 480,
         dsle: 313,
         dssxw: 336,
     },
     Baihumon: {
         base: 479,
-        dwds: 479,
-        dwdd: 481,
+        ds: 479,
+        dssm: 481,
         dsle: 311,
         dssxw: 341,
     },
     Zhuqiaomon: {
         base: 480,
-        dwds: 480,
-        dwdd: 482,
+        ds: 480,
+        dssm: 482,
         dsle: 312,
         dssxw: 337,
     },
     MoonMillenniumon: {
         base: 481,
-        dwds: 481,
-        dwdd: 371,
+        ds: 481,
+        dssm: 371,
         dsle: 301,
         dssxw: 349,
     },
     ZeedMillenniumon: {
         base: 482,
-        dwds: 482,
-        dwdd: 355,
+        ds: 482,
+        dssm: 355,
         dsle: 298,
         dssxw: 352,
     },
     ShoutmonX5S: {
         base: 483,
-        dwds: 483,
-        dwdd: 483,
+        ds: 483,
+        dssm: 483,
         dsle: 483,
         dssxw: 392,
     },
@@ -9304,7 +9317,7 @@ const Bosses = {
 
 // TODO: Figure out if it's better to have a frozen array and access the story "Enums" as an array using keys and values reversed, or use the new proxy version
 const Story = {
-    dwds: [
+    ds: [
         Bosses.Ogremon,
         Bosses.BlackAgumon,
         SpecialValues.bronze,
@@ -9322,12 +9335,12 @@ const Story = {
         SpecialValues.king,
         Bosses.LucemonFM,
     ],
-    dwdd: {},
+    dssm: {},
     dsle: {},
     dssxw: {},
 }
 
-// const StoryDWDS = Enum({
+// const StoryDS = Enum({
 //     Ogremon: 0,
 //     BlackAgumon: 1,
 //     Bronze: 2,
@@ -9346,7 +9359,7 @@ const Story = {
 //     LucemonFM: 15,
 // })
 
-// const StoryDWDD = Enum({
+// const StoryDSSM = Enum({
 
 // })
 
@@ -9434,7 +9447,7 @@ digimon requirements: Story completion, Quest completion or starter chosen
                     level: 9,
                     foundIn: [1, 2],
                     requirement: {
-                        story: Story.dwds.Ogremon,
+                        story: Story.ds.Ogremon,
                         starter: DataNames.Koromon,
                     },
                 },
@@ -9443,7 +9456,7 @@ digimon requirements: Story completion, Quest completion or starter chosen
                     level: 9,
                     foundIn: [1, 2],
                     requirement: {
-                        story: Story.dwds.Ogremon,
+                        story: Story.ds.Ogremon,
                         starter: DataNames.Tsunomon,
                     },
                 },
@@ -9452,7 +9465,7 @@ digimon requirements: Story completion, Quest completion or starter chosen
                     level: 9,
                     foundIn: [1, 2],
                     requirement: {
-                        story: Story.dwds.Ogremon,
+                        story: Story.ds.Ogremon,
                         starter: DataNames.Tanemon,
                     },
                 },
@@ -9471,14 +9484,14 @@ digimon requirements: Story completion, Quest completion or starter chosen
                     level: 7,
                     foundIn: [1, 2],
                     requirement: {
-                        story: Story.dwds.Ogremon,
+                        story: Story.ds.Ogremon,
                     },
                 },
             ],
 */
 
 export const MapsList = {
-    dwds: {
+    ds: {
         dataForest: {
             dataName: "dataForest",
             name: "Data Forest",
@@ -9718,7 +9731,7 @@ export const MapsList = {
             digimonPool: [],
         },
     },
-    dwdd: {
+    dssm: {
         loginMountain: {
             name: "Login Mountain",
             image: "",
@@ -10014,13 +10027,13 @@ export const MapsList = {
 // When the type is "boss", the "map" and "area" indicate where said boss spawns. While this story is active, no wild Digimon will spawn in that area
 // - unlocks: if beating this part of the story unlocks a new area. Some story parts don't unlock new areas, but add new Digimon to old areas
 export const GameProgress = {
-    dwds: [
-        { type: SpecialValues.defeat, map: MapsList.dwds.dataForest.dataName, area: 0, amount: 5, unlocks: { map: MapsList.dwds.dataForest.dataName, area: 1 } },
-        { type: SpecialValues.defeat, map: MapsList.dwds.dataForest.dataName, area: 1, amount: 5, unlocks: { map: MapsList.dwds.dataForest.dataName, area: 2 } },
-        { type: SpecialValues.bosses, bosses: [{ dataName: Bosses.Ogremon, level: 7 }], map: MapsList.dwds.dataForest.dataName, area: 2, unlocks: { map: MapsList.dwds.trainingPeak.dataName, area: 0 } },
-        { type: SpecialValues.defeat, map: MapsList.dwds.trainingPeak.dataName, area: 0, amount: 10, unlocks: { map: MapsList.dwds.trainingPeak.dataName, area: 1 } },
+    ds: [
+        { type: SpecialValues.defeat, map: MapsList.ds.dataForest.dataName, area: 0, amount: 5, unlocks: { map: MapsList.ds.dataForest.dataName, area: 1 } },
+        { type: SpecialValues.defeat, map: MapsList.ds.dataForest.dataName, area: 1, amount: 5, unlocks: { map: MapsList.ds.dataForest.dataName, area: 2 } },
+        { type: SpecialValues.bosses, bosses: [{ dataName: Bosses.Ogremon, level: 7 }], map: MapsList.ds.dataForest.dataName, area: 2, unlocks: { map: MapsList.ds.trainingPeak.dataName, area: 0 } },
+        { type: SpecialValues.defeat, map: MapsList.ds.trainingPeak.dataName, area: 0, amount: 10, unlocks: { map: MapsList.ds.trainingPeak.dataName, area: 1 } },
     ],
-    dwdd: [
+    dssm: [
 
     ],
     dsle: [
@@ -10031,18 +10044,18 @@ export const GameProgress = {
     ]
 };
 
-// TODO: Add Fusion and Armor evolution to dawn/dusk Digimon
+// TODO: Add Fusion and Armor evolution to sunburst/moonlight Digimon
 
-// TODO: Check dawn/dusk locations
+// TODO: Check sunburst/moonlight locations
 
 export const DigimonList = {
     //#region Baby
     Koromon: {
         species: [Species.DRG],
         stage: Stage.stage1,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.dataForest,
+                area: MapsList.ds.dataForest,
                 special: SpecialValues.starter,
             },
             evolutions: [
@@ -10068,9 +10081,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Koromon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.limitValley,
+                area: MapsList.dssm.limitValley,
                 version: DataNames.both,
             },
             evolutions: [
@@ -10124,9 +10137,9 @@ export const DigimonList = {
     Tsunomon: {
         species: [Species.BST],
         stage: Stage.stage1,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.dataForest,
+                area: MapsList.ds.dataForest,
                 special: SpecialValues.starter,
             },
             evolutions: [
@@ -10149,9 +10162,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Tsunomon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -10192,9 +10205,9 @@ export const DigimonList = {
     Tanemon: {
         species: [Species.INS, Species.PLN],
         stage: Stage.stage1,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.dataForest,
+                area: MapsList.ds.dataForest,
                 special: SpecialValues.starter,
             },
             evolutions: [
@@ -10217,9 +10230,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Tanemon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.chipForest,
+                area: MapsList.dssm.chipForest,
                 version: DataNames.both,
             },
             evolutions: [
@@ -10272,9 +10285,9 @@ export const DigimonList = {
     Poyomon: {
         species: [Species.AQU],
         stage: Stage.stage1,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.dataForest,
+                area: MapsList.ds.dataForest,
             },
             evolutions: [
                 {
@@ -10296,9 +10309,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Poyomon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.loopSwamp,
+                area: MapsList.dssm.loopSwamp,
                 version: DataNames.both,
             },
             evolutions: [
@@ -10345,9 +10358,9 @@ export const DigimonList = {
     Tokomon: {
         species: [Species.BRD, Species.HOL],
         stage: Stage.stage1,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.trainingPeak,
+                area: MapsList.ds.trainingPeak,
             },
             evolutions: [
                 {
@@ -10368,9 +10381,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Tokomon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.loginMountain,
+                area: MapsList.dssm.loginMountain,
                 version: DataNames.both,
             },
             evolutions: [
@@ -10426,9 +10439,9 @@ export const DigimonList = {
     Puttomon: {
         species: [Species.HOL],
         stage: Stage.stage1,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutions: [
                 {
@@ -10446,10 +10459,10 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Puttomon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.highlightHaven,
-                version: DataNames.dawn,
+                area: MapsList.dssm.highlightHaven,
+                version: DataNames.sunburst,
             },
             evolutions: [
                 {
@@ -10494,9 +10507,9 @@ export const DigimonList = {
     Chicomon: {
         species: [Species.DRG],
         stage: Stage.stage1,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutions: [
                 {
@@ -10514,10 +10527,10 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Chicomon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.taskCanyon,
-                version: DataNames.dawn,
+                area: MapsList.dssm.taskCanyon,
+                version: DataNames.sunburst,
             },
             evolutions: [
                 {
@@ -10555,9 +10568,9 @@ export const DigimonList = {
     Minomon: {
         species: [Species.INS],
         stage: Stage.stage1,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -10602,10 +10615,10 @@ export const DigimonList = {
     Gigimon: {
         species: [Species.DRG],
         stage: Stage.stage1,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.taskCanyon,
-                version: DataNames.dawn,
+                area: MapsList.dssm.taskCanyon,
+                version: DataNames.sunburst,
             },
             evolutions: [
                 {
@@ -10634,9 +10647,9 @@ export const DigimonList = {
     Gummymon: {
         species: [Species.HOL, Species.BST],
         stage: Stage.stage1,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.chipForest,
+                area: MapsList.dssm.chipForest,
                 version: DataNames.both,
             },
             evolutions: [
@@ -10686,9 +10699,9 @@ export const DigimonList = {
     Kokomon: {
         species: [Species.DAR],
         stage: Stage.stage1,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.chipForest,
+                area: MapsList.dssm.chipForest,
                 version: DataNames.both,
             },
             evolutions: [
@@ -10703,9 +10716,9 @@ export const DigimonList = {
     Wanyamon: {
         species: [Species.BST],
         stage: Stage.stage1,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -10736,11 +10749,11 @@ export const DigimonList = {
     Budmon: {
         species: [Species.INS, Species.PLN],
         stage: Stage.stage1,
-        dwdd: {
+        dssm: {
             location: {
                 // Added specifically for DIS, not found anywhere in the original games
-                area: MapsList.dwdd.chipForest,
-                version: DataNames.dusk,
+                area: MapsList.dssm.chipForest,
+                version: DataNames.moonlight,
             },
             evolutions: [
                 {
@@ -10778,10 +10791,10 @@ export const DigimonList = {
     Botamon: {
         species: [Species.DAR, Species.DRG],
         stage: Stage.stage1,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.thrillerRuins, // TODO: Found in the temple area
-                version: DataNames.dawn,
+                area: MapsList.dssm.thrillerRuins, // TODO: Found in the temple area
+                version: DataNames.sunburst,
             },
             evolutions: [
                 {
@@ -10815,9 +10828,9 @@ export const DigimonList = {
     Pagumon: {
         species: [Species.DAR],
         stage: Stage.stage1,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.thrillerRuins,
+                area: MapsList.dssm.thrillerRuins,
                 version: DataNames.both,
             },
             evolutions: [
@@ -10862,9 +10875,9 @@ export const DigimonList = {
     Kuramon: {
         species: [Species.DAR],
         stage: Stage.stage1,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutions: [
                 {
@@ -10886,10 +10899,10 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Kuramon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.magnetMine,
-                version: DataNames.dusk,
+                area: MapsList.dssm.magnetMine,
+                version: DataNames.moonlight,
             },
             evolutions: [
                 {
@@ -10935,10 +10948,10 @@ export const DigimonList = {
     Tsumemon: {
         species: [Species.DAR],
         stage: Stage.stage1,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.shadowAbyss,
-                version: DataNames.dusk,
+                area: MapsList.dssm.shadowAbyss,
+                version: DataNames.moonlight,
             },
             evolutions: [
                 {
@@ -10979,9 +10992,9 @@ export const DigimonList = {
     Kapurimon: {
         species: [Species.MAC],
         stage: Stage.stage1,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutions: [
                 {
@@ -11007,9 +11020,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Kapurimon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.sunkenTunnel,
+                area: MapsList.dssm.sunkenTunnel,
                 version: DataNames.both,
             },
             evolutions: [
@@ -11056,9 +11069,9 @@ export const DigimonList = {
     Dorimon: {
         species: [Species.BST, Species.DRG],
         stage: Stage.stage1,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutions: [
                 {
@@ -11080,9 +11093,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Dorimon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -11125,10 +11138,10 @@ export const DigimonList = {
     Sunmon: {
         species: [Species.HOL, Species.BST],
         stage: Stage.stage1,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.taskCanyon,
-                version: DataNames.dawn,
+                area: MapsList.dssm.taskCanyon,
+                version: DataNames.sunburst,
             },
             evolutions: [
                 {
@@ -11164,10 +11177,10 @@ export const DigimonList = {
     Moonmon: {
         species: [Species.DAR, Species.BST],
         stage: Stage.stage1,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.magnetMine,
-                version: DataNames.dusk,
+                area: MapsList.dssm.magnetMine,
+                version: DataNames.moonlight,
             },
             evolutions: [
                 {
@@ -11203,9 +11216,9 @@ export const DigimonList = {
     Chicchimon: {
         species: [Species.HOL, Species.BRD],
         stage: Stage.stage1,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -11251,15 +11264,15 @@ export const DigimonList = {
     Culumon: {
         species: [Species.HOL],
         stage: Stage.stage1,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutionTree: DataNames.Culumon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Culumon,
@@ -11320,10 +11333,10 @@ export const DigimonList = {
     Agumon: {
         species: [Species.DRG],
         stage: Stage.stage2,
-        dwds: {
+        ds: {
             sprite: "",
             location: {
-                area: MapsList.dwds.dataForest,
+                area: MapsList.ds.dataForest,
                 special: SpecialValues.starter,
             },
             evolutions: [
@@ -11338,10 +11351,10 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Koromon,
         },
-        dwdd: {
+        dssm: {
             sprite: "",
             location: {
-                area: MapsList.dwdd.limitValley,
+                area: MapsList.dssm.limitValley,
                 version: DataNames.both,
             },
             evolutions: [
@@ -11391,9 +11404,9 @@ export const DigimonList = {
     Gabumon: {
         species: [Species.BST],
         stage: Stage.stage2,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.dataForest,
+                area: MapsList.ds.dataForest,
                 special: SpecialValues.starter,
             },
             evolutions: [
@@ -11404,9 +11417,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Tsunomon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.resistorJungle,
+                area: MapsList.dssm.resistorJungle,
                 version: DataNames.both,
             },
             evolutions: [
@@ -11449,9 +11462,9 @@ export const DigimonList = {
     Piyomon: {
         species: [Species.BRD],
         stage: Stage.stage2,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutions: [
                 {
@@ -11461,9 +11474,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Piyomon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.limitValley,
+                area: MapsList.dssm.limitValley,
                 version: DataNames.both,
             },
             evolutions: [
@@ -11516,9 +11529,9 @@ export const DigimonList = {
     Palmon: {
         species: [Species.INS, Species.PLN],
         stage: Stage.stage2,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.dataForest,
+                area: MapsList.ds.dataForest,
                 special: SpecialValues.starter,
             },
             evolutions: [
@@ -11529,9 +11542,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Tanemon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -11574,9 +11587,9 @@ export const DigimonList = {
     Tentomon: {
         species: [Species.INS],
         stage: Stage.stage2,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutions: [
                 {
@@ -11590,9 +11603,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Tentomon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.chipForest,
+                area: MapsList.dssm.chipForest,
                 version: DataNames.both,
             },
             evolutions: [
@@ -11645,9 +11658,9 @@ export const DigimonList = {
     Gomamon: {
         species: [Species.AQU, Species.BST],
         stage: Stage.stage2,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutions: [
                 {
@@ -11657,9 +11670,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Poyomon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -11704,9 +11717,9 @@ export const DigimonList = {
     Patamon: {
         species: [Species.BRD, Species.HOL],
         stage: Stage.stage2,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.trainingPeak,
+                area: MapsList.ds.trainingPeak,
             },
             evolutions: [
                 {
@@ -11720,9 +11733,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Tokomon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.loginMountain,
+                area: MapsList.dssm.loginMountain,
                 version: DataNames.both,
             },
             evolutions: [
@@ -11787,9 +11800,9 @@ export const DigimonList = {
     Plotmon: {
         species: [Species.HOL],
         stage: Stage.stage2,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutions: [
                 {
@@ -11799,9 +11812,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Puttomon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -11856,9 +11869,9 @@ export const DigimonList = {
     Veemon: {
         species: [Species.DRG],
         stage: Stage.stage2,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutions: [
                 {
@@ -11868,9 +11881,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Chicomon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.loginMountain,
+                area: MapsList.dssm.loginMountain,
                 version: DataNames.both,
             },
             evolutions: [
@@ -11940,9 +11953,9 @@ export const DigimonList = {
     Wormmon: {
         species: [Species.INS],
         stage: Stage.stage2,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.steamyJungle,
+                area: MapsList.ds.steamyJungle,
             },
             evolutions: [
                 {
@@ -11952,9 +11965,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Wormmon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.resistorJungle,
+                area: MapsList.dssm.resistorJungle,
                 version: DataNames.both,
             },
             evolutions: [
@@ -12023,9 +12036,9 @@ export const DigimonList = {
     Hawkmon: {
         species: [Species.BRD],
         stage: Stage.stage2,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutions: [
                 {
@@ -12035,9 +12048,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Hawkmon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.loginMountain,
+                area: MapsList.dssm.loginMountain,
                 version: DataNames.both,
             },
             evolutions: [
@@ -12090,9 +12103,9 @@ export const DigimonList = {
     Armadimon: {
         species: [Species.BST],
         stage: Stage.stage2,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutions: [
                 {
@@ -12102,9 +12115,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Dorimon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.loginMountain,
+                area: MapsList.dssm.loginMountain,
                 version: DataNames.both,
             },
             evolutions: [
@@ -12164,9 +12177,9 @@ export const DigimonList = {
     Guilmon: {
         species: [Species.DRG],
         stage: Stage.stage2,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.sheerValley,
+                area: MapsList.ds.sheerValley,
             },
             evolutions: [
                 {
@@ -12180,10 +12193,10 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Kuramon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.taskCanyon,
-                version: DataNames.dawn,
+                area: MapsList.dssm.taskCanyon,
+                version: DataNames.sunburst,
             },
             evolutions: [
                 {
@@ -12247,9 +12260,9 @@ export const DigimonList = {
     Renamon: {
         species: [Species.HOL, Species.BST],
         stage: Stage.stage2,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.sheerValley,
+                area: MapsList.ds.sheerValley,
             },
             evolutions: [
                 {
@@ -12263,9 +12276,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Tanemon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.limitValley,
+                area: MapsList.dssm.limitValley,
                 version: DataNames.both,
             },
             evolutions: [
@@ -12324,9 +12337,9 @@ export const DigimonList = {
     Terriermon: {
         species: [Species.BST],
         stage: Stage.stage2,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.steamyJungle,
+                area: MapsList.ds.steamyJungle,
             },
             evolutions: [
                 {
@@ -12336,9 +12349,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Terriermon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -12387,9 +12400,9 @@ export const DigimonList = {
     Lopmon: {
         species: [Species.DAR, Species.BST],
         stage: Stage.stage2,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.steamyJungle,
+                area: MapsList.ds.steamyJungle,
             },
             evolutions: [
                 {
@@ -12399,9 +12412,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Pagumon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -12447,9 +12460,9 @@ export const DigimonList = {
     Impmon: {
         species: [Species.DAR],
         stage: Stage.stage2,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.chromeMine,
+                area: MapsList.ds.chromeMine,
             },
             evolutions: [
                 {
@@ -12475,9 +12488,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Impmon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -12537,9 +12550,9 @@ export const DigimonList = {
     Lalamon: {
         species: [Species.INS, Species.PLN],
         stage: Stage.stage2,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutions: [
                 {
@@ -12549,9 +12562,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Tanemon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -12611,9 +12624,9 @@ export const DigimonList = {
     Gaomon: {
         species: [Species.BST],
         stage: Stage.stage2,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutions: [
                 {
@@ -12623,9 +12636,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Tsunomon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -12687,9 +12700,9 @@ export const DigimonList = {
     Falcomon: {
         species: [Species.BRD],
         stage: Stage.stage2,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutions: [
                 {
@@ -12699,9 +12712,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Tokomon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -12735,9 +12748,9 @@ export const DigimonList = {
     PawnChessmonB: {
         species: [Species.MAC],
         stage: Stage.stage2,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.chromeMine,
+                area: MapsList.ds.chromeMine,
             },
             evolutions: [
                 {
@@ -12751,9 +12764,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Kapurimon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.thrillerRuins,
+                area: MapsList.dssm.thrillerRuins,
                 version: DataNames.both,
             },
             evolutions: [
@@ -12768,15 +12781,15 @@ export const DigimonList = {
     PawnChessmonW: {
         species: [Species.MAC],
         stage: Stage.stage2,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutionTree: DataNames.Puttomon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.thrillerRuins,
+                area: MapsList.dssm.thrillerRuins,
                 version: DataNames.both,
             },
             evolutions: [
@@ -12798,9 +12811,9 @@ export const DigimonList = {
     Kudamon: {
         species: [Species.HOL],
         stage: Stage.stage2,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutions: [
                 {
@@ -12810,10 +12823,10 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Puttomon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.taskCanyon,
-                version: DataNames.dawn,
+                area: MapsList.dssm.taskCanyon,
+                version: DataNames.sunburst,
             },
             evolutions: [
                 {
@@ -12872,9 +12885,9 @@ export const DigimonList = {
     Kamemon: {
         species: [Species.AQU],
         stage: Stage.stage2,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.mangoveWoods,
+                area: MapsList.ds.mangoveWoods,
             },
             evolutions: [
                 {
@@ -12888,9 +12901,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Poyomon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.loopSwamp,
+                area: MapsList.dssm.loopSwamp,
                 version: DataNames.both,
             },
             evolutions: [
@@ -12952,9 +12965,9 @@ export const DigimonList = {
     Dorumon: {
         species: [Species.BST, Species.DRG],
         stage: Stage.stage2,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutions: [
                 {
@@ -12968,9 +12981,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Dorimon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -13027,9 +13040,9 @@ export const DigimonList = {
     Monodramon: {
         species: [Species.DRG],
         stage: Stage.stage2,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.loginMountain,
+                area: MapsList.dssm.loginMountain,
                 version: DataNames.both,
             },
             evolutions: [
@@ -13085,9 +13098,9 @@ export const DigimonList = {
     BlackAgumon: {
         species: [Species.DRG],
         stage: Stage.stage2,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.trainingPeak,
+                area: MapsList.ds.trainingPeak,
             },
             evolutions: [
                 {
@@ -13097,10 +13110,10 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Pagumon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.processFactory,
-                version: DataNames.dusk,
+                area: MapsList.dssm.processFactory,
+                version: DataNames.moonlight,
             },
             evolutions: [
                 {
@@ -13149,15 +13162,15 @@ export const DigimonList = {
     YukiAgumon: {
         species: [Species.AQU, Species.DRG],
         stage: Stage.stage2,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutionTree: DataNames.Chicomon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -13183,9 +13196,9 @@ export const DigimonList = {
     Goburimon: {
         species: [Species.BST],
         stage: Stage.stage2,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.dataForest,
+                area: MapsList.ds.dataForest,
             },
             evolutions: [
                 {
@@ -13207,9 +13220,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Goburimon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.chipForest,
+                area: MapsList.dssm.chipForest,
                 version: DataNames.both,
             },
             evolutions: [
@@ -13266,9 +13279,9 @@ export const DigimonList = {
     Shamamon: {
         species: [Species.BST],
         stage: Stage.stage2,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.limitValley,
+                area: MapsList.dssm.limitValley,
                 version: DataNames.both,
             },
             evolutions: [
@@ -13298,9 +13311,9 @@ export const DigimonList = {
     SnowGoburimon: {
         species: [Species.AQU],
         stage: Stage.stage2,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -13323,9 +13336,9 @@ export const DigimonList = {
     Kumamon: {
         species: [Species.BST],
         stage: Stage.stage2,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutions: [
                 {
@@ -13339,9 +13352,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Kumamon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.chipForest,
+                area: MapsList.dssm.chipForest,
                 version: DataNames.both,
             },
             evolutions: [
@@ -13372,9 +13385,9 @@ export const DigimonList = {
     Penmon: {
         species: [Species.BRD],
         stage: Stage.stage2,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.mangoveWoods,
+                area: MapsList.ds.mangoveWoods,
             },
             evolutions: [
                 {
@@ -13392,9 +13405,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Penmon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -13434,9 +13447,9 @@ export const DigimonList = {
     Muchomon: {
         species: [Species.BRD],
         stage: Stage.stage2,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutions: [
                 {
@@ -13446,9 +13459,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Kuramon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.paletteAmazon,
+                area: MapsList.dssm.paletteAmazon,
                 version: DataNames.both,
             },
             evolutions: [
@@ -13475,9 +13488,9 @@ export const DigimonList = {
     Betamon: {
         species: [Species.AQU, Species.DRG],
         stage: Stage.stage2,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.dataForest,
+                area: MapsList.ds.dataForest,
             },
             evolutions: [
                 {
@@ -13491,9 +13504,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Betamon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.sunkenTunnel,
+                area: MapsList.dssm.sunkenTunnel,
                 version: DataNames.both,
             },
             evolutions: [
@@ -13557,9 +13570,9 @@ export const DigimonList = {
     Otamamon: {
         species: [Species.AQU],
         stage: Stage.stage2,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.drainTunnel,
+                area: MapsList.ds.drainTunnel,
             },
             evolutions: [
                 {
@@ -13577,9 +13590,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Otamamon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.loopSwamp,
+                area: MapsList.dssm.loopSwamp,
                 version: DataNames.both,
             },
             evolutions: [
@@ -13626,9 +13639,9 @@ export const DigimonList = {
     Ganimon: {
         species: [Species.AQU],
         stage: Stage.stage2,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.packetSwamp,
+                area: MapsList.ds.packetSwamp,
             },
             evolutions: [
                 {
@@ -13638,9 +13651,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Poyomon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.paletteAmazon,
+                area: MapsList.dssm.paletteAmazon,
                 version: DataNames.both,
             },
             evolutions: [
@@ -13672,9 +13685,9 @@ export const DigimonList = {
     Gizamon: {
         species: [Species.AQU],
         stage: Stage.stage2,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.drainTunnel,
+                area: MapsList.ds.drainTunnel,
             },
             evolutions: [
                 {
@@ -13684,9 +13697,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Gizamon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.sunkenTunnel,
+                area: MapsList.dssm.sunkenTunnel,
                 version: DataNames.both,
             },
             evolutions: [
@@ -13713,9 +13726,9 @@ export const DigimonList = {
     Syakomon: {
         species: [Species.AQU],
         stage: Stage.stage2,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.macroSea,
+                area: MapsList.dssm.macroSea,
                 version: DataNames.both,
             },
             evolutions: [
@@ -13774,9 +13787,9 @@ export const DigimonList = {
     Kunemon: {
         species: [Species.INS],
         stage: Stage.stage2,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.chipForest,
+                area: MapsList.dssm.chipForest,
                 version: DataNames.both,
             },
             evolutions: [
@@ -13811,9 +13824,9 @@ export const DigimonList = {
     DoKunemon: {
         species: [Species.INS],
         stage: Stage.stage2,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -13844,9 +13857,9 @@ export const DigimonList = {
     Floramon: {
         species: [Species.INS],
         stage: Stage.stage2,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.steamyJungle,
+                area: MapsList.ds.steamyJungle,
             },
             evolutions: [
                 {
@@ -13856,9 +13869,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Floramon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.resistorJungle,
+                area: MapsList.dssm.resistorJungle,
                 version: DataNames.both,
             },
             evolutions: [
@@ -13897,15 +13910,15 @@ export const DigimonList = {
     Aruraumon: {
         species: [Species.INS],
         stage: Stage.stage2,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutionTree: DataNames.Dorimon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -13928,9 +13941,9 @@ export const DigimonList = {
     Mushroomon: {
         species: [Species.INS, Species.PLN],
         stage: Stage.stage2,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.chipForest,
+                area: MapsList.dssm.chipForest,
                 version: DataNames.both,
             },
             evolutions: [
@@ -13956,9 +13969,9 @@ export const DigimonList = {
     ToyAgumon: {
         species: [Species.MAC],
         stage: Stage.stage2,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutions: [
                 {
@@ -13976,10 +13989,10 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Koromon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.processFactory,
-                version: DataNames.dusk,
+                area: MapsList.dssm.processFactory,
+                version: DataNames.moonlight,
             },
             evolutions: [
                 {
@@ -14031,9 +14044,9 @@ export const DigimonList = {
     ToyAgumonB: {
         species: [Species.MAC],
         stage: Stage.stage2,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.junkFactory,
+                area: MapsList.ds.junkFactory,
             },
             evolutions: [
                 {
@@ -14043,9 +14056,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.ToyAgumonB,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.sunkenTunnel,
+                area: MapsList.dssm.sunkenTunnel,
                 version: DataNames.both,
             },
             evolutions: [
@@ -14064,9 +14077,9 @@ export const DigimonList = {
     Hagurumon: {
         species: [Species.MAC],
         stage: Stage.stage2,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.drainTunnel,
+                area: MapsList.ds.drainTunnel,
             },
             evolutions: [
                 {
@@ -14076,9 +14089,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Kapurimon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.sunkenTunnel,
+                area: MapsList.dssm.sunkenTunnel,
                 version: DataNames.both,
             },
             evolutions: [
@@ -14136,9 +14149,9 @@ export const DigimonList = {
     Solarmon: {
         species: [Species.MAC],
         stage: Stage.stage2,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.proxyIsland,
+                area: MapsList.dssm.proxyIsland,
                 version: DataNames.both,
             },
             evolutions: [
@@ -14165,9 +14178,9 @@ export const DigimonList = {
     Kotemon: {
         species: [Species.MAC],
         stage: Stage.stage2,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.trainingPeak,
+                area: MapsList.ds.trainingPeak,
             },
             evolutions: [
                 {
@@ -14181,9 +14194,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Kapurimon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.sunkenTunnel,
+                area: MapsList.dssm.sunkenTunnel,
                 version: DataNames.both,
             },
             evolutions: [
@@ -14206,9 +14219,9 @@ export const DigimonList = {
     Kokuwamon: {
         species: [Species.MAC, Species.INS],
         stage: Stage.stage2,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.thrillerRuins,
+                area: MapsList.dssm.thrillerRuins,
                 version: DataNames.both,
             },
             evolutions: [
@@ -14258,9 +14271,9 @@ export const DigimonList = {
     Gotsumon: {
         species: [Species.MAC],
         stage: Stage.stage2,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.trainingPeak,
+                area: MapsList.ds.trainingPeak,
             },
             evolutions: [
                 {
@@ -14282,9 +14295,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Gotsumon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.loginMountain,
+                area: MapsList.dssm.loginMountain,
                 version: DataNames.both,
             },
             evolutions: [
@@ -14343,9 +14356,9 @@ export const DigimonList = {
     Bakumon: {
         species: [Species.HOL],
         stage: Stage.stage2,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.trainingPeak,
+                area: MapsList.ds.trainingPeak,
             },
             evolutions: [
                 {
@@ -14355,9 +14368,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Bakumon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.thrillerRuins,
+                area: MapsList.dssm.thrillerRuins,
                 version: DataNames.both,
             },
             evolutions: [
@@ -14380,9 +14393,9 @@ export const DigimonList = {
     Candlemon: {
         species: [Species.DAR],
         stage: Stage.stage2,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.thrillerRuins,
+                area: MapsList.dssm.thrillerRuins,
                 version: DataNames.both,
             },
             evolutions: [
@@ -14409,9 +14422,9 @@ export const DigimonList = {
     PicoDevimon: {
         species: [Species.DAR],
         stage: Stage.stage2,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.chromeMine,
+                area: MapsList.ds.chromeMine,
             },
             evolutions: [
                 {
@@ -14421,9 +14434,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.PicoDevimon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -14484,9 +14497,9 @@ export const DigimonList = {
     Keramon: {
         species: [Species.DAR],
         stage: Stage.stage2,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutions: [
                 {
@@ -14500,10 +14513,10 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Kuramon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.magnetMine,
-                version: DataNames.dusk,
+                area: MapsList.dssm.magnetMine,
+                version: DataNames.moonlight,
             },
             evolutions: [
                 {
@@ -14548,15 +14561,15 @@ export const DigimonList = {
     Tsukaimon: {
         species: [Species.DAR],
         stage: Stage.stage2,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutionTree: DataNames.Pagumon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.thrillerRuins,
+                area: MapsList.dssm.thrillerRuins,
                 version: DataNames.both,
             },
             evolutions: [
@@ -14589,9 +14602,9 @@ export const DigimonList = {
     Dracmon: {
         species: [Species.DAR],
         stage: Stage.stage2,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutions: [
                 {
@@ -14601,9 +14614,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Tsunomon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.thrillerRuins,
+                area: MapsList.dssm.thrillerRuins,
                 version: DataNames.both,
             },
             evolutions: [
@@ -14652,15 +14665,15 @@ export const DigimonList = {
     DotAgumon: {
         species: [Species.DRG],
         stage: Stage.stage2,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutionTree: DataNames.Koromon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Koromon,
@@ -14675,15 +14688,15 @@ export const DigimonList = {
     DotFalcomon: {
         species: [Species.BRD],
         stage: Stage.stage2,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutionTree: DataNames.Tokomon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Tokomon,
@@ -14698,9 +14711,9 @@ export const DigimonList = {
     Coronamon: {
         species: [Species.HOL, Species.BST],
         stage: Stage.stage2,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -14751,9 +14764,9 @@ export const DigimonList = {
     Lunamon: {
         species: [Species.DAR, Species.BST],
         stage: Stage.stage2,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -15023,9 +15036,9 @@ export const DigimonList = {
     Greymon: {
         species: [Species.DRG],
         stage: Stage.stage3,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutions: [
                 {
@@ -15035,10 +15048,10 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Koromon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.taskCanyon,
-                version: DataNames.dawn,
+                area: MapsList.dssm.taskCanyon,
+                version: DataNames.sunburst,
             },
             evolutions: [
                 {
@@ -15102,9 +15115,9 @@ export const DigimonList = {
     Garurumon: {
         species: [Species.BST],
         stage: Stage.stage3,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutions: [
                 {
@@ -15114,9 +15127,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Tsunomon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -15168,9 +15181,9 @@ export const DigimonList = {
     Birdramon: {
         species: [Species.BRD],
         stage: Stage.stage3,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.mangoveWoods,
+                area: MapsList.ds.mangoveWoods,
             },
             evolutions: [
                 {
@@ -15180,9 +15193,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Piyomon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -15236,9 +15249,9 @@ export const DigimonList = {
     Togemon: {
         species: [Species.INS, Species.PLN],
         stage: Stage.stage3,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.packetSwamp,
+                area: MapsList.ds.packetSwamp,
             },
             evolutions: [
                 {
@@ -15248,9 +15261,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Tanemon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.paletteAmazon,
+                area: MapsList.dssm.paletteAmazon,
                 version: DataNames.both,
             },
             evolutions: [
@@ -15300,9 +15313,9 @@ export const DigimonList = {
     Kabuterimon: {
         species: [Species.INS],
         stage: Stage.stage3,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutions: [
                 {
@@ -15312,9 +15325,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Tentomon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -15368,9 +15381,9 @@ export const DigimonList = {
     Ikkakumon: {
         species: [Species.AQU, Species.BST],
         stage: Stage.stage3,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.drainTunnel,
+                area: MapsList.ds.drainTunnel,
             },
             evolutions: [
                 {
@@ -15380,9 +15393,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Poyomon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -15437,9 +15450,9 @@ export const DigimonList = {
     Angemon: {
         species: [Species.HOL],
         stage: Stage.stage3,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutions: [
                 {
@@ -15453,9 +15466,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Tokomon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.accessGlacier,
+                area: MapsList.dssm.accessGlacier,
                 version: DataNames.both,
             },
             evolutions: [
@@ -15519,9 +15532,9 @@ export const DigimonList = {
     Tailmon: {
         species: [Species.HOL],
         stage: Stage.stage3,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutions: [
                 {
@@ -15539,10 +15552,10 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Puttomon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.highlightHaven,
-                version: DataNames.dawn,
+                area: MapsList.dssm.highlightHaven,
+                version: DataNames.sunburst,
             },
             evolutions: [
                 {
@@ -15615,9 +15628,9 @@ export const DigimonList = {
     ExVeemon: {
         species: [Species.DRG],
         stage: Stage.stage3,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutions: [
                 {
@@ -15645,9 +15658,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Chicomon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             dna: [DataNames.Dinobeemon, DataNames.Paildramon],
@@ -15694,9 +15707,9 @@ export const DigimonList = {
     Stingmon: {
         species: [Species.INS],
         stage: Stage.stage3,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.packetSwamp,
+                area: MapsList.ds.packetSwamp,
             },
             evolutions: [
                 {
@@ -15721,9 +15734,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Wormmon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             dna: [DataNames.Dinobeemon, DataNames.Paildramon],
@@ -15774,9 +15787,9 @@ export const DigimonList = {
     Aquilamon: {
         species: [Species.BRD],
         stage: Stage.stage3,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.trainingPeak,
+                area: MapsList.ds.trainingPeak,
             },
             evolutions: [
                 {
@@ -15797,10 +15810,10 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Hawkmon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.loginMountain,
-                version: DataNames.both,    // TODO: Check if it's Dawn exclusive
+                area: MapsList.dssm.loginMountain,
+                version: DataNames.both,    // TODO: Check if it's Sunburst exclusive
             },
             dna: [DataNames.Silphymon],
             evolutionTree: DataNames.Hawkmon,
@@ -15842,9 +15855,9 @@ export const DigimonList = {
     Ankylomon: {
         species: [Species.BST, Species.DRG],
         stage: Stage.stage3,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutions: [
                 {
@@ -15857,9 +15870,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Dorimon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             dna: [DataNames.Shakkoumon],
@@ -15902,9 +15915,9 @@ export const DigimonList = {
     Growlmon: {
         species: [Species.DRG],
         stage: Stage.stage3,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.ancientCanyon,
+                area: MapsList.ds.ancientCanyon,
             },
             evolutions: [
                 {
@@ -15918,9 +15931,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Kuramon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -15974,9 +15987,9 @@ export const DigimonList = {
     Kyubimon: {
         species: [Species.HOL, Species.BST],
         stage: Stage.stage3,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutions: [
                 {
@@ -15990,9 +16003,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Tanemon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.limitValley,
+                area: MapsList.dssm.limitValley,
                 version: DataNames.both,
             },
             evolutions: [
@@ -16044,9 +16057,9 @@ export const DigimonList = {
     Gargomon: {
         species: [Species.BST],
         stage: Stage.stage3,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutions: [
                 {
@@ -16071,9 +16084,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Terriermon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.resistorJungle,
+                area: MapsList.dssm.resistorJungle,
                 version: DataNames.both,
             },
             evolutions: [
@@ -16134,9 +16147,9 @@ export const DigimonList = {
     Guardromon: {
         species: [Species.MAC],
         stage: Stage.stage3,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.trainingPeak,
+                area: MapsList.ds.trainingPeak,
             },
             evolutions: [
                 {
@@ -16153,9 +16166,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Kapurimon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -16213,9 +16226,9 @@ export const DigimonList = {
     GeoGreymon: {
         species: [Species.DRG],
         stage: Stage.stage3,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutions: [
                 {
@@ -16229,9 +16242,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Koromon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -16292,9 +16305,9 @@ export const DigimonList = {
     Gaogamon: {
         species: [Species.BST],
         stage: Stage.stage3,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutions: [
                 {
@@ -16308,9 +16321,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Tsunomon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -16356,9 +16369,9 @@ export const DigimonList = {
     Sunflowmon: {
         species: [Species.INS, Species.PLN],
         stage: Stage.stage3,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutions: [
                 {
@@ -16372,9 +16385,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Tanemon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.paletteAmazon,
+                area: MapsList.dssm.paletteAmazon,
                 version: DataNames.both,
             },
             evolutions: [
@@ -16422,9 +16435,9 @@ export const DigimonList = {
     Peckmon: {
         species: [Species.BRD],
         stage: Stage.stage3,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutions: [
                 {
@@ -16434,9 +16447,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Tokomon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -16496,15 +16509,15 @@ export const DigimonList = {
     Gawappamon: {
         species: [Species.AQU],
         stage: Stage.stage3,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutionTree: DataNames.Poyomon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -16549,9 +16562,9 @@ export const DigimonList = {
     KnightChessmonW: {
         species: [Species.MAC],
         stage: Stage.stage3,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.thrillerRuins,
+                area: MapsList.dssm.thrillerRuins,
                 version: DataNames.both,
             },
             evolutions: [
@@ -16579,9 +16592,9 @@ export const DigimonList = {
     KnightChessmonB: {
         species: [Species.MAC],
         stage: Stage.stage3,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.thrillerRuins,
+                area: MapsList.dssm.thrillerRuins,
                 version: DataNames.both,
             },
             evolutions: [
@@ -16596,9 +16609,9 @@ export const DigimonList = {
     Reppamon: {
         species: [Species.HOL],
         stage: Stage.stage3,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutions: [
                 {
@@ -16612,9 +16625,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Puttomon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -16669,9 +16682,9 @@ export const DigimonList = {
     Veedramon: {
         species: [Species.DRG],
         stage: Stage.stage3,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -16727,9 +16740,9 @@ export const DigimonList = {
     Dorugamon: {
         species: [Species.BST, Species.DRG],
         stage: Stage.stage3,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutions: [
                 {
@@ -16743,9 +16756,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Dorimon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.loginMountain,
+                area: MapsList.dssm.loginMountain,
                 version: DataNames.both,
             },
             evolutions: [
@@ -16797,9 +16810,9 @@ export const DigimonList = {
     Raptordramon: {
         species: [Species.DRG],
         stage: Stage.stage3,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.ancientCanyon,
+                area: MapsList.ds.ancientCanyon,
             },
             evolutions: [
                 {
@@ -16809,9 +16822,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.ToyAgumonB,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.accessGlacier,
+                area: MapsList.dssm.accessGlacier,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Raptordramon,
@@ -16889,15 +16902,15 @@ export const DigimonList = {
     DarkTyrannomon: {
         species: [Species.DAR, Species.DRG],
         stage: Stage.stage3,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.trainingPeak,
+                area: MapsList.ds.trainingPeak,
             },
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.processFactory,
-                version: DataNames.dusk,
+                area: MapsList.dssm.processFactory,
+                version: DataNames.moonlight,
             },
             evolutions: [
                 {
@@ -16969,9 +16982,9 @@ export const DigimonList = {
     Dinohumon: {
         species: [Species.DRG],
         stage: Stage.stage3,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.sheerValley,
+                area: MapsList.ds.sheerValley,
             },
             evolutions: [
                 {
@@ -16981,9 +16994,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Kapurimon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.paletteAmazon,
+                area: MapsList.dssm.paletteAmazon,
             },
             evolutions: [
                 {
@@ -17001,9 +17014,9 @@ export const DigimonList = {
     Monochromon: {
         species: [Species.DRG],
         stage: Stage.stage3,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -17022,9 +17035,9 @@ export const DigimonList = {
     Tyrannomon: {
         species: [Species.DRG],
         stage: Stage.stage3,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.sheerValley,
+                area: MapsList.ds.sheerValley,
             },
             evolutions: [
                 {
@@ -17034,10 +17047,10 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Goburimon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.taskCanyon,
-                version: DataNames.dawn,
+                area: MapsList.dssm.taskCanyon,
+                version: DataNames.sunburst,
             },
             evolutions: [
                 {
@@ -17086,16 +17099,16 @@ export const DigimonList = {
     Airdramon: {
         species: [Species.DRG],
         stage: Stage.stage3,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.sheerValley,
+                area: MapsList.ds.sheerValley,
             },
             evolutionTree: DataNames.Gotsumon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.highlightHaven,
-                version: DataNames.dawn,
+                area: MapsList.dssm.highlightHaven,
+                version: DataNames.sunburst,
             },
             evolutions: [
                 {
@@ -17140,15 +17153,15 @@ export const DigimonList = {
     Flarerizamon: {
         species: [Species.DRG],
         stage: Stage.stage3,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutionTree: DataNames.Koromon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Botamon,
@@ -17157,9 +17170,9 @@ export const DigimonList = {
     Centalmon: {
         species: [Species.BST],
         stage: Stage.stage3,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.transfield,
+                area: MapsList.dssm.transfield,
                 version: DataNames.both,
             },
             evolutions: [
@@ -17191,9 +17204,9 @@ export const DigimonList = {
     Leomon: {
         species: [Species.BST],
         stage: Stage.stage3,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.ancientCanyon,
+                area: MapsList.ds.ancientCanyon,
             },
             evolutions: [
                 {
@@ -17203,9 +17216,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Kumamon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.resistorJungle,
+                area: MapsList.dssm.resistorJungle,
                 version: DataNames.both,
             },
             evolutions: [
@@ -17255,9 +17268,9 @@ export const DigimonList = {
     Ogremon: {
         species: [Species.BST],
         stage: Stage.stage3,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.dataForest,
+                area: MapsList.ds.dataForest,
             },
             evolutions: [
                 {
@@ -17275,9 +17288,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Goburimon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.chipForest,
+                area: MapsList.dssm.chipForest,
                 version: DataNames.both,
             },
             evolutions: [
@@ -17333,9 +17346,9 @@ export const DigimonList = {
     Fugamon: {
         species: [Species.BST],
         stage: Stage.stage3,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.paletteAmazon,
+                area: MapsList.dssm.paletteAmazon,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Dorimon,
@@ -17344,9 +17357,9 @@ export const DigimonList = {
     Hyogamon: {
         species: [Species.AQU],
         stage: Stage.stage3,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.accessGlacier,
+                area: MapsList.dssm.accessGlacier,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.SnowGoburimon,
@@ -17355,9 +17368,9 @@ export const DigimonList = {
     Grizzmon: {
         species: [Species.BST],
         stage: Stage.stage3,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.steamyJungle,
+                area: MapsList.ds.steamyJungle,
             },
             evolutions: [
                 {
@@ -17367,9 +17380,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Kumamon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -17399,15 +17412,15 @@ export const DigimonList = {
     Seasarmon: {
         species: [Species.BST],
         stage: Stage.stage3,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.ancientCanyon,
+                area: MapsList.ds.ancientCanyon,
             },
             evolutionTree: DataNames.Poyomon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.limitValley,
+                area: MapsList.dssm.limitValley,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Gummymon,
@@ -17424,9 +17437,9 @@ export const DigimonList = {
     Hanumon: {
         species: [Species.BST],
         stage: Stage.stage3,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.ancientCanyon,
+                area: MapsList.ds.ancientCanyon,
             },
             evolutions: [
                 {
@@ -17440,9 +17453,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Gizamon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.limitValley,
+                area: MapsList.dssm.limitValley,
                 version: DataNames.both,
             },
             evolutions: [
@@ -17469,9 +17482,9 @@ export const DigimonList = {
     Minotarumon: {
         species: [Species.BST],
         stage: Stage.stage3,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.ancientCanyon,
+                area: MapsList.ds.ancientCanyon,
             },
             evolutions: [
                 {
@@ -17485,9 +17498,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Gotsumon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.transfield,
+                area: MapsList.dssm.transfield,
                 version: DataNames.both,
             },
             evolutions: [
@@ -17514,9 +17527,9 @@ export const DigimonList = {
     Yukidarumon: {
         species: [Species.AQU, Species.BST],
         stage: Stage.stage3,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.accessGlacier,
+                area: MapsList.dssm.accessGlacier,
                 version: DataNames.both,
             },
             dna: [DataNames.Pandamon],
@@ -17546,10 +17559,10 @@ export const DigimonList = {
     Tsuchidarumon: {
         species: [Species.BST],
         stage: Stage.stage3,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.magnetMine,
-                version: DataNames.dusk,
+                area: MapsList.dssm.magnetMine,
+                version: DataNames.moonlight,
             },
             dna: [DataNames.Pandamon],
             evolutionTree: DataNames.Gotsumon,
@@ -17571,9 +17584,9 @@ export const DigimonList = {
     Tortamon: {
         species: [Species.AQU],
         stage: Stage.stage3,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.proxyIsland,
+                area: MapsList.dssm.proxyIsland,
                 version: DataNames.both,
             },
             evolutions: [
@@ -17595,9 +17608,9 @@ export const DigimonList = {
     Nanimon: {
         species: [Species.MAC],
         stage: Stage.stage3,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.chipForest,
+                area: MapsList.dssm.chipForest,
                 version: DataNames.both,
             },
             dna: [DataNames.Vademon],
@@ -17607,10 +17620,10 @@ export const DigimonList = {
     BomberNanimon: {
         species: [Species.MAC],
         stage: Stage.stage3,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.magnetMine,
-                version: DataNames.dusk,
+                area: MapsList.dssm.magnetMine,
+                version: DataNames.moonlight,
             },
             evolutions: [
                 {
@@ -17647,9 +17660,9 @@ export const DigimonList = {
     Mojyamon: {
         species: [Species.BST],
         stage: Stage.stage3,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.accessGlacier,
+                area: MapsList.dssm.accessGlacier,
                 version: DataNames.both,
             },
             evolutions: [
@@ -17664,9 +17677,9 @@ export const DigimonList = {
     JungleMojyamon: {
         species: [Species.BST],
         stage: Stage.stage3,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.proxyIsland,
+                area: MapsList.dssm.proxyIsland,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Tsunomon,
@@ -17675,9 +17688,9 @@ export const DigimonList = {
     Drimogemon: {
         species: [Species.BST],
         stage: Stage.stage3,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.loginMountain,
+                area: MapsList.dssm.loginMountain,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Dorimon,
@@ -17699,9 +17712,9 @@ export const DigimonList = {
     NiseDrimogemon: {
         species: [Species.BST],
         stage: Stage.stage3,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.limitValley,
+                area: MapsList.dssm.limitValley,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Dorimon,
@@ -17710,15 +17723,15 @@ export const DigimonList = {
     Diatrymon: {
         species: [Species.BRD],
         stage: Stage.stage3,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.skyPalace,
+                area: MapsList.ds.skyPalace,
             },
             evolutionTree: DataNames.Penmon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.proxyIsland,
+                area: MapsList.dssm.proxyIsland,
                 version: DataNames.both,
             },
             evolutions: [
@@ -17747,9 +17760,9 @@ export const DigimonList = {
     Saberdramon: {
         species: [Species.BRD],
         stage: Stage.stage3,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.proxyIsland,
+                area: MapsList.dssm.proxyIsland,
                 version: DataNames.both,
             },
             evolutions: [
@@ -17764,15 +17777,15 @@ export const DigimonList = {
     Kokatorimon: {
         species: [Species.BRD],
         stage: Stage.stage3,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.mangoveWoods,
+                area: MapsList.ds.mangoveWoods,
             },
             evolutionTree: DataNames.Penmon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.paletteAmazon,
+                area: MapsList.dssm.paletteAmazon,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Chicchimon,
@@ -17807,15 +17820,15 @@ export const DigimonList = {
     Akatorimon: {
         species: [Species.BRD],
         stage: Stage.stage3,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutionTree: DataNames.Kuramon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -17840,9 +17853,9 @@ export const DigimonList = {
     Kiwimon: {
         species: [Species.BRD],
         stage: Stage.stage3,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.mangoveWoods,
+                area: MapsList.ds.mangoveWoods,
             },
             evolutions: [
                 {
@@ -17856,9 +17869,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Penmon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.paletteAmazon,
+                area: MapsList.dssm.paletteAmazon,
                 version: DataNames.both,
             },
             evolutions: [
@@ -17877,9 +17890,9 @@ export const DigimonList = {
     Seadramon: {
         species: [Species.AQU, Species.DRG],
         stage: Stage.stage3,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.drainTunnel,
+                area: MapsList.ds.drainTunnel,
             },
             evolutions: [
                 {
@@ -17889,9 +17902,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Betamon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.loopSwamp,
+                area: MapsList.dssm.loopSwamp,
                 version: DataNames.both,
             },
             evolutions: [
@@ -17951,15 +17964,15 @@ export const DigimonList = {
     Icemon: {
         species: [Species.AQU],
         stage: Stage.stage3,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.hardMountains,
+                area: MapsList.ds.hardMountains,
             },
             evolutionTree: DataNames.Gotsumon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.accessGlacier,
+                area: MapsList.dssm.accessGlacier,
                 version: DataNames.both,
             },
             evolutions: [
@@ -17974,9 +17987,9 @@ export const DigimonList = {
     Gekomon: {
         species: [Species.AQU],
         stage: Stage.stage3,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.packetSwamp,
+                area: MapsList.ds.packetSwamp,
             },
             evolutions: [
                 {
@@ -17986,9 +17999,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Otamamon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.loopSwamp,
+                area: MapsList.dssm.loopSwamp,
                 version: DataNames.both,
             },
             evolutions: [
@@ -18015,15 +18028,15 @@ export const DigimonList = {
     Numemon: {
         species: [Species.AQU],
         stage: Stage.stage3,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutionTree: DataNames.Numemon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.loopSwamp,
+                area: MapsList.dssm.loopSwamp,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Otamamon,
@@ -18058,9 +18071,9 @@ export const DigimonList = {
     Geremon: {
         species: [Species.AQU],
         stage: Stage.stage3,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Otamamon,
@@ -18069,9 +18082,9 @@ export const DigimonList = {
     KaratsukiNumemon: {
         species: [Species.AQU],
         stage: Stage.stage3,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -18093,9 +18106,9 @@ export const DigimonList = {
     Shellmon: {
         species: [Species.AQU],
         stage: Stage.stage3,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.loopSwamp,
+                area: MapsList.dssm.loopSwamp,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Syakomon,
@@ -18112,9 +18125,9 @@ export const DigimonList = {
     MoriShellmon: {
         species: [Species.BST],
         stage: Stage.stage3,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.paletteAmazon,
+                area: MapsList.dssm.paletteAmazon,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Tanemon,
@@ -18123,9 +18136,9 @@ export const DigimonList = {
     Octomon: {
         species: [Species.AQU],
         stage: Stage.stage3,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.proxyIsland,
+                area: MapsList.dssm.proxyIsland,
                 version: DataNames.both,
             },
             dna: [DataNames.Dagomon],
@@ -18161,9 +18174,9 @@ export const DigimonList = {
     Gesomon: {
         species: [Species.AQU],
         stage: Stage.stage3,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.proxyIsland,
+                area: MapsList.dssm.proxyIsland,
                 version: DataNames.both,
             },
             dna: [DataNames.Dagomon],
@@ -18186,9 +18199,9 @@ export const DigimonList = {
     Coelamon: {
         species: [Species.AQU],
         stage: Stage.stage3,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.macroSea,
+                area: MapsList.dssm.macroSea,
                 version: DataNames.both,
             },
             evolutions: [
@@ -18238,9 +18251,9 @@ export const DigimonList = {
     Rukamon: {
         species: [Species.AQU],
         stage: Stage.stage3,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.macroSea,
+                area: MapsList.dssm.macroSea,
                 version: DataNames.both,
             },
             evolutions: [
@@ -18278,9 +18291,9 @@ export const DigimonList = {
     Ebidramon: {
         species: [Species.AQU, Species.DRG],
         stage: Stage.stage3,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.macroSea,
+                area: MapsList.dssm.macroSea,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Poyomon,
@@ -18308,9 +18321,9 @@ export const DigimonList = {
     Kuwagamon: {
         species: [Species.INS],
         stage: Stage.stage3,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.steamyJungle,
+                area: MapsList.ds.steamyJungle,
             },
             evolutions: [
                 {
@@ -18320,9 +18333,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Tentomon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.resistorJungle,
+                area: MapsList.dssm.resistorJungle,
                 version: DataNames.both,
             },
             evolutions: [
@@ -18367,9 +18380,9 @@ export const DigimonList = {
     Snimon: {
         species: [Species.INS],
         stage: Stage.stage3,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Minomon,
@@ -18385,9 +18398,9 @@ export const DigimonList = {
     Dokugumon: {
         species: [Species.INS],
         stage: Stage.stage3,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.resistorJungle,
+                area: MapsList.dssm.resistorJungle,
                 version: DataNames.both,
             },
             evolutions: [
@@ -18436,9 +18449,9 @@ export const DigimonList = {
     Gokimon: {
         species: [Species.INS],
         stage: Stage.stage3,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.steamyJungle,
+                area: MapsList.ds.steamyJungle,
             },
             evolutions: [
                 {
@@ -18452,9 +18465,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Impmon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.thrillerRuins,
+                area: MapsList.dssm.thrillerRuins,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Budmon,
@@ -18463,9 +18476,9 @@ export const DigimonList = {
     Flymon: {
         species: [Species.INS],
         stage: Stage.stage3,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.chipForest,
+                area: MapsList.dssm.chipForest,
                 version: DataNames.both,
             },
             evolutions: [
@@ -18500,9 +18513,9 @@ export const DigimonList = {
     Yanmamon: {
         species: [Species.INS],
         stage: Stage.stage3,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.loopSwamp,
+                area: MapsList.dssm.loopSwamp,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Minomon,
@@ -18518,9 +18531,9 @@ export const DigimonList = {
     SandYanmamon: {
         species: [Species.INS],
         stage: Stage.stage3,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.limitValley,
+                area: MapsList.dssm.limitValley,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Minomon,
@@ -18529,9 +18542,9 @@ export const DigimonList = {
     Vegiemon: {
         species: [Species.INS, Species.PLN],
         stage: Stage.stage3,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.packetSwamp,
+                area: MapsList.ds.packetSwamp,
             },
             evolutions: [
                 {
@@ -18541,9 +18554,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Floramon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Tanemon,
@@ -18559,9 +18572,9 @@ export const DigimonList = {
     Weedmon: {
         species: [Species.INS],
         stage: Stage.stage3,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.loopSwamp,
+                area: MapsList.dssm.loopSwamp,
                 version: DataNames.both,
             },
             evolutions: [
@@ -18580,9 +18593,9 @@ export const DigimonList = {
     RedVegiemon: {
         species: [Species.INS],
         stage: Stage.stage3,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.resistorJungle,
+                area: MapsList.dssm.resistorJungle,
                 version: DataNames.both,
             },
             dna: [DataNames.Vademon],
@@ -18592,9 +18605,9 @@ export const DigimonList = {
     Woodmon: {
         species: [Species.INS, Species.PLN],
         stage: Stage.stage3,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.resistorJungle,
+                area: MapsList.dssm.resistorJungle,
                 version: DataNames.both,
             },
             evolutions: [
@@ -18648,9 +18661,9 @@ export const DigimonList = {
     Igamon: {
         species: [Species.INS, Species.PLN],
         stage: Stage.stage3,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.resistorJungle,
+                area: MapsList.dssm.resistorJungle,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Budmon,
@@ -18690,9 +18703,9 @@ export const DigimonList = {
     Kogamon: {
         species: [Species.INS],
         stage: Stage.stage3,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.loopSwamp,
+                area: MapsList.dssm.loopSwamp,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Budmon,
@@ -18701,10 +18714,10 @@ export const DigimonList = {
     Mechanorimon: {
         species: [Species.MAC],
         stage: Stage.stage3,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.processFactory,
-                version: DataNames.dusk,
+                area: MapsList.dssm.processFactory,
+                version: DataNames.moonlight,
             },
             evolutions: [
                 {
@@ -18729,10 +18742,10 @@ export const DigimonList = {
     Tankmon: {
         species: [Species.MAC],
         stage: Stage.stage3,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.processFactory,
-                version: DataNames.dusk,
+                area: MapsList.dssm.processFactory,
+                version: DataNames.moonlight,
             },
             evolutions: [
                 {
@@ -18781,9 +18794,9 @@ export const DigimonList = {
     Hookmon: {
         species: [Species.MAC],
         stage: Stage.stage3,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.drainTunnel,
+                area: MapsList.ds.drainTunnel,
             },
             evolutions: [
                 {
@@ -18793,9 +18806,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Kapurimon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.sunkenTunnel,
+                area: MapsList.dssm.sunkenTunnel,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Kapurimon,
@@ -18835,9 +18848,9 @@ export const DigimonList = {
     Revolmon: {
         species: [Species.MAC],
         stage: Stage.stage3,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -18892,9 +18905,9 @@ export const DigimonList = {
     Clockmon: {
         species: [Species.MAC],
         stage: Stage.stage3,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.chaosBrain,
+                area: MapsList.dssm.chaosBrain,
                 version: DataNames.both,
             },
             evolutions: [
@@ -18940,9 +18953,9 @@ export const DigimonList = {
     Thunderballmon: {
         species: [Species.MAC],
         stage: Stage.stage3,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -18964,9 +18977,9 @@ export const DigimonList = {
     Omekamon: {
         species: [Species.MAC],
         stage: Stage.stage3,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -18981,10 +18994,10 @@ export const DigimonList = {
     Golemon: {
         species: [Species.MAC],
         stage: Stage.stage3,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.magnetMine,
-                version: DataNames.dusk,
+                area: MapsList.dssm.magnetMine,
+                version: DataNames.moonlight,
             },
             evolutionTree: DataNames.Gotsumon,
         },
@@ -18999,15 +19012,15 @@ export const DigimonList = {
     Raremon: {
         species: [Species.MAC],
         stage: Stage.stage3,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.drainTunnel,
+                area: MapsList.ds.drainTunnel,
             },
             evolutionTree: DataNames.Otamamon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.sunkenTunnel,
+                area: MapsList.dssm.sunkenTunnel,
                 version: DataNames.both,
             },
             evolutions: [
@@ -19026,9 +19039,9 @@ export const DigimonList = {
     Sukamon: {
         species: [Species.MAC],
         stage: Stage.stage3,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.drainTunnel,
+                area: MapsList.ds.drainTunnel,
             },
             evolutions: [
                 {
@@ -19042,9 +19055,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Betamon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.sunkenTunnel,
+                area: MapsList.dssm.sunkenTunnel,
                 version: DataNames.both,
             },
             evolutions: [
@@ -19070,9 +19083,9 @@ export const DigimonList = {
     PlatinumSukamon: {
         species: [Species.MAC],
         stage: Stage.stage3,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.drainTunnel,
+                area: MapsList.ds.drainTunnel,
             },
             evolutions: [
                 {
@@ -19082,9 +19095,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Kapurimon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.sunkenTunnel,
+                area: MapsList.dssm.sunkenTunnel,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Kapurimon,
@@ -19093,9 +19106,9 @@ export const DigimonList = {
     Starmon: {
         species: [Species.HOL, Species.MAC],
         stage: Stage.stage3,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.sheerValley,
+                area: MapsList.ds.sheerValley,
             },
             evolutions: [
                 {
@@ -19105,9 +19118,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Koromon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.paletteAmazon,
+                area: MapsList.dssm.paletteAmazon,
                 version: DataNames.both,
             },
             evolutions: [
@@ -19156,9 +19169,9 @@ export const DigimonList = {
     Unimon: {
         species: [Species.HOL],
         stage: Stage.stage3,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.skyPalace,
+                area: MapsList.ds.skyPalace,
             },
             evolutions: [
                 {
@@ -19168,9 +19181,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Bakumon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.highlightHaven,
+                area: MapsList.dssm.highlightHaven,
                 version: DataNames.both,
             },
             evolutions: [
@@ -19196,15 +19209,15 @@ export const DigimonList = {
     Sorcerymon: {
         species: [Species.HOL],
         stage: Stage.stage3,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.junkFactory,
+                area: MapsList.ds.junkFactory,
             },
             evolutionTree: DataNames.Impmon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.highlightHaven,
+                area: MapsList.dssm.highlightHaven,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Gummymon,
@@ -19213,9 +19226,9 @@ export const DigimonList = {
     Wizardmon: {
         species: [Species.DAR],
         stage: Stage.stage3,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.chromeMine,
+                area: MapsList.ds.chromeMine,
             },
             evolutions: [
                 {
@@ -19235,9 +19248,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Pagumon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.shadowAbyss,
+                area: MapsList.dssm.shadowAbyss,
                 version: DataNames.both,
             },
             evolutions: [
@@ -19307,9 +19320,9 @@ export const DigimonList = {
     Devimon: {
         species: [Species.DAR],
         stage: Stage.stage3,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.drainTunnel,
+                area: MapsList.ds.drainTunnel,
             },
             evolutions: [
                 {
@@ -19323,9 +19336,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.PicoDevimon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -19389,9 +19402,9 @@ export const DigimonList = {
     IceDevimon: {
         species: [Species.AQU],
         stage: Stage.stage3,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.accessGlacier,
+                area: MapsList.dssm.accessGlacier,
                 version: DataNames.both,
             },
             evolutions: [
@@ -19424,9 +19437,9 @@ export const DigimonList = {
     Devidramon: {
         species: [Species.DAR],
         stage: Stage.stage3,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.shadowAbyss,
+                area: MapsList.dssm.shadowAbyss,
                 version: DataNames.both,
             },
             evolutions: [
@@ -19488,9 +19501,9 @@ export const DigimonList = {
     Evilmon: {
         species: [Species.DAR],
         stage: Stage.stage3,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.chromeMine,
+                area: MapsList.ds.chromeMine,
             },
             evolutions: [
                 {
@@ -19500,9 +19513,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Impmon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.thrillerRuins,
+                area: MapsList.dssm.thrillerRuins,
                 version: DataNames.both,
             },
             evolutions: [
@@ -19528,15 +19541,15 @@ export const DigimonList = {
     Bakemon: {
         species: [Species.DAR],
         stage: Stage.stage3,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.chromeMine,
+                area: MapsList.ds.chromeMine,
             },
             evolutionTree: DataNames.Goburimon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.thrillerRuins,
+                area: MapsList.dssm.thrillerRuins,
                 version: DataNames.both,
             },
             evolutions: [
@@ -19581,9 +19594,9 @@ export const DigimonList = {
     Chrysalimon: {
         species: [Species.DAR],
         stage: Stage.stage3,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutions: [
                 {
@@ -19593,10 +19606,10 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Kuramon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.magnetMine,
-                version: DataNames.dusk,
+                area: MapsList.dssm.magnetMine,
+                version: DataNames.moonlight,
             },
             evolutions: [
                 {
@@ -19648,9 +19661,9 @@ export const DigimonList = {
     Wendimon: {
         species: [Species.BST],
         stage: Stage.stage3,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.resistorJungle,
+                area: MapsList.dssm.resistorJungle,
                 version: DataNames.both,
             },
             evolutions: [
@@ -19691,15 +19704,15 @@ export const DigimonList = {
     DarkLizardmon: {
         species: [Species.DAR],
         stage: Stage.stage3,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.chromeMine,
+                area: MapsList.ds.chromeMine,
             },
             evolutionTree: DataNames.Kapurimon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.shadowAbyss,
+                area: MapsList.dssm.shadowAbyss,
                 version: DataNames.both,
             },
             evolutions: [
@@ -19718,9 +19731,9 @@ export const DigimonList = {
     Musyamon: {
         species: [Species.DAR],
         stage: Stage.stage3,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.loopSwamp,
+                area: MapsList.dssm.loopSwamp,
                 version: DataNames.both,
             },
             evolutions: [
@@ -19766,9 +19779,9 @@ export const DigimonList = {
     Sangloupmon: {
         species: [Species.DAR],
         stage: Stage.stage3,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutions: [
                 {
@@ -19778,9 +19791,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Tsunomon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -19829,9 +19842,9 @@ export const DigimonList = {
     Firamon: {
         species: [Species.HOL, Species.BST],
         stage: Stage.stage3,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -19880,9 +19893,9 @@ export const DigimonList = {
     Lekismon: {
         species: [Species.DAR, Species.BST],
         stage: Stage.stage3,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -20126,15 +20139,15 @@ export const DigimonList = {
     Fladramon: {
         species: [Species.DRG],
         stage: Stage.stage4,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutionTree: DataNames.Chicomon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Fladramon,
@@ -20150,9 +20163,9 @@ export const DigimonList = {
     Shadramon: {
         species: [Species.INS],
         stage: Stage.stage4,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             dna: [DataNames.BelialVamdemon],
@@ -20177,9 +20190,9 @@ export const DigimonList = {
     Allomon: {
         species: [Species.DRG],
         stage: Stage.stage4,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Allomon,
@@ -20188,9 +20201,9 @@ export const DigimonList = {
     Lynxmon: {
         species: [Species.BST],
         stage: Stage.stage4,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Lynxmon,
@@ -20212,15 +20225,15 @@ export const DigimonList = {
     Kenkimon: {
         species: [Species.MAC],
         stage: Stage.stage4,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutionTree: DataNames.Kapurimon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             dna: [DataNames.GigaSeadramon],
@@ -20256,9 +20269,9 @@ export const DigimonList = {
     Owlmon: {
         species: [Species.BRD],
         stage: Stage.stage4,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Owlmon,
@@ -20267,9 +20280,9 @@ export const DigimonList = {
     Pipismon: {
         species: [Species.BRD],
         stage: Stage.stage4,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Pipismon,
@@ -20278,15 +20291,15 @@ export const DigimonList = {
     Shurimon: {
         species: [Species.BRD, Species.PLN],
         stage: Stage.stage4,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutionTree: DataNames.Hawkmon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.transfield,
+                area: MapsList.dssm.transfield,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Shurimon,
@@ -20318,15 +20331,15 @@ export const DigimonList = {
     Ponchomon: {
         species: [Species.DAR],
         stage: Stage.stage4,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutionTree: DataNames.Pagumon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Ponchomon,
@@ -20335,9 +20348,9 @@ export const DigimonList = {
     Kabukimon: {
         species: [Species.INS, Species.PLN],
         stage: Stage.stage4,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Kabukimon,
@@ -20360,9 +20373,9 @@ export const DigimonList = {
     Tylomon: {
         species: [Species.AQU, Species.DRG],
         stage: Stage.stage4,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             dna: [DataNames.GigaSeadramon],
@@ -20379,15 +20392,15 @@ export const DigimonList = {
     Seahomon: {
         species: [Species.AQU],
         stage: Stage.stage4,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutionTree: DataNames.Dorimon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Seahomon,
@@ -20407,9 +20420,9 @@ export const DigimonList = {
     Toucanmon: {
         species: [Species.BRD],
         stage: Stage.stage4,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Toucanmon,
@@ -20418,15 +20431,15 @@ export const DigimonList = {
     Prairiemon: {
         species: [Species.BST],
         stage: Stage.stage4,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutionTree: DataNames.Terriermon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Prairiemon,
@@ -20461,15 +20474,15 @@ export const DigimonList = {
     Magnamon: {
         species: [Species.HOL, Species.DRG],
         stage: Stage.stage4,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutionTree: DataNames.Chicomon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             dna: [DataNames.Susanoomon],
@@ -20500,15 +20513,15 @@ export const DigimonList = {
     Kongoumon: {
         species: [Species.INS],
         stage: Stage.stage4,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutionTree: DataNames.Wormmon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.transfield,
+                area: MapsList.dssm.transfield,
                 version: DataNames.both,
             },
             dna: [DataNames.Susanoomon],
@@ -20531,9 +20544,9 @@ export const DigimonList = {
     MetalGreymon: {
         species: [Species.DRG],
         stage: Stage.stage4,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutions: [
                 {
@@ -20558,9 +20571,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Koromon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.chaosBrain,
+                area: MapsList.dssm.chaosBrain,
                 version: DataNames.both,
             },
             evolutions: [
@@ -20628,9 +20641,9 @@ export const DigimonList = {
     WereGarurumonBlue: {
         species: [Species.BST],
         stage: Stage.stage4,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutions: [
                 {
@@ -20648,9 +20661,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Tsunomon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -20717,9 +20730,9 @@ export const DigimonList = {
     Garudamon: {
         species: [Species.BRD],
         stage: Stage.stage4,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutions: [
                 {
@@ -20733,10 +20746,10 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Piyomon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.taskCanyon,
-                version: DataNames.dawn,
+                area: MapsList.dssm.taskCanyon,
+                version: DataNames.sunburst,
             },
             evolutions: [
                 {
@@ -20786,9 +20799,9 @@ export const DigimonList = {
     Lilymon: {
         species: [Species.INS, Species.PLN],
         stage: Stage.stage4,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutions: [
                 {
@@ -20798,9 +20811,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Tanemon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Tanemon,
@@ -20842,9 +20855,9 @@ export const DigimonList = {
     AtlurKabuterimonR: {
         species: [Species.INS],
         stage: Stage.stage4,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutions: [
                 {
@@ -20858,9 +20871,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Tentomon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             dna: [DataNames.HeraclesKabuterimon],
@@ -20914,9 +20927,9 @@ export const DigimonList = {
     Zudomon: {
         species: [Species.AQU, Species.BST],
         stage: Stage.stage4,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.hardMountains,
+                area: MapsList.ds.hardMountains,
             },
             evolutions: [
                 {
@@ -20938,9 +20951,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Poyomon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.accessGlacier,
+                area: MapsList.dssm.accessGlacier,
                 version: DataNames.both,
             },
             evolutions: [
@@ -21001,9 +21014,9 @@ export const DigimonList = {
     HolyAngemon: {
         species: [Species.HOL],
         stage: Stage.stage4,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutions: [
                 {
@@ -21013,9 +21026,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Tokomon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.highlightHaven,
+                area: MapsList.dssm.highlightHaven,
                 version: DataNames.both,
             },
             evolutions: [
@@ -21089,9 +21102,9 @@ export const DigimonList = {
     Angewomon: {
         species: [Species.HOL],
         stage: Stage.stage4,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.skyPalace,
+                area: MapsList.ds.skyPalace,
             },
             evolutions: [
                 {
@@ -21101,10 +21114,10 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Puttomon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.highlightHaven,
-                version: DataNames.dawn,
+                area: MapsList.dssm.highlightHaven,
+                version: DataNames.sunburst,
             },
             evolutions: [
                 {
@@ -21159,9 +21172,9 @@ export const DigimonList = {
     Paildramon: {
         species: [Species.DRG],
         stage: Stage.stage4,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutions: [
                 {
@@ -21183,9 +21196,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Chicomon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -21241,9 +21254,9 @@ export const DigimonList = {
     Silphymon: {
         species: [Species.BRD],
         stage: Stage.stage4,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.tropicalIsles,
+                area: MapsList.ds.tropicalIsles,
             },
             evolutions: [
                 {
@@ -21257,9 +21270,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Hawkmon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.transfield,
+                area: MapsList.dssm.transfield,
                 version: DataNames.both,
             },
             evolutions: [
@@ -21305,10 +21318,10 @@ export const DigimonList = {
     Shakkoumon: {
         species: [Species.HOL],
         stage: Stage.stage4,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.taskCanyon,
-                version: DataNames.dawn,
+                area: MapsList.dssm.taskCanyon,
+                version: DataNames.sunburst,
             },
             evolutionTree: DataNames.Shakkoumon,
         },
@@ -21338,9 +21351,9 @@ export const DigimonList = {
     MegaloGrowlmon: {
         species: [Species.DRG],
         stage: Stage.stage4,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutions: [
                 {
@@ -21350,9 +21363,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Kuramon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -21428,9 +21441,9 @@ export const DigimonList = {
     Taomon: {
         species: [Species.HOL, Species.BST],
         stage: Stage.stage4,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.skyPalace,
+                area: MapsList.ds.skyPalace,
             },
             evolutions: [
                 {
@@ -21448,9 +21461,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Tanemon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -21503,9 +21516,9 @@ export const DigimonList = {
     Rapidmon: {
         species: [Species.BST],
         stage: Stage.stage4,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.tropicalIsles,
+                area: MapsList.ds.tropicalIsles,
             },
             evolutions: [
                 {
@@ -21519,9 +21532,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Terriermon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -21587,9 +21600,9 @@ export const DigimonList = {
     Cyberdramon: {
         species: [Species.DRG],
         stage: Stage.stage4,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.lavaRiver,
+                area: MapsList.ds.lavaRiver,
             },
             evolutions: [
                 {
@@ -21603,9 +21616,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Gotsumon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.accessGlacier,
+                area: MapsList.dssm.accessGlacier,
                 version: DataNames.both,
             },
             evolutions: [
@@ -21660,9 +21673,9 @@ export const DigimonList = {
     Antylamon: {
         species: [Species.DAR, Species.BST],
         stage: Stage.stage4,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutions: [
                 {
@@ -21691,9 +21704,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Pagumon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -21760,15 +21773,15 @@ export const DigimonList = {
     RizeGreymon: {
         species: [Species.DRG],
         stage: Stage.stage4,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutionTree: DataNames.Koromon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -21837,15 +21850,15 @@ export const DigimonList = {
     MachGaogamon: {
         species: [Species.BST],
         stage: Stage.stage4,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutionTree: DataNames.Tsunomon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -21912,15 +21925,15 @@ export const DigimonList = {
     Lilamon: {
         species: [Species.INS, Species.PLN],
         stage: Stage.stage4,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutionTree: DataNames.Tanemon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.paletteAmazon,
+                area: MapsList.dssm.paletteAmazon,
                 version: DataNames.both,
             },
             evolutions: [
@@ -21984,9 +21997,9 @@ export const DigimonList = {
     Yatagaramon: {
         species: [Species.BRD],
         stage: Stage.stage4,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.coreField,
+                area: MapsList.ds.coreField,
             },
             evolutions: [
                 {
@@ -21996,10 +22009,10 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Tokomon,
         },
-        dwdd: {
+        dssm: {
             sprite: "_2",
             location: {
-                area: MapsList.dwdd.highlightHaven,
+                area: MapsList.dssm.highlightHaven,
                 version: DataNames.both,
             },
             evolutions: [
@@ -22051,9 +22064,9 @@ export const DigimonList = {
     Shawujinmon: {
         species: [Species.AQU],
         stage: Stage.stage4,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.transfield,
+                area: MapsList.dssm.transfield,
                 version: DataNames.both,
             },
             evolutions: [
@@ -22109,9 +22122,9 @@ export const DigimonList = {
     BishopChessmon: {
         species: [Species.MAC],
         stage: Stage.stage4,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.chaosBrain,
+                area: MapsList.dssm.chaosBrain,
                 version: DataNames.both,
             },
             evolutions: [
@@ -22137,10 +22150,10 @@ export const DigimonList = {
     RookChessmon: {
         species: [Species.MAC],
         stage: Stage.stage4,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.processFactory,
-                version: DataNames.dusk,
+                area: MapsList.dssm.processFactory,
+                version: DataNames.moonlight,
             },
             evolutions: [
                 {
@@ -22166,9 +22179,9 @@ export const DigimonList = {
     Tyilinmon: {
         species: [Species.HOL],
         stage: Stage.stage4,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutions: [
                 {
@@ -22182,10 +22195,10 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Puttomon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.highlightHaven,
-                version: DataNames.dawn,
+                area: MapsList.dssm.highlightHaven,
+                version: DataNames.sunburst,
             },
             evolutions: [
                 {
@@ -22224,9 +22237,9 @@ export const DigimonList = {
     Dorugremon: {
         species: [Species.DRG],
         stage: Stage.stage4,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutions: [
                 {
@@ -22236,9 +22249,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Dorimon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -22336,10 +22349,10 @@ export const DigimonList = {
     AeroVeedramon: {
         species: [Species.DRG],
         stage: Stage.stage4,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.taskCanyon,
-                version: DataNames.dawn,
+                area: MapsList.dssm.taskCanyon,
+                version: DataNames.sunburst,
             },
             evolutions: [
                 {
@@ -22406,15 +22419,15 @@ export const DigimonList = {
     BlackMegaloGrowlmon: {
         species: [Species.DRG],
         stage: Stage.stage4,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.lavaRiver,
+                area: MapsList.ds.lavaRiver,
             },
             evolutionTree: DataNames.Kuramon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.shadowAbyss,
+                area: MapsList.dssm.shadowAbyss,
                 version: DataNames.both,
             },
             dna: [DataNames.ChaosDukemon],
@@ -22463,9 +22476,9 @@ export const DigimonList = {
     Triceramon: {
         species: [Species.DRG],
         stage: Stage.stage4,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.ancientCanyon,
+                area: MapsList.ds.ancientCanyon,
             },
             evolutions: [
                 {
@@ -22475,9 +22488,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Goburimon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.proxyIsland,
+                area: MapsList.dssm.proxyIsland,
                 version: DataNames.both,
             },
             evolutions: [
@@ -22509,9 +22522,9 @@ export const DigimonList = {
     Vermillimon: {
         species: [Species.DRG],
         stage: Stage.stage4,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.proxyIsland,
+                area: MapsList.dssm.proxyIsland,
                 version: DataNames.both,
             },
             evolutions: [
@@ -22537,9 +22550,9 @@ export const DigimonList = {
     Mametyramon: {
         species: [Species.MAC, Species.DRG],
         stage: Stage.stage4,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.accessGlacier,
+                area: MapsList.dssm.accessGlacier,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.ToyAgumon,
@@ -22574,9 +22587,9 @@ export const DigimonList = {
     GrapLeomon: {
         species: [Species.BST],
         stage: Stage.stage4,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.paletteAmazon,
+                area: MapsList.dssm.paletteAmazon,
                 version: DataNames.both,
             },
             evolutions: [
@@ -22654,9 +22667,9 @@ export const DigimonList = {
     Kyukimon: {
         species: [Species.BST],
         stage: Stage.stage4,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutions: [
                 {
@@ -22666,9 +22679,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Kapurimon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -22698,9 +22711,9 @@ export const DigimonList = {
     Etemon: {
         species: [Species.BST],
         stage: Stage.stage4,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.tropicalIsles,
+                area: MapsList.ds.tropicalIsles,
             },
             evolutions: [
                 {
@@ -22714,9 +22727,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Goburimon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.proxyIsland,
+                area: MapsList.dssm.proxyIsland,
                 version: DataNames.both,
             },
             evolutions: [
@@ -22748,9 +22761,9 @@ export const DigimonList = {
     Pandamon: {
         species: [Species.BST],
         stage: Stage.stage4,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             dna: [DataNames.BanchoLeomon],
@@ -22790,9 +22803,9 @@ export const DigimonList = {
     Mammon: {
         species: [Species.BST],
         stage: Stage.stage4,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.accessGlacier,
+                area: MapsList.dssm.accessGlacier,
                 version: DataNames.both,
             },
             evolutions: [
@@ -22854,9 +22867,9 @@ export const DigimonList = {
     Sinduramon: {
         species: [Species.BRD],
         stage: Stage.stage4,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.transfield,
+                area: MapsList.dssm.transfield,
                 version: DataNames.both,
             },
             dna: [DataNames.Valdurmon],
@@ -22874,9 +22887,9 @@ export const DigimonList = {
     Karatenmon: {
         species: [Species.BRD],
         stage: Stage.stage4,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.chaosBrain,
+                area: MapsList.dssm.chaosBrain,
                 version: DataNames.both,
             },
             dna: [DataNames.Anubimon, DataNames.Kuzuhamon],
@@ -22917,9 +22930,9 @@ export const DigimonList = {
     Parrotmon: {
         species: [Species.BRD],
         stage: Stage.stage4,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.mangoveWoods,
+                area: MapsList.ds.mangoveWoods,
             },
             evolutions: [
                 {
@@ -22933,9 +22946,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Parrotmon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.paletteAmazon,
+                area: MapsList.dssm.paletteAmazon,
                 version: DataNames.both,
             },
             evolutions: [
@@ -22980,15 +22993,15 @@ export const DigimonList = {
     Deramon: {
         species: [Species.BRD],
         stage: Stage.stage4,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.mangoveWoods,
+                area: MapsList.ds.mangoveWoods,
             },
             evolutionTree: DataNames.Penmon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.paletteAmazon,
+                area: MapsList.dssm.paletteAmazon,
                 version: DataNames.both,
             },
             evolutions: [
@@ -23013,15 +23026,15 @@ export const DigimonList = {
     Dagomon: {
         species: [Species.AQU],
         stage: Stage.stage4,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.drainTunnel,
+                area: MapsList.ds.drainTunnel,
             },
             evolutionTree: DataNames.Betamon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.macroSea,
+                area: MapsList.dssm.macroSea,
                 version: DataNames.both,
             },
             evolutions: [
@@ -23117,9 +23130,9 @@ export const DigimonList = {
     Whamon: {
         species: [Species.AQU],
         stage: Stage.stage4,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.underseaDrive,
+                area: MapsList.ds.underseaDrive,
             },
             evolutions: [
                 {
@@ -23133,9 +23146,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Otamamon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.macroSea,
+                area: MapsList.dssm.macroSea,
                 version: DataNames.both,
             },
             evolutions: [
@@ -23169,9 +23182,9 @@ export const DigimonList = {
     MegaSeadramon: {
         species: [Species.AQU, Species.DRG],
         stage: Stage.stage4,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.mangoveWoods,
+                area: MapsList.ds.mangoveWoods,
             },
             evolutions: [
                 {
@@ -23193,9 +23206,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Betamon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -23309,9 +23322,9 @@ export const DigimonList = {
     Brachimon: {
         species: [Species.AQU, Species.DRG],
         stage: Stage.stage4,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.transfield,
+                area: MapsList.dssm.transfield,
                 version: DataNames.both,
             },
             evolutions: [
@@ -23355,15 +23368,15 @@ export const DigimonList = {
     Hangyomon: {
         species: [Species.AQU],
         stage: Stage.stage4,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.underseaDrive,
+                area: MapsList.ds.underseaDrive,
             },
             evolutionTree: DataNames.Gizamon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.macroSea,
+                area: MapsList.dssm.macroSea,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Betamon,
@@ -23385,9 +23398,9 @@ export const DigimonList = {
     TonosamaGekomon: {
         species: [Species.AQU],
         stage: Stage.stage4,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.loopSwamp,
+                area: MapsList.dssm.loopSwamp,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Otamamon,
@@ -23403,9 +23416,9 @@ export const DigimonList = {
     Anomalocarimon: {
         species: [Species.AQU],
         stage: Stage.stage4,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.proxyIsland,
+                area: MapsList.dssm.proxyIsland,
                 version: DataNames.both,
             },
             evolutions: [
@@ -23449,9 +23462,9 @@ export const DigimonList = {
     MarineDevimon: {
         species: [Species.AQU],
         stage: Stage.stage4,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.macroSea,
+                area: MapsList.dssm.macroSea,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Gizamon,
@@ -23468,15 +23481,15 @@ export const DigimonList = {
     AtlurKabuterimonB: {
         species: [Species.INS],
         stage: Stage.stage4,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutionTree: DataNames.Impmon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.resistorJungle,
+                area: MapsList.dssm.resistorJungle,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Minomon,
@@ -23485,9 +23498,9 @@ export const DigimonList = {
     Dinobeemon: {
         species: [Species.INS],
         stage: Stage.stage4,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutions: [
                 {
@@ -23497,9 +23510,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Wormmon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -23550,9 +23563,9 @@ export const DigimonList = {
     Ookuwamon: {
         species: [Species.INS],
         stage: Stage.stage4,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.packetSwamp,
+                area: MapsList.ds.packetSwamp,
             },
             evolutions: [
                 {
@@ -23562,9 +23575,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Tentomon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.proxyIsland,
+                area: MapsList.dssm.proxyIsland,
                 version: DataNames.both,
             },
             evolutions: [
@@ -23621,9 +23634,9 @@ export const DigimonList = {
     Arukenimon: {
         species: [Species.INS],
         stage: Stage.stage4,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.steamyJungle,
+                area: MapsList.ds.steamyJungle,
             },
             evolutions: [
                 {
@@ -23633,9 +23646,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Goburimon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.resistorJungle,
+                area: MapsList.dssm.resistorJungle,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Budmon,
@@ -23679,9 +23692,9 @@ export const DigimonList = {
     Jureimon: {
         species: [Species.INS, Species.PLN],
         stage: Stage.stage4,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.resistorJungle,
+                area: MapsList.dssm.resistorJungle,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Tanemon,
@@ -23725,15 +23738,15 @@ export const DigimonList = {
     Blossomon: {
         species: [Species.INS, Species.PLN],
         stage: Stage.stage4,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.packetSwamp,
+                area: MapsList.ds.packetSwamp,
             },
             evolutionTree: DataNames.Floramon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.loopSwamp,
+                area: MapsList.dssm.loopSwamp,
                 version: DataNames.both,
             },
             dna: [DataNames.Anubimon],
@@ -23776,10 +23789,10 @@ export const DigimonList = {
     ArgomonUltimate: {
         species: [Species.DAR],
         stage: Stage.stage4,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.thrillerRuins,
-                version: DataNames.dusk,
+                area: MapsList.dssm.thrillerRuins,
+                version: DataNames.moonlight,
             },
             evolutions: [
                 {
@@ -23828,9 +23841,9 @@ export const DigimonList = {
     Andromon: {
         species: [Species.MAC],
         stage: Stage.stage4,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.hardMountains,
+                area: MapsList.ds.hardMountains,
             },
             evolutions: [
                 {
@@ -23844,9 +23857,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Kapurimon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.chaosBrain,
+                area: MapsList.dssm.chaosBrain,
                 version: DataNames.both,
             },
             evolutions: [
@@ -23908,9 +23921,9 @@ export const DigimonList = {
     MetalTyrannomon: {
         species: [Species.MAC, Species.DRG],
         stage: Stage.stage4,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.accessGlacier,
+                area: MapsList.dssm.accessGlacier,
                 version: DataNames.both,
             },
             dna: [DataNames.Mugendramon],
@@ -23957,9 +23970,9 @@ export const DigimonList = {
     Megadramon: {
         species: [Species.MAC, Species.DRG],
         stage: Stage.stage4,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.junkFactory,
+                area: MapsList.ds.junkFactory,
             },
             evolutions: [
                 {
@@ -23969,9 +23982,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Wormmon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.accessGlacier,
+                area: MapsList.dssm.accessGlacier,
                 version: DataNames.both,
             },
             evolutions: [
@@ -24017,16 +24030,16 @@ export const DigimonList = {
     Gigadramon: {
         species: [Species.DAR, Species.DRG],
         stage: Stage.stage4,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutionTree: DataNames.Hawkmon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.processFactory,
-                version: DataNames.dusk,
+                area: MapsList.dssm.processFactory,
+                version: DataNames.moonlight,
             },
             dna: [DataNames.GigaSeadramon, DataNames.Mugendramon, DataNames.ZeedMillenniumon],
             evolutionTree: DataNames.Kuramon,
@@ -24062,9 +24075,9 @@ export const DigimonList = {
     Mamemon: {
         species: [Species.MAC],
         stage: Stage.stage4,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.junkFactory,
+                area: MapsList.ds.junkFactory,
             },
             evolutions: [
                 {
@@ -24078,9 +24091,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.ToyAgumonB,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.proxyIsland,
+                area: MapsList.dssm.proxyIsland,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Kokuwamon,
@@ -24120,9 +24133,9 @@ export const DigimonList = {
     MetalMamemon: {
         species: [Species.MAC],
         stage: Stage.stage4,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.hardMountains,
+                area: MapsList.ds.hardMountains,
             },
             evolutions: [
                 {
@@ -24132,9 +24145,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Kapurimon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.chaosBrain,
+                area: MapsList.dssm.chaosBrain,
                 version: DataNames.both,
             },
             evolutions: [
@@ -24179,9 +24192,9 @@ export const DigimonList = {
     BigMamemon: {
         species: [Species.MAC],
         stage: Stage.stage4,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.transfield,
+                area: MapsList.dssm.transfield,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.BigMamemon,
@@ -24190,9 +24203,9 @@ export const DigimonList = {
     Giromon: {
         species: [Species.MAC],
         stage: Stage.stage4,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.chaosBrain,
+                area: MapsList.dssm.chaosBrain,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Solarmon,
@@ -24208,9 +24221,9 @@ export const DigimonList = {
     Tekkamon: {
         species: [Species.MAC],
         stage: Stage.stage4,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.magnetMine,
+                area: MapsList.dssm.magnetMine,
                 version: DataNames.blue,
             },
             evolutions: [
@@ -24233,9 +24246,9 @@ export const DigimonList = {
     Nanomon: {
         species: [Species.MAC],
         stage: Stage.stage4,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.chaosBrain,
+                area: MapsList.dssm.chaosBrain,
                 version: DataNames.both,
             },
             evolutions: [
@@ -24272,16 +24285,16 @@ export const DigimonList = {
     Insekimon: {
         species: [Species.MAC],
         stage: Stage.stage4,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.chromeMine,
+                area: MapsList.ds.chromeMine,
             },
             evolutionTree: DataNames.Kapurimon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.magnetMine,
-                version: DataNames.dusk,
+                area: MapsList.dssm.magnetMine,
+                version: DataNames.moonlight,
             },
             evolutionTree: DataNames.Gotsumon,
         },
@@ -24303,16 +24316,16 @@ export const DigimonList = {
     Garbemon: {
         species: [Species.MAC],
         stage: Stage.stage4,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.junkFactory,
+                area: MapsList.ds.junkFactory,
             },
             evolutionTree: DataNames.Betamon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.processFactory,
-                version: DataNames.dusk,
+                area: MapsList.dssm.processFactory,
+                version: DataNames.moonlight,
             },
             evolutionTree: DataNames.Minomon,
         },
@@ -24327,9 +24340,9 @@ export const DigimonList = {
     Vademon: {
         species: [Species.MAC],
         stage: Stage.stage4,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -24367,9 +24380,9 @@ export const DigimonList = {
     Volcamon: {
         species: [Species.DAR, Species.MAC],
         stage: Stage.stage4,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.shadowAbyss,
+                area: MapsList.dssm.shadowAbyss,
                 version: DataNames.both,
             },
             dna: [DataNames.Boltmon],
@@ -24418,9 +24431,9 @@ export const DigimonList = {
     Piccolomon: {
         species: [Species.HOL],
         stage: Stage.stage4,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.skyPalace,
+                area: MapsList.ds.skyPalace,
             },
             evolutions: [
                 {
@@ -24434,9 +24447,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Bakumon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.highlightHaven,
+                area: MapsList.dssm.highlightHaven,
                 version: DataNames.both,
             },
             evolutions: [
@@ -24486,9 +24499,9 @@ export const DigimonList = {
     Knightmon: {
         species: [Species.HOL, Species.MAC],
         stage: Stage.stage4,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.transfield,
+                area: MapsList.dssm.transfield,
                 version: DataNames.both,
             },
             evolutions: [
@@ -24544,9 +24557,9 @@ export const DigimonList = {
     SuperStarmon: {
         species: [Species.HOL, Species.MAC],
         stage: Stage.stage4,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.junkFactory,
+                area: MapsList.ds.junkFactory,
             },
             evolutions: [
                 {
@@ -24560,9 +24573,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Koromon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.transfield,
+                area: MapsList.dssm.transfield,
                 version: DataNames.both,
             },
             dna: [DataNames.Susanoomon],
@@ -24596,9 +24609,9 @@ export const DigimonList = {
     Monzaemon: {
         species: [Species.HOL],
         stage: Stage.stage4,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.sheerValley,
+                area: MapsList.ds.sheerValley,
             },
             evolutions: [
                 {
@@ -24612,9 +24625,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Kumamon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.proxyIsland,
+                area: MapsList.dssm.proxyIsland,
                 version: DataNames.both,
             },
             evolutions: [
@@ -24660,9 +24673,9 @@ export const DigimonList = {
     Digitamamon: {
         species: [Species.HOL, Species.DAR],
         stage: Stage.stage4,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutions: [
                 {
@@ -24676,9 +24689,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Digitamamon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.thrillerRuins,
+                area: MapsList.dssm.thrillerRuins,
                 version: DataNames.both,
             },
             evolutions: [
@@ -24779,15 +24792,15 @@ export const DigimonList = {
     WereGarurumonBlack: {
         species: [Species.BST],
         stage: Stage.stage4,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.steamyJungle,
+                area: MapsList.ds.steamyJungle,
             },
             evolutionTree: DataNames.Kumamon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.thrillerRuins,
+                area: MapsList.dssm.thrillerRuins,
                 version: DataNames.both,
             },
             evolutions: [
@@ -24841,9 +24854,9 @@ export const DigimonList = {
     BlackRapidmon: {
         species: [Species.DAR],
         stage: Stage.stage4,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.lavaRiver,
+                area: MapsList.ds.lavaRiver,
             },
             evolutions: [
                 {
@@ -24857,10 +24870,10 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Terriermon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.processFactory,
-                version: DataNames.dusk,
+                area: MapsList.dssm.processFactory,
+                version: DataNames.moonlight,
             },
             evolutions: [
                 {
@@ -24884,10 +24897,10 @@ export const DigimonList = {
     SkullGreymon: {
         species: [Species.DAR, Species.DRG],
         stage: Stage.stage4,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.shadowAbyss,
-                version: DataNames.dusk,
+                area: MapsList.dssm.shadowAbyss,
+                version: DataNames.moonlight,
             },
             evolutions: [
                 {
@@ -24935,9 +24948,9 @@ export const DigimonList = {
     Kimeramon: {
         species: [Species.DAR],
         stage: Stage.stage4,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -24981,9 +24994,9 @@ export const DigimonList = {
     Vamdemon: {
         species: [Species.DAR],
         stage: Stage.stage4,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.chromeMine,
+                area: MapsList.ds.chromeMine,
             },
             evolutions: [
                 {
@@ -25004,9 +25017,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.PicoDevimon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.thrillerRuins,
+                area: MapsList.dssm.thrillerRuins,
                 version: DataNames.both,
             },
             evolutions: [
@@ -25073,15 +25086,15 @@ export const DigimonList = {
     LadyDevimon: {
         species: [Species.DAR],
         stage: Stage.stage4,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.lavaRiver,
+                area: MapsList.ds.lavaRiver,
             },
             evolutionTree: DataNames.Puttomon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.shadowAbyss,
+                area: MapsList.dssm.shadowAbyss,
                 version: DataNames.both,
             },
             evolutions: [
@@ -25132,9 +25145,9 @@ export const DigimonList = {
     Mummymon: {
         species: [Species.DAR],
         stage: Stage.stage4,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.lavaRiver,
+                area: MapsList.ds.lavaRiver,
             },
             evolutions: [
                 {
@@ -25148,9 +25161,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Impmon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.thrillerRuins,
+                area: MapsList.dssm.thrillerRuins,
                 version: DataNames.both,
             },
             evolutions: [
@@ -25230,9 +25243,9 @@ export const DigimonList = {
     Infermon: {
         species: [Species.DAR],
         stage: Stage.stage4,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutions: [
                 {
@@ -25249,9 +25262,9 @@ export const DigimonList = {
             ],
             evolutionTree: DataNames.Kuramon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.chaosBrain,
+                area: MapsList.dssm.chaosBrain,
                 version: DataNames.both,
             },
             evolutions: [
@@ -25322,9 +25335,9 @@ export const DigimonList = {
     Vajramon: {
         species: [Species.DAR, Species.BST],
         stage: Stage.stage4,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.transfield,
+                area: MapsList.dssm.transfield,
                 version: DataNames.both,
             },
             evolutions: [
@@ -25362,9 +25375,9 @@ export const DigimonList = {
     Phantomon: {
         species: [Species.DAR],
         stage: Stage.stage4,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.thrillerRuins,
+                area: MapsList.dssm.thrillerRuins,
                 version: DataNames.both,
             },
             evolutions: [
@@ -25431,15 +25444,15 @@ export const DigimonList = {
     Matadormon: {
         species: [Species.DRG, Species.DRG],
         stage: Stage.stage4,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutionTree: DataNames.Tsunomon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.shadowAbyss,
+                area: MapsList.dssm.shadowAbyss,
                 version: DataNames.both,
             },
             evolutions: [
@@ -25495,9 +25508,9 @@ export const DigimonList = {
     EXTyrannomon: {
         species: [Species.MAC, Species.DAR],
         stage: Stage.stage4,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -25612,9 +25625,9 @@ export const DigimonList = {
     Flaremon: {
         species: [Species.HOL, Species.BST],
         stage: Stage.stage4,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -25671,9 +25684,9 @@ export const DigimonList = {
     Crescemon: {
         species: [Species.DAR, Species.BST],
         stage: Stage.stage4,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -25775,9 +25788,9 @@ export const DigimonList = {
     LucemonFM: {
         species: [Species.DAR],
         stage: Stage.stage4,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutions: [
@@ -25880,15 +25893,15 @@ export const DigimonList = {
     WarGreymon: {
         species: [Species.DRG],
         stage: Stage.stage5,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutionTree: DataNames.Koromon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             dna: [DataNames.Omegamon],
@@ -25931,15 +25944,15 @@ export const DigimonList = {
     MetalGarurumon: {
         species: [Species.BST],
         stage: Stage.stage5,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutionTree: DataNames.Tsunomon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             dna: [DataNames.Omegamon],
@@ -25982,15 +25995,15 @@ export const DigimonList = {
     Hououmon: {
         species: [Species.BRD],
         stage: Stage.stage5,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.skyPalace,
+                area: MapsList.ds.skyPalace,
             },
             evolutionTree: DataNames.Piyomon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.highlightHaven,
+                area: MapsList.dssm.highlightHaven,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Chicchimon,
@@ -26033,15 +26046,15 @@ export const DigimonList = {
     Rosemon: {
         species: [Species.INS, Species.PLN],
         stage: Stage.stage5,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutionTree: DataNames.Tanemon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.transfield,
+                area: MapsList.dssm.transfield,
                 version: DataNames.both,
             },
             dna: [DataNames.RosemonBM],
@@ -26082,15 +26095,15 @@ export const DigimonList = {
     HeraclesKabuterimon: {
         species: [Species.INS],
         stage: Stage.stage5,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutionTree: DataNames.Tentomon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.HeraclesKabuterimon,
@@ -26123,15 +26136,15 @@ export const DigimonList = {
     Vikemon: {
         species: [Species.AQU, Species.BST],
         stage: Stage.stage5,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutionTree: DataNames.Poyomon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.accessGlacier,
+                area: MapsList.dssm.accessGlacier,
                 version: DataNames.both,
             },
             dna: [DataNames.MirageGaogamonBM],
@@ -26162,15 +26175,15 @@ export const DigimonList = {
     Seraphimon: {
         species: [Species.HOL],
         stage: Stage.stage5,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutionTree: DataNames.Tokomon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             dna: [DataNames.DukemonCM],
@@ -26204,9 +26217,9 @@ export const DigimonList = {
     Holydramon: {
         species: [Species.HOL, Species.DRG],
         stage: Stage.stage5,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Holydramon,
@@ -26236,15 +26249,15 @@ export const DigimonList = {
     ImperialdramonDM: {
         species: [Species.DRG],
         stage: Stage.stage5,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutionTree: DataNames.Chicomon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Paildramon,
@@ -26290,15 +26303,15 @@ export const DigimonList = {
     Dukemon: {
         species: [Species.HOL, Species.DRG],
         stage: Stage.stage5,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutionTree: DataNames.Kuramon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             dna: [DataNames.DukemonCM, DataNames.ShineGreymonBM],
@@ -26330,15 +26343,15 @@ export const DigimonList = {
     Sakuyamon: {
         species: [Species.HOL, Species.BST],
         stage: Stage.stage5,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutionTree: DataNames.Tanemon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Gummymon,
@@ -26361,15 +26374,15 @@ export const DigimonList = {
     SaintGargomon: {
         species: [Species.BST],
         stage: Stage.stage5,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutionTree: DataNames.Terriermon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.chaosBrain,
+                area: MapsList.dssm.chaosBrain,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Gummymon,
@@ -26392,15 +26405,15 @@ export const DigimonList = {
     Justimon: {
         species: [Species.MAC],
         stage: Stage.stage5,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutionTree: DataNames.Koromon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Chicomon,
@@ -26429,15 +26442,15 @@ export const DigimonList = {
     MarineAngemon: {
         species: [Species.AQU],
         stage: Stage.stage5,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.underseaDrive,
+                area: MapsList.ds.underseaDrive,
             },
             evolutionTree: DataNames.Puttomon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.macroSea,
+                area: MapsList.dssm.macroSea,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Betamon,
@@ -26459,9 +26472,9 @@ export const DigimonList = {
     ShineGreymon: {
         species: [Species.DRG],
         stage: Stage.stage5,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             dna: [DataNames.ShineGreymonBM, DataNames.ShineGreymonRM],
@@ -26520,9 +26533,9 @@ export const DigimonList = {
     MirageGaogamon: {
         species: [Species.BST],
         stage: Stage.stage5,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             dna: [DataNames.MirageGaogamonBM],
@@ -26570,9 +26583,9 @@ export const DigimonList = {
     Ravemon: {
         species: [Species.BRD],
         stage: Stage.stage5,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             dna: [DataNames.RavemonBM],
@@ -26619,15 +26632,15 @@ export const DigimonList = {
     Sleipmon: {
         species: [Species.HOL],
         stage: Stage.stage5,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutionTree: DataNames.Puttomon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Puttomon,
@@ -26656,15 +26669,15 @@ export const DigimonList = {
     BanchoLeomon: {
         species: [Species.BST],
         stage: Stage.stage5,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutionTree: DataNames.Kumamon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             dna: [DataNames.BeelzebumonBM, DataNames.Chaosmon],
@@ -26707,15 +26720,15 @@ export const DigimonList = {
     BlackWarGreymon: {
         species: [Species.DRG],
         stage: Stage.stage5,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.coreField,
+                area: MapsList.ds.coreField,
             },
             evolutionTree: DataNames.Koromon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.transfield,
+                area: MapsList.dssm.transfield,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Botamon,
@@ -26746,15 +26759,15 @@ export const DigimonList = {
     ImperialdramonDMB: {
         species: [Species.DRG],
         stage: Stage.stage5,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutionTree: DataNames.Digitamamon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.transfield,
+                area: MapsList.dssm.transfield,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Minomon,
@@ -26763,9 +26776,9 @@ export const DigimonList = {
     Megidramon: {
         species: [Species.DRG],
         stage: Stage.stage5,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Gigimon,
@@ -26810,15 +26823,15 @@ export const DigimonList = {
     ChaosDukemon: {
         species: [Species.DAR, Species.DRG],
         stage: Stage.stage6,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutionTree: DataNames.Pagumon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.ChaosDukemon,
@@ -26846,15 +26859,15 @@ export const DigimonList = {
     Kuzuhamon: {
         species: [Species.HOL],
         stage: Stage.stage5,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.coreField,
+                area: MapsList.ds.coreField,
             },
             evolutionTree: DataNames.Tanemon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Dorimon,
@@ -26863,15 +26876,15 @@ export const DigimonList = {
     BlackSaintGargomon: {
         species: [Species.BST],
         stage: Stage.stage5,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.destroyedBelt,
+                area: MapsList.ds.destroyedBelt,
             },
             evolutionTree: DataNames.Terriermon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.transfield,
+                area: MapsList.dssm.transfield,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Kokomon,
@@ -26880,15 +26893,15 @@ export const DigimonList = {
     CherubimonAku: {
         species: [Species.DAR],
         stage: Stage.stage5,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutionTree: DataNames.Pagumon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.transfield,
+                area: MapsList.dssm.transfield,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Kokomon,
@@ -26920,15 +26933,15 @@ export const DigimonList = {
     CherubimonZen: {
         species: [Species.HOL],
         stage: Stage.stage5,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutionTree: DataNames.Pagumon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.highlightHaven,
+                area: MapsList.dssm.highlightHaven,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Kokomon,
@@ -26952,10 +26965,10 @@ export const DigimonList = {
     Goddramon: {
         species: [Species.HOL, Species.DRG],
         stage: Stage.stage5,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.highlightHaven,
-                version: DataNames.dawn,
+                area: MapsList.dssm.highlightHaven,
+                version: DataNames.sunburst,
             },
             evolutionTree: DataNames.Chicomon,
         },
@@ -26991,15 +27004,15 @@ export const DigimonList = {
     Dorugoramon: {
         species: [Species.DRG],
         stage: Stage.stage5,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutionTree: DataNames.Dorimon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Dorimon,
@@ -27028,16 +27041,16 @@ export const DigimonList = {
     Darkdramon: {
         species: [Species.DRG],
         stage: Stage.stage5,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.destroyedBelt,
+                area: MapsList.ds.destroyedBelt,
             },
             evolutionTree: DataNames.Tsunomon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.accessGlacier,
-                version: DataNames.dawn,
+                area: MapsList.dssm.accessGlacier,
+                version: DataNames.sunburst,
             },
             dna: [DataNames.Chaosmon, DataNames.ShineGreymonRM],
             evolutionTree: DataNames.Chicomon,
@@ -27089,15 +27102,15 @@ export const DigimonList = {
     Cannondramon: {
         species: [Species.DRG],
         stage: Stage.stage5,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.sheerValley,
+                area: MapsList.ds.sheerValley,
             },
             evolutionTree: DataNames.Goburimon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.transfield,
+                area: MapsList.dssm.transfield,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Gigimon,
@@ -27113,16 +27126,16 @@ export const DigimonList = {
     SaberLeomon: {
         species: [Species.BST],
         stage: Stage.stage5,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.tropicalIsles,
+                area: MapsList.ds.tropicalIsles,
             },
             evolutionTree: DataNames.Terriermon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.proxyIsland,
-                version: DataNames.dusk,
+                area: MapsList.dssm.proxyIsland,
+                version: DataNames.moonlight,
             },
             evolutionTree: DataNames.Wanyamon,
         },
@@ -27161,15 +27174,15 @@ export const DigimonList = {
     MetalEtemon: {
         species: [Species.BST],
         stage: Stage.stage5,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.destroyedBelt,
+                area: MapsList.ds.destroyedBelt,
             },
             evolutionTree: DataNames.Goburimon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.chaosBrain,
+                area: MapsList.dssm.chaosBrain,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Tsunomon,
@@ -27185,10 +27198,10 @@ export const DigimonList = {
     Gryphomon: {
         species: [Species.BRD],
         stage: Stage.stage5,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.taskCanyon,
-                version: DataNames.dawn,
+                area: MapsList.dssm.taskCanyon,
+                version: DataNames.sunburst,
             },
             evolutionTree: DataNames.Piyomon,
         },
@@ -27202,9 +27215,9 @@ export const DigimonList = {
     SkullMammon: {
         species: [Species.BST],
         stage: Stage.stage5,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.transfield,
+                area: MapsList.dssm.transfield,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Wanyamon,
@@ -27220,15 +27233,15 @@ export const DigimonList = {
     Valkyrimon: {
         species: [Species.BRD],
         stage: Stage.stage5,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutionTree: DataNames.Hawkmon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             dna: [DataNames.RavemonBM],
@@ -27266,15 +27279,15 @@ export const DigimonList = {
     Crossmon: {
         species: [Species.BRD],
         stage: Stage.stage5,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.tropicalIsles,
+                area: MapsList.ds.tropicalIsles,
             },
             evolutionTree: DataNames.Parrotmon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.transfield,
+                area: MapsList.dssm.transfield,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Chicchimon,
@@ -27304,15 +27317,15 @@ export const DigimonList = {
     Plesiomon: {
         species: [Species.AQU, Species.DRG],
         stage: Stage.stage5,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.underseaDrive,
+                area: MapsList.ds.underseaDrive,
             },
             evolutionTree: DataNames.Otamamon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Poyomon,
@@ -27355,9 +27368,9 @@ export const DigimonList = {
     JumboGamemon: {
         species: [Species.AQU],
         stage: Stage.stage5,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.transfield,
+                area: MapsList.dssm.transfield,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Poyomon,
@@ -27394,9 +27407,9 @@ export const DigimonList = {
     Pukumon: {
         species: [Species.AQU],
         stage: Stage.stage5,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.macroSea,
+                area: MapsList.dssm.macroSea,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Syakomon,
@@ -27417,15 +27430,15 @@ export const DigimonList = {
     GranKuwagamon: {
         species: [Species.INS],
         stage: Stage.stage5,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.destroyedBelt,
+                area: MapsList.ds.destroyedBelt,
             },
             evolutionTree: DataNames.Tentomon,  // TODO: And Wormmon
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.transfield,
+                area: MapsList.dssm.transfield,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Budmon,
@@ -27478,9 +27491,9 @@ export const DigimonList = {
     Lotusmon: {
         species: [Species.INS, Species.PLN],
         stage: Stage.stage5,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.transfield,
+                area: MapsList.dssm.transfield,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Budmon,
@@ -27503,9 +27516,9 @@ export const DigimonList = {
     ArgomonMega: {
         species: [Species.DAR],
         stage: Stage.stage5,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Tsumemon,
@@ -27526,9 +27539,9 @@ export const DigimonList = {
     QueenChessmon: {
         species: [Species.MAC],
         stage: Stage.stage5,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.transfield,
+                area: MapsList.dssm.transfield,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Kapurimon,
@@ -27543,9 +27556,9 @@ export const DigimonList = {
     KingChessmon: {
         species: [Species.MAC],
         stage: Stage.stage5,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.transfield,
+                area: MapsList.dssm.transfield,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Puttomon,
@@ -27560,15 +27573,15 @@ export const DigimonList = {
     HiAndromon: {
         species: [Species.MAC],
         stage: Stage.stage5,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.coreField,
+                area: MapsList.ds.coreField,
             },
             evolutionTree: DataNames.Kapurimon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Kapurimon,
@@ -27597,16 +27610,16 @@ export const DigimonList = {
     PrinceMamemon: {
         species: [Species.MAC],
         stage: Stage.stage5,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.junkFactory,
+                area: MapsList.ds.junkFactory,
             },
             evolutionTree: DataNames.Kapurimon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.magnetMine,
-                version: DataNames.dusk,
+                area: MapsList.dssm.magnetMine,
+                version: DataNames.moonlight,
             },
             dna: [DataNames.MirageGaogamonBM],
             evolutionTree: DataNames.ToyAgumon,
@@ -27635,15 +27648,15 @@ export const DigimonList = {
     Parasimon: {
         species: [Species.MAC, Species.INS],
         stage: Stage.stage5,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.coreField,
+                area: MapsList.ds.coreField,
             },
             evolutionTree: DataNames.Goburimon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Gizamon,
@@ -27664,10 +27677,10 @@ export const DigimonList = {
     Boltmon: {
         species: [Species.MAC],
         stage: Stage.stage5,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.thrillerRuins,
-                version: DataNames.both,    // TODO: Dusk only?
+                area: MapsList.dssm.thrillerRuins,
+                version: DataNames.both,    // TODO: Moonlight only?
             },
             evolutionTree: DataNames.Pagumon,
         },
@@ -27688,9 +27701,9 @@ export const DigimonList = {
     Ebemon: {
         species: [Species.MAC],
         stage: Stage.stage5,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.chaosBrain,
+                area: MapsList.dssm.chaosBrain,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Vademon,
@@ -27711,9 +27724,9 @@ export const DigimonList = {
     Ophanimon: {
         species: [Species.HOL],
         stage: Stage.stage5,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             dna: [DataNames.RosemonBM],
@@ -27738,15 +27751,15 @@ export const DigimonList = {
     SlashAngemon: {
         species: [Species.HOL],
         stage: Stage.stage5,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutionTree: DataNames.Kapurimon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.chaosBrain,
+                area: MapsList.dssm.chaosBrain,
                 version: DataNames.both,
             },
             dna: [DataNames.Duftmon],
@@ -27776,15 +27789,15 @@ export const DigimonList = {
     Jijimon: {
         species: [Species.HOL],
         stage: Stage.stage5,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.ancientCanyon,
+                area: MapsList.ds.ancientCanyon,
             },
             evolutionTree: DataNames.Bakumon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.transfield,
+                area: MapsList.dssm.transfield,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Gummymon,
@@ -27818,15 +27831,15 @@ export const DigimonList = {
     Babamon: {
         species: [Species.HOL],
         stage: Stage.stage5,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.ancientCanyon,
+                area: MapsList.ds.ancientCanyon,
             },
             evolutionTree: DataNames.Bakumon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.transfield,
+                area: MapsList.dssm.transfield,
                 version: DataNames.both,
             },
             dna: [DataNames.RosemonBM],
@@ -27849,9 +27862,9 @@ export const DigimonList = {
     Pharaohmon: {
         species: [Species.HOL, Species.DAR, Species.MAC],
         stage: Stage.stage5,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.thrillerRuins,
+                area: MapsList.dssm.thrillerRuins,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Pagumon,
@@ -27873,10 +27886,10 @@ export const DigimonList = {
     Anubimon: {
         species: [Species.HOL],
         stage: Stage.stage5,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.thrillerRuins,
-                version: DataNames.dawn,
+                area: MapsList.dssm.thrillerRuins,
+                version: DataNames.sunburst,
             },
             evolutionTree: DataNames.Anubimon,
         },
@@ -27904,15 +27917,15 @@ export const DigimonList = {
     ChronomonHM: {
         species: [Species.HOL, Species.BRD],
         stage: Stage.stage5,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutionTree: DataNames.ChronomonHM,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.ChronomonHM,
@@ -27936,16 +27949,16 @@ export const DigimonList = {
     VenomVamdemon: {
         species: [Species.DAR],
         stage: Stage.stage5,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.destroyedBelt,
+                area: MapsList.ds.destroyedBelt,
             },
             evolutionTree: DataNames.PicoDevimon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.shadowAbyss,
-                version: DataNames.both,    // TODO: Check if it's Dusk-Only
+                area: MapsList.dssm.shadowAbyss,
+                version: DataNames.both,    // TODO: Check if it's Moonlight-Only
             },
             evolutionTree: DataNames.Pagumon,
         },
@@ -27994,15 +28007,15 @@ export const DigimonList = {
     Diaboromon: {
         species: [Species.DAR],
         stage: Stage.stage5,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.coreField,
+                area: MapsList.ds.coreField,
             },
             evolutionTree: DataNames.Kuramon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             dna: [DataNames.Armagemon, DataNames.ChaosDukemon],
@@ -28053,9 +28066,9 @@ export const DigimonList = {
     Gulfmon: {
         species: [Species.DAR],
         stage: Stage.stage5,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.transfield,
+                area: MapsList.dssm.transfield,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Tsunomon,
@@ -28077,9 +28090,9 @@ export const DigimonList = {
     Devitamamon: {
         species: [Species.DAR],
         stage: Stage.stage5,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.chaosBrain,
+                area: MapsList.dssm.chaosBrain,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Syakomon,
@@ -28114,9 +28127,9 @@ export const DigimonList = {
     Zanbamon: {
         species: [Species.DAR],
         stage: Stage.stage5,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.shadowAbyss,
+                area: MapsList.dssm.shadowAbyss,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Pagumon,
@@ -28145,15 +28158,15 @@ export const DigimonList = {
     Deathmon: {
         species: [Species.DAR],
         stage: Stage.stage5,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.coreField,
+                area: MapsList.ds.coreField,
             },
             evolutionTree: DataNames.Impmon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.chaosBrain,
+                area: MapsList.dssm.chaosBrain,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.ToyAgumonB,
@@ -28182,15 +28195,15 @@ export const DigimonList = {
     DeathmonB: {
         species: [Species.DAR],
         stage: Stage.stage5,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.destroyedBelt,
+                area: MapsList.ds.destroyedBelt,
             },
             evolutionTree: DataNames.Gotsumon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.chaosBrain,
+                area: MapsList.dssm.chaosBrain,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Kuramon,
@@ -28199,9 +28212,9 @@ export const DigimonList = {
     Lampmon: {
         species: [Species.HOL],
         stage: Stage.stage5,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Syakomon,
@@ -28210,15 +28223,15 @@ export const DigimonList = {
     MetalSeadramon: {
         species: [Species.AQU, Species.DRG],
         stage: Stage.stage5,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.underseaDrive,
+                area: MapsList.ds.underseaDrive,
             },
             evolutionTree: DataNames.Betamon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.macroSea,
+                area: MapsList.dssm.macroSea,
                 version: DataNames.both,
             },
             dna: [DataNames.Apocalymon],
@@ -28259,15 +28272,15 @@ export const DigimonList = {
     GigaSeadramon: {
         species: [Species.AQU, Species.DRG],
         stage: Stage.stage5,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.underseaDrive,
+                area: MapsList.ds.underseaDrive,
             },
             evolutionTree: DataNames.Betamon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.YukiAgumon,
@@ -28300,15 +28313,15 @@ export const DigimonList = {
     Pinocchimon: {
         species: [Species.MAC, Species.PLN],
         stage: Stage.stage5,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.junkFactory,
+                area: MapsList.ds.junkFactory,
             },
             evolutionTree: DataNames.ToyAgumonB,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             dna: [DataNames.Apocalymon],
@@ -28339,16 +28352,16 @@ export const DigimonList = {
     Mugendramon: {
         species: [Species.MAC],
         stage: Stage.stage5,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.hardMountains,
+                area: MapsList.ds.hardMountains,
             },
             evolutionTree: DataNames.Wormmon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.processFactory,
-                version: DataNames.dusk,
+                area: MapsList.dssm.processFactory,
+                version: DataNames.moonlight,
             },
             dna: [DataNames.Apocalymon, DataNames.Millenniumon],
             evolutionTree: DataNames.Botamon,
@@ -28390,9 +28403,9 @@ export const DigimonList = {
     Millenniumon: {
         species: [Species.DAR],
         stage: Stage.stage5,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Millenniumon,
@@ -28440,16 +28453,16 @@ export const DigimonList = {
     Piemon: {
         species: [Species.DAR],
         stage: Stage.stage5,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.lavaRiver,
+                area: MapsList.ds.lavaRiver,
             },
             evolutionTree: DataNames.Goburimon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.shadowAbyss,
-                version: DataNames.dusk,
+                area: MapsList.dssm.shadowAbyss,
+                version: DataNames.moonlight,
             },
             dna: [DataNames.Apocalymon],
             evolutionTree: DataNames.Tsumemon,
@@ -28491,9 +28504,9 @@ export const DigimonList = {
     Apollomon: {
         species: [Species.HOL, Species.BST],
         stage: Stage.stage5,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Sunmon,
@@ -28516,9 +28529,9 @@ export const DigimonList = {
     Dianamon: {
         species: [Species.DAR, Species.BST],
         stage: Stage.stage5,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Moonmon,
@@ -28541,9 +28554,9 @@ export const DigimonList = {
     Minervamon: {
         species: [Species.BST],
         stage: Stage.stage5,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.paletteAmazon,
+                area: MapsList.dssm.paletteAmazon,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Minervamon,
@@ -28576,15 +28589,15 @@ export const DigimonList = {
     Neptunemon: {
         species: [Species.AQU],
         stage: Stage.stage5,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutionTree: DataNames.Poyomon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Dagomon,
@@ -28717,15 +28730,15 @@ export const DigimonList = {
     Beelzebumon: {
         species: [Species.DAR],
         stage: Stage.stage5,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutionTree: DataNames.Kuramon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             dna: [DataNames.BeelzebumonBM],
@@ -28766,15 +28779,15 @@ export const DigimonList = {
     Demon: {
         species: [Species.DAR],
         stage: Stage.stage5,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.lavaRiver,
+                area: MapsList.ds.lavaRiver,
             },
             evolutionTree: DataNames.Impmon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.LucemonFM,
@@ -28806,9 +28819,9 @@ export const DigimonList = {
     Lilithmon: {
         species: [Species.DAR],
         stage: Stage.stage5,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.transfield,
+                area: MapsList.dssm.transfield,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Pagumon,
@@ -28868,9 +28881,9 @@ export const DigimonList = {
     Alphamon: {
         species: [Species.HOL, Species.DRG],
         stage: Stage.stage5,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Solarmon,
@@ -28939,9 +28952,9 @@ export const DigimonList = {
     Duftmon: {
         species: [Species.HOL, Species.BST],
         stage: Stage.stage5,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Duftmon,
@@ -29375,9 +29388,9 @@ export const DigimonList = {
     DotShineGreymon: {
         species: [Species.DRG],
         stage: Stage.stage5,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Koromon,
@@ -29392,9 +29405,9 @@ export const DigimonList = {
     DotMirageGaogamon: {
         species: [Species.BST],
         stage: Stage.stage5,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Wanyamon,
@@ -29527,15 +29540,15 @@ export const DigimonList = {
     Omegamon: {
         species: [Species.HOL, Species.DRG],
         stage: Stage.stage6,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutionTree: DataNames.Koromon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             dna: [DataNames.ImperialdramonPM],
@@ -29560,16 +29573,16 @@ export const DigimonList = {
     ImperialdramonFM: {
         species: [Species.DRG],
         stage: Stage.stage6,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutionTree: DataNames.Chicomon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.taskCanyon,
-                version: DataNames.dawn,
+                area: MapsList.dssm.taskCanyon,
+                version: DataNames.sunburst,
             },
             dna: [DataNames.ImperialdramonPM, DataNames.ShineGreymonBM],
             evolutionTree: DataNames.Paildramon,
@@ -29598,15 +29611,15 @@ export const DigimonList = {
     ImperialdramonPM: {
         species: [Species.HOL, Species.DRG],
         stage: Stage.stage6,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutionTree: DataNames.Chicomon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.ImperialdramonPM,
@@ -29629,15 +29642,15 @@ export const DigimonList = {
     DukemonCM: {
         species: [Species.HOL, Species.DRG],
         stage: Stage.stage6,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutionTree: DataNames.DukemonCM,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.DukemonCM,
@@ -29660,9 +29673,9 @@ export const DigimonList = {
     BeelzebumonBM: {
         species: [Species.DAR],
         stage: Stage.stage6,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.BeelzebumonBM,
@@ -29678,9 +29691,9 @@ export const DigimonList = {
     Susanoomon: {
         species: [Species.HOL],
         stage: Stage.stage6,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             dna: [DataNames.ChronomonHM],
@@ -29704,9 +29717,9 @@ export const DigimonList = {
     ShineGreymonRM: {
         species: [Species.DAR, Species.DRG],
         stage: Stage.stage6,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.ShineGreymonRM,
@@ -29738,9 +29751,9 @@ export const DigimonList = {
     ShineGreymonBM: {
         species: [Species.DRG],
         stage: Stage.stage6,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.ShineGreymonBM,
@@ -29763,9 +29776,9 @@ export const DigimonList = {
     MirageGaogamonBM: {
         species: [Species.BST],
         stage: Stage.stage6,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.MirageGaogamonBM,
@@ -29788,9 +29801,9 @@ export const DigimonList = {
     RosemonBM: {
         species: [Species.INS, Species.PLN],
         stage: Stage.stage6,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.RosemonBM,
@@ -29813,9 +29826,9 @@ export const DigimonList = {
     RavemonBM: {
         species: [Species.BRD],
         stage: Stage.stage6,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.RavemonBM,
@@ -29838,9 +29851,9 @@ export const DigimonList = {
     Apocalymon: {
         species: [Species.DAR],
         stage: Stage.stage6,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Kuramon,
@@ -29863,15 +29876,15 @@ export const DigimonList = {
     BelialVamdemon: {
         species: [Species.DAR],
         stage: Stage.stage6,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutionTree: DataNames.PicoDevimon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.BelialVamdemon,
@@ -29894,10 +29907,10 @@ export const DigimonList = {
     Armagemon: {
         species: [Species.DAR],
         stage: Stage.stage6,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.magnetMine,
-                version: DataNames.dusk,
+                area: MapsList.dssm.magnetMine,
+                version: DataNames.moonlight,
             },
             evolutionTree: DataNames.Armagemon,
         },
@@ -29929,15 +29942,15 @@ export const DigimonList = {
     Valdurmon: {
         species: [Species.BRD],
         stage: Stage.stage6,
-        dwds: {
+        ds: {
             location: {
-                area: MapsList.dwds.none,
+                area: MapsList.ds.none,
             },
             evolutionTree: DataNames.Tokomon,
         },
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             dna: [DataNames.Chaosmon, DataNames.ChronomonHM, DataNames.RavemonBM],
@@ -29996,9 +30009,9 @@ export const DigimonList = {
     Chaosmon: {
         species: [Species.HOL, Species.DRG],
         stage: Stage.stage6,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.Chaosmon,
@@ -30093,9 +30106,9 @@ export const DigimonList = {
     MoonMillenniumon: {
         species: [Species.DAR],
         stage: Stage.stage6,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             dna: [DataNames.ZeedMillenniumon],
@@ -30129,9 +30142,9 @@ export const DigimonList = {
     ZeedMillenniumon: {
         species: [Species.DAR],
         stage: Stage.stage6,
-        dwdd: {
+        dssm: {
             location: {
-                area: MapsList.dwdd.none,
+                area: MapsList.dssm.none,
                 version: DataNames.both,
             },
             evolutionTree: DataNames.ZeedMillenniumon,

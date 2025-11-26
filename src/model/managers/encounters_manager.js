@@ -7,24 +7,21 @@ export class EncountersManager {
     spawnableDigimon;
     // Array of boss Digimon the player will face when in a boss Area
     bossDigimon;
-    // Keeps track of what boss the player is currently fighting
-    // currBoss;
     bossOrdinals = {};
 
     constructor(game) {
         this.game = game;
         this.spawnableDigimon = [];
         this.bossDigimon = [];
-        // this.currBoss = 0;
 
-        GameProgress.dwds.forEach((storyPart, index) => {
+        GameProgress.ds.forEach((storyPart, index) => {
             if (storyPart.type == SpecialValues.bosses) {
                 this.bossOrdinals[storyPart.bosses[storyPart.bosses.length - 1].dataName] = index;
             }
         });
     }
 
-    // TODO: Might need to make a DWDS-specific inherited version to take into account the starting Digimon
+    // TODO: Might need to make a DS-specific inherited version to take into account the starting Digimon
     enteredNewArea(mapArea, currStory) {
         this.spawnableDigimon = [];
         this.bossDigimon = [];
@@ -44,12 +41,10 @@ export class EncountersManager {
     /**
      * Assigns the bosses that spawn in this boss area
      * 
-     * @param {string[]} bosses Array of all the Bosses' DataNames?
+     * @param {string[]} bosses Array of DigimonEncounterData that has each boss' Data Name and Level
      */
-    // TODO: Level should be per boss
     enteredBossArea(bosses) {
         this.spawnableDigimon = [];
-        // this.currBoss = 0;
         // Get the array of Bosses to defeat, if applicable
         this.bossDigimon = [];
 
@@ -64,12 +59,10 @@ export class EncountersManager {
      */
     // Gets a new Digimon for the player to fight in this area. If there are bosses in this area, they will be spawned first
     getNewDigimonEncounter() {
-        // if (this.bossDigimon.length > 0 && this.currBoss < this.bossDigimon.length) {
         if (this.bossDigimon.length > 0) {
             // Return the array of bosses (These will be fought one at a time in the battle system)
             return this.bossDigimon;
             // Return the current boss and increment the counter
-            // return this.bossDigimon[this.currBoss++];
         }
 
         return [this.generateRandomEncounter()];
@@ -77,7 +70,6 @@ export class EncountersManager {
 
     // Returns a random Digimon from the available pool in the current location
     generateRandomEncounter() {
-        // TODO: Need to change this to an actual Digimon Encounter class to account for Bosses
         return this.spawnableDigimon[Math.floor(Math.random() * this.spawnableDigimon.length)];
     }
 
@@ -87,5 +79,9 @@ export class EncountersManager {
 
     setStarterDigimon(starterDigimon) {
         this.starterDigimon = starterDigimon;
+    }
+
+    isInBosssArea() {
+        return this.bossDigimon.length > 0;
     }
 }

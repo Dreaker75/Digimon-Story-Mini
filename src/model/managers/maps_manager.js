@@ -6,7 +6,7 @@ export class MapsManager {
     mapAreasUnlocked = {};
 
     constructor() {
-        Array.from(Object.values(MapsList.dwds)).forEach(area => {
+        Array.from(Object.values(MapsList.ds)).forEach(area => {
             this.mapAreasUnlocked[area.dataName] = [];
             Array.from(area.areas).forEach(() => {
                 this.mapAreasUnlocked[area.dataName].push(false);
