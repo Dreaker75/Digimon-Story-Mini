@@ -10,7 +10,7 @@ import { BattleManager } from "../model/managers/battle_manager.js";
 export class Controller {
     #currLocation = "town";
     // TODO: Might have to be rethought when implementing multiple games
-    _gameChosen = "ds";
+    _gameChosen;
     #starterDigimonList = [DataNames.Koromon, DataNames.Tsunomon, DataNames.Tanemon];
     #playerManagers = [];
     #battleManagers = [];
@@ -24,17 +24,22 @@ export class Controller {
     #storyManager;
 
     constructor() {
+        // TODO: Change when the ability to select a game is added
+        this._gameChosen = DataNames.ds;
+
+        // Initialize all the game-exclusive managers
         // Digimon Story Managers
         this.#playerManagers[DataNames.ds] = new DSPlayerManager(6, 3);
         this.#battleManagers[DataNames.ds] = new BattleManager();
 
-        // Manager references
-        // TODO: Need to add the references that will be used based on the game chosen. This will be done on a button function in the future
+        // Assign the corresponding Game-exclusive manager references
         this.#playerManager = this.#playerManagers[this._gameChosen];
         this.#battleManager = this.#battleManagers[this._gameChosen];
+
+        // Initialize generic managers
         this.#encountersManager = new EncountersManager(this._gameChosen);
         this.#mapsManager = new MapsManager();
-        this.#storyManager = new StoryManager();
+        this.#storyManager = new StoryManager(this._gameChosen);
 
         // Create the default Party boxes
         let partyDigimonTemplate = document.getElementById("party-digimon-template");
@@ -164,9 +169,11 @@ export class Controller {
         if (this.#storyManager.isInBossArea(this.#mapsManager.getCurrentMapArea())) {
             // Pass the bosses array to the Encounter Manager
             this.#encountersManager.enteredBossArea(this.#storyManager.getCurrentBosses());
+            this.#view.enableFleeButton(false);
             return;
         }
 
+        this.#view.enableFleeButton(true);
         this.#encountersManager.enteredNewArea(this.#mapsManager.getCurrentMapArea(), this.#storyManager.getCurrentStory());
     }
     //#endregion
@@ -178,15 +185,15 @@ export class Controller {
             // Grab the Digimon defeated
             let defeatedDigimon = this.#battleManager.getDefeatedDigimon();
             // Grab the information of the Digimon defeated
-            let defeatedDigimonInfo = DigimonList[defeatedDigimon.dataName];
+            let defeatedDigimonInfo = DigimonList[defeatedDigimon.getDataName()];
 
             // Increase the Player's Species EXP based on the Digimon defeated
-            this.#playerManager.increaseSpeciesExperience(this.getDigimonSpecies(defeatedDigimon.dataName), defeatedDigimonInfo.stage.value);
-            this.#playerManager.tryBattleLevelUp(defeatedDigimon.level);
+            this.#playerManager.increaseSpeciesExperience(this.getDigimonSpecies(defeatedDigimon.getDataName()), defeatedDigimonInfo.stage.value);
+            this.#playerManager.tryBattleLevelUp(defeatedDigimon.getLevel());
 
             // If the fight dropped Scan Data (or DigiMelodies in DSSXW)
             if (this.#battleManager.didDigimonDropData()) {
-                this.#playerManager.addDigimonData(defeatedDigimon.dataName);
+                this.#playerManager.addDigimonData(defeatedDigimon.getDataName());
             }
 
             // Check if the Digimon defeated was from the current Map and Area from the Story task
@@ -221,7 +228,7 @@ export class Controller {
             this.#view.displayUpdatedEnemyDigimonInformation(this.#battleManager.getCurrentEnemyDigimon());
             // If this returns false, the player was defeated
             let enemyAttack = this.#battleManager.getEnemyTurn();
-            let attacksDealt = (() => {switch (enemyAttack.attackType) {
+            let attacksDealt = (() => {switch (enemyAttack.getAttackType()) {
                 case EnemyTypes.doubleHit:
                     return 2;
                 case EnemyTypes.tripleHit:
@@ -232,7 +239,7 @@ export class Controller {
 
             let playerDefeated = false;
             for (let index = 0; index < attacksDealt && !playerDefeated; index++) {
-                this.#playerManager.dealDamage(enemyAttack.damage, enemyAttack.attackType == EnemyTypes.aoe);
+                this.#playerManager.dealDamage(enemyAttack.getDamage(), enemyAttack.getAttackType() == EnemyTypes.aoe);
                 
                 playerDefeated = this.#playerManager.wasPlayerDefeated();
 

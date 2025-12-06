@@ -8,6 +8,6 @@ export class DSPlayerManager extends PlayerManager {
      * @param {*} digimon dataName of the Digimon to add
      */
     addDigimonData(digimon) {
-        this.digimonItems[DigimonIDs[digimon][DataNames.ds]]++;
+        this._digimonItems[DigimonIDs[digimon][DataNames.ds]]++;
     }
 }

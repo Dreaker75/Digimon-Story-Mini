@@ -11,6 +11,7 @@ export class View {
     // Map Elements
     prevAreaButton;
     nextAreaButton;
+    fleeButton;
 
     // Player information elements
     partyDigimonDivs;
@@ -32,6 +33,7 @@ export class View {
         this.enemyDigimonDiv.style.display = "none";
         this.prevAreaButton = document.getElementById("prev-area-button");
         this.nextAreaButton = document.getElementById("next-area-button");
+        this.fleeButton = document.getElementById("flee-button-ds");
         this.digimonDetailedInfoModal = document.getElementById("digimon-info-modal");
         this.digimonNameDisplay = this.digimonDetailedInfoModal.querySelector("h2");
         this.digimonImageDisplay = this.digimonDetailedInfoModal.querySelector("img");
@@ -83,6 +85,14 @@ export class View {
         this.prevAreaButton.disabled = !prevAreaUnlocked;
         this.nextAreaButton.disabled = !nextAreaUnlocked;
     }
+
+    enableFleeButton = enable => {
+        if (enable) {
+            this.fleeButton.removeAttribute("disabled");
+        } else {
+            this.fleeButton.setAttribute("disabled", "");
+        }
+    }
     //#endregion
 
     //#region PLAYER INFORMATION FUNCTIONS
@@ -92,7 +102,7 @@ export class View {
     }
     
     updatePartyDigimonInformation (id, digimon) {
-        let dataName = digimon.dataName;
+        let dataName = digimon.getDataName();
         let displayName = Names[dataName][this.languageChosen] ?? dataName;
         this.partyDigimonDivs[id].querySelector(".digimon-name").textContent = displayName;
         this.partyDigimonDivs[id].querySelector("img").src = "./images/digimon/" + dataName + (DigimonList[dataName][this.gameChosen].sprite ?? "") + ".png";
@@ -102,19 +112,19 @@ export class View {
 
     updatedPlayerPartyBattleInformation(playerParty) {
         playerParty.forEach((digimon, id) => {
-            this.partyDigimonDivs[id].querySelector(".level").textContent = digimon.level;
-            this.partyDigimonDivs[id].querySelector(".hp-info").textContent = digimon.currHP + " / " + digimon.maxHP;
-            this.partyDigimonDivs[id].querySelector(".attack-info").textContent = digimon.damage;
+            this.partyDigimonDivs[id].querySelector(".level").textContent = digimon.getLevel();
+            this.partyDigimonDivs[id].querySelector(".hp-info").textContent = digimon.getCurrHP() + " / " + digimon.getMaxHP();
+            this.partyDigimonDivs[id].querySelector(".attack-info").textContent = digimon.getDamage();
         });
     }
 
     displayDetailedDigimonInfo = digimon => {
-        let dataName = digimon.dataName;
+        let dataName = digimon.getDataName();
         let displayName = Names[dataName][this.languageChosen] ?? dataName;
         this.digimonNameDisplay.textContent = displayName;
         this.digimonImageDisplay.src = "./images/digimon/" + dataName + (DigimonList[dataName][this.gameChosen].sprite ?? "") + ".png";
         this.digimonImageDisplay.alt = displayName + " Image";
-        this.digimonLevelDisplay.textContent = digimon.level;
+        this.digimonLevelDisplay.textContent = digimon.getLevel();
         this.digimonDetailedInfoModal.style.display = "block";
     }
 
@@ -122,16 +132,16 @@ export class View {
     //#endregion
 
     //#region ENEMY INFORMATION FUNCTIONS
-    displayUpdatedEnemyDigimonInformation = digimon => this.enemyDigimonDiv.querySelectorAll("p")[1].textContent = "HP " + digimon.currHP + " / " + digimon.maxHP;
+    displayUpdatedEnemyDigimonInformation = digimon => this.enemyDigimonDiv.querySelectorAll("p")[1].textContent = "HP " + digimon.getCurrHP() + " / " + digimon.getMaxHP();
 
     setEnemyDigimon = digimon => {
-        let dataName = digimon.dataName;
+        let dataName = digimon.getDataName();
         let displayName = Names[dataName][this.languageChosen] ?? dataName;
         this.enemyDigimonDiv.querySelector("img").src = "./images/digimon/" + dataName + (DigimonList[dataName][this.gameChosen].sprite ?? "") + ".png";
         this.enemyDigimonDiv.querySelector("img").alt = displayName + " Image";
         this.enemyDigimonDiv.querySelector("h3").textContent = displayName;
-        this.enemyDigimonDiv.querySelectorAll("p")[0].textContent = "Level " + digimon.level;
-        this.enemyDigimonDiv.querySelectorAll("p")[1].textContent = "HP " + digimon.currHP + " / " + digimon.maxHP;
+        this.enemyDigimonDiv.querySelectorAll("p")[0].textContent = "Level " + digimon.getLevel();
+        this.enemyDigimonDiv.querySelectorAll("p")[1].textContent = "HP " + digimon.getCurrHP() + " / " + digimon.getMaxHP();
         this.enemyDigimonDiv.style.display = "block";
     }
     //#endregion

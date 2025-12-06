@@ -144,6 +144,6 @@ td+td{
     background-color: rgb(36, 49, 233);
 }
 
-div#game-info {
+div#game-info, div#game-ds {
     width: 100%;
 }

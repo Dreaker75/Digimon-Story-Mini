@@ -4,26 +4,26 @@ export class PlayerManager {
     currStory = 0;
     // Maximum Level reached with a Digimon (Can only increase by battling)
     // DEBUG: This is set to 3 for demo purposes since the party starts at lv3, check if it need to be changed back to 1 for the official release
-    maxLevel = 3;
-    levelUpBoost = 1;
+    #maxLevel = 3;
+    #levelUpBoost = 1;
     #party = []; // Array of class Digimon
     #partySize;
     #activePartySize;
     // Amount of Digimon the player has defeated of each Species,
     // - Baby Digimon add 1, Child add 2, Adult 4, Perfect 8, Ultimate 16 and Ultimate2 32
-    amountDefeated = {};
+    #amountDefeated = {};
     // Holds the amount of items the player has to convert a Digimon (Melodies for dssxw, Data for the rest)
     // TODO: Need to initialize this to 0 for every item?
-    digimonItems = [];
+    _digimonItems = [];
 
     constructor(partySize, activePartySize) {
         this.#partySize = partySize;
         this.#activePartySize = activePartySize;
         // Initialize the array to 0 since default value for undeclared arrays is undefined
         // TODO: Might need to rewrite this to use the DS order, but might be fine since it's always the same amount of Digimon
-        this.digimonItems = new Array(Object.keys(DigimonIDs).length).fill(0);
+        this._digimonItems = new Array(Object.keys(DigimonIDs).length).fill(0);
         Object.values(Species).forEach(species => {
-            this.amountDefeated[species] = 0;
+            this.#amountDefeated[species] = 0;
         });
     }
 
@@ -46,9 +46,9 @@ export class PlayerManager {
 
     addNewDigimon(digimon) {
         // If the Digimon added was a Culumon
-        if (digimon.dataName == DataNames.Culumon) {
+        if (digimon.getDataName() == DataNames.Culumon) {
             // Increase the amount of levels gained per win
-            this.levelUpBoost++;
+            this.#levelUpBoost++;
         }
 
         // TODO: Remove the Digimon from the Digi-Bank?
@@ -59,9 +59,9 @@ export class PlayerManager {
 
     removeDigimon(index) {
         // If the Digimon removed was a Culumon
-        if (this.#party[index].dataName == DataNames.Culumon) {
+        if (this.#party[index].getDataName() == DataNames.Culumon) {
             // Decrease the amount of levels gained per win
-            this.levelUpBoost--;
+            this.#levelUpBoost--;
         }
 
         // TODO: Add the Digimon to the Digi-Bank?
@@ -74,10 +74,10 @@ export class PlayerManager {
      * Adds a Scan Data of the Digimon passed in, using its base id
      * This function is overwritten by every corresponding game to use the right id, so this one will only be called if a unique game is made
      * @param {*} digimon dataName of the Digimon to add a Scan Data of
-     * -  NOTE: This is overwritten to access the corresponding id based on the current game
      */
     addDigimonData(digimon) {
-        this.digimonItems[DigimonIDs[digimon]["base"]]++;
+        // NOTE: This is overwritten to access the corresponding id based on the current game
+        this._digimonItems[DigimonIDs[digimon]["base"]]++;
     }
 
     // Swaps 2 Digimon that are currently in the party
@@ -98,10 +98,10 @@ export class PlayerManager {
 
     // species is the name of the object's property. stage is used to calculate how much "exp" is obtained
     increaseSpeciesExperience(species, stage) {
-        if (this.amountDefeated[species] < MAX_SPECIES_EXP)
-            this.amountDefeated[species] = Math.min(this.amountDefeated[species] + 2 ** (stage - 1), MAX_SPECIES_EXP);
-        if (this.amountDefeated[Species.ANY] < MAX_TOTAL_EXP)
-            this.amountDefeated[Species.ANY] = Math.min(this.amountDefeated[Species.ANY] + 2 ** (stage - 1), MAX_TOTAL_EXP);
+        if (this.#amountDefeated[species] < MAX_SPECIES_EXP)
+            this.#amountDefeated[species] = Math.min(this.#amountDefeated[species] + 2 ** (stage - 1), MAX_SPECIES_EXP);
+        if (this.#amountDefeated[Species.ANY] < MAX_TOTAL_EXP)
+            this.#amountDefeated[Species.ANY] = Math.min(this.#amountDefeated[Species.ANY] + 2 ** (stage - 1), MAX_TOTAL_EXP);
     }
 
     /**
@@ -111,15 +111,15 @@ export class PlayerManager {
     tryBattleLevelUp(levelDefeated) {
         // The maximum level any Digimon can reach with the level of the Digimon defeated
         // Save whether the current Player's Max Level is higher, or the Enemy Digimon's Level + 1 is (Level + 1 because defeating a higher Level Digimon can increase the Max Level up to 1 higher than its own)
-        let maxLevelUpLevel = Math.min(Math.max(this.maxLevel, levelDefeated + 1), MAX_LEVEL);
+        let maxLevelUpLevel = Math.min(Math.max(this.#maxLevel, levelDefeated + 1), MAX_LEVEL);
 
         this.#party.forEach(digimon => {
-            if (levelDefeated >= digimon.level) {
+            if (levelDefeated >= digimon.getLevel()) {
                 // Level up the Digimon with the max level found and the current level up boost
-                digimon.levelUp(maxLevelUpLevel, this.levelUpBoost);
+                digimon.levelUp(maxLevelUpLevel, this.#levelUpBoost);
                 // The current Digimon levelled up past the Max Level
-                if (this.maxLevel < MAX_LEVEL && digimon.level > this.maxLevel) {
-                    this.maxLevel = maxLevelUpLevel;
+                if (this.#maxLevel < MAX_LEVEL && digimon.getLevel() > this.#maxLevel) {
+                    this.#maxLevel = maxLevelUpLevel;
                 }
             }
         });
@@ -172,7 +172,7 @@ export class PlayerManager {
 
         let defeatedDigimon = [];
         for (let index = 0; index < this.#activePartySize; index++) {
-            if (this.#party[index].currHP <= 0) {
+            if (this.#party[index].getCurrHP() <= 0) {
                 defeatedDigimon.push(index);
             }
         }
@@ -181,7 +181,7 @@ export class PlayerManager {
         defeatedDigimon.reverse();
 
         for (let index = this.#activePartySize; index < this.#partySize && defeatedDigimon.length > 0; index++) {
-            if (this.#party[index].currHP > 0) {
+            if (this.#party[index].getCurrHP() > 0) {
                 swapPartyDigimon(index, defeatedDigimon.pop());
             }            
         }
@@ -194,7 +194,7 @@ export class PlayerManager {
     wasPlayerDefeated() {
         let allDigimonDefeated = true;
         this.#party.forEach(digimon => {
-            if (digimon.currHP > 0) {
+            if (digimon.getCurrHP() > 0) {
                 allDigimonDefeated = false;
                 // We leave the forEach
                 return;

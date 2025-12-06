@@ -10591,7 +10591,7 @@ export const DigimonList = {
         },
         dsle: {
             location: {
-                // Added specifically for DIS, not found anywhere in the original games
+                // Added specifically for DSM, not found anywhere in the original games
                 area: MapsList.dsle.labelForest,
             },
             evolutions: [
@@ -10751,7 +10751,7 @@ export const DigimonList = {
         stage: Stage.stage1,
         dssm: {
             location: {
-                // Added specifically for DIS, not found anywhere in the original games
+                // Added specifically for DSM, not found anywhere in the original games
                 area: MapsList.dssm.chipForest,
                 version: DataNames.moonlight,
             },

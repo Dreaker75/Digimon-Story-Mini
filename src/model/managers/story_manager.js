@@ -2,35 +2,27 @@ import { GameProgress, SpecialValues } from "../data/constants.js";
 import { MapArea } from "../entities/map_area.js";
 
 export class StoryManager {
+    #gameChosen;
     #currStory;
-    storyType;
-    amountLeft;
-    targetMapArea;
+    #storyType;
+    #amountLeft;
+    #targetMapArea;
     #bossDefeated;
 
     // Elements to return to game_manager when finishing a story task
     #mapAreaUnlocked;
 
-    constructor() {
-        // TODO: Change to account for multiple games
-        // Add all bosses to the boss array, which will be a way to translate it to story progress, to check if an area or Digimon should be unlocked
+    constructor(gameChosen) {
+        this.#gameChosen = gameChosen;
         this.#currStory = -1;
         this.#bossDefeated = false;
         this.#mapAreaUnlocked = null;
         this.nextStory();
     }
 
-    wasBossDefeated() {
-        return this.#bossDefeated;
-    }
-
-    getCurrentStory() {
-        return this.#currStory;
-    }
-    
-    getTargetMapArea() {
-        return this.targetMapArea;
-    }
+    wasBossDefeated() { return this.#bossDefeated; }
+    getCurrentStory() { return this.#currStory; }
+    getTargetMapArea() { return this.#targetMapArea; }
 
     /**
      * 
@@ -45,13 +37,13 @@ export class StoryManager {
 
     // Returns whether the player is currently in a boss are
     isInBossArea(currMapArea) {
-        return this.storyType === SpecialValues.bosses && this.targetMapArea.isSameMapArea(currMapArea);
+        return this.#storyType === SpecialValues.bosses && this.#targetMapArea.isSameMapArea(currMapArea);
     }
 
     // Returns the array of bosses that need to be defeated for the current story, or an empty array if the current story is not a boss story
     getCurrentBosses() {
-        if (this.storyType === SpecialValues.bosses){
-            return GameProgress.ds[this.#currStory].bosses;
+        if (this.#storyType === SpecialValues.bosses){
+            return GameProgress[this.#gameChosen][this.#currStory].bosses;
         }
         else
             return [];
@@ -59,9 +51,8 @@ export class StoryManager {
 
     // Returns true if the task was completed, false otherwise
     digimonDefeated() {
-        this.amountLeft--;
-        if (this.amountLeft === 0) {
-            // TODO: If the task completed was a Boss battle, either return the player to Town or restore the normal encounters in this area
+        this.#amountLeft--;
+        if (this.#amountLeft === 0) {
             this.storyTaskCompleted();
             this.nextStory();
             return true;
@@ -70,9 +61,8 @@ export class StoryManager {
     }
 
     storyTaskCompleted() {
-        // TODO: Change to account for multiple games
         // Obtain the task the player completed
-        let lastStoryTask = GameProgress.ds[this.#currStory];
+        let lastStoryTask = GameProgress[this.#gameChosen][this.#currStory];
         
         this.#bossDefeated = lastStoryTask.type == SpecialValues.bosses;
         if (lastStoryTask.unlocks === undefined) {
@@ -86,17 +76,16 @@ export class StoryManager {
 
     nextStory() {
         this.#currStory++;
-        // TODO: Adapt based on game
-        let nextStoryTask = GameProgress.ds[this.#currStory];
-        this.storyType = nextStoryTask.type;
+        let nextStoryTask = GameProgress[this.#gameChosen][this.#currStory];
+        this.#storyType = nextStoryTask.type;
 
-        if (this.storyType == SpecialValues.defeat) {
-            this.amountLeft = nextStoryTask.amount;
+        if (this.#storyType == SpecialValues.defeat) {
+            this.#amountLeft = nextStoryTask.amount;
         }
-        else if (this.storyType == SpecialValues.bosses) {
-            this.amountLeft = 1;
+        else if (this.#storyType == SpecialValues.bosses) {
+            this.#amountLeft = 1;
         }
 
-        this.targetMapArea = new MapArea(nextStoryTask.map, nextStoryTask.area);
+        this.#targetMapArea = new MapArea(nextStoryTask.map, nextStoryTask.area);
     }
 }

@@ -32,77 +32,79 @@
       <button>Digivolve</button>
     </div>
   </template>
-  <div id="starter-modal" class="modal">
-    <section>
-      <h2>Choose a Starter Digimon</h2>
-      <div class="starter-selection">
-        <h2>Koromon</h2>
-        <!-- <img src="" alt=""> -->
-        <button>Choose</button>
-      </div>
-      <div class="starter-selection">
-        <h2>Tsunomon</h2>
-        <!-- <img src="" alt=""> -->
-        <button>Choose</button>
-      </div>
-      <div class="starter-selection">
-        <h2>Tanemon</h2>
-        <!-- <img src="" alt=""> -->
-        <button>Choose</button>
-      </div>
-    </section>
-  </div>
-
-  <div id="digimon-info-modal" class="modal">
-    <div id="modal-background">
-      <button id="close-modal">X</button>
-      <h2>Digimon Name</h2>
-      <img src="" alt="">
-      <p><span id="level-info">Level</span></p>
-      <button>Digivolve</button>
+  <div id="game-ds">
+    <div id="starter-modal" class="modal">
+      <section>
+        <h2>Choose a Starter Digimon</h2>
+        <div class="starter-selection">
+          <h2>Koromon</h2>
+          <!-- <img src="" alt=""> -->
+          <button>Choose</button>
+        </div>
+        <div class="starter-selection">
+          <h2>Tsunomon</h2>
+          <!-- <img src="" alt=""> -->
+          <button>Choose</button>
+        </div>
+        <div class="starter-selection">
+          <h2>Tanemon</h2>
+          <!-- <img src="" alt=""> -->
+          <button>Choose</button>
+        </div>
+      </section>
     </div>
-  </div>
 
-  <!-- Div for the game window -->
-  <div id="game-info">
-    <!-- div for game info. Will put map/town information here -->
-    <nav id="game-hub-ds">
-      <img
-        src="https://vignette.wikia.nocookie.net/digimon/images/d/d3/Digimon_world_ds_logo.png/revision/latest?cb=20161124161643"
-        alt="Digimon World DS Logo">
-      <nav>
-        <button id="town-button" disabled>Town</button>
-        <button id="maps-button">Maps</button>
-        <button class="unimplemented">DigiConvert</button>
-        <button class="unimplemented">DigiBank</button>
-        <button class="unimplemented">DigiFarm</button>
-        <button class="unimplemented">Quests</button>
-      </nav>
-    </nav>
-    <section id="town-menu-ds">
-
-    </section>
-    <section id="maps-menu-ds">
-      <div id="current-map-ds">
-        <div class="maps">
-          <button id="prev-area-button">Prev</button> | <button class="unimplemented">Select Map</button> | <button
-            id="next-area-button">Next</button>
-        </div>
-        <h2 id="map-name">Map Name</h2>
-        <p><span class="bold">Wild Digimon: </span><span id="wild-digimon-list"></span></p>
-        <!-- <img src="images/maps/dataForest.png" alt="Data Forest background"> -->
-        <div id="enemy-digimon-ds">
-          <h3>Enemy Name</h3>
-          <img src="" alt="Enemy Image">
-          <p>Level X</p>
-          <p>HP BAR GOES HERE</p>
-        </div>
+    <div id="digimon-info-modal" class="modal">
+      <div id="modal-background">
+        <button id="close-modal">X</button>
+        <h2>Digimon Name</h2>
+        <img src="" alt="">
+        <p><span id="level-info">Level</span></p>
+        <button>Digivolve</button>
       </div>
-      <button id="attack-button-ds">Attack</button>
-      <button id="flee-button-ds">Flee</button>
-    </section>
-    <section id="party-box">
-    </section>
+    </div>
+
+    <!-- Div for the game window -->
+    <div id="game-info">
+      <!-- div for game info. Will put map/town information here -->
+      <nav id="game-hub-ds">
+        <img
+          src="https://vignette.wikia.nocookie.net/digimon/images/d/d3/Digimon_world_ds_logo.png/revision/latest?cb=20161124161643"
+          alt="Digimon World DS Logo">
+        <nav>
+          <button id="town-button" disabled>Town</button>
+          <button id="maps-button">Maps</button>
+          <button class="unimplemented">DigiConvert</button>
+          <button class="unimplemented">DigiBank</button>
+          <button class="unimplemented">DigiFarm</button>
+          <button class="unimplemented">Quests</button>
+        </nav>
+      </nav>
+      <section id="town-menu-ds">
+
+      </section>
+      <section id="maps-menu-ds">
+        <div id="current-map-ds">
+          <div class="maps">
+            <button id="prev-area-button">Prev</button> | <button class="unimplemented">Select Map</button> | <button
+              id="next-area-button">Next</button>
+          </div>
+          <h2 id="map-name">Map Name</h2>
+          <p><span class="bold">Wild Digimon: </span><span id="wild-digimon-list"></span></p>
+          <!-- <img src="images/maps/dataForest.png" alt="Data Forest background"> -->
+          <div id="enemy-digimon-ds">
+            <h3>Enemy Name</h3>
+            <img src="" alt="Enemy Image">
+            <p>Level X</p>
+            <p>HP BAR GOES HERE</p>
+          </div>
+        </div>
+        <button id="attack-button-ds">Attack</button>
+        <button id="flee-button-ds">Flee</button>
+      </section>
+      <section id="party-box">
+      </section>
+    </div>
   </div>
   <script type="module" src="src/main.js"></script>
 </body>

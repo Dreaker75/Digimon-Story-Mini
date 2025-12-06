@@ -78,10 +78,10 @@ export class BattleManager {
             //             return EnemyTypes.normal;
             //     }
             // })();
-            return new EnemyAttack(this.enemyDigimon[this.currEnemy].damage, enemyType);
+            return new EnemyAttack(this.enemyDigimon[this.currEnemy].getDamage(), enemyType);
         }
 
-        return new EnemyAttack(this.enemyDigimon[this.currEnemy].damage);
+        return new EnemyAttack(this.enemyDigimon[this.currEnemy].getDamage());
     }
 
     updatePlayerBattleInfo() {
@@ -90,8 +90,8 @@ export class BattleManager {
         // TODO: Currently uses even reserve Digimon's damage, might need to change to only use active ones, depends on game
         this.playerParty.forEach(digimon => {
             // Don't include the damage from defeated Digimon
-            if (digimon.currHP > 0) {
-                this.playerDamage += digimon.damage;
+            if (digimon.getCurrHP() > 0) {
+                this.playerDamage += digimon.getDamage();
             }
         });
 
