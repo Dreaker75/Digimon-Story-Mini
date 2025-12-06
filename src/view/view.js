@@ -67,6 +67,20 @@ export class View {
         // Show the new location's div
         this.locationDivs[location].style.display = "block";
     }
+
+    showPartyDigimonBattleStats(show) {
+        this.partyDigimonDivs.forEach(digimon => {
+            digimon.querySelectorAll(".town-stat").forEach(stat => {
+                stat.style.display = (show ? "none" : "inline");
+            });
+        });
+
+        this.partyDigimonDivs.forEach(digimon => {
+            digimon.querySelectorAll(".battle-stat").forEach(stat => {
+                stat.style.display = (show ? "inline" : "none");
+            });
+        });
+    }
     //#endregion
 
     //#region MAP FUNCTIONS
@@ -113,7 +127,8 @@ export class View {
     updatedPlayerPartyBattleInformation(playerParty) {
         playerParty.forEach((digimon, id) => {
             this.partyDigimonDivs[id].querySelector(".level").textContent = digimon.getLevel();
-            this.partyDigimonDivs[id].querySelector(".hp-info").textContent = digimon.getCurrHP() + " / " + digimon.getMaxHP();
+            this.partyDigimonDivs[id].querySelector(".curr-hp").textContent = digimon.getCurrHP();
+            this.partyDigimonDivs[id].querySelector(".max-hp").textContent = digimon.getMaxHP();
             this.partyDigimonDivs[id].querySelector(".attack-info").textContent = digimon.getDamage();
         });
     }

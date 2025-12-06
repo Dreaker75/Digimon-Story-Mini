@@ -52,17 +52,15 @@ button:disabled {
     color: black;
 }
 
-table {
-    border: 1px solid black;
-    position: relative;
+.digimon-stats {
     background-color: rgb(235, 146, 253);
-    text-align: right;
-    width: 80%;
-    left: 10%;
+    border: 1px solid black;
+    padding: 5% 0%;
+    width: 100%;
 }
 
-td+td{
-    text-align: left;
+.battle-stat {
+    display: none;
 }
 
 .bold {

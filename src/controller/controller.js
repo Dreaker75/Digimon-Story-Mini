@@ -105,6 +105,8 @@ export class Controller {
     handleLeavingLocation = (location) => {
         switch (location) {
             case Locations.Maps:
+                // Hide the battle-exclusive stats
+                this.#view.showPartyDigimonBattleStats(false);
                 // We end any currently active battles
                 this.#battleManager.endBattle();
                 break;
@@ -118,6 +120,8 @@ export class Controller {
     handleEnteringLocation = (location) => {
         switch (location) {
             case Locations.Maps:
+                // Show the battle-exclusive stats
+                this.#view.showPartyDigimonBattleStats(true);
                 // TODO: Will need a way to know which area the player is entering (when area selection is implemented)
                 this.changeMap(this.#mapsManager.getCurrentMapArea().getMapDataName());
                 this.movedToNewArea();

@@ -267,9 +267,10 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("next-area-button").addEventListener("click", () => controller.changeArea(1));
     
     // NOTE: When getting party-box here it should already have all its spawned (in Controller)
-    Array.from(document.getElementById("party-box").querySelectorAll("button")).forEach((button, index) => {
-        button.addEventListener("click", () => controller.displayDetailedDigimonInfo(index));
-    });
+    // TODO: Re-add this when implementing the ability to digivolve
+    // Array.from(document.getElementById("party-box").querySelectorAll("button")).forEach((button, index) => {
+    //     button.addEventListener("click", () => controller.displayDetailedDigimonInfo(index));
+    // });
 
     // Add the button function to select a starter
     Array.from(document.getElementById("starter-modal").querySelectorAll("button")).forEach((button, index) => {
