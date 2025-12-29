@@ -162,7 +162,16 @@ export class View {
     //#endregion
 
     //#region STARTER FUNCTIONS
-    showStarterModal = () => document.getElementById("starter-modal").style.display = "block";
+    showStarterModal = starters => {
+        let starterDivs = document.getElementsByClassName("starter-digimon-list")[0];
+        Array.from(starterDivs.children).forEach((starterDiv, index) => {
+            let starterDataName = starters[index];
+            starterDiv.querySelector("h2").textContent = Names[starterDataName][this.languageChosen] ?? starterDataName;
+            starterDiv.querySelector("img").src = "./images/digimon/" + starterDataName + (DigimonList[starterDataName][this.gameChosen].sprite ?? "") + ".png";
+            starterDiv.querySelector("img").alt = (Names[starterDataName][this.languageChosen] ?? starterDataName) + " Image";
+        });
+        document.getElementById("starter-modal").style.display = "block";
+    }
     closeStarterModal = () => document.getElementById("starter-modal").style.display = "none";
     //#endregion
 }

@@ -54,7 +54,7 @@ export class Controller {
         
         if (this.#playerManager.getCurrPartySize() == 0) {
             // TODO: Change the code to be less hardcoded (Everything is still happening in the background while having no Digimon)
-            this.#view.showStarterModal();
+            this.#view.showStarterModal(this.#starterDigimonList);
         }
     }
 

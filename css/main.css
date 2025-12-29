@@ -7,23 +7,6 @@ div {
     text-align: center;
 }
 
-div#starter-modal section {
-    padding: 5% 0;
-    margin: 1%;
-    border: 2px solid black;
-    background: linear-gradient(to bottom, rgb(14, 160, 99), rgb(12, 80, 38));
-}
-
-div.maps {
-    text-transform: uppercase;
-    font-size: 2em;
-}
-
-div.maps a {
-    text-decoration: none;
-    color: black;
-}
-
 nav button {
     font-size: 2em;
 }
@@ -94,7 +77,19 @@ button:disabled {
     font-weight: bold;
 }
 
-/* MAP INFO */
+/********************/
+/***** MAP INFO *****/
+/********************/
+div.maps {
+    text-transform: uppercase;
+    font-size: 2em;
+}
+
+div.maps a {
+    text-decoration: none;
+    color: black;
+}
+
 #maps-menu-ds {
     display: none;
     left: 10%;
@@ -110,21 +105,59 @@ button:disabled {
     background-color: pink;
 }
 
+.enemy-digimon-image-box {
+    width: 100%;
+    /* Tallest Digimon is Vikemon at 186px so far */
+    /* NOTE: It works, but it's too much blank space and looks bad for smaller Digimon, might look better once the background is added */
+    height: 186px;
+    overflow: hidden;
+}
+
 #attack-button-ds, #flee-button-ds {
     display: block;
     margin: auto;   /* This line centers items */
 }
 
+/*********************/
 /* STARTER SELECTION */
+/*********************/
+div#starter-modal section {
+    padding: 5% 0;
+    margin: 1%;
+    border: 2px solid black;
+    background: linear-gradient(to bottom, rgb(14, 160, 99), rgb(12, 80, 38));
+}
+
+div.starter-digimon-list {
+    display: flex;
+    justify-content: space-evenly;
+}
+
 .starter-selection {
     position: relative;
     border: 2px solid black;
-    padding: 10% 0;
-    margin-top: 10vh;
+    padding: 5% 0;
     width: 30%;
+    height: auto;
     background-color: rgb(73, 84, 240);
 }
 
+.starter-digimon-image-box {
+    width: 100%;
+    height: 50px;
+    overflow: hidden;
+}
+
+.starter-digimon-image-box img, .enemy-digimon-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: none;
+    object-position: bottom;
+}
+
+/*********************/
+/*** PARTY SECTION ***/
+/*********************/
 .party-digimon {
     display: none;
     padding: 10px;
