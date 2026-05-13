@@ -7,7 +7,7 @@ export class View {
     // Locations Elements
     locationButtons = {};
     locationDivs = {};
-    
+
     // Map Elements
     prevAreaButton;
     nextAreaButton;
@@ -22,7 +22,7 @@ export class View {
 
     // Enemy information elements
     enemyDigimonDiv;
-    
+
     constructor(gameChosen) {
         this.gameChosen = gameChosen;
         this.locationButtons[Locations.Maps] = document.getElementById("maps-button");
@@ -46,7 +46,11 @@ export class View {
         // Store the party Digimon's divs
         this.partyDigimonDivs = document.getElementById("party-box").querySelectorAll(".party-digimon");
     }
-    
+
+    //#region GENERAL GAME FUNCTIONS
+    showMainGame = () => document.getElementById("game-info").style.display = "block";
+    //#endregion
+
     //#region LOCATION FUNCTIONS
     /**
      * Handles what happens when the player leaves a location
@@ -55,15 +59,15 @@ export class View {
     handleLeavingLocation(location) {
         // Enable the button for the old area
         this.locationButtons[location].disabled = false;
-    
+
         // Hide the old location's div
         this.locationDivs[location].style.display = "none";
     }
-    
+
     handleEnteringLocation(location) {
         // Disable the button for the new map
         this.locationButtons[location].disabled = true;
-        
+
         // Show the new location's div
         this.locationDivs[location].style.display = "block";
     }
@@ -114,8 +118,8 @@ export class View {
         playerParty.forEach((digimon, id) => this.updatePartyDigimonInformation(id, digimon));
         this.updatedPlayerPartyBattleInformation(playerParty);
     }
-    
-    updatePartyDigimonInformation (id, digimon) {
+
+    updatePartyDigimonInformation(id, digimon) {
         let dataName = digimon.getDataName();
         let displayName = Names[dataName][this.languageChosen] ?? dataName;
         this.partyDigimonDivs[id].querySelector(".digimon-name").textContent = displayName;
@@ -162,7 +166,7 @@ export class View {
     //#endregion
 
     //#region STARTER FUNCTIONS
-    showStarterModal = starters => {
+    showStarterSelection = starters => {
         let starterDivs = document.getElementsByClassName("starter-digimon-list")[0];
         Array.from(starterDivs.children).forEach((starterDiv, index) => {
             let starterDataName = starters[index];
@@ -170,8 +174,9 @@ export class View {
             starterDiv.querySelector("img").src = "./images/digimon/" + starterDataName + (DigimonList[starterDataName][this.gameChosen].sprite ?? "") + ".png";
             starterDiv.querySelector("img").alt = (Names[starterDataName][this.languageChosen] ?? starterDataName) + " Image";
         });
-        document.getElementById("starter-modal").style.display = "block";
+        document.getElementById("starter-selection").style.display = "block";
     }
-    closeStarterModal = () => document.getElementById("starter-modal").style.display = "none";
+
+    hideStarterSelection = () => document.getElementById("starter-selection").style.display = "none";
     //#endregion
 }

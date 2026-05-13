@@ -77,6 +77,10 @@ button:disabled {
     font-weight: bold;
 }
 
+#game-info {
+    display: none;
+}
+
 /********************/
 /***** MAP INFO *****/
 /********************/
@@ -121,7 +125,7 @@ div.maps a {
 /*********************/
 /* STARTER SELECTION */
 /*********************/
-div#starter-modal section {
+div#starter-selection section {
     padding: 5% 0;
     margin: 1%;
     border: 2px solid black;

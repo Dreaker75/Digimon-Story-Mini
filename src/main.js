@@ -273,7 +273,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // });
 
     // Add the button function to select a starter
-    Array.from(document.getElementById("starter-modal").querySelectorAll("button")).forEach((button, index) => {
+    Array.from(document.getElementById("starter-selection").querySelectorAll("button")).forEach((button, index) => {
         button.addEventListener("click", () => controller.assignStarter(index));
     });
 });

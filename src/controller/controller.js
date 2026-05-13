@@ -54,7 +54,7 @@ export class Controller {
         
         if (this.#playerManager.getCurrPartySize() == 0) {
             // TODO: Change the code to be less hardcoded (Everything is still happening in the background while having no Digimon)
-            this.#view.showStarterModal(this.#starterDigimonList);
+            this.#view.showStarterSelection(this.#starterDigimonList);
         }
     }
 
@@ -269,7 +269,8 @@ export class Controller {
         this.#playerManager.addNewDigimon(new Digimon(DataNames.DotAgumon, 3));
         this.#playerManager.addNewDigimon(new Digimon(DataNames.DotFalcomon, 3));
 
-        this.#view.closeStarterModal();
+        this.#view.hideStarterSelection();
+        this.#view.showMainGame();
 
         this.#view.updatePlayerPartyInformation(this.#playerManager.getDigimonParty());
     }
